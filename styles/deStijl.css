@@ -132,4 +132,7 @@ img{
     background-color: var(--primary);
     align-items: center;
   }
+  h1{
+    font-size: calc(96vw/8);
+  }
 }
