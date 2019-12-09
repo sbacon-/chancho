@@ -40,7 +40,7 @@ h1{
   width: inherit;
   text-align: center;
   color: var(--secondary-dark);
-  font-size: 2rem;
+  font-size: calc(25vw/5);
 }
 h1 em{
   color: var(--secondary);
