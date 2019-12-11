@@ -9,7 +9,7 @@ html{
   --tertiary: #d9e46f;
   --tertiary-highlight: #e9f295;
   --tertiary-dark: #899323;
-  --neutral:#a9686d;
+  --neutral:#ffffff;
 }
 *{
   border-radius: 5px;
