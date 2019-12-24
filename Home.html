@@ -7,38 +7,121 @@
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href='styles/deStijl.css'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="styles/scripts.js"></script>
-    <!--[if lt IE 9]>
-      <script src="styles/html5shiv.js"></script>
-    <![endif]-->
+    <script src="https://kit.fontawesome.com/f979a6de37.js" crossorigin="anonymous"></script>
     </head>
-  <body>
-    <header role="banner">
-      <h1>CHANCHO<em>.dev</em></h1>
-      <nav role="navigation">
-        <a href="/">Home</a>
-        <a href="/About.html">About</a>
-        <a onclick="displayNav()">Projects</a>
-        <span id='projects'>
-          <li><a href="/Catan.html">Catan</a></li>
-          <li><a href="/Nought.html">LudumDare 45</a></li>
-          <li><a href="/BTC.html">BTC Exchange Rate</a></li>
-          <li><a href="/AutoClick.html">AutoClicker</a></li>
-          <li><a href="https://316metalworks.com">3:16 MetalWorks</a></li>
-          <li><a href="/imgdump/">Image Dump</a></li>
-        </span>
-      </nav>
-    </header>
-    <article>
-      <h2>Hello and Welcome to CHANCHO<em>.dev</em></h2>
-      <p>
-        Current Project: <a href="/Catan.html">Catan</a><br>
-        Latest Update 11/25/19:<br>
-        Redesigning the site;<br>
-        <small id='sig'>-Chancho</small>
-      </p>
-    </article>
-  <footer role="contentinfo">
-  </footer>
+  <body><svg xmlns="http://www.w3.org/2000/svg" xml:lang="en" id="logo" width="400px" height="320px">
+      <defs>
+        <circle id="light" cx="70" r="35"></circle>
+        <radialGradient id="red-light-off" fx="0.45" fy="0.4">
+          <stop stop-color="maroon" offset="0"></stop>
+          <stop stop-color="#220000" offset="0.7"></stop>
+          <stop stop-color="black" offset="1.0"></stop>
+        </radialGradient>
+        <radialGradient id="red-light-on" fx="0.45" fy="0.4">
+          <stop stop-color="orange" offset="0"></stop>
+          <stop stop-color="red" offset="0.8"></stop>
+          <stop stop-color="brown" offset="1.0"></stop>
+        </radialGradient>
+        <radialGradient id="yellow-light-off" fx="0.45" fy="0.4">
+          <stop stop-color="#a06000" offset="0"></stop>
+          <stop stop-color="#804000" offset="0.7"></stop>
+          <stop stop-color="#502000" offset="1.0"></stop>
+        </radialGradient>
+        <radialGradient id="yellow-light-on" fx="0.45" fy="0.4">
+          <stop stop-color="yellow" offset="0"></stop>
+          <stop stop-color="orange" offset="0.8"></stop>
+          <stop stop-color="darkOrange" offset="1.0"></stop>
+        </radialGradient>
+        <radialGradient id="green-light-off" fx="0.45" fy="0.4">
+          <stop stop-color="#007000" offset="0"></stop>
+          <stop stop-color="#004000" offset="0.7"></stop>
+          <stop stop-color="#001000" offset="1.0"></stop>
+        </radialGradient>
+        <radialGradient id="green-light-on" fx="0.45" fy="0.4">
+          <stop stop-color="#88ff00" offset="0"></stop>
+          <stop stop-color="forestGreen" offset="0.8"></stop>
+          <stop stop-color="darkGreen" offset="1.0"></stop>
+        </radialGradient>
+        <linearGradient id="metal" spreadMethod="repeat" gradientTransform="scale(0.7) rotate(75)">
+          <stop stop-color="#808080" offset="0"></stop>
+          <stop stop-color="#404040" offset="0.25"></stop>
+          <stop stop-color="#c0c0c0" offset="0.35"></stop>
+          <stop stop-color="#808080" offset="0.5"></stop>
+          <stop stop-color="#e0e0e0" offset="0.7"></stop>
+          <stop stop-color="#606060" offset="0.75"></stop>
+          <stop stop-color="#a0a0a0" offset="0.9"></stop>
+          <stop stop-color="#808080" offset="1"></stop>
+        </linearGradient>
+      </defs>
+      <style>
+      @keyframes cycle {
+          33.3% { visibility: visible; }
+          100%  { visibility: hidden;  }
+      }
+      .lit {
+          animation: cycle 9s step-start infinite;
+      }
+      .red    .lit { animation-delay: -3s; }
+      .yellow .lit { animation-delay: -6s; }
+      .green  .lit { animation-delay:  0s; }
+      text {
+        font: bold 60px  'Montserrat',sans-serif;
+      }
+      </style>
+      <rect x="20" y="20" width="100" height="280" fill="url(#metal)" stroke="black" stroke-width="3px"></rect>
+      <g stroke="black" stroke-width="2px">
+        <g class="red light">
+          <use href="#light" y="80" fill="url(#red-light-off)"></use>
+          <g class="lit" fill="url(#red-light-on)">
+            <use href="#light" y="80"></use>
+            <text x="140" y="100" stroke="darkRed">S</text>
+          </g>
+        </g>
+        <g class="yellow light">
+          <use href="#light" y="160" fill="url(#yellow-light-off)"></use>
+          <g class="lit" fill="url(#yellow-light-on)">
+            <use href="#light" y="160"></use>
+            <text x="140" y="180" stroke="Orange">S</text>
+          </g>
+        </g>
+        <g class="green light">
+          <use href="#light" y="240" fill="url(#green-light-off)"></use>
+          <g class="lit" fill="url(#green-light-on)">
+            <use href="#light" y="240"></use>
+            <text x="140" y="260" stroke="forestGreen">GO!</text>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <nav id="shortcuts">
+      <li><a href="https://www.coinbase.com/price/bitcoin"><div>btc</div><i class="fab fa-btc"></i></a></li>
+      <li><a href="https://robinhood.com/"><div>rbn</div><i class="fas fa-feather"></i></a></li>
+      <li><a href="http://4channel.org/"><div>4ch</div><i class="fas fa-greater-than"></i></a></li>
+      <li><a href="https://thepiratebay.org/"><div>tpb</div><i class="fas fa-skull-crossbones"></i></a></li>
+      <li><a href="https://chancho.dev/"><div>c.d</div><i class="fas fa-piggy-bank"></i></a></li>
+      <li><a href="https://github.com/"><div>git</div><i class="fas fa-code-branch"></i></a></li>
+    </nav>
+    <form id="search-bar">
+      <input
+        id="search-query"
+        type="search"
+        maxlength="256"
+        placeholder="Search..."
+        autofocus><button
+        id="search-submit"
+        onclick="submitSearch()"><i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+    </form>
+    <div id=spotify><iframe
+      src="https://open.spotify.com/embed/playlist/7yLYKG9cbxtjEmon4HoLIk"
+      width="80" height="80"
+      allowtransparency="false"
+      frameborder=0
+      allow="encrypted-media">
+    </iframe></div>
   </body>
+  <script type="text/javascript" src="styles/scripts.js"></script>
+  <!--[if lt IE 9]>
+    <script src="styles/html5shiv.js"></script>
+  <![endif]-->
 </html>
