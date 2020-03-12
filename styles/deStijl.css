@@ -113,6 +113,9 @@ nav a:hover{
 p{
   margin: 32px;
 }
+q{
+  padding: 25px;
+}
 a{color: var(--tertiary);}
 a:hover{color: var(--tertiary-highlight);}
 img{
