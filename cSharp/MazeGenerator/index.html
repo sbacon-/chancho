@@ -4,18 +4,47 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | MazeGenerator</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href='styles/deStijl.css'>
+    <link rel="stylesheet" href='/styles/deStijl.css'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
-    <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Unity Builds.json", {onProgress: UnityProgress});
-    </script>
+    <script>var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Unity Builds.json", {onProgress: UnityProgress});</script>
+    <script type="text/javascript" src="/styles/scripts.js"></script>
   </head>
   <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 600px; height: 600px"></div>
-    </div>
+    <header role="banner">
+      <h1>CHANCHO<em>.dev</em></h1>
+      <nav role="navigation">
+        <a href="/">Home</a>
+        <a href="/About.html">About</a>
+        <a onclick="displayNav()">Projects</a>
+        <span id='projects'>
+          <li><a href="/Alfonso.html">Alfonso</a></li>
+          <li><a href="/Catan.html">Catan</a></li>
+          <li><a href="/Nought.html">LD45</a></li>
+          <li><a href="/LD46.html">LD46</a></li>
+          <li><a href="/BTC.html">BTC</a></li>
+          <li><a href="/AutoClick.html">ClickBot</a></li>
+          <li><a href="https://316metalworks.com">3:16</a></li>
+          <li><a href="/imgdump/">Image Dump</a></li>
+        </span>
+      </nav>
+    </header>
+    <article>
+      <h2>Algorithmic Maze Generation</h2>
+      <div class="webgl-content">
+        <div id="unityContainer" style="width: 600px; height: 600px"></div>
+      </div>
+      <p>
+        This is a randomized variation of a depth first search algorithm, the basic structure is as follows:<br>
+        <ul>
+        <li>At each iteration the current node checks which neigbors are unexplored.</li><br>
+          <ul><li>If all neighbors are explored, we will begin backtracking through the stack to the first cell with unexplored neighbors</li></ul><br>
+        <li>Picking a neigbor at random it will remove the wall that separates them.</li><br>
+        <li>The current node is added to the stack and the neighboring node will begin the next iteration</li><br></ul>
+      </p>
+    </article>
+  <footer role="contentinfo">
+  </footer>
   </body>
 </html>
