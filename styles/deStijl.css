@@ -1,14 +1,14 @@
 html{
   font-size: 2em;
-  --primary: #ffa41b;
-  --primary-highlight: #ffdd1b;
-  --primary-dark:#ff6b1b;
-  --secondary: #005082;
-  --secondary-highlight: #1a0082;
-  --secondary-dark: #000839;
-  --tertiary: #d9e46f;
-  --tertiary-highlight: #e9f295;
-  --tertiary-dark: #899323;
+  --primary: #000839;
+  --primary-highlight: #eeeeee;
+  --primary-dark:#000839;
+  --secondary: #e43f5a;
+  --secondary-highlight: #000839;
+  --secondary-dark: #626fa3;
+  --tertiary: #e43f5a;
+  --tertiary-highlight: #626fa3;
+  --tertiary-dark: #626fa3;
   --neutral:#cccccc;
 }
 *{
