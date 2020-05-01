@@ -118,6 +118,11 @@ nav a:hover{
 p{
   margin: 32px;
 }
+small{
+  margin: auto;
+  width:50%
+  size: 0.25em;
+}
 q{
   padding: 25px;
 }
