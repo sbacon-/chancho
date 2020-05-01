@@ -1,14 +1,14 @@
 html{
   font-size: 2em;
-  --primary: #000839;
+  --primary: #626fa3;
   --primary-highlight: #eeeeee;
   --primary-dark:#000839;
   --secondary: #e43f5a;
-  --secondary-highlight: #000839;
-  --secondary-dark: #626fa3;
+  --secondary-highlight: #e43f5a;
+  --secondary-dark: #000839;
   --tertiary: #e43f5a;
-  --tertiary-highlight: #626fa3;
-  --tertiary-dark: #626fa3;
+  --tertiary-highlight: #000839;
+  --tertiary-dark: #000839;
   --neutral:#cccccc;
 }
 *{
