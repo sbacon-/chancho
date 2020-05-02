@@ -9,13 +9,13 @@ html{
   --tertiary: #e43f5a;
   --tertiary-highlight: #000839;
   --tertiary-dark: #000839;
-  --neutral:#cccccc;
+  --neutral:#aaaaaa;
 }
 *{
   border-radius: 5px;
 }
 body{
-  background: linear-gradient(90deg, #ffffff 0%, var(--neutral) 100%);
+  background: linear-gradient(90deg, #cccccc 0%, var(--neutral) 100%);
   background-size: 100vw 100vh;
   margin: 0;
   color: black;
