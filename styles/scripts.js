@@ -2,6 +2,7 @@ function displayNav(){
   var element = document.getElementById('projects');
   var projects = [//ADD NEW PAGES HERE ENTER ~ TO OVERRIDE HREF
     "MazeGenerator~/cSharp/MazeGenerator",
+    "Digitizer",
     "Alfonso",
     "Catan",
     "LD45",
