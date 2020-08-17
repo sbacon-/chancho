@@ -1,24 +1,27 @@
 html{
   font-size: 2em;
-  --primary: #626fa3;
-  --primary-highlight: #eeeeee;
-  --primary-dark:#000839;
-  --secondary: #e43f5a;
-  --secondary-highlight: #e43f5a;
-  --secondary-dark: #000839;
-  --tertiary: #e43f5a;
-  --tertiary-highlight: #000839;
-  --tertiary-dark: #000839;
-  --neutral:#aaaaaa;
+  --primary: #473429;
+  --primary-highlight: #473429;
+  --primary-dark:#473429;
+  --secondary: #a8aa9f;
+  --secondary-highlight: #8ED4AE;
+  --secondary-dark: #54876B;
+  --tertiary: #525163;
+  --tertiary-highlight: #6396D4;
+  --tertiary-dark: #466387;
+  --neutral:#d2ae74;
+
+  --backdrop: #6E513F;
+  --text: #ffffff;
 }
 *{
   border-radius: 5px;
 }
 body{
-  background: linear-gradient(90deg, #cccccc 0%, var(--neutral) 100%);
+  background: linear-gradient(90deg, var(--backdrop) 0%, var(--neutral) 100%);
   background-size: 100vw 100vh;
   margin: 0;
-  color: black;
+  color: var(--text);
   font-family: 'Montserrat',sans-serif;
   font-size: 1em;
 }
@@ -60,7 +63,7 @@ h2{
   text-align: center;
   width: inherit;
   position: relative;
-  color: var(--tertiary);
+  color: var(--tertiary-highlight);
   font-size: 1.5rem;
 }
 nav{
@@ -103,12 +106,12 @@ nav a:hover{
   border-top-left-radius: 0px;border-bottom-left-radius: 0px;
   border-left: 10px solid var(--secondary-dark);
   margin-left:15px;
-  background: var(--tertiary-dark);
-  color: var(--tertiary);
+  background: var(--tertiary);
+  color: var(--tertiary-highlight);
 }
 #projects a:hover{
-  background: var(--tertiary);
-  color: var(--tertiary-dark);
+  background: var(--tertiary-highlight);
+  color: var(--tertiary);
 }
 .webgl-content{
   margin: 0 auto;
@@ -124,7 +127,7 @@ small{
 q{
   padding: 25px;
 }
-a{color: var(--tertiary);}
+a{color: var(--tertiary-dark);}
 a:hover{color: var(--tertiary-highlight);}
 img{
 
