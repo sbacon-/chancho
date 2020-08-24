@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Shoot 'Em Up Prototype</title>
+    <link rel="stylesheet" href='/styles/deStijl.css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/SHMUP.json", {onProgress: UnityProgress});
+
+    </script>
+    <script type="text/javascript" src="/styles/scripts.js"></script>
+  </head>
+  <body>
+    <header role="banner">
+      <h1>CHANCHO<em>.dev</em></h1>
+      <nav role="navigation">
+        <a href="/">Home</a>
+        <a href="/About.html">About</a>
+        <a onclick="displayNav()">Projects</a>
+        <span id='projects'>
+        </span>
+      </nav>
+    </header>
+    <article>
+      <h2>SHMUP</h2>
+      <div class="webgl-content">
+        <div id="unityContainer" style="width: 960px; height: 600px"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+          <div class="title">Shoot 'Em Up Prototype</div>
+        </div>
+      </div>
+      <p>
+        Had a great weekend making this, wanted to complete a project on a LD Jam Timeline in the Unity Engine, this is about 2 days or work.
+        Very happy with the results, collision is terrible and I had meant to implement some sort of boost system, but I decided to focus more on
+        visuals and overall feel of the game.<br>
+        <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
+      </p>
+    </article>
+  <footer role="contentinfo">
+  </footer>
+  </body>
+</html>
