@@ -1,6 +1,7 @@
 function displayNav(){
   var element = document.getElementById('projects');
   var projects = [//ADD NEW PAGES HERE ENTER ~ TO OVERRIDE HREF
+    "SHMUP~/cSharp/SHMUP"
     "MazeGenerator~/cSharp/MazeGenerator",
     "Digitizer",
     "Alfonso",
