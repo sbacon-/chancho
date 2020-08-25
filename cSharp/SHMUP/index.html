@@ -6,7 +6,7 @@
     <title>Shoot 'Em Up Prototype</title>
     <link rel="stylesheet" href='/styles/deStijl.css'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="/styles/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/SHMUP.json", {onProgress: UnityProgress});
@@ -31,9 +31,10 @@
         <div id="unityContainer" style="width: 960px; height: 600px"></div>
         <div class="footer">
           <div class="webgl-logo"></div>
-          <div class="title">Shoot 'Em Up Prototype</div>
           <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+          <div class="title">Shoot 'Em Up Prototype</div>
         </div>
+      </div>
       </div>
       <p>
         Had a great weekend making this, wanted to complete a project on a LD Jam Timeline in the Unity Engine, this is about 2 days or work.

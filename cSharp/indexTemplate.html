@@ -3,12 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>MazeGenerator</title>
+    <title>Shoot 'Em Up Prototype</title>
     <link rel="stylesheet" href='/styles/deStijl.css'>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="/styles/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
-    <script>var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Unity Builds.json", {onProgress: UnityProgress});</script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/SHMUP.json", {onProgress: UnityProgress});
+
+    </script>
     <script type="text/javascript" src="/styles/scripts.js"></script>
   </head>
   <body>
@@ -23,19 +26,20 @@
       </nav>
     </header>
     <article>
-      <h2>Algorithmic Maze Generation</h2>
+      <h2>SHMUP</h2>
       <div class="webgl-content">
-        <div id="unityContainer" style="width: 600px; height: 600px"></div>
-        <small>R - Generate A New Maze</small>
+        <div id="unityContainer" style="width: 960px; height: 600px"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+          <div class="title">Shoot 'Em Up Prototype</div>
+        </div>
+      </div>
       </div>
       <p>
-        This is a randomized variation of a depth first search algorithm, the basic structure is as follows:<br>
-        <ul>
-        <li>At each iteration the current node checks which neigbors are unexplored.</li><br>
-          <ul><li>If all neighbors are explored, we will begin backtracking through the stack to the first cell with unexplored neighbors</li></ul><br>
-        <li>Picking a neigbor at random it will remove the wall that separates them.</li><br>
-        <li>The current node is added to the stack and the neighboring node will begin the next iteration</li><br></ul>
-
+        Had a great weekend making this, wanted to complete a project on a LD Jam Timeline in the Unity Engine, this is about 2 days or work.
+        Very happy with the results, collision is terrible and I had meant to implement some sort of boost system, but I decided to focus more on
+        visuals and overall feel of the game.<br>
         <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
       </p>
     </article>
