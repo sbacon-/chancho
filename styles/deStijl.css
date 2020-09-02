@@ -1,24 +1,24 @@
 html{
   font-size: 2em;
-  --primary: #473429;
-  --primary-highlight: #473429;
-  --primary-dark:#473429;
-  --secondary: #a8aa9f;
-  --secondary-highlight: #8ED4AE;
-  --secondary-dark: #54876B;
-  --tertiary: #525163;
-  --tertiary-highlight: #6396D4;
-  --tertiary-dark: #466387;
-  --neutral:#d2ae74;
+  --primary: #c4c4c4;/*BLOCK L*/
+  --primary-highlight: #c4c4c4;/*BLOCK R*/
+  --primary-dark:#000082;/*UNUSED*/
+  --secondary: #b22021;/*dotdev*/
+  --secondary-highlight: #ffffff;/*NAV TEXT*/
+  --secondary-dark: #000082;/*CHANCHO TEXT, nav button*/
+  --tertiary: #ffffff;/*Projects button*/
+  --tertiary-highlight: #000082;/*Headers, proj text*/
+  --tertiary-dark: #0000ee;/*links*/
+  --neutral:#008080; /*BACKGROUND R*/
 
-  --backdrop: #6E513F;
-  --text: #ffffff;
+  --backdrop: #008080; /*BACKGROUND L*/
+  --text: #000000;
 }
 *{
   border-radius: 5px;
 }
 body{
-  background: linear-gradient(90deg, var(--backdrop) 0%, var(--neutral) 100%);
+  background: linear-gradient(360deg, var(--backdrop) 0%, var(--neutral) 100%);
   background-size: 100vw 100vh;
   margin: 0;
   color: var(--text);
@@ -271,17 +271,17 @@ iframe {
 /*.webgl-content {position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);z-index: -1; }*/
 
 .webgl-content .logo, .progress {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
-.webgl-content .logo {background: url('/img/unity.png') no-repeat center / contain; width: 154px; height: 130px;}
+.webgl-content .logo {background: url('/img/UnityWEBGL/unity.png') no-repeat center / contain; width: 154px; height: 130px;}
 .webgl-content .progress {height: 18px; width: 141px; margin-top: 90px;}
-.webgl-content .progress .empty {background: url('/img/progressEmpty.Light.png') no-repeat right / cover; float: right; width: 100%; height: 100%; display: inline-block;}
-.webgl-content .progress .full {background: url('/img/progressFull.Light.png') no-repeat left / cover; float: left; width: 0%; height: 100%; display: inline-block;}
+.webgl-content .progress .empty {background: url('/img/UnityWEBGL/progressEmpty.Light.png') no-repeat right / cover; float: right; width: 100%; height: 100%; display: inline-block;}
+.webgl-content .progress .full {background: url('/img/UnityWEBGL/progressFull.Light.png') no-repeat left / cover; float: left; width: 0%; height: 100%; display: inline-block;}
 
-.webgl-content .logo.Dark {background-image: url('/img/unity.png');}
-.webgl-content .progress.Dark .empty {background-image: url('/img/progressEmpty.Dark.png');}
-.webgl-content .progress.Dark .full {background-image: url('/img/progressFull.Dark.png');}
+.webgl-content .logo.Dark {background-image: url('/img/UnityWEBGL/unity.png');}
+.webgl-content .progress.Dark .empty {background-image: url('/img/UnityWEBGL/progressEmpty.Dark.png');}
+.webgl-content .progress.Dark .full {background-image: url('/img/UnityWEBGL/progressFull.Dark.png');}
 
 .webgl-content .footer {margin-top: 5px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;}
 .webgl-content .footer .webgl-logo, .title, .fullscreen {height: 100%; display: inline-block; background: transparent center no-repeat;}
-.webgl-content .footer .webgl-logo {background-image: url('/img/webgl-logo.png'); width: 204px; float: left;}
+.webgl-content .footer .webgl-logo {background-image: url('/img/UnityWEBGL/webgl-logo.png'); width: 204px; float: left;}
 .webgl-content .footer .title {font-family: 'Montserrat',sans-serif;margin-right: 10px; float: right;}
-.webgl-content .footer .fullscreen {background-image: url('/img/fullscreen.png'); width: 38px; float: right;}
+.webgl-content .footer .fullscreen {background-image: url('/img/UnityWEBGL/fullscreen.png'); width: 38px; float: right;}
