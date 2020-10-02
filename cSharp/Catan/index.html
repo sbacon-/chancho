@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Catan</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Catan.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <header role="banner">
+      <h1>CHANCHO<em>.dev</em></h1>
+      <nav role="navigation">
+        <a href="/">Home</a>
+        <a href="/About.html">About</a>
+        <a onclick="displayNav()">Projects</a>
+        <span id='projects'>
+        </span>
+      </nav>
+    </header>
+    <article>
+      <h2>CATAN (UNITY)</h2>
+      <div class="webgl-content">
+        <div id="unityContainer" style="width: 960px; height: 600px"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+          <div class="title">CATAN</div>
+        </div>
+      </div>
+      </div>
+      <p>
+        This is a better version of the remake of Settlers of Catan... It's still not very good though. <br>
+        A / D -> Rotate Camera <br>
+        Shift -> Get Dizzy <br>
+      </p>
+
+      <h2>CATAN (Pre-Alpha)</h2>
+      <p>
+          <ul>Downloads:
+            <li><a href="files/Catan.jar">Catan.jar a0.1.1</a></li>
+          </ul><br>
+          This is my current pet project, it is a recreation of my favorite boardgame Settlers of Catan<br>
+          Latest update 11/19 includes new development card toasts to show built cards, and a few more cosmetic updates.<br>
+          There is still much to accomplish for this project, but so far it has been good practice in implementing Toasts & Buttons<br>
+          All source code can be found here: <a href="https://github.com/sbacon-/Catan.git">source</a><br>
+          Screenshots<br>
+          <img src="img/Catan_1.png">
+          <img src="img/Catan_2.png">
+          <img src="img/Catan_3.png"><br>
+
+          Planned Updates:<br>
+          Finishing Toasts<br>
+          Add EndGame<br>
+          Trade<br>
+          Online<br>
+
+      </p>
+    </article>
+  <footer role="contentinfo">
+  </footer>
+  </body>
+</html>

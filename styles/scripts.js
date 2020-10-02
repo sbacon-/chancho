@@ -3,9 +3,9 @@ function displayNav(){
   var projects = [//ADD NEW PAGES HERE ENTER ~ TO OVERRIDE HREF
     "SHMUP~/cSharp/SHMUP",
     "MazeGenerator~/cSharp/MazeGenerator",
+    "Catan~/cSharp/Catan",
     "Digitizer",
     "Alfonso",
-    "Catan",
     "LD45",
     "LD46",
     "BTC",
