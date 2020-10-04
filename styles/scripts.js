@@ -8,6 +8,7 @@ function displayNav(){
     "Alfonso",
     "LD45",
     "LD46",
+    "LD47~/cSharp/LD47",
     "BTC",
     "ClickBot",
     "3:16 Metal~https://316metalworks.com",
