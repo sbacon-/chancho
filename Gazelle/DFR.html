@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type"image/ico" href="res/favicon.ico">
   <link rel="stylesheet" href="res/style.css" type="text/css">
   <title>Pivotal Retail - Gazelle</title>
   <script src="res/script.js"></script>
@@ -19,10 +20,13 @@
   --><article>
     <h1>Daily Field Report</h1>
     <form>
-      <label for="Date">Date:</label><input type="date"><br>
-      <label for="Photo">Image:</label><input type="file" id="photos" name="photos" multiple><br>
-      <label for="Completed">Tasks Completed:</label><textarea></textarea><br>
-      <input type="submit" value="Submit">
+      <fieldset>
+        <legend id="Store">Store: </legend>
+        Date:<br>
+        <input type="date" id="Date"><br>
+        Tasks Accomplished<br>
+        <textarea>200 char limit</textarea>
+      </fieldset>
     </form>
   </article>
 </body>
