@@ -1,17 +1,17 @@
 html{
   font-size: 2em;
-  --primary: #c4c4c4;/*BLOCK L*/
-  --primary-highlight: #c4c4c4;/*BLOCK R*/
+  --primary: #F5DF4D;/*BLOCK L*/
+  --primary-highlight: #F5DF4D;/*BLOCK R*/
   --primary-dark:#000082;/*UNUSED*/
-  --secondary: #b22021;/*dotdev*/
-  --secondary-highlight: #ffffff;/*NAV TEXT*/
-  --secondary-dark: #000082;/*CHANCHO TEXT, nav button*/
-  --tertiary: #ffffff;/*Projects button*/
-  --tertiary-highlight: #000082;/*Headers, proj text*/
-  --tertiary-dark: #0000ee;/*links*/
-  --neutral:#008080; /*BACKGROUND R*/
+  --secondary: #979DA6;/*dotdev*/
+  --secondary-highlight: #F2EEB3;/*NAV TEXT*/
+  --secondary-dark: #000000;/*CHANCHO TEXT, nav button*/
+  --tertiary: #F2EEB3;/*Projects button*/
+  --tertiary-highlight: #000000;/*Headers, proj text*/
+  --tertiary-dark: #68788C;/*links*/
+  --neutral: #939597; /*BACKGROUND R*/
 
-  --backdrop: #008080; /*BACKGROUND L*/
+  --backdrop: #939597; /*BACKGROUND L*/
   --text: #000000;
 }
 *{
@@ -44,7 +44,7 @@ h1{
   width: inherit;
   text-align: center;
   color: var(--secondary-dark);
-  font-size: calc(25vw/8);
+  font-size: 1.5rem;
 }
 h1 em{
   color: var(--secondary);
@@ -67,7 +67,7 @@ h2{
   font-size: 1.5rem;
 }
 nav{
-  width: inherit;
+  width: 25vw;
   text-align: left;
 }
 nav a{
