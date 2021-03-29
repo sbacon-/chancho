@@ -1,18 +1,13 @@
 function displayNav(){
   var element = document.getElementById('projects');
   var projects = [//ADD NEW PAGES HERE ENTER ~ TO OVERRIDE HREF
+    "CUR2R5~/cSharp/CUR2R5",
     "SHMUP~/cSharp/SHMUP",
     "MazeGenerator~/cSharp/MazeGenerator",
     "Catan~/cSharp/Catan",
-    "Digitizer",
-    "Alfonso",
-    "LD45",
-    "LD46",
-    "LD47~/cSharp/LD47",
-    "BTC",
-    "ClickBot",
     "3:16 Metal~https://316metalworks.com",
-    "Image Dump~/imgdump"];
+    "Archive"
+  ];
   for(s of projects){
     var link = "/"+s+".html";
     var text = s;

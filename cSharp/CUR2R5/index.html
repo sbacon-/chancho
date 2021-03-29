@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CUR2R5</title>
+    <link rel="stylesheet" href='/styles/deStijl.css?v=1'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="/styles/UnityProgress.js"></script>
+    <script type="text/javascript" src="/styles/scripts.js"></script>
+  </head>
+  <body>
+    <header role="banner">
+      <a href="/"><h1>CHANCHO<em>.dev</em></h1></a>
+      <nav role="navigation">
+        <a href="/">Home</a>
+        <a href="/About.html">About</a>
+        <a onclick="displayNav()">Projects</a>
+        <span id='projects'>
+        </span>
+      </nav>
+    </header>
+    <article>
+    <h2>Chancho's Unity Roundup 2k21 Remastered V</h2>
+    <div style="margin: auto">
+      <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-mobile-warning">
+      </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title"><a>CUR2R5 - Click here for Fullscreen</a></div>
+      </div>
+      </div>
+    </div>
+    <script>
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/CUR2R5.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/CUR2R5.data",
+        frameworkUrl: buildUrl + "/CUR2R5.framework.js",
+        codeUrl: buildUrl + "/CUR2R5.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Chancho.dev",
+        productName: "CUR2R5",
+        productVersion: "0.1",
+      };
+
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-footer");
+      var mobileWarning = document.querySelector("#unity-mobile-warning");
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+        config.devicePixelRatio = 1;
+        mobileWarning.style.display = "block";
+        setTimeout(() => {
+          mobileWarning.style.display = "none";
+        }, 5000);
+      } else {
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+      <p>
+        It's that time of year again. Time to gear up and be ready for the most intense 48 to 72 hours imaginable.
+        That's right folks, Ludum Dare.<br>
+        I made this project as a refresher course. Had a ton of fun, especially with the UI. [MineSweeper].<br>
+        Ran into a few bugs with the Canvas not corresponding to the screen size and trying to hard code transform positions.
+        It seems like Unity has also changed the way it handles exporting to Web.<br>
+        Overall it was a good few weeks. Hope you enjoy the roundup and good luck on your own Jams.<br>
+        <a href="https://github.com/sbacon-/">View Source Code</a>
+      </p>
+    </article>
+  <footer role="contentinfo">
+  </footer>
+  </body>
+</html>
