@@ -13,10 +13,11 @@ for(t of library){
   var src = t.card;
   var a = document.createElement("A");
   var img = document.createElement("IMG");
+  var li = document.createElement("LI");
   a.text = title;
   a.href = link;
-  img.src = src;
-  a.appendChild(img);
-  ul.appendChild(a);
+  a.style="background-image: url("+src+")";
+  li.appendChild(a);
+  ul.appendChild(li);
 }
 element.appendChild(ul);

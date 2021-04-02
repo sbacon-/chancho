@@ -28,14 +28,14 @@
     "navigation" : false
   },
   {
-    "title":"IgKnight",
+    "title":"IgKnight: Keeper of the Flame",
     "reference":"/LD46.html",
     "card":"/res/img/library/Knight.png",
     "platform" : ["java"],
     "navigation" : false
   },
   {
-    "title":"Nought",
+    "title":"Nought - My First Ludum Dare Game",
     "reference":"/LD45.html",
     "card":"/res/img/library/Nought.png",
     "platform" : ["java"],
