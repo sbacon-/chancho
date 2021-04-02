@@ -1,9 +1,12 @@
 function displayNav(){
   var element = document.getElementById('projects');
+
+  //IMPORT LIBRARY.JSON
   var request = new XMLHttpRequest();
   request.open("GET","/res/scripts/library.json", false);
   request.send(null);
   var library = JSON.parse(request.responseText);
+
   var ol = document.createElement("OL");
   for(s of library){
     if(!s.navigation)continue;

@@ -1,9 +1,11 @@
 var element = document.getElementById("library");
+
+//IMPORT LIBRARY.JSON
 var request = new XMLHttpRequest();
 request.open("GET","/res/scripts/library.json", false);
 request.send(null);
 var library = JSON.parse(request.responseText);
-console.log(library);
+
 var ul = document.createElement("UL");
 for(t of library){
   var title = t.title;
