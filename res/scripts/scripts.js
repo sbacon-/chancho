@@ -1,21 +1,14 @@
 function displayNav(){
   var element = document.getElementById('projects');
-  var projects = [//ADD NEW PAGES HERE ENTER ~ TO OVERRIDE HREF
-    "Chancho's Unity Roundup 2k21 Remastered V~/cSharp/CUR2R5",
-    "Shoot 'em Up Prototype~/cSharp/SHMUP",
-    "Maze Generator~/cSharp/MazeGenerator",
-    "Catan Proof Of Concept~/cSharp/Catan",
-    "3:16 Metal~https://316metalworks.com",
-    "Archive"
-  ];
+  var request = new XMLHttpRequest();
+  request.open("GET","/res/scripts/library.json", false);
+  request.send(null);
+  var library = JSON.parse(request.responseText);
   var ol = document.createElement("OL");
-  for(s of projects){
-    var link = "/"+s+".html";
-    var text = s;
-    if(s.indexOf("~")!=-1){
-      link = s.substring(s.indexOf("~")+1);
-      text = s.substring(0,s.indexOf("~"));
-    }
+  for(s of library){
+    if(!s.navigation)continue;
+    var link = s.reference;
+    var text = s.title;
     var li = document.createElement("LI");
     var a = document.createElement("A");
     a.href = link;

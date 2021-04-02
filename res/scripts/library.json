@@ -1,0 +1,58 @@
+[
+  {
+    "title":"Chancho's Unity Roundup 2k21 Remastered V",
+    "reference":"/cSharp/CUR2R5",
+    "card":"/res/img/library/Cur2.png",
+    "platform" : ["html"],
+    "navigation" : true
+  },
+  {
+    "title":"Shoot 'em Up Prototype",
+    "reference":"/cSharp/SHMUP",
+    "card":"/res/img/library/Shmup.png",
+    "platform" : ["html"],
+    "navigation" : true
+  },
+  {
+    "title":"Algorithmic Maze Generator",
+    "reference":"/cSharp/MazeGenerator",
+    "card":"/res/img/library/Maze.png",
+    "platform" : ["html"],
+    "navigation" : true
+  },
+  {
+    "title":"Lazy River Racing",
+    "reference":"/cSharp/LD47",
+    "card":"/res/img/library/River.png",
+    "platform" : ["html"],
+    "navigation" : false
+  },
+  {
+    "title":"IgKnight",
+    "reference":"/LD46.html",
+    "card":"/res/img/library/Knight.png",
+    "platform" : ["java"],
+    "navigation" : false
+  },
+  {
+    "title":"Nought",
+    "reference":"/LD45.html",
+    "card":"/res/img/library/Nought.png",
+    "platform" : ["java"],
+    "navigation" : false
+  },
+  {
+    "title":"Catan",
+    "reference":"/cSharp/Catan",
+    "card":"/res/img/library/Catan.png",
+    "platform" : ["html","java"],
+    "navigation" : false
+  },
+  {
+    "title":"Alfonso's IceCream Shop",
+    "reference":"/Alfonso.html",
+    "card":"/res/img/library/Icecream.png",
+    "platform" : ["java"],
+    "navigation" : false
+  }
+]
