@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- CHANCHO.DEV -->
+    <title>Chancho.dev</title>
+    <link rel="icon" href="res/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=VT323&display=swap" rel="stylesheet">
+
+    <!-- CSS & JavaScript -->
+    <link rel="stylesheet" type="text/css" href='/res/styles/deStijl.css?v=1'>
+    <script type="text/javascript" src="/res/scripts/scripts.js"></script>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="https://kit.fontawesome.com/f979a6de37.js" crossorigin="anonymous"></script>
+
+    <!--[if lt IE 9]>
+      <script src="styles/html5shiv.js"></script>
+    <![endif]-->
+    </head>
+  <body>
+    <header class="clearfix" role="banner">
+      <h1 id="sitename"><a href="/">CHANCHO<em>.dev</em></a></h1>
+      <h1><a href="https://github.com/sbacon-"><i class="fab fa-github" id="sitename" style="position:absolute;top:0px;right:0px;"></i></a></h1>
+      <nav role="navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a onclick="displayNav()">Projects</a>
+        <div style="position:absolute"><span id='projects'>
+        </span></div></li>
+        <li><a href="/About.html">About</a></li>
+      </ul>
+      </nav>
+    </header>
+    <article>
+    <!--GAME TITLE-->
+    <h2>Sort Algorithm Visualizer</h2>
+    <div class="center">
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-mobile-warning">
+        WebGL builds are not supported on mobile devices.
+      </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">CUR2R5</div>
+      </div>
+    </div>
+  </div>
+    <!--GAME TEXT-->
+  <p>
+Sample Text!
+  </p>
+    <script>
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/AlgoVisualizer.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/AlgoVisualizer.data",
+        frameworkUrl: buildUrl + "/AlgoVisualizer.framework.js",
+        codeUrl: buildUrl + "/AlgoVisualizer.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "chancho.dev",
+        productName: "Sort Algorithm Visualizer",
+        productVersion: "1.0",
+      };
+
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var mobileWarning = document.querySelector("#unity-mobile-warning");
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+        config.devicePixelRatio = 1;
+        mobileWarning.style.display = "block";
+        setTimeout(() => {
+          mobileWarning.style.display = "none";
+        }, 5000);
+      } else {
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+      }
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

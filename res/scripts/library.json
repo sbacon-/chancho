@@ -1,4 +1,12 @@
 [
+  
+  {
+    "title":"Sort Algorithm Visualizer",
+    "reference":"/cSharp/AlgoVisualizer",
+    "card":"/res/img/library/Sort.png",
+    "platform" : ["html"],
+    "navigation" : true
+  },
   {
     "title":"Chancho's Unity Roundup 2k21 Remastered V",
     "reference":"/cSharp/CUR2R5",
