@@ -1,5 +1,11 @@
 [
-  
+  {
+    "title":"Dolphin Jump Demo",
+    "reference":"/cSharp/DolphinJump",
+    "card":"/res/img/library/Dolphin.png",
+    "platform" : ["html"],
+    "navigation" : true
+  },
   {
     "title":"Sort Algorithm Visualizer",
     "reference":"/cSharp/AlgoVisualizer",
