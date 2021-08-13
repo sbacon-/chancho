@@ -34,3 +34,9 @@
   justify-content: end;
   padding: 0 10px;
 }
+
+.num-cash{
+  height: 350px;
+  display:flex;
+  flex-direction: column;
+}

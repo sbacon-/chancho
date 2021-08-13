@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- CHANCHO.DEV -->
+    <title>Chancho.dev</title>
+    <link rel="icon" href="/res/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=VT323&display=swap" rel="stylesheet">
+
+    <!-- CSS & JavaScript -->
+    <link rel="stylesheet" type="text/css" href='/res/styles/deStijl.css?v=1'>
+    <link rel="stylesheet" type="text/css" href='/res/styles/calcStyle.css'>
+    <script type="text/javascript" src="/res/scripts/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/f979a6de37.js" crossorigin="anonymous"></script>
+    
+
+    <!--[if lt IE 9]>
+      <script src="styles/html5shiv.js"></script>
+    <![endif]-->
+    </head>
+  <body>
+    <header class="navBar" role="banner">
+      <!--Logo-->
+      <h1 class="nav-item logo">
+        <a href="/">CHANCHO<em>.dev</em></a>
+      </h1>
+      <!--Site Navigation-->
+      <nav role="navigation" class="nav-item">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="#" onclick="displayNav()">Projects</a></li>
+          <ol id='projects' class="nav-list"></ol>
+          <li><a href="/About.html">About</a></li>
+        </ul>
+      </nav>
+      <!--Profiles-->
+      <h3 class="nav-item profiles ">
+        <a href="https://github.com/sbacon-" aria-label="GitHub">
+          <i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/TomChumley" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i></a>
+        <a href="https://stackoverflow.com/users/11916061/tom-chumley" aria-label="StackOverflow">
+          <i class="fab fa-stack-overflow"></i></a>
+      </h3>
+      <!--JS Target for <ol> of projects-->
+    </header>
+    <article class="article-body"> 
+        <h5>Numbers to Word Calculator</h5>
+        <p>Enter a number to convert to dollars and cents. (Works up to 999,999,999.00) I have an idea for the recursion here
+            but had to leave it for now. Also noticed 1000 doesn't work. I'll have to check it out this weekend<br>
+        </p>
+
+        <div class="num-cash">
+            <input type="number" class="num-cash-input" autofocus></input>
+
+            <h4 class="num-cash-output" onclick="clickToCopy()"></h4>
+            <i class="fas fa-clipboard" onclick="clickToCopy()"></i>
+
+            <script type="text/javascript" src="/res/scripts/numCash.js"></script>
+        </div>
+    </article>
+    <footer role="contentinfo">
+      Contact:
+    <a href="mailto:tom@chancho.dev">Email</a> or
+    <a href="tel:+14703802933">Call</a>
+    </footer>
+  </body>
+</html>
