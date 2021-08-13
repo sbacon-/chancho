@@ -1,42 +1,56 @@
 [
   {
+    "title":"JS Calculator",
+    "reference":"/Calculator.html",
+    "card":"/res/img/library/Calc.png",
+    "platform" : ["html"],
+    "navigation" : true
+  },
+  {
+    "title":"The Depths",
+    "reference":"/cSharp/Depths/",
+    "card":"/res/img/library/Depths.png",
+    "platform" : ["html"],
+    "navigation" : true
+  },
+  {
     "title":"Dolphin Jump Demo",
-    "reference":"/cSharp/DolphinJump",
+    "reference":"/cSharp/DolphinJump/",
     "card":"/res/img/library/Dolphin.png",
     "platform" : ["html"],
     "navigation" : true
   },
   {
     "title":"Sort Algorithm Visualizer",
-    "reference":"/cSharp/AlgoVisualizer",
+    "reference":"/cSharp/AlgoVisualizer/",
     "card":"/res/img/library/Sort.png",
     "platform" : ["html"],
     "navigation" : true
   },
   {
     "title":"Chancho's Unity Roundup 2k21 Remastered V",
-    "reference":"/cSharp/CUR2R5",
+    "reference":"/cSharp/CUR2R5/",
     "card":"/res/img/library/Cur2.png",
     "platform" : ["html"],
     "navigation" : true
   },
   {
     "title":"Shoot 'em Up Prototype",
-    "reference":"/cSharp/SHMUP",
+    "reference":"/cSharp/SHMUP/",
     "card":"/res/img/library/Shmup.png",
     "platform" : ["html"],
     "navigation" : true
   },
   {
     "title":"Algorithmic Maze Generator",
-    "reference":"/cSharp/MazeGenerator",
+    "reference":"/cSharp/MazeGenerator/",
     "card":"/res/img/library/Maze.png",
     "platform" : ["html"],
     "navigation" : true
   },
   {
     "title":"Lazy River Racing",
-    "reference":"/cSharp/LD47",
+    "reference":"/cSharp/LD47/",
     "card":"/res/img/library/River.png",
     "platform" : ["html"],
     "navigation" : false
@@ -57,7 +71,7 @@
   },
   {
     "title":"Catan",
-    "reference":"/cSharp/Catan",
+    "reference":"/cSharp/Catan/",
     "card":"/res/img/library/Catan.png",
     "platform" : ["html","java"],
     "navigation" : false

@@ -1,52 +1,69 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- CHANCHO.DEV -->
-  <title>Chancho.dev</title>
-  <link rel="icon" href="res/favicon.png">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- CHANCHO.DEV -->
+    <title>Chancho.dev</title>
+    <link rel="icon" href="/res/favicon.png">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=VT323&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=VT323&display=swap" rel="stylesheet">
 
-  <!-- CSS & JavaScript -->
-  <link rel="stylesheet" type="text/css" href='/res/styles/deStijl.css?v=1'>
-  <script type="text/javascript" src="/res/scripts/scripts.js"></script>
-  <script src="https://kit.fontawesome.com/f979a6de37.js" crossorigin="anonymous"></script>
+    <!-- CSS & JavaScript -->
+    <link rel="stylesheet" type="text/css" href='/res/styles/deStijl.css?v=1'>
+    <script type="text/javascript" src="/res/scripts/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/f979a6de37.js" crossorigin="anonymous"></script>
+    
 
-  <!--[if lt IE 9]>
-    <script src="styles/html5shiv.js"></script>
-  <![endif]-->
-  </head>
+    <!--[if lt IE 9]>
+      <script src="styles/html5shiv.js"></script>
+    <![endif]-->
+    </head>
   <body>
-    <header class="clearfix" role="banner">
-      <h1 id="sitename"><a href="/">CHANCHO<em>.dev</em></a></h1>
-      <h1><a href="https://github.com/sbacon-"><i class="fab fa-github" id="sitename" style="position:absolute;top:0px;right:0px;"></i></a></h1>
-      <nav role="navigation">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a onclick="displayNav()">Projects</a>
-        <div style="position:absolute"><span id='projects'>
-        </span></div></li>
-        <li><a href="/About.html">About</a></li>
-      </ul>
+    <header class="navBar" role="banner">
+      <!--Logo-->
+      <h1 class="nav-item logo">
+        <a href="/">CHANCHO<em>.dev</em></a>
+      </h1>
+      <!--Site Navigation-->
+      <nav role="navigation" class="nav-item">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="#" onclick="displayNav()">Projects</a></li>
+          <ol id='projects' class="nav-list"></ol>
+          <li><a href="/About.html">About</a></li>
+        </ul>
       </nav>
+      <!--Profiles-->
+      <h3 class="nav-item profiles ">
+        <a href="https://github.com/sbacon-" aria-label="GitHub">
+          <i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/TomChumley" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i></a>
+        <a href="https://stackoverflow.com/users/11916061/tom-chumley" aria-label="StackOverflow">
+          <i class="fab fa-stack-overflow"></i></a>
+      </h3>
+      <!--JS Target for <ol> of projects-->
     </header>
-    <article>
-    <h2>Bitcoin Exchange Rate</h2>
+    <article class="article-body"> 
+    <h3>Bitcoin Exchange Rate</h3><br>
+    <h4>Downloads:</h4>
+    <ul>
+      <li><a href="res/files/BTC.jar">BTC.jar</a></li>
+    </ul><br>
     <p>
-        <ul>Downloads:
-          <li><a href="res/files/BTC.jar">BTC.jar</a></li>
-        </ul><br>
-        This is a simple utility to fetch the current exchange rate of Bitcoin<br>
-        Can be run in a terminal using java -jar /path/to/BTC.jar<br>
-
-        All source code can be found here: <a href="https://github.com/sbacon-/BTC">source</a><br>
+      <strong>Note: This project is no longer being maintained and did not function last I checked</strong><br>
+      This is a simple utility to fetch the current exchange rate of Bitcoin<br>
+      Can be run in a terminal using java -jar /path/to/BTC.jar<br>
+      All source code can be found here: <a href="https://github.com/sbacon-/BTC">source</a><br>
     </p>
   </article>
   <footer role="contentinfo">
+    Contact:
+  <a href="mailto:tom@chancho.dev">Email</a> or
+  <a href="tel:+14703802933">Call</a>
   </footer>
   </body>
   <script type="text/javascript" src="styles/scripts.js"></script>

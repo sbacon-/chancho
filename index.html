@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- CHANCHO.DEV -->
     <title>Chancho.dev</title>
-    <link rel="icon" href="res/favicon.png">
+    <link rel="icon" href="/res/favicon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -15,49 +15,64 @@
     <link rel="stylesheet" type="text/css" href='/res/styles/deStijl.css?v=1'>
     <script type="text/javascript" src="/res/scripts/scripts.js"></script>
     <script src="https://kit.fontawesome.com/f979a6de37.js" crossorigin="anonymous"></script>
+    
 
     <!--[if lt IE 9]>
       <script src="styles/html5shiv.js"></script>
     <![endif]-->
     </head>
   <body>
-    <header class="clearfix" role="banner">
-      <h1 id="sitename"><a href="/">CHANCHO<em>.dev</em></a></h1>
-      <h1><a href="https://github.com/sbacon-"><i class="fab fa-github" id="sitename" style="position:absolute;top:0px;right:0px;"></i></a></h1>
-      <nav role="navigation">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a onclick="displayNav()">Projects</a>
-        <div style="position:absolute"><span id='projects'>
-        </span></div></li>
-        <li><a href="/About.html">About</a></li>
-      </ul>
+    <header class="navBar" role="banner">
+      <!--Logo-->
+      <h1 class="nav-item logo">
+        <a href="/">CHANCHO<em>.dev</em></a>
+      </h1>
+      <!--Site Navigation-->
+      <nav role="navigation" class="nav-item">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="#" onclick="displayNav()">Projects</a></li>
+          <ol id='projects' class="nav-list"></ol>
+          <li><a href="/About.html">About</a></li>
+        </ul>
       </nav>
+      <!--Profiles-->
+      <h3 class="nav-item profiles ">
+        <a href="https://github.com/sbacon-" aria-label="GitHub">
+          <i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/TomChumley" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i></a>
+        <a href="https://stackoverflow.com/users/11916061/tom-chumley" aria-label="StackOverflow">
+          <i class="fab fa-stack-overflow"></i></a>
+      </h3>
+      <!--JS Target for <ol> of projects-->
     </header>
-    <article>
-      <h2>Welcome Home!</h2>
-      <div id="library"></div>
-      <script src="res/scripts/genLib.js"></script>
-      <pre>
-        Latest Post: <a href="/cSharp/CUR2R5">Unity Roundup 2k21</a><br>
-        -03-28-21-<br>
-        ---<br>
-        <a href="/cSharp/SHMUP">Shoot 'Em Up Prototype</a> AKA Unity Roundup 2k20<br>
-        -10-01-20-<br>
-        Updated the <a href="cSharp/Catan">Catan page</a> to a unity version I was working on.<br>
-        -09-07-20-<br>
-        Uploaded a new branch of AMOEBA on github for <a href= "https://github.com/sbacon-/AMOEBA/tree/gizmo">Gizmo (a java robot for data entry)</a><br>
-        Changed Server to run off Windows 95 and edited the colors to reflect this change <br>
-        -08-24-20-<br>
-        In preparation for LD47. I made a Shoot 'Em Up Style game in 2 days<br>
-        with an emphasis on world design and game mechanics<br>
-        Very proud of how this one turned out
-        --<br>
-        Redisgned the site
-        Made it easier to add to nav
-      </pre>
+    <article class="article-body"> 
+      <h3>Site redesign is finally happening!</h3>
+      <p>
+        Decided to take a look at rebuilding the site.
+        Visibly not much has changed, but I decided to do some refresher courses on CSS; 
+        I determined that I should be using flex-displays as often as possible; rather than what this <a href="https://www.oreilly.com/library/view/css-the-definitive/9781449325053/">[O'Reily Book]</a> taught me back in 2019.
+        I've also got an upcoming redesign project for another website that I work on, so I though some practice couldn't hurt.
+        <br>
+        I haven't had much time to work on Unity projects; between my day-job and trying to get a new personal high-score in <em>Cookie Clicker</em>
+        (which has been made much easier with an old Java project of mine: <a href="/ClickBot.html">ClickBot</a>). I'll likely take some time
+        to revisit the Unity engine and C# in September; when LD49 is closer. I'm very excited, this will be my 5th consecutive time competing.
+        <br>
+        In the mean time I've got VBA code for my automation programs to push to Github, I've also got some Blender courses going on,
+        so I may post some renders here for a comparison when I do the 'refresher couses' in a few years (lol).
+        <br>
+        Enjoy your stay and feel free to reach me by <a href="mailto:tom@chancho.dev">email</a> or by the social links in the top right!    
+      </p>
+      <h3>Recent Projects</h3>
+      <!--LIBRARY-->
+      <ul id="library"></ul>
+      <script src="/res/scripts/genLib.js" async></script>
     </article>
-  <footer role="contentinfo">
-  </footer>
+    <footer role="contentinfo">
+      Contact:
+    <a href="mailto:tom@chancho.dev">Email</a> or
+    <a href="tel:+14703802933">Call</a>
+    </footer>
   </body>
 </html>

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- CHANCHO.DEV -->
     <title>Chancho.dev</title>
-    <link rel="icon" href="res/favicon.png">
+    <link rel="icon" href="/res/favicon.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,28 +14,40 @@
     <!-- CSS & JavaScript -->
     <link rel="stylesheet" type="text/css" href='/res/styles/deStijl.css?v=1'>
     <script type="text/javascript" src="/res/scripts/scripts.js"></script>
-    <link rel="stylesheet" href="TemplateData/style.css">
     <script src="https://kit.fontawesome.com/f979a6de37.js" crossorigin="anonymous"></script>
+    
 
     <!--[if lt IE 9]>
       <script src="styles/html5shiv.js"></script>
     <![endif]-->
     </head>
   <body>
-    <header class="clearfix" role="banner">
-      <h1 id="sitename"><a href="/">CHANCHO<em>.dev</em></a></h1>
-      <h1><a href="https://github.com/sbacon-"><i class="fab fa-github" id="sitename" style="position:absolute;top:0px;right:0px;"></i></a></h1>
-      <nav role="navigation">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a onclick="displayNav()">Projects</a>
-        <div style="position:absolute"><span id='projects'>
-        </span></div></li>
-        <li><a href="/About.html">About</a></li>
-      </ul>
+    <header class="navBar" role="banner">
+      <!--Logo-->
+      <h1 class="nav-item logo">
+        <a href="/">CHANCHO<em>.dev</em></a>
+      </h1>
+      <!--Site Navigation-->
+      <nav role="navigation" class="nav-item">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="#" onclick="displayNav()">Projects</a></li>
+          <ol id='projects' class="nav-list"></ol>
+          <li><a href="/About.html">About</a></li>
+        </ul>
       </nav>
+      <!--Profiles-->
+      <h3 class="nav-item profiles ">
+        <a href="https://github.com/sbacon-" aria-label="GitHub">
+          <i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/TomChumley" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i></a>
+        <a href="https://stackoverflow.com/users/11916061/tom-chumley" aria-label="StackOverflow">
+          <i class="fab fa-stack-overflow"></i></a>
+      </h3>
+      <!--JS Target for <ol> of projects-->
     </header>
-    <article>
+    <article class="article-body"> 
     <!--GAME TITLE-->
     <h2>Chancho's Unity Roundup 2k21 Remastered V</h2>
     <div class="center">
@@ -49,13 +59,11 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-mobile-warning">
-        WebGL builds are not supported on mobile devices.
-      </div>
+      <div id="unity-mobile-warning"></div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">CUR2R5</div>
+        <div id="unity-build-title"></div>
       </div>
     </div>
   </div>
@@ -117,5 +125,11 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
       };
       document.body.appendChild(script);
     </script>
+    </article>
+    <footer role="contentinfo">
+      Contact:
+    <a href="mailto:tom@chancho.dev">Email</a> or
+    <a href="tel:+14703802933">Call</a>
+    </footer>
   </body>
 </html>

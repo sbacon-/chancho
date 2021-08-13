@@ -3,11 +3,11 @@ function displayNav(){
 
   //IMPORT LIBRARY.JSON
   var request = new XMLHttpRequest();
-  request.open("GET","/res/scripts/library.json", false);
+  request.open("GET","./res/scripts/library.json", false);
   request.send(null);
   var library = JSON.parse(request.responseText);
 
-  var ol = document.createElement("OL");
+  var ol = element;
   for(s of library){
     if(!s.navigation)continue;
     var link = s.reference;
@@ -18,7 +18,6 @@ function displayNav(){
     a.text = text;
     ol.appendChild(li);
     li.appendChild(a);
-    element.appendChild(ol);
   }
   if(element.style.visibility=="visible"){
     element.style.visibility="hidden";

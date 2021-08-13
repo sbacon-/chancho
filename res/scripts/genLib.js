@@ -6,13 +6,12 @@ request.open("GET","/res/scripts/library.json", false);
 request.send(null);
 var library = JSON.parse(request.responseText);
 
-var ul = document.createElement("UL");
+var ul = element;
 for(t of library){
   var title = t.title;
   var link = t.reference;
   var src = t.card;
   var a = document.createElement("A");
-  var img = document.createElement("IMG");
   var li = document.createElement("LI");
   a.text = title;
   a.href = link;
@@ -20,4 +19,3 @@ for(t of library){
   li.appendChild(a);
   ul.appendChild(li);
 }
-element.appendChild(ul);

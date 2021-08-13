@@ -1,45 +1,58 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <!-- CHANCHO.DEV -->
-  <title>Chancho.dev</title>
-  <link rel="icon" href="res/favicon.png">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- CHANCHO.DEV -->
+    <title>Chancho.dev</title>
+    <link rel="icon" href="/res/favicon.png">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=VT323&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=VT323&display=swap" rel="stylesheet">
 
-  <!-- CSS & JavaScript -->
-  <link rel="stylesheet" type="text/css" href='/res/styles/deStijl.css?v=1'>
-  <script type="text/javascript" src="/res/scripts/scripts.js"></script>
-  <script src="https://kit.fontawesome.com/f979a6de37.js" crossorigin="anonymous"></script>
-  <!-- Legacy Unity Instance -->
-  <script src="Build/UnityProgress.js"></script>
-  <script src="Build/UnityLoader.js"></script>
-  <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Catan.json", {onProgress: UnityProgress});</script>
-
-  <!--[if lt IE 9]>
-    <script src="styles/html5shiv.js"></script>
-  <![endif]-->
-  </head>
+    <!-- CSS & JavaScript -->
+    <link rel="stylesheet" type="text/css" href='/res/styles/deStijl.css?v=1'>
+    <script type="text/javascript" src="/res/scripts/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/f979a6de37.js" crossorigin="anonymous"></script>
+    
+    <script src="Build/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Catan.json", {onProgress: UnityProgress});</script>
+    
+    <!--[if lt IE 9]>
+      <script src="styles/html5shiv.js"></script>
+    <![endif]-->
+    </head>
   <body>
-    <header class="clearfix" role="banner">
-      <h1 id="sitename"><a href="/">CHANCHO<em>.dev</em></a></h1>
-      <h1><a href="https://github.com/sbacon-"><i class="fab fa-github" id="sitename" style="position:absolute;top:0px;right:0px;"></i></a></h1>
-      <nav role="navigation">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a onclick="displayNav()">Projects</a>
-        <div style="position:absolute"><span id='projects'>
-        </span></div></li>
-        <li><a href="/About.html">About</a></li>
-      </ul>
+    <header class="navBar" role="banner">
+      <!--Logo-->
+      <h1 class="nav-item logo">
+        <a href="/">CHANCHO<em>.dev</em></a>
+      </h1>
+      <!--Site Navigation-->
+      <nav role="navigation" class="nav-item">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="#" onclick="displayNav()">Projects</a></li>
+          <ol id='projects' class="nav-list"></ol>
+          <li><a href="/About.html">About</a></li>
+        </ul>
       </nav>
+      <!--Profiles-->
+      <h3 class="nav-item profiles ">
+        <a href="https://github.com/sbacon-" aria-label="GitHub">
+          <i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/TomChumley" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i></a>
+        <a href="https://stackoverflow.com/users/11916061/tom-chumley" aria-label="StackOverflow">
+          <i class="fab fa-stack-overflow"></i></a>
+      </h3>
+      <!--JS Target for <ol> of projects-->
+
     </header>
-    <article>
-      <h2>CATAN (UNITY)</h2>
+    <article class="article-body"> 
+      <h3>CATAN (UNITY)</h3>
       <div class="center">
       <div class="webgl-content">
         <div id="unityContainer" style="width: 960px; height: 600px"></div>
@@ -51,26 +64,28 @@
       </div>
       </div>
       <p>
-        This is a better version of the remake of Settlers of Catan... It's still not very good though. <br>
-        A / D -> Rotate Camera <br>
-        Shift -> Get Dizzy <br>
+        This is a <del>better</del>(different) version of the Java remake of Settlers of Catan.
+        It was more an excercise in 3d modeling and programatic placement and rotation in Unity.<br>
+        <em>A / D -> Rotate Camera</em><br>
+        <em>Shift -> Get Dizzy </em><br>
       </p>
 
-      <h2>CATAN (Pre-Alpha)</h2>
-          <ul>Downloads:
-            <li><a href="/res/files/Catan.jar">Catan.jar a0.1.1</a></li>
-          </ul><br>
+      <h3>CATAN (Pre-Alpha)</h3><br>
+      <h4>Downloads:</h4>
+      <ul>
+        <li><a href="/res/files/Catan.jar">Catan.jar a0.1.1</a></li>
+      </ul><br>
           <p>
           This is my current pet project, it is a recreation of my favorite boardgame Settlers of Catan<br>
           Latest update 11/19 includes new development card toasts to show built cards, and a few more cosmetic updates.<br>
           There is still much to accomplish for this project, but so far it has been good practice in implementing Toasts & Buttons<br>
           All source code can be found here: <a href="https://github.com/sbacon-/Catan.git">source</a><br>
-          Screenshots<br>
+          <strong>Screenshots:</strong><br>
           <img src="/res/img/Catan_1.png">
           <img src="/res/img/Catan_2.png">
           <img src="/res/img/Catan_3.png"><br>
 
-          Planned Updates:<br>
+          <strong>TODO:</strong><br>
           Finishing Toasts<br>
           Add EndGame<br>
           Trade<br>
@@ -78,7 +93,10 @@
 
       </p>
     </article>
-  <footer role="contentinfo">
-  </footer>
+    <footer role="contentinfo">
+      Contact:
+    <a href="mailto:tom@chancho.dev">Email</a> or
+    <a href="tel:+14703802933">Call</a>
+    </footer>
   </body>
 </html>
