@@ -154,13 +154,12 @@ body{/*general rules*/
   text-align: center;
   text-decoration: underline;
   background-size: 100%;
-  color: rgba(255, 255, 255, 0);
+  color: rgba(0,0,0, 0);
 }
 #library a:hover{
   background-size: 0%;
   border: outset var(--secondary) 16px;
-  background-color: var(--primary);
-  color: rgb(255, 255, 255);
+  color: rgb(0,0,0);
 }
 
 /***
