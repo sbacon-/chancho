@@ -1,42 +1,68 @@
 const input = document.querySelector(".num-cash-input");
 const output = document.querySelector(".num-cash-output");
 
+//Update result whenever input is changed
 input.addEventListener('keyup', (e) =>{
     output.textContent = cashToWord(e.target.value);
 });
 
-cashToWord = function(number){
+cashToWord = function(number){//function called on input change
     let result="";
-    if(number>1_000_000){
-        result+=convertThree(number/1_000_000);
-        result+=" million ";
-        number%=1000000;
+
+    //Fixing the epsilon decimal non-sense
+    let dollars = Math.floor(number);
+    let cents = (number-dollars).toPrecision(2);
+    cents*=100;
+
+    //Base - number of zeros after the first digit
+    let base = 0;
+    while(10**base<=dollars){
+        base++;
     }
-    if(number>1_000){
-        result+=convertThree(number/1_000);
+
+    //Felt like it was excessive already.
+    if(base>=333) return "Limit: One Decicentillion [10^(333)]";
+    
+    //This will run until dollars are less than one million [10^(6)]
+    while(base>=6){ 
+        let exp = base-(base%3);//round exponent to the nearest -illion
+        let temp = convertThree(dollars/10**exp);
+        if(temp!="")result+=temp+" "+getBase(exp);//Skip ,000,
+        
+        dollars%=(10**exp);
+        base-=3;
+    }
+
+    //Thousands down to cents
+    if(dollars>=1_000){ 
+        result+=convertThree(dollars/1_000);
         result+=" thousand ";
-        number%=1000;
+        dollars%=1000;
     }
-    if(number>1){
-        result+=convertThree(number);
+    if(dollars>=1){
+        result+=convertThree(dollars);
         result+=" ";
-        number%=1;
+        dollars%=1;
     }
-    result+="dollars "
-    if(number!=0){
-        result+=convertThree(Math.round(number*100));
-        result+=" cents"
+    result+="dollars";
+    if(cents!=0){
+        result+=" ";
+        console.log(cents);
+        result+=convertThree(cents);
+        result+=" cents";
     }
 
     return result;
 
 }
 
-convertThree = function(number){
-    let result = ""
+convertThree = function(number){//Converts numbers into groups of hundreds
+    //Dictionaries (Included blank entry for ease of use)
     let dict = ["","one","two","three","four","five","six","seven","eight","nine"]
-    let dict_teens = ["","eleven","twelve","thir","four","fif","six","seven","eight","nine"]
-    let dict_tens = ["","ten","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"]
+    let dictTeens = ["","eleven","twelve","thir","four","fif","six","seven","eight","nine"]
+    let dictTens = ["","ten","twenty","thirty","fourty","fifty","sixty","seventy","eighty","ninety"]
+
+    let result = "";
 
     //Hundreds Place
     if(number>=100){
@@ -46,14 +72,14 @@ convertThree = function(number){
 
     //Teens Contingency
     if(number>10 && number<20){
-        result+=(dict_teens[Math.floor(number-10)])
-        if(number>=13) result+="teen"
+        result+=(dictTeens[Math.floor(number-10)]);
+        if(number>=13) result+="teen";
         return result;
     }
 
     //Tens
     if(number>=10){
-        result+=dict_tens[Math.floor(number/10)]+(number/10>1?"-":"");
+        result+=dictTens[Math.floor(number/10)]+((number/10>1) && Math.floor(number%10)>0?"-":"");
         number%=10;
     }
 
@@ -65,14 +91,39 @@ convertThree = function(number){
     return result;
 }
 
-clickToCopy = function(){
+getBase = function(number){//Takes the base and returns which -illion you're at
+    //Dictionaries (Included blank entry for ease of use)
+    let dictIllis = ["","dec","vigint","trigint","quadragint","quinquagint","sexagint","seuagint","octogint","nonagint","cent"];
+    let dictTens = ["","un","duo","tres","quatr","quin","se","septe","octo","nove"];
+    let dictOnes = ["","m","b","tr","qradr","quint","sext","sept","oct","non"];
+    
+    //This will make one million (6) index 1, billion (9) index 2 and so forth
+    number-=3;
+    number/=3;
+    
+    let result = "";
+    
+    //Teens Contingency
+    if(number>=10){
+        result+=dictTens[Math.floor(number%10)];
+        result+=dictIllis[Math.floor(number/10)];
+    }else{//Ones
+        result+=dictOnes[Math.floor(number)];
+    }
+    result+="illion ";
+
+    return result;
+}
+
+//I paste these into excel for my work, so it'd be helpful to just click and have it on the clipboard
+//Copy & Pasted from stack overflow
+clickToCopy = function(){ 
     let selection = window.getSelection();
     let range = document.createRange();
-    range.selectNodeContents(output);
+    range.selectNodeContents(output);//output is the html tag with the result
 
     selection.removeAllRanges();
     selection.addRange(range);
 
-    document.execCommand("copy");
+    document.execCommand("copy"); //I'll have to remember this one
 }
-
