@@ -1,7 +1,7 @@
 html{
   font-family: 'Roboto', Arial, sans-serif;
   font-family: 'VT323', Courier, monospace;
-  --primary: #40363D;
+  --primary:#40363D;
   --primary-highlight: #736573;
   --primary-dark:#000000;
   --secondary: #788C30;

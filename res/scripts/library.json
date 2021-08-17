@@ -1,4 +1,11 @@
 [
+   {
+    "title":"3:16 Metal Works",
+    "reference":"https://316metalworks.com/",
+    "card":"/res/img/library/316.png",
+    "platform" : ["html"],
+    "navigation" : true
+  },
   {
     "title":"JS Calculator",
     "reference":"/Calculator.html",
