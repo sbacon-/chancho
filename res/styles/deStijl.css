@@ -133,6 +133,16 @@ body{/*general rules*/
 /***
       Library
  ***/
+
+@keyframes expand-library{
+ from{width:240px;height:240px;}
+ to{width:300px;height:300px;}
+}
+@keyframes shrink-library{
+ from{width:300px;height:300px;}
+ to{width:240px;height:240px;}
+}
+
 #library{
   list-style-type: none;
   padding: 0;
@@ -155,11 +165,13 @@ body{/*general rules*/
   text-decoration: underline;
   background-size: 100%;
   color: rgba(0,0,0, 0);
+  animation: shrink-library 0.5s;
 }
 #library a:hover{
-  background-size: 0%;
+  background-color: rgba(0,0,0,0); 
+  width:300px;height:300px;
+  animation: expand-library 0.5s; 
   border: outset var(--secondary) 16px;
-  color: rgb(0,0,0);
 }
 
 /***
