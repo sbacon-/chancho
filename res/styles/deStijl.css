@@ -135,12 +135,14 @@ body{/*general rules*/
  ***/
 
 @keyframes expand-library{
- from{width:240px;height:240px;}
- to{width:300px;height:300px;}
+ 0%{width:240px;height:240px;margin:30px;}
+ 50%{width:240px;height:240px;margin:30px;}
+ 100%{width:300px;height:300px;margin:0;}
 }
 @keyframes shrink-library{
- from{width:300px;height:300px;}
- to{width:240px;height:240px;}
+ 0%{width:300px;height:300px;margin:0;}
+ 50%{width:300px;height:300px;margin:0;}
+ 100%{width:240px;height:240px;margin:30px;}
 }
 
 #library{
@@ -152,25 +154,27 @@ body{/*general rules*/
   justify-content: space-between;
 }
 #library li{
-  margin: 16px;
+  margin: 0;
 }
 #library a{
   border: outset var(--primary) 16px;
   display: inline-block;
   width: 240px;
   height: 240px;
+  margin: 30px;
   padding-top: 30px;
   overflow-wrap: break-word;
   text-align: center;
   text-decoration: underline;
   background-size: 100%;
   color: rgba(0,0,0, 0);
-  animation: shrink-library 0.5s;
+  animation: shrink-library 1s;
 }
 #library a:hover{
-  background-color: rgba(0,0,0,0); 
+  background-color: Rgba(0,0,0,0); 
   width:300px;height:300px;
-  animation: expand-library 0.5s; 
+  margin: 0px; 
+  animation: expand-library 1s;
   border: outset var(--secondary) 16px;
 }
 
