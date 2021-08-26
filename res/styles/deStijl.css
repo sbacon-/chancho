@@ -61,6 +61,7 @@ body{/*general rules*/
 .nav-list ol{/*Hidden Menu*/
   visibility: hidden;
   display: block;
+  z-index: 1;
   margin-top:61px;
 
   position: fixed;
@@ -135,14 +136,12 @@ body{/*general rules*/
  ***/
 
 @keyframes expand-library{
- 0%{width:240px;height:240px;margin:30px;}
- 50%{width:240px;height:240px;margin:30px;}
- 100%{width:300px;height:300px;margin:0;}
+ from{width:240px;height:240px;margin:30px;}
+ to{width:300px;height:300px;margin:0;}
 }
 @keyframes shrink-library{
- 0%{width:300px;height:300px;margin:0;}
- 50%{width:300px;height:300px;margin:0;}
- 100%{width:240px;height:240px;margin:30px;}
+ from{width:300px;height:300px;margin:0;}
+ to{width:240px;height:240px;margin:30px;}
 }
 
 #library{
