@@ -212,5 +212,9 @@ footer a{
   background-color: var(--tertiary-dark);
 }
 
+article .gallery{
+	width: 90%;
+	height: 90%;
+}
 /*LEGACY UNITY PROJECTS*/
 
