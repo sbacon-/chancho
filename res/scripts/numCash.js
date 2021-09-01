@@ -95,7 +95,7 @@ getBase = function(number){//Takes the base and returns which -illion you're at
     //Dictionaries (Included blank entry for ease of use)
     let dictIllis = ["","dec","vigint","trigint","quadragint","quinquagint","sexagint","seuagint","octogint","nonagint","cent"];
     let dictTens = ["","un","duo","tres","quatr","quin","se","septe","octo","nove"];
-    let dictOnes = ["","m","b","tr","qradr","quint","sext","sept","oct","non"];
+    let dictOnes = ["","m","b","tr","quadr","quint","sext","sept","oct","non"];
     
     //This will make one million (6) index 1, billion (9) index 2 and so forth
     number-=3;
