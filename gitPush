@@ -2,5 +2,6 @@
 
 git add .
 git commit -m "$1"
-git push
+gitToken
+git push && gsutil -m cp -r * gs://www.chancho.dev/
 
