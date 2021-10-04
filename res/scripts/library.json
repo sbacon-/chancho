@@ -1,10 +1,24 @@
 [
    {
+    "title":"Un-Named Stock Market Battle Simulator",
+    "reference":"/cSharp/LD49/",
+    "card":"/res/img/library/Stonk.png",
+    "platform" : ["html"],
+    "navigation" : false
+  },
+  {
+    "title":"Ressetti's Game",
+    "reference":"/cSharp/Ressetti/",
+    "card":"/res/img/library/Ressetti.png",
+    "platform" : ["html"],
+    "navigation" : false
+  },
+  {
     "title":"3:16 Metal Works",
     "reference":"https://316metalworks.com/",
     "card":"/res/img/library/316.png",
     "platform" : ["html"],
-    "navigation" : true
+    "navigation" : false
   },
   {
     "title":"JS Calculator",
@@ -18,14 +32,14 @@
     "reference":"/cSharp/Depths/",
     "card":"/res/img/library/Depths.png",
     "platform" : ["html"],
-    "navigation" : true
+    "navigation" : false
   },
   {
     "title":"Dolphin Jump Demo",
     "reference":"/cSharp/DolphinJump/",
     "card":"/res/img/library/Dolphin.png",
     "platform" : ["html"],
-    "navigation" : true
+    "navigation" : false
   },
   {
     "title":"Sort Algorithm Visualizer",
@@ -46,7 +60,7 @@
     "reference":"/cSharp/SHMUP/",
     "card":"/res/img/library/Shmup.png",
     "platform" : ["html"],
-    "navigation" : true
+    "navigation" : false
   },
   {
     "title":"Algorithmic Maze Generator",
