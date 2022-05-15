@@ -1,5 +1,19 @@
 [
    {
+    "title":"Hotel Lazarus",
+    "reference":"/cSharp/HotelLazarus/",
+    "card":"/res/img/library/Hotel.png",
+    "platform" : ["html"],
+    "navigation" : true
+  },
+   {
+    "title":"Wordle",
+    "reference":"/cSharp/Wordle/",
+    "card":"/res/img/library/Wordle.png",
+    "platform" : ["html"],
+    "navigation" : true
+  },
+   {
     "title":"Un-Named Stock Market Battle Simulator",
     "reference":"/cSharp/LD49/",
     "card":"/res/img/library/Stonk.png",

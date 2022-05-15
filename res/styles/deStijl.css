@@ -1,19 +1,20 @@
 html{
   font-family: 'Roboto', Arial, sans-serif;
   font-family: 'VT323', Courier, monospace;
-  --primary:#40363D;
-  --primary-highlight: #736573;
-  --primary-dark:#000000;
-  --secondary: #788C30;
-  --secondary-highlight: #B3BF56;
+  --primary: #333333; 
+  --primary-highlight: #333333;
+  --primary-dark:#3c3d65;
+  --secondary: #666666;
+  --secondary-highlight: #EBBD36;
   --secondary-dark: #000000;
-  --tertiary: #3366BB;
+  --tertiary: #EBBD36;
   --tertiary-highlight: #ffffff;
   --tertiary-dark: #68788C;
-  --neutral: #c2c2c2;
+  --neutral:#666666;
 
-  --backdrop: #1a2530;
+  --backdrop: #6667ab;
   --text: #ffffff;
+  --text-invert: #000000;
 
 }
 *{
@@ -25,7 +26,7 @@ html{
 body{/*general rules*/
   padding: none;
   font-family: 'Roboto',Arial, sans-serif;
-  background: linear-gradient(270deg, var(--backdrop) 0%, var(--neutral) 100%);
+  background: linear-gradient(0deg, var(--backdrop) 0%, var(--neutral) 100%);
   font-size: 1.5em;
   color: var(--text);
   max-width: 1248px;
@@ -78,6 +79,7 @@ body{/*general rules*/
 }
 .nav-list li a:hover{
   background-color: var(--secondary-highlight);
+  color: var(--text-invert);
   line-height: 100%;
   padding: inherit;
 }
@@ -96,15 +98,15 @@ body{/*general rules*/
       ARTICLE
  ***/
 .article-body{
-  background-color: var(--neutral);
+  background-color: var(--primary-dark);
   border: solid var(--primary) 5px;
   padding:32px 10%;
 }
 .article-body *{
-  color:var(--primary-dark);
+  color:var(--text);
 }
 .article-body p, .article-body pre{
-  color:var(--primary-dark);
+  color:var(--test);
   line-height: 1.5em;
   margin: 16px;
   text-align: left;
@@ -216,5 +218,4 @@ article .gallery{
 	width: 90%;
 	height: 90%;
 }
-/*LEGACY UNITY PROJECTS*/
 
