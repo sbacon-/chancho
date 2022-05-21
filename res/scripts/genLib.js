@@ -13,9 +13,14 @@ for(t of library){
   var src = t.card;
   var a = document.createElement("A");
   var li = document.createElement("LI");
-  a.text = title;
   a.href = link;
   a.style="background-image: url("+src+")";
-  li.appendChild(a);
-  ul.appendChild(li);
+  li.innerHTML = title;
+  a.appendChild(li);
+  ul.appendChild(a);
 }
+
+element.addEventListener("wheel", (evt) => {
+	evt.preventDefault();
+	element.scrollLeft += evt.deltaY;
+});

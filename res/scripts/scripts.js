@@ -12,12 +12,10 @@ function displayNav(){
     if(!s.navigation)continue;
     var link = s.reference;
     var text = s.title;
-    var li = document.createElement("LI");
     var a = document.createElement("A");
     a.href = link;
     a.text = text;
-    ol.appendChild(li);
-    li.appendChild(a);
+    ol.appendChild(a);
   }
   if(element.style.visibility=="visible"){
     element.style.visibility="hidden";
