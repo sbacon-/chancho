@@ -7,6 +7,7 @@ html{
   --complementary: #abaa66;
   --neutral:#333333;
   --neutral-dsat:#555555;
+  --backdrop: #6667ab;
 
   --text: #ffffff;
   --text-invert: #000000;
@@ -16,7 +17,7 @@ html{
   font-family: 'VT323', Courier, monospace;
   */ 
   height: 100vh;
-  background: var(--neutral-dsat);
+  background: linear-gradient(180deg, var(--backdrop) 0%, var(--neutral-dsat) 100%);
 }
 
 body{
@@ -37,7 +38,7 @@ body{
 .navBar{
   background: var(--neutral);
   font-family: 'VT323', Courier, monospace;
-  font-size: 1.5em;
+  font-size: 2.5ch;
   color: var(--text);
   height: 7%;
   display: flex;
@@ -59,6 +60,7 @@ body{
 
 /*logo*/
 .logo{
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,7 +158,7 @@ section{
   background-color: var(--primary-dsat);
 }
 
-section p{
+section pre, section p{
   padding: 32px;
 }
 
@@ -168,6 +170,7 @@ h1,h2,h3,h4,h5,h6{
 /***
 	NEW Library
 ***/
+
 #library{
   list-style-type: none;
   display: flex;
@@ -175,8 +178,10 @@ h1,h2,h3,h4,h5,h6{
 }
 
 #library a{
-  border: outset var(--secondary) 2vh;
+  border-color: var(--secondary);
   border-radius: 90px;
+  border-width: 2vh;
+  border-style: groove ridge ridge groove;
   margin: 0 3vh;
   background-size: 100%;
   text-decoration: none;
@@ -188,22 +193,21 @@ h1,h2,h3,h4,h5,h6{
 }
 
 #library a:hover{
-  border: outset var(--complementary) 2vh;
+  border-color: var(--complementary);
 }
 
 /***
 	WEB-GL
 ***/
 
-.web-gl{
+.feature{
+  height: 60%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  position: relative;
+}
+.feature *{
   margin: auto;
-  width: 960px;
-  height:640px;
-  padding: 10px;
-  background-color: var(--tertiary-dark);
 }
 
 /***
@@ -225,12 +229,12 @@ footer a{
 
 
 /*Mobile*/
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1280px){
   body{
     width:90%;	
   }
   .navBar{
-    font-size: 0.75em;
+    font-size: 2ch;
   }
   .nav-item{
     padding: 0px;

@@ -36,7 +36,7 @@
   },
   {
     "title":"JS Calculator",
-    "reference":"/Calculator.html",
+    "reference":"/misc/Calculator.html",
     "card":"/res/img/library/Calc.png",
     "platform" : ["html"],
     "navigation" : true
@@ -92,14 +92,14 @@
   },
   {
     "title":"IgKnight: Keeper of the Flame",
-    "reference":"/LD46.html",
+    "reference":"/misc/LD46.html",
     "card":"/res/img/library/Knight.png",
     "platform" : ["java"],
     "navigation" : false
   },
   {
     "title":"Nought - My First Ludum Dare Game",
-    "reference":"/LD45.html",
+    "reference":"/misc/LD45.html",
     "card":"/res/img/library/Nought.png",
     "platform" : ["java"],
     "navigation" : false
@@ -113,9 +113,16 @@
   },
   {
     "title":"Alfonso's IceCream Shop",
-    "reference":"/Alfonso.html",
+    "reference":"/misc/Alfonso.html",
     "card":"/res/img/library/Icecream.png",
     "platform" : ["java"],
     "navigation" : false
+  },
+  {
+    "title":"Archives",
+    "reference":"/misc/index.html",
+    "card":"/res/img/library/Archive.png",
+    "platform" : ["html"],
+    "navigation" : true
   }
 ]

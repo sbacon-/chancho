@@ -13,14 +13,14 @@
 
     <!-- CSS & JavaScript -->
     <link rel="stylesheet" type="text/css" href='/res/styles/deStijl.css?v=1'>
+    <link rel="stylesheet" type="text/css" href='/res/styles/calcStyle.css'>
     <script type="text/javascript" src="/res/scripts/scripts.js"></script>
     <script src="https://kit.fontawesome.com/f979a6de37.js" crossorigin="anonymous"></script>
-    
 
     <!--[if lt IE 9]>
       <script src="styles/html5shiv.js"></script>
     <![endif]-->
-    </head>
+  </head>
   <body>
     <header class="navBar" role="banner">
       <!--Logo-->
@@ -34,6 +34,7 @@
 	  <a href="#" onclick="displayNav()"><li>Projects</li></a>
           <a href="/About.html"><li>About</li></a>
         </ul>
+	<!--JS Target for <ol> of projects-->
         <ol id='projects'></ol>
       </nav>
       <!--Profiles-->
@@ -45,33 +46,34 @@
         <a href="https://stackoverflow.com/users/11916061/tom-chumley" aria-label="StackOverflow">
           <i class="fab fa-stack-overflow"></i></a>
       </h3>
-      <!--JS Target for <ol> of projects-->
     </header>
     <article class="article-body"> 
-    <section class="text">
-      <h3>Updates</h3>
-      <p>
-      Welcome to the new and improved Chancho.dev 3.0 - 
-      complete with a fresh coat of paint!!<br>
-      <br>
-      I've setup a server to host the site locally to allow for POST requests for
-      leaderboards and other PHP queries.
-      Excited to add new features and upcoming C++ projects. Don't touch that dial.<br>
-      <br>
-      On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em>
-      </p>
-    </section>
-    <section class="hScroll">
-      <!--LIBRARY-->
-      <ul id="library"></ul>
-      <script src="/res/scripts/genLib.js" async></script>
-    </section>
+<section class="text">
+<h3>Updates</h3>
+<pre>
+Welcome to the new & improved Chancho.dev 3.0
+Complete with a fresh coat of paint!!
+
+I've setup a server to host the site locally to allow for POST requests.
+This will allow me to create leader boards, and other PHP functionality.
+Excited to add new features and pages.
+
+I've also created a new C++ program that writes the HTML for me.
+Making it far easier to frequently add new content. So stay tuned.
+Check it out over on <a href="https://github.com/sbacon-/chancho"> gitHub </a>.
+On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em>
+</pre></section>
+
+<section class="hScroll">
+<ul id="library"></ul>
+<script src="/res/scripts/genLib.js" async></script></section>
+
     </article>
     <footer role="contentinfo">
       <div>
       Contact:
-    <a href="mailto:tom@chancho.dev">Email</a> or
-    <a href="tel:+14703802933">Call</a>
+	    <a href="mailto:tom@chancho.dev">Email</a> or
+	    <a href="tel:+14703802933">Call</a>
       </div>
     </footer>
   </body>

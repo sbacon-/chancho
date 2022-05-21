@@ -13,14 +13,14 @@
 
     <!-- CSS & JavaScript -->
     <link rel="stylesheet" type="text/css" href='/res/styles/deStijl.css?v=1'>
+    <link rel="stylesheet" type="text/css" href='/res/styles/calcStyle.css'>
     <script type="text/javascript" src="/res/scripts/scripts.js"></script>
     <script src="https://kit.fontawesome.com/f979a6de37.js" crossorigin="anonymous"></script>
-    
 
     <!--[if lt IE 9]>
       <script src="styles/html5shiv.js"></script>
     <![endif]-->
-    </head>
+  </head>
   <body>
     <header class="navBar" role="banner">
       <!--Logo-->
@@ -30,11 +30,12 @@
       <!--Site Navigation-->
       <nav role="navigation" class="nav-item">
         <ul class="nav-list">
-          <li><a href="/">Home</a></li>
-          <li><a href="#" onclick="displayNav()">Projects</a></li>
-          <ol id='projects' class="nav-list"></ol>
-          <li><a href="/About.html">About</a></li>
+          <a href="/"><li>Home</li></a>
+	  <a href="#" onclick="displayNav()"><li>Projects</li></a>
+          <a href="/About.html"><li>About</li></a>
         </ul>
+	<!--JS Target for <ol> of projects-->
+        <ol id='projects'></ol>
       </nav>
       <!--Profiles-->
       <h3 class="nav-item profiles ">
@@ -45,29 +46,35 @@
         <a href="https://stackoverflow.com/users/11916061/tom-chumley" aria-label="StackOverflow">
           <i class="fab fa-stack-overflow"></i></a>
       </h3>
-      <!--JS Target for <ol> of projects-->
     </header>
     <article class="article-body"> 
-      <h2>About Me</h2>
-        <p>
-          Hello, my name is Tom. I make games, automation utilites, and websites.
-          <br>
-          <img style="width:30%;" src="/res/img/me.jpg" alt="Handsome man in glasses shaped like hearts">
-          <br>
-          I taught myself to write Java programs 10+ years ago, and have loved it ever since.
-	  I recently picked up C++; I'm very excited to start making games/applications with such a flexible and functional language.
-          A few years ago, after some guidance from the Ludum Dare community, I decided to learn C# and the Unity Engine. I've participated in every compo since 45, and the results seem to improve with every entry.
-          I am familiar with a few other languages (Python, Kotlin, Python, JS, HTML/CSS, XML,and Visual Basic), but these I don't use so often.
-          I am available for freelance programming if you have something you would like built: websites, games, apps etc.
-          Check out the footer for contact info, and check out the my <a href="https://github.com/sbacon-">Github</a> page for tools/inspiration in automating your own projects.
-        </p>
-      </article>
-      <footer role="contentinfo">
-      Reach Out :|: <a href="mailto:tom@chancho.dev">tom@chancho.dev</a> :|: <a href="tel:+14703802933">(470)380-2933</a>
-      </footer>
+<section class="feature">
+<img style="width:30%;" src="/res/img/me.jpg" alt="Handsome man in glasses shaped like hearts">
+</section>
+<section class="text">
+<h2>About Me</h2>
+<p>
+Hello, my name is Tom. I make games, automation utilities, and websites.<br><br>
+I taught myself to write Java programs 10+ years ago, and have loved it ever since.<br>
+I recently picked up C++; I'm very excited to start making games/applications
+with such a flexible and functional language.<br><br>
+A few years ago, after some guidance from the Ludum Dare community, I decided to learn C# and the Unity Engine.
+I've participated in every compo since 45, and the results seem to improve with every entry.
+I am familiar with a few other languages (Python, Kotlin, Python, JS, HTML/CSS, XML,and Visual Basic),
+but these I don't use so often.<br><br>
+I am available for freelance programming if you have something you would like built: 
+websites, games, apps etc. Check out the footer for contact info, 
+and check out the my Github page for tools/inspiration in automating your own projects.
+</p>
+</section>
+
+    </article>
+    <footer role="contentinfo">
+      <div>
+      Contact:
+	    <a href="mailto:tom@chancho.dev">Email</a> or
+	    <a href="tel:+14703802933">Call</a>
+      </div>
+    </footer>
   </body>
-  <script type="text/javascript" src="styles/scripts.js"></script>
-  <!--[if lt IE 9]>
-    <script src="styles/html5shiv.js"></script>
-  <![endif]-->
 </html>
