@@ -1,0 +1,20 @@
+<section class="text">
+<h3>Updates</h3>
+<pre>
+Welcome to the new & improved Chancho.dev 3.0
+Complete with a fresh coat of paint!!
+
+I've setup a server to host the site locally to allow for POST requests.
+This will allow me to create leader boards, and other PHP functionality.
+Excited to add new features and pages.
+
+I've also created a new C++ program that writes the HTML for me.
+Making it far easier to frequently add new content. So stay tuned.
+Check it out over on <a href="https://github.com/sbacon-/chancho"> gitHub </a>.
+On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em>
+</pre></section>
+
+<section class="hScroll">
+<ul id="library"></ul>
+<script src="/res/scripts/genLib.js" async></script></section>
+

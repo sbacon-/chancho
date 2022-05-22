@@ -1,0 +1,20 @@
+<section class="feature">
+    <h3>Digitizer</h3><br>
+    <h4>Downloads:</h4>
+    <ul>
+      <li><a href="https://github.com/sbacon-/Digitizer">Source Code</a></li>
+      <li><a href="https://developer.android.com/studio/command-line/adb">Android Debug Bridge</a></li>
+    </ul>
+    <p>
+        
+        <br>
+        This is a tool I created to turn an old phone into a drawing tablet.<br>
+        The current functionality only allows for stylus input<br>
+        Haven't made an app in a while so it's pretty bare bones<br>
+        Currently Requires the Android Debug Bridge and you need to alter<br>
+        the PC client source code to the proper directory<br>
+        <strong>Update: 08/09/21</strong><br>
+        I bought a Wacom tablet... It was like 20 USD
+    </p>
+</section>
+

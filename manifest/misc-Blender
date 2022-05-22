@@ -1,0 +1,21 @@
+<section class="feature">
+<h2>Blends</h2>
+        <p>
+		<img class="gallery" src="/res/img/blend/enclosure.png"><br>
+		<img class="gallery" src="/res/img/blend/plant.png"><br>
+		<img class="gallery" src="/res/img/blend/vase.png"><br>
+		<video controls="controls" width="800" height="600" name="Video Name">
+ 			<source src="/res/img/blend/run.mov">
+		</video>
+		<img class="gallery" src="/res/img/blend/skeleton.png"><br>
+		<img class="gallery" src="/res/img/blend/skeletonRef.png"><br>
+		<img class="gallery" src="/res/img/blend/rename.png"><br>
+		<img class="gallery" src="/res/img/blend/renameRef.png"><br>
+		<img class="gallery" src="/res/img/blend/magic.png"><br>
+		<img class="gallery" src="/res/img/blend/office.png"><br>
+		<video controls="controls" width="800" height="600" name="Video Name">
+ 			<source src="/res/img/blend/donut.mov">
+		</video>
+        </p>
+</section>
+

@@ -1,0 +1,88 @@
+<section class="feature">
+ <h3>Javascript Calculator</h3>
+      <div id="calculator">
+        <div class="calc-display calc-row">0</div>
+        <div class="calc-row">
+          <button class="calc-button calc-wide" onclick="clearContent()">CE</button>
+          <button class="calc-button" onclick="backspace()">←</button>
+          <button class="calc-button" onclick="flushToMemory(`divide`)">÷</button></div>
+        <div class="calc-row">
+          <button class="calc-button" onclick="appendContent(`7`)">7</button>
+          <button class="calc-button" onclick="appendContent(`8`)">8</button>
+          <button class="calc-button" onclick="appendContent(`9`)">9</button>
+          <button class="calc-button" onclick="flushToMemory(`multiply`)">x</button></div>
+        <div class="calc-row">
+          <button class="calc-button" onclick="appendContent(`4`)">4</button>
+          <button class="calc-button" onclick="appendContent(`5`)">5</button>
+          <button class="calc-button" onclick="appendContent(`6`)">6</button>
+          <button class="calc-button" onclick="flushToMemory(`subtract`)">-</button></div>
+        <div class="calc-row">
+          <button class="calc-button" onclick="appendContent(`1`)">1</button>
+          <button class="calc-button" onclick="appendContent(`2`)">2</button>
+          <button class="calc-button" onclick="appendContent(`3`)">3</button>
+          <button class="calc-button" onclick="flushToMemory(`add`)">+</button></div>
+        <div class="calc-row">
+          <button class="calc-button calc-wide" onclick="appendContent(`0`)">0</button>
+          <button class="calc-button" onclick="appendContent(`.`)">.</button>
+          <button class="calc-button" onclick="calculate()">=</button>
+        </div>
+      </div>
+      <script type="text/javascript" src="/res/scripts/calc.js"></script>
+</section>
+<section class="text">
+      <p> Made this as part of a <a href="https://frontendmasters.com/courses/web-development-v2"/>course in web-dev</a></p>
+      <p> Also made an automation tool for <a href="/misc/NumToWord.html"/>currency to word conversion</a></p>
+      <h3>calc.js</h3>
+      <pre>
+console.log("|--- Hello! ---|")
+let memory = 0;
+let task = "na"
+let newNumber = true;
+let display = document.querySelectorAll(".calc-display.calc-row");
+
+function clearContent(){
+    display[0].innerHTML="0";
+};
+
+function appendContent(number){
+    if((number!=='.'&&display[0].innerHTML==0)||newNumber) display[0].innerHTML="";
+    display[0].innerHTML+=number;
+    newNumber=false;
+}
+
+function flushToMemory(request){
+    memory = parseFloat(display[0].innerHTML);
+    task=request;
+    newNumber=true;
+}
+
+function calculate(){
+    let active = parseFloat(display[0].innerHTML);
+    switch(task){
+        case `add`:
+            display[0].innerHTML= memory+active;
+            break;
+        case `subtract`:
+            display[0].innerHTML= memory-active;
+            break;
+        case `multiply`:
+            display[0].innerHTML= memory*active;
+            break;
+        case `divide`:
+            display[0].innerHTML= memory/active;
+            break;
+        default:
+            display[0].innerHTML="Error: CE";
+            task='na';
+            break;
+    }
+    newNumber=true;
+}
+
+function backspace(){
+    display[0].innerHTML=display[0].innerHTML.substr(0,display[0].innerHTML.length-1);
+}
+
+      </pre>
+</section>
+
