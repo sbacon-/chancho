@@ -1,10 +1,8 @@
-<section class="feature">
-<img style="width:30%;" src="/res/img/me.jpg" alt="Handsome man in glasses shaped like hearts">
-</section>
-<section class="text">
+<section class="full">
 <h2>About Me</h2>
 <p>
 Hello, my name is Tom. I make games, automation utilities, and websites.<br><br>
+<img style="width:30%;" src="/res/img/me.jpg" alt="Handsome man in glasses shaped like hearts"><br>
 I taught myself to write Java programs 10+ years ago, and have loved it ever since.<br>
 I recently picked up C++; I'm very excited to start making games/applications
 with such a flexible and functional language.<br><br>

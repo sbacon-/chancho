@@ -1,5 +1,4 @@
 <section class="feature">
-  <!--GAME TITLE-->
   <div class="center">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -19,7 +18,6 @@
   </div>
 </section>
 <section class="text">
-  <!--GAME TEXT-->
   <h2>Ressetti's Game</h2>
   <p>
   <h4>Text Recieved w/ Concept : 1:17AM;</h4>

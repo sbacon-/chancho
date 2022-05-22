@@ -1,5 +1,4 @@
 <section class="feature">
-<!--GAME TITLE-->
     <div class="center">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -19,7 +18,6 @@
   </div>
 </section>
 <section class="text">
-    <!--GAME TEXT-->
   <p>
     <h2>Chancho's Unity Roundup 2k21 Remastered V</h2>
 It's that time of year again. Time to gear up and be ready for the most intense 48 to 72 hours imaginable.

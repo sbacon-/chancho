@@ -1,5 +1,4 @@
 <section class="feature">
- <!--GAME TITLE-->
   <div class="center">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -19,7 +18,6 @@
   </div>
 </section>
 <section class="text">
-  <!--GAME TEXT-->
   <h2>Un-Named Stock Market Battle Simulator</h2>
   
   <h4>Created in 48 hours for Ludum Dare #49</h4><br>

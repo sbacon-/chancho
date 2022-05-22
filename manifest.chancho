@@ -1,4 +1,4 @@
----/cSharp/AlgoVisualizer/index
+---cSharp/AlgoVisualizer/index
 <section class="feature">
 <!--GAME TITLE-->
     <div class="center">
@@ -129,9 +129,8 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
 
 
 
----/cSharp/LD49/index
+---cSharp/LD49/index
 <section class="feature">
- <!--GAME TITLE-->
   <div class="center">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -151,7 +150,6 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
   </div>
 </section>
 <section class="text">
-  <!--GAME TEXT-->
   <h2>Un-Named Stock Market Battle Simulator</h2>
   
   <h4>Created in 48 hours for Ludum Dare #49</h4><br>
@@ -230,9 +228,8 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
 
 
 
----/cSharp/Wordle/index
+---cSharp/Wordle/index
 <section class="feature">
-<!--GAME TITLE-->
   <div class="center">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -253,7 +250,6 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
 </section>
 <section class="text">
   <h2>Wordle</h2>
-  <!--GAME TEXT-->
   <p>
   <h4>Created in 48 hours in preparation for Ludum Dare #50</h4>
   Recently started playing <a href=https://www.nytimes.com/games/wordle/index.html>Wordle</a><br>
@@ -314,9 +310,8 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
 
 
 
----/cSharp/Ressetti/index
+---cSharp/Ressetti/index
 <section class="feature">
-  <!--GAME TITLE-->
   <div class="center">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -336,7 +331,6 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
   </div>
 </section>
 <section class="text">
-  <!--GAME TEXT-->
   <h2>Ressetti's Game</h2>
   <p>
   <h4>Text Recieved w/ Concept : 1:17AM;</h4>
@@ -396,7 +390,7 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
 
 
 
----/cSharp/SHMUP/index
+---cSharp/SHMUP/index
 <section class="feature">
  <!-- Legacy Unity Instance -->
   <script src="Build/UnityProgress.js"></script>
@@ -426,14 +420,12 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
 
 
 
----/About
-<section class="feature">
-<img style="width:30%;" src="/res/img/me.jpg" alt="Handsome man in glasses shaped like hearts">
-</section>
-<section class="text">
+---About
+<section class="full">
 <h2>About Me</h2>
 <p>
 Hello, my name is Tom. I make games, automation utilities, and websites.<br><br>
+<img style="width:30%;" src="/res/img/me.jpg" alt="Handsome man in glasses shaped like hearts"><br>
 I taught myself to write Java programs 10+ years ago, and have loved it ever since.<br>
 I recently picked up C++; I'm very excited to start making games/applications
 with such a flexible and functional language.<br><br>
@@ -449,7 +441,7 @@ and check out the my Github page for tools/inspiration in automating your own pr
 
 
 
----/cSharp/LD47/index
+---cSharp/LD47/index
 <section class="feature">
 <!-- Legacy Unity Instance -->
       <script src="Build/UnityProgress.js"></script>
@@ -495,9 +487,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
 
 
 
----/cSharp/DolphinJump/index
+---cSharp/DolphinJump/index
 <section class="feature">
-<!--GAME TITLE-->
   <h2>DolphinJump</h2>
   <div class="center">
     <div id="unity-container" class="unity-desktop">
@@ -518,7 +509,6 @@ and check out the my Github page for tools/inspiration in automating your own pr
   </div>
 </section>
 <section class="text">
-  <!--GAME TEXT-->
   <p>
 
     Went and got a 3D printer this week so I made a game out of a model I made to print. T-minus 5 days to Ludum Dare 48!<br>
@@ -579,8 +569,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
 
 
 
----/misc/ClickBot
-<section class="feature">
+---misc/ClickBot
+<section class="full">
 <h3>ClickBot</h3><br>
     <h4>Downloads:</h4>
     <ul>
@@ -601,7 +591,7 @@ and check out the my Github page for tools/inspiration in automating your own pr
 
 
 
----/cSharp/MazeGenerator/index
+---cSharp/MazeGenerator/index
 <section class="feature">
 <!-- Legacy Unity Instance -->
   <script src="Build/UnityProgress.js"></script>
@@ -631,9 +621,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
 
 
 
----/cSharp/CUR2R5/index
+---cSharp/CUR2R5/index
 <section class="feature">
-<!--GAME TITLE-->
     <div class="center">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -653,7 +642,6 @@ and check out the my Github page for tools/inspiration in automating your own pr
   </div>
 </section>
 <section class="text">
-    <!--GAME TEXT-->
   <p>
     <h2>Chancho's Unity Roundup 2k21 Remastered V</h2>
 It's that time of year again. Time to gear up and be ready for the most intense 48 to 72 hours imaginable.
@@ -716,8 +704,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
 
 
----/misc/LD46
-<section class="feature">
+---misc/LD46
+<section class="full">
 <h3>Ludum Dare 46 (IGKNIGHT)</h3><br>
     <h4>Downloads:</h4>
     <ul>
@@ -757,9 +745,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
 
 
----/cSharp/Depths/index
+---cSharp/Depths/index
 <section class="feature">
-<!--GAME TITLE-->
   <div class="center">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -779,7 +766,6 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
   </div>
 </section>
 <section class="text">
-  <!--GAME TEXT-->
   <h2>The Depths</h2>
   <h3><a href="/res/files/DepthsULTIMATEXII.zip">WINDOWS STANDALONE VERION</a></br></h3>
   <p>
@@ -808,37 +794,37 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
       The Code is as follows:
       <code><br>
         float layerZ = 0;<br>
-        foreach(Sprite s in level){<em style="color:green">//Serialized list of sprites, next time I'll likely use one large sprite and calculate which portions to use</em><br>
-            layerZ++;<em style="color:green">//Only used 5 layers, but didn't know if I wanted to add more depth</em><br>
-            levelColors=s.texture.GetPixels32();<em style="color:green">//STORES THE SPRITE AS AN ARRAY OF PIXELS</em><br>
+        foreach(Sprite s in level){<em style="color:chartreuse">//Serialized list of sprites, next time I'll likely use one large sprite and calculate which portions to use</em><br>
+            layerZ++;<em style="color:chartreuse">//Only used 5 layers, but didn't know if I wanted to add more depth</em><br>
+            levelColors=s.texture.GetPixels32();<em style="color:chartreuse">//STORES THE SPRITE AS AN ARRAY OF PIXELS</em><br>
             for(int y = 0; y&lt;s.rect.height; y++){<br>
                 for(int x = 0; x&lt;s.rect.width; x++){<br>
                 Color32 c = levelColors[(int)(x+y*s.rect.width)];<br>
-                Vector3 pos = new Vector3(x*2,y*2,layerZ*2);<em style="color:green">//THE TERRAIN BLOCKS WERE ALL 2m<sup>3</sup></em><br>
+                Vector3 pos = new Vector3(x*2,y*2,layerZ*2);<em style="color:chartreuse">//THE TERRAIN BLOCKS WERE ALL 2m<sup>3</sup></em><br>
                 <br>
-                <em style="color:green">//REALIZING NOW THIS WOULD HAVE BEEN MORE EFFICIENT AS A SWITCH STATEMENT</em><br>
+                <em style="color:chartreuse">//REALIZING NOW THIS WOULD HAVE BEEN MORE EFFICIENT AS A SWITCH STATEMENT</em><br>
                     if(CompareColor(c,black)){<br>
                         GameObject go = Instantiate(blockPrefab,pos,Quaternion.identity);<br>
-                        <em style = "color:green">//Block Prefab if the pixel is black</em><br>
+                        <em style = "color:chartreuse">//Block Prefab if the pixel is black</em><br>
                     }<br>
                     else if(CompareColor(c,gray4)){<br>
                         GameObject go = Instantiate(platPrefab,pos,Quaternion.identity);<br>
-                        <em style = "color:green">//Vine Prefab</em><br>
+                        <em style = "color:chartreuse">//Vine Prefab</em><br>
                     } else if(CompareColor(c,cyan)){<br>
                         GameObject go = Instantiate(guardPrefab,pos,Quaternion.identity);<br>
-                        <em style = "color:green">//This was a transparent block to keep the enemies on their platforms</em><br>
+                        <em style = "color:chartreuse">//This was a transparent block to keep the enemies on their platforms</em><br>
                     }<br>
                     else if(CompareColor(c,yellow)){<br>
                         GameObject go = Instantiate(coinPrefab,pos,Quaternion.identity);<br>
-                        <em style = "color:green">//Coins</em><br>
+                        <em style = "color:chartreuse">//Coins</em><br>
                     } <br>
                     else if (CompareColor(c, red)) {<br>
                         GameObject go = Instantiate(enemyPrefab, pos, Quaternion.identity);<br>
-                        <em style = "color:green">//Enemy-namely Gators</em><br>
+                        <em style = "color:chartreuse">//Enemy-namely Gators</em><br>
                     } <br>
-                    else if (CompareColor(c, green)) {<br>
+                    else if (CompareColor(c, chartreuse)) {<br>
                         GameObject go = Instantiate(sharkPrefab, pos, Quaternion.identity);<br>
-                        <em style = "color:green">//Sharks or meteors on the space lvl</em><br>
+                        <em style = "color:chartreuse">//Sharks or meteors on the space lvl</em><br>
                     ...<br>
       </code>
       Thanks to this technique I was able to do way more levels than I anticipated: didn't get to all of them<br>
@@ -914,7 +900,7 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
 
 
----/index
+---index
 <section class="text">
 <h3>Updates</h3>
 <pre>
@@ -937,7 +923,7 @@ On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em>
 
 
 
----/misc/Calculator
+---misc/Calculator
 <section class="feature">
  <h3>Javascript Calculator</h3>
       <div id="calculator">
@@ -1028,8 +1014,8 @@ function backspace(){
 
 
 
----/misc/Digitizer
-<section class="feature">
+---misc/Digitizer
+<section class="full">
     <h3>Digitizer</h3><br>
     <h4>Downloads:</h4>
     <ul>
@@ -1051,8 +1037,8 @@ function backspace(){
 
 
 
----/misc/NumToWord
-<section class="feature">
+---misc/NumToWord
+<section class="full">
        <h5>Numbers to Word Calculator</h5>
         <p>Enter a number to convert to dollars and cents. Click to Copy!<br>
         </p>
@@ -1074,8 +1060,8 @@ function backspace(){
 </section>
 
 
----/misc/BTC
-<section class="feature">
+---misc/BTC
+<section class="full">
 <h3>Bitcoin Exchange Rate</h3><br>
     <h4>Downloads:</h4>
     <ul>
@@ -1091,8 +1077,8 @@ function backspace(){
 
 
 
----/misc/index
-<section class="feature">
+---misc/index
+<section class="full">
 <h2>Archives</h2>
     <pre>
         <a href="/misc/Alfonso.html">Alfonso</a>
@@ -1109,7 +1095,7 @@ function backspace(){
 
 
 
----/cSharp/HotelLazarus/index
+---cSharp/HotelLazarus/index
 <section class="feature">
 
 <div class="center">
@@ -1233,8 +1219,8 @@ See y'all in October
 
 
 
----/misc/Alfonso
-<section class="feature">
+---misc/Alfonso
+<section class="full">
     <h3>Alfonso's Ice Cream Shop</h3>
     <br>
     <h4>Downloads:</h4>
@@ -1259,7 +1245,7 @@ See y'all in October
 
 
 
----/cSharp/Catan/index
+---cSharp/Catan/index
 <section class="feature">
       <div class="center">
       <div class="webgl-content">
@@ -1307,20 +1293,17 @@ See y'all in October
 
 
 
----/misc/Blender
-<section class="feature">
+---misc/Blender
+<section class="full">
 <h2>Blends</h2>
         <p>
-		<img class="gallery" src="/res/img/blend/enclosure.png"><br>
-		<img class="gallery" src="/res/img/blend/plant.png"><br>
-		<img class="gallery" src="/res/img/blend/vase.png"><br>
 		<video controls="controls" width="800" height="600" name="Video Name">
  			<source src="/res/img/blend/run.mov">
 		</video>
 		<img class="gallery" src="/res/img/blend/skeleton.png"><br>
 		<img class="gallery" src="/res/img/blend/skeletonRef.png"><br>
-		<img class="gallery" src="/res/img/blend/rename.png"><br>
-		<img class="gallery" src="/res/img/blend/renameRef.png"><br>
+		<img class="gallery" src="/res/img/blend/shelf.png"><br>
+		<img class="gallery" src="/res/img/blend/shelfRef.png"><br>
 		<img class="gallery" src="/res/img/blend/magic.png"><br>
 		<img class="gallery" src="/res/img/blend/office.png"><br>
 		<video controls="controls" width="800" height="600" name="Video Name">
@@ -1331,8 +1314,8 @@ See y'all in October
 
 
 
----/misc/LD45
-<section class="feature">
+---misc/LD45
+<section class="full">
 <h3>Ludum Dare 45 (NOUGHT)</h3><br>
     <h4>Downloads:</h4>
     <ul>

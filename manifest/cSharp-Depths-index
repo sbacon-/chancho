@@ -1,5 +1,4 @@
 <section class="feature">
-<!--GAME TITLE-->
   <div class="center">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -19,7 +18,6 @@
   </div>
 </section>
 <section class="text">
-  <!--GAME TEXT-->
   <h2>The Depths</h2>
   <h3><a href="/res/files/DepthsULTIMATEXII.zip">WINDOWS STANDALONE VERION</a></br></h3>
   <p>
@@ -48,37 +46,37 @@
       The Code is as follows:
       <code><br>
         float layerZ = 0;<br>
-        foreach(Sprite s in level){<em style="color:green">//Serialized list of sprites, next time I'll likely use one large sprite and calculate which portions to use</em><br>
-            layerZ++;<em style="color:green">//Only used 5 layers, but didn't know if I wanted to add more depth</em><br>
-            levelColors=s.texture.GetPixels32();<em style="color:green">//STORES THE SPRITE AS AN ARRAY OF PIXELS</em><br>
+        foreach(Sprite s in level){<em style="color:chartreuse">//Serialized list of sprites, next time I'll likely use one large sprite and calculate which portions to use</em><br>
+            layerZ++;<em style="color:chartreuse">//Only used 5 layers, but didn't know if I wanted to add more depth</em><br>
+            levelColors=s.texture.GetPixels32();<em style="color:chartreuse">//STORES THE SPRITE AS AN ARRAY OF PIXELS</em><br>
             for(int y = 0; y&lt;s.rect.height; y++){<br>
                 for(int x = 0; x&lt;s.rect.width; x++){<br>
                 Color32 c = levelColors[(int)(x+y*s.rect.width)];<br>
-                Vector3 pos = new Vector3(x*2,y*2,layerZ*2);<em style="color:green">//THE TERRAIN BLOCKS WERE ALL 2m<sup>3</sup></em><br>
+                Vector3 pos = new Vector3(x*2,y*2,layerZ*2);<em style="color:chartreuse">//THE TERRAIN BLOCKS WERE ALL 2m<sup>3</sup></em><br>
                 <br>
-                <em style="color:green">//REALIZING NOW THIS WOULD HAVE BEEN MORE EFFICIENT AS A SWITCH STATEMENT</em><br>
+                <em style="color:chartreuse">//REALIZING NOW THIS WOULD HAVE BEEN MORE EFFICIENT AS A SWITCH STATEMENT</em><br>
                     if(CompareColor(c,black)){<br>
                         GameObject go = Instantiate(blockPrefab,pos,Quaternion.identity);<br>
-                        <em style = "color:green">//Block Prefab if the pixel is black</em><br>
+                        <em style = "color:chartreuse">//Block Prefab if the pixel is black</em><br>
                     }<br>
                     else if(CompareColor(c,gray4)){<br>
                         GameObject go = Instantiate(platPrefab,pos,Quaternion.identity);<br>
-                        <em style = "color:green">//Vine Prefab</em><br>
+                        <em style = "color:chartreuse">//Vine Prefab</em><br>
                     } else if(CompareColor(c,cyan)){<br>
                         GameObject go = Instantiate(guardPrefab,pos,Quaternion.identity);<br>
-                        <em style = "color:green">//This was a transparent block to keep the enemies on their platforms</em><br>
+                        <em style = "color:chartreuse">//This was a transparent block to keep the enemies on their platforms</em><br>
                     }<br>
                     else if(CompareColor(c,yellow)){<br>
                         GameObject go = Instantiate(coinPrefab,pos,Quaternion.identity);<br>
-                        <em style = "color:green">//Coins</em><br>
+                        <em style = "color:chartreuse">//Coins</em><br>
                     } <br>
                     else if (CompareColor(c, red)) {<br>
                         GameObject go = Instantiate(enemyPrefab, pos, Quaternion.identity);<br>
-                        <em style = "color:green">//Enemy-namely Gators</em><br>
+                        <em style = "color:chartreuse">//Enemy-namely Gators</em><br>
                     } <br>
-                    else if (CompareColor(c, green)) {<br>
+                    else if (CompareColor(c, chartreuse)) {<br>
                         GameObject go = Instantiate(sharkPrefab, pos, Quaternion.identity);<br>
-                        <em style = "color:green">//Sharks or meteors on the space lvl</em><br>
+                        <em style = "color:chartreuse">//Sharks or meteors on the space lvl</em><br>
                     ...<br>
       </code>
       Thanks to this technique I was able to do way more levels than I anticipated: didn't get to all of them<br>

@@ -1,5 +1,4 @@
 <section class="feature">
-<!--GAME TITLE-->
   <div class="center">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -20,7 +19,6 @@
 </section>
 <section class="text">
   <h2>Wordle</h2>
-  <!--GAME TEXT-->
   <p>
   <h4>Created in 48 hours in preparation for Ludum Dare #50</h4>
   Recently started playing <a href=https://www.nytimes.com/games/wordle/index.html>Wordle</a><br>

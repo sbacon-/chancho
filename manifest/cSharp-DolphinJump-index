@@ -1,5 +1,4 @@
 <section class="feature">
-<!--GAME TITLE-->
   <h2>DolphinJump</h2>
   <div class="center">
     <div id="unity-container" class="unity-desktop">
@@ -20,7 +19,6 @@
   </div>
 </section>
 <section class="text">
-  <!--GAME TEXT-->
   <p>
 
     Went and got a 3D printer this week so I made a game out of a model I made to print. T-minus 5 days to Ludum Dare 48!<br>

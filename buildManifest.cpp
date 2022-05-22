@@ -15,7 +15,7 @@ int main(){
 		
 		std::string file_path {entry.path()};	
 		std::replace(file_path.begin(),file_path.end(),'-','/');
-		file_path = "---"+file_path.substr(folder_path.size());
+		file_path = "---"+file_path.substr(folder_path.size()+1);
 		outf<<file_path<<'\n';
 
 		std::ifstream inf {entry.path()};
