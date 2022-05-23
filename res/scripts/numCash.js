@@ -126,4 +126,5 @@ clickToCopy = function(){
     selection.addRange(range);
 
     document.execCommand("copy"); //I'll have to remember this one
+    selection.removeAllRanges();
 }
