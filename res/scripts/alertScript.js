@@ -161,7 +161,7 @@ function buttonFunctions(){
    
    subLIV.setAttribute("onClick","changeDelay()");
    subLIV_label = document.getElementById("chancho-3");
-   subLIV_label.innerHTML = "DELAY: 5s";
+   subLIV_label.innerHTML = "DELAY: "+delta/1000+"s";
 }
 
 createAngelGUI();
