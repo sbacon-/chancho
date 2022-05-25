@@ -1,6 +1,6 @@
 var intervalID;
 var angel = false;
-var delta = 5000;
+var delta = 10000;
 
 var addr = "http://chancho.dev/res/mp3/";
 var sound_url = "";
@@ -14,7 +14,10 @@ var subLI_label, subLII_label, subLIII_label, subLIV_label;
 function autorefresh(){
 	//Check for the existense of a refresh button
    var home = $('button[data-id="incident|NoRelationship|HomePageGrid|Mscrm.HomepageGrid.incident.RefreshModernButton"]'); 
-   if(home.size() > 0)home[0].click();
+   var home_alt = $('button[data-id="RefreshDashboard"]');
+   if(home.length > 0)home[0].click();
+   if(home_alt.length > 0)home_alt[0].click();
+
 	
    //Check for Cases assigned to 'Accoutning Core'
    var acCase = $('a[aria-label="Accounting Core"]');
