@@ -1,23 +1,25 @@
 ---index
 <section class="text">
 <h3>Updates</h3>
-<pre>
-Welcome to the new & improved Chancho.dev 3.0
-Complete with a fresh coat of paint!!
-
-I've setup a server to host the site locally to allow for POST requests.
-This will allow me to create leader boards, and other PHP functionality.
-Excited to add new features and pages.
-
-I've also created a new C++ program that writes the HTML for me.
-Making it far easier to frequently add new content. So stay tuned.
-Check it out over on <a href="https://github.com/sbacon-/chancho"> gitHub </a>.
-On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em>
-</pre></section>
+<p>
+Welcome to the new & improved Chancho.dev 3.0<br>
+Complete with a fresh coat of paint!!<br>
+<br>
+I've setup a server to host the site locally to allow for POST requests.<br>
+This will allow me to create leader boards, and other PHP functionality.<br>
+Excited to add new features and pages<br>
+<br>
+I've also created a new C++ program that writes the HTML for me.<br>
+Making it far easier to frequently add new content. So stay tuned.<br>
+Check it out over on <a href="https://github.com/sbacon-/chancho"> gitHub </a>.<br>
+On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em><br>
+</p></section>
 
 <section class="hScroll">
 <ul id="library"></ul>
 <script src="/res/scripts/genLib.js" async></script></section>
+
+
 
 
 
@@ -48,6 +50,8 @@ On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em>
         <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
       </p>
 </section>
+
+
 
 
 
@@ -248,6 +252,8 @@ repeater();
 </section>
 
 
+
+
 ---About
 <section class="full">
 <h2>About Me</h2>
@@ -266,6 +272,8 @@ websites, games, apps etc. Check out the footer for contact info,
 and check out the my Github page for tools/inspiration in automating your own projects.
 </p>
 </section>
+
+
 
 
 
@@ -290,6 +298,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
 
 
 
+
+
 ---misc/ClickBot
 <section class="full">
 <h3>ClickBot</h3><br>
@@ -309,6 +319,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
         Enjoy!
     </p>
 </section>
+
+
 
 
 
@@ -369,8 +381,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
 
@@ -394,6 +406,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
 
 
 
+
+
 ---misc/BTC
 <section class="full">
 <h3>Bitcoin Exchange Rate</h3><br>
@@ -408,6 +422,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
       All source code can be found here: <a href="https://github.com/sbacon-/BTC">source</a><br>
     </p>
 </section>
+
+
 
 
 
@@ -426,6 +442,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
         <a href="/cSharp/LD47">LudumDare 47</a>
     </pre>
 </section>
+
+
 
 
 
@@ -450,6 +468,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
             SourceCode</a> - (or just hit F12)
         </p>
 </section>
+
+
 
 
 ---misc/LD45
@@ -480,6 +500,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
         Mood: 376th (2.848 average from 35 ratings)<br>
     </p>
 </section>
+
+
 
 
 
@@ -541,8 +563,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
 
@@ -566,6 +588,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
 
 
+
+
 ---cSharp/LD47/index
 <section class="feature">
 <!-- Legacy Unity Instance -->
@@ -574,7 +598,7 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
       <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/LD47.json", {onProgress: UnityProgress});</script>    
       <div class="center">
       <div class="webgl-content">
-        <div id="unityContainer" style="width: 960px; height: 600px"></div>
+        <div id="unityContainer" style="width: 100%; height: 85%"></div>
         <div class="footer">
           <div class="webgl-logo"></div>
           <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
@@ -609,6 +633,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
           Mood: 374th (3.017 average from 32 ratings)<br>
       </p>
 </section>
+
+
 
 
 
@@ -654,7 +680,7 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
   <p>
   I knew going into the compo that I wanted to implement a renderTexture of some sort. As a filter to the entire game or in the case of this game:
   as a second UI projected onto a computer screen. The vectors on the graph were a bit tricky, they kept disappearing when I was down scaling the texture
-  to give it a more blocky look on the monitor, but one of my absolute favorite parts of development is the UI (as you can maybe tell from the game above that is about 95% UI),
+  to give it a more blocky look on the monitor, but one of my absolute favorite parts of development is the UI (as you can maybe tell from the game above that is about 90% UI),
   so I had a great time with it.
   </p><br>
   <h5>I hope you enjoyed, I'll see you all in April.</h5>
@@ -686,8 +712,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
 
@@ -708,6 +734,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
       document.body.appendChild(script);
     </script>
 </section>
+
+
 
 
 
@@ -768,8 +796,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
 
@@ -793,11 +821,13 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
 
 
+
+
 ---cSharp/Catan/index
 <section class="feature">
       <div class="center">
       <div class="webgl-content">
-        <div id="unityContainer" style="width: 960px; height: 600px"></div>
+        <div id="unityContainer" style="width: 100%; height:85%"></div>
         <div class="footer">
           <div class="webgl-logo"></div>
           <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
@@ -838,6 +868,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
       </p>
 </section>
+
+
 
 
 
@@ -940,8 +972,8 @@ See y'all in October
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
 
@@ -962,6 +994,8 @@ See y'all in October
       document.body.appendChild(script);
     </script>
 </section>
+
+
 
 
 
@@ -991,6 +1025,8 @@ See y'all in October
 
 
 
+
+
 ---misc/Digitizer
 <section class="full">
     <h3>Digitizer</h3><br>
@@ -1011,6 +1047,8 @@ See y'all in October
         I bought a Wacom tablet... It was like 20 USD
     </p>
 </section>
+
+
 
 
 
@@ -1055,6 +1093,8 @@ See y'all in October
 
 
 
+
+
 ---cSharp/SHMUP/index
 <section class="feature">
  <!-- Legacy Unity Instance -->
@@ -1064,7 +1104,7 @@ See y'all in October
 
       <div class="center">
       <div class="webgl-content">
-        <div id="unityContainer" style="width: 960px; height: 600px"></div>
+        <div id="unityContainer" style="width: 100%; height: 85%"></div>
         <div class="footer">
           <div class="webgl-logo"></div>
           <div class="unity-fullscreen-button" onclick="unityInstance.SetFullscreen(1)"></div>
@@ -1082,6 +1122,8 @@ See y'all in October
         <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
       </p>
 </section>
+
+
 
 
 
@@ -1173,6 +1215,8 @@ function backspace(){
 
       </pre>
 </section>
+
+
 
 
 
@@ -1306,8 +1350,8 @@ function backspace(){
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
 
@@ -1328,6 +1372,8 @@ function backspace(){
       document.body.appendChild(script);
     </script>
 </section>
+
+
 
 
 
@@ -1437,8 +1483,8 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
 
@@ -1459,6 +1505,8 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
       document.body.appendChild(script);
     </script>  
 </section>
+
+
 
 
 
@@ -1517,8 +1565,8 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
 
@@ -1539,6 +1587,8 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
       document.body.appendChild(script);
     </script>
 </section>
+
+
 
 
 

@@ -54,8 +54,8 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
 
@@ -76,4 +76,6 @@
       document.body.appendChild(script);
     </script>
 </section>
+
+
 

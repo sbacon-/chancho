@@ -6,7 +6,7 @@
 
       <div class="center">
       <div class="webgl-content">
-        <div id="unityContainer" style="width: 960px; height: 600px"></div>
+        <div id="unityContainer" style="width: 100%; height: 85%"></div>
         <div class="footer">
           <div class="webgl-logo"></div>
           <div class="unity-fullscreen-button" onclick="unityInstance.SetFullscreen(1)"></div>
@@ -24,4 +24,6 @@
         <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
       </p>
 </section>
+
+
 

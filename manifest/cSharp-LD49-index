@@ -39,7 +39,7 @@
   <p>
   I knew going into the compo that I wanted to implement a renderTexture of some sort. As a filter to the entire game or in the case of this game:
   as a second UI projected onto a computer screen. The vectors on the graph were a bit tricky, they kept disappearing when I was down scaling the texture
-  to give it a more blocky look on the monitor, but one of my absolute favorite parts of development is the UI (as you can maybe tell from the game above that is about 95% UI),
+  to give it a more blocky look on the monitor, but one of my absolute favorite parts of development is the UI (as you can maybe tell from the game above that is about 90% UI),
   so I had a great time with it.
   </p><br>
   <h5>I hope you enjoyed, I'll see you all in April.</h5>
@@ -71,8 +71,8 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
 
@@ -93,4 +93,6 @@
       document.body.appendChild(script);
     </script>
 </section>
+
+
 
