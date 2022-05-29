@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!-- CHANCHO.DEV -->
     <title>Chancho.dev</title>
-    <link rel="icon" href="/res/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/res/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/res/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/res/favicon-96x96.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=VT323&display=swap" rel="stylesheet">
 
     <!-- CSS & JavaScript -->
+    <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="stylesheet" type="text/css" href='/res/styles/deStijl.css?v=1'>
     <link rel="stylesheet" type="text/css" href='/res/styles/calcStyle.css'>
     <script type="text/javascript" src="/res/scripts/scripts.js"></script>
@@ -49,23 +52,21 @@
     </header>
     <article class="article-body"> 
 <section class="feature">
-<h3>ClickBot</h3><br>
-    <h4>Downloads:</h4>
-    <ul>
-      <li><a href="res/files/ClickBot.jar">ClickBot.jar</a></li>
-    </ul>
-    <br>
-    <p>        
-        This is a simple utility to emulate the mouse as being pressed very rapidly (33 C/s)<br>
-        <br>
-        <strong>Update 12/11/19</strong><br>
-        Updated for ease of use, the clicker will now ask for a number of clicks.
-        The Clicker will run where the ok key is clicked. Or wherever the mouse is when the
-        dialog is closed.<br>
-
-        Enjoy!
-    </p>
+<canvas id="canvas"></canvas>
+<script src=$GODOT_URL></script>
+<script>
+	var engine = new Engine($GODOT_CONFIG);
+</script>
+<button onclick="engine.startGame()">Click To Play</button>
 </section>
+<section class="text">
+<h3>$GODOT_PROJECT_NAME</h3>
+<p>
+TODO: PROJECT WRITE-UP
+</p>
+</section>
+
+
 
     </article>
     <footer role="contentinfo">

@@ -1,4 +1,16 @@
 [
+   {"title":"Godot Test 3D",
+    "reference":"/godot/SquashTheCreeps/",
+    "card":"/res/img/library/Godot3D.png",
+    "platform" : ["html"],
+    "navigation" : false
+  },
+   {"title":"Godot Test 2D",
+    "reference":"/godot/AvoidTheCreeps/",
+    "card":"/res/img/library/Godot2D.png",
+    "platform" : ["html"],
+    "navigation" : false
+  },
    {
     "title":"Hotel Lazarus",
     "reference":"/cSharp/HotelLazarus/",
