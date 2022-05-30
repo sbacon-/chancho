@@ -1,10 +1,18 @@
 <section class="feature">
 <canvas id="canvas"></canvas>
 <script src=$GODOT_URL></script>
+<button id="play" onclick="engine.startGame({onProgress: printProgress })">Click to Play</button>
 <script>
-	var engine = new Engine($GODOT_CONFIG);
+
+var engine = new Engine($GODOT_CONFIG);
+var playButton = document.querySelector("#play");     
+function printProgress(current, total) {
+var percentage = (current/total)*100;
+playButton.setAttribute("style","background:linear-gradient(180deg,var(--secondary-dsat) 0%,var(--secondary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
+console.log("Loaded " + current + " of " + total + " bytes");
+}
+
 </script>
-<button onclick="engine.startGame()">Click To Play</button>
 </section>
 <section class="text">
 <h3>$GODOT_PROJECT_NAME</h3>
