@@ -285,14 +285,14 @@
 <section class="feature">
 <canvas id="canvas"></canvas>
 <script src=index.js></script>
-<button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fab fa-html5"></i></button>
+<button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
 <script>
 
 var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":2172608,"index.wasm":17503191},"focusCanvas":true,"gdnativeLibs":[]});
 var playButton = document.querySelector("#play");     
 function printProgress(current, total) {
 var percentage = (current/total)*100;
-playButton.setAttribute("style","background:linear-gradient(180deg,var(--secondary-dsat) 0%,var(--secondary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
+playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
 console.log("Loaded " + current + " of " + total + " bytes");
 }
 
@@ -987,14 +987,14 @@ On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em><br
 <section class="feature">
 <canvas id="canvas"></canvas>
 <script src=$GODOT_URL></script>
-<button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fab fa-html5"></i></button>
+<button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
 <script>
 
 var engine = new Engine($GODOT_CONFIG);
 var playButton = document.querySelector("#play");     
 function printProgress(current, total) {
 var percentage = (current/total)*100;
-playButton.setAttribute("style","background:linear-gradient(180deg,var(--secondary-dsat) 0%,var(--secondary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
+playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
 console.log("Loaded " + current + " of " + total + " bytes");
 }
 
@@ -1283,14 +1283,14 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
 <section class="feature">
 <canvas id="canvas"></canvas>
 <script src=index.js></script>
-<button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fab fa-html5"></i></button>
+<button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
 <script>
 
 var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":1885312,"index.wasm":17503191},"focusCanvas":true,"gdnativeLibs":[]});
 var playButton = document.querySelector("#play");     
 function printProgress(current, total) {
 var percentage = (current/total)*100;
-playButton.setAttribute("style","background:linear-gradient(180deg,var(--secondary-dsat) 0%,var(--secondary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
+playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
 console.log("Loaded " + current + " of " + total + " bytes");
 }
 
