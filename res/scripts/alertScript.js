@@ -1,5 +1,6 @@
 var intervalID;
 var angel = false;
+var refresh = true;
 var delta = 10000;
 
 var addr = "http://chancho.dev/res/mp3/";
@@ -57,10 +58,12 @@ function repeater(){
    if(intervalID == null){
       intervalID = setInterval(autorefresh,delta);	
       subLIII_label.innerHTML = "REFRESH: On";
+      refresh = true;
    }else{
       clearInterval(intervalID);
       intervalID = null;
       subLIII_label.innerHTML = "REFRESH: Off";
+      refresh = false;
    }
 }
 
@@ -167,3 +170,13 @@ function buttonFunctions(){
 createAngelGUI();
 buttonFunctions();
 repeater();
+
+document.addEventListener('visibilitychange',function(){
+   if(!refresh)return;
+   if(document.hidden){
+      clearInterval(intervalID)
+      intervalID = null;
+   }else{
+      repeater();
+   }
+});
