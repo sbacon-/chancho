@@ -1,15 +1,9 @@
 [
-   {"title":"Godot Test 3D",
-    "reference":"/godot/SquashTheCreeps/",
-    "card":"/res/img/library/Godot3D.png",
+   {"title":"gdChess Trainer",
+    "reference":"/godot/gdChess/",
+    "card":"/res/img/library/Chess.png",
     "platform" : ["html"],
-    "navigation" : false
-  },
-   {"title":"Godot Test 2D",
-    "reference":"/godot/AvoidTheCreeps/",
-    "card":"/res/img/library/Godot2D.png",
-    "platform" : ["html"],
-    "navigation" : false
+    "navigation" : true
   },
    {
     "title":"Hotel Lazarus",
@@ -24,6 +18,18 @@
     "card":"/res/img/library/Wordle.png",
     "platform" : ["html"],
     "navigation" : true
+  },
+   {"title":"Godot Test 3D",
+    "reference":"/godot/SquashTheCreeps/",
+    "card":"/res/img/library/Godot3D.png",
+    "platform" : ["html"],
+    "navigation" : false
+  },
+   {"title":"Godot Test 2D",
+    "reference":"/godot/AvoidTheCreeps/",
+    "card":"/res/img/library/Godot2D.png",
+    "platform" : ["html"],
+    "navigation" : false
   },
    {
     "title":"Un-Named Stock Market Battle Simulator",
