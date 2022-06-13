@@ -64,6 +64,7 @@ var percentage = (current/total)*100;
 playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
 console.log("Loaded " + current + " of " + total + " bytes");
 }
+if(total==current)playButton.setAttribute("style","display:none");
 
 </script>
 </section>
