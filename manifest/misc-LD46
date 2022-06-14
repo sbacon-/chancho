@@ -2,8 +2,8 @@
 <h3>Ludum Dare 46 (IGKNIGHT)</h3><br>
     <h4>Downloads:</h4>
     <ul>
-      <li><a href="res/files/IgKnight.jar">IgKnight.jar (LD COMPO)</a></li>
-      <li><a href="res/files/Igknight.jar">Rolling Release</a></li>
+      <li><a href="/res/files/IgKnight.jar">IgKnight.jar (LD COMPO)</a></li>
+      <li><a href="/res/files/Igknight.jar">Rolling Release</a></li>
     </ul><br>
     <p>
         
@@ -35,6 +35,8 @@
         Mood: 268th (3.538 average from 41 ratings)<br>
     </p>
 </section>
+
+
 
 
 

@@ -348,7 +348,7 @@ TODO: PROJECT WRITE-UP
 <h3>ClickBot</h3><br>
     <h4>Downloads:</h4>
     <ul>
-      <li><a href="res/files/ClickBot.jar">ClickBot.jar</a></li>
+      <li><a href="/res/files/ClickBot.jar">ClickBot.jar</a></li>
     </ul>
     <br>
     <p>        
@@ -460,7 +460,7 @@ TODO: PROJECT WRITE-UP
 <h3>Bitcoin Exchange Rate</h3><br>
     <h4>Downloads:</h4>
     <ul>
-      <li><a href="res/files/BTC.jar">BTC.jar</a></li>
+      <li><a href="/res/files/BTC.jar">BTC.jar</a></li>
     </ul><br>
     <p>
       <strong>Note: This project is no longer being maintained and did not function last I checked</strong><br>
@@ -530,8 +530,8 @@ TODO: PROJECT WRITE-UP
 <h3>Ludum Dare 45 (NOUGHT)</h3><br>
     <h4>Downloads:</h4>
     <ul>
-      <li><a href="res/files/Nought.jar">Nought.jar (LD JAM)</a></li>
-      <li><a href="res/files/LD45.jar">LD45.jar (LD COMPO)</a></li>
+      <li><a href="/res/files/Nought.jar">Nought.jar (LD JAM)</a></li>
+      <li><a href="/res/files/LD45.jar">LD45.jar (LD COMPO)</a></li>
     </ul><br>
     <p>
         Game was created in 48 hours for the <a href="https://ldjam.com/events/ludum-dare/45/nought-procedurally-generated-dungeon">Ludum Dare #45</a><br>
@@ -1163,7 +1163,7 @@ TODO: PROJECT WRITE-UP
     <br>
     <h4>Downloads:</h4>
     <ul>
-      <li><a href="res/files/Alfonso.jar">Alfonso.jar</a></li>
+      <li><a href="/res/files/Alfonso.jar">Alfonso.jar</a></li>
     </ul>
     <br>
     <p>
@@ -1219,8 +1219,8 @@ TODO: PROJECT WRITE-UP
 <h3>Ludum Dare 46 (IGKNIGHT)</h3><br>
     <h4>Downloads:</h4>
     <ul>
-      <li><a href="res/files/IgKnight.jar">IgKnight.jar (LD COMPO)</a></li>
-      <li><a href="res/files/Igknight.jar">Rolling Release</a></li>
+      <li><a href="/res/files/IgKnight.jar">IgKnight.jar (LD COMPO)</a></li>
+      <li><a href="/res/files/Igknight.jar">Rolling Release</a></li>
     </ul><br>
     <p>
         
