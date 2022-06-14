@@ -29,6 +29,8 @@ Email me your sheets if you'd like to join the queue.<br>
 
 
 
+
+
 ---cSharp/MazeGenerator/index
 <section class="feature">
 <!-- Legacy Unity Instance -->
@@ -56,6 +58,8 @@ Email me your sheets if you'd like to join the queue.<br>
         <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
       </p>
 </section>
+
+
 
 
 
@@ -264,6 +268,8 @@ repeater();
 
 
 
+
+
 ---About
 <section class="full">
 <h2>About Me</h2>
@@ -289,6 +295,8 @@ and check out the my Github page for tools/inspiration in automating your own pr
 
 
 
+
+
 ---godot/template
 <section class="feature">
 <canvas id="canvas"></canvas>
@@ -298,13 +306,17 @@ and check out the my Github page for tools/inspiration in automating your own pr
 
 var engine = new Engine($GODOT_CONFIG);
 var playButton = document.querySelector("#play");     
+var canvas = document.querySelector("#canvas");     
+canvas.setAttribute("style","display:none");
 function printProgress(current, total) {
 var percentage = (current/total)*100;
 playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
 console.log("Loaded " + current + " of " + total + " bytes");
+if(total==current){
+  playButton.setAttribute("style","display:none");
+  canvas.setAttribute("style","display:none");
 }
-if(total==current)playButton.setAttribute("style","display:none");
-
+}
 </script>
 </section>
 <section class="text">
@@ -313,6 +325,8 @@ if(total==current)playButton.setAttribute("style","display:none");
 TODO: PROJECT WRITE-UP
 </p>
 </section>
+
+
 
 
 
@@ -343,6 +357,8 @@ TODO: PROJECT WRITE-UP
 
 
 
+
+
 ---misc/ClickBot
 <section class="full">
 <h3>ClickBot</h3><br>
@@ -362,6 +378,8 @@ TODO: PROJECT WRITE-UP
         Enjoy!
     </p>
 </section>
+
+
 
 
 
@@ -455,6 +473,8 @@ TODO: PROJECT WRITE-UP
 
 
 
+
+
 ---misc/BTC
 <section class="full">
 <h3>Bitcoin Exchange Rate</h3><br>
@@ -469,6 +489,8 @@ TODO: PROJECT WRITE-UP
       All source code can be found here: <a href="https://github.com/sbacon-/BTC">source</a><br>
     </p>
 </section>
+
+
 
 
 
@@ -498,6 +520,8 @@ TODO: PROJECT WRITE-UP
 
 
 
+
+
 ---misc/NumToWord
 <section class="full">
        <h5>Numbers to Word Calculator</h5>
@@ -519,6 +543,8 @@ TODO: PROJECT WRITE-UP
             SourceCode</a> - (or just hit F12)
         </p>
 </section>
+
+
 
 
 
@@ -560,6 +586,8 @@ TODO: PROJECT WRITE-UP
 
 
 
+
+
 ---godot/SquashTheCreeps/index
 <section class="feature">
 <canvas id="canvas"></canvas>
@@ -583,6 +611,8 @@ console.log("Loaded " + current + " of " + total + " bytes");
 TODO: PROJECT WRITE-UP
 </p>
 </section>
+
+
 
 
 
@@ -676,6 +706,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
 
 
+
+
 ---cSharp/LD47/index
 <section class="feature">
 <!-- Legacy Unity Instance -->
@@ -719,6 +751,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
           Mood: 374th (3.017 average from 32 ratings)<br>
       </p>
 </section>
+
+
 
 
 
@@ -829,6 +863,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
 
 
+
+
 ---cSharp/DolphinJump/index
 <section class="feature">
   <h2>DolphinJump</h2>
@@ -915,6 +951,8 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
 
 
+
+
 ---godot/gdChess/index
 <section class="feature">
 <canvas id="canvas"></canvas>
@@ -924,11 +962,16 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
 var engine = new Engine({"args":[],"canvasResizePolicy":1,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":39696,"index.wasm":13351459},"focusCanvas":true,"gdnativeLibs":[]});
 var playButton = document.querySelector("#play");     
+var canvas = document.querySelector("#canvas");
+canvas.setAttribute("style","display:none");     
 function printProgress(current, total) {
 var percentage = (current/total)*100;
 playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
 console.log("Loaded " + current + " of " + total + " bytes");
-if(current==total) playButton.setAttribute("style","display:none")
+if(current==total){
+ playButton.setAttribute("style","display:none")
+ canvas.setAttribute("style","");     
+}
 }
 
 </script>
@@ -945,7 +988,6 @@ TODO: PROJECT WRITE-UP
 
 
 
----manifest.chancho
 
 
 ---cSharp/Catan/index
@@ -993,6 +1035,8 @@ TODO: PROJECT WRITE-UP
 
       </p>
 </section>
+
+
 
 
 
@@ -1128,6 +1172,8 @@ See y'all in October
 
 
 
+
+
 ---godot/AvoidTheCreeps/index
 <section class="feature">
 <canvas id="canvas"></canvas>
@@ -1151,6 +1197,8 @@ console.log("Loaded " + current + " of " + total + " bytes");
 TODO: PROJECT WRITE-UP
 </p>
 </section>
+
+
 
 
 
@@ -1187,6 +1235,8 @@ TODO: PROJECT WRITE-UP
 
 
 
+
+
 ---misc/Digitizer
 <section class="full">
     <h3>Digitizer</h3><br>
@@ -1207,6 +1257,8 @@ TODO: PROJECT WRITE-UP
         I bought a Wacom tablet... It was like 20 USD
     </p>
 </section>
+
+
 
 
 
@@ -1259,6 +1311,8 @@ TODO: PROJECT WRITE-UP
 
 
 
+
+
 ---cSharp/SHMUP/index
 <section class="feature">
  <!-- Legacy Unity Instance -->
@@ -1286,6 +1340,8 @@ TODO: PROJECT WRITE-UP
         <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
       </p>
 </section>
+
+
 
 
 
@@ -1381,6 +1437,8 @@ function backspace(){
 
       </pre>
 </section>
+
+
 
 
 
@@ -1547,6 +1605,8 @@ function backspace(){
 
 
 
+
+
 ---cSharp/AlgoVisualizer/index
 <section class="feature">
 <!--GAME TITLE-->
@@ -1682,6 +1742,8 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
 
 
 
+
+
 ---cSharp/Ressetti/index
 <section class="feature">
   <div class="center">
@@ -1759,6 +1821,8 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
       document.body.appendChild(script);
     </script>
 </section>
+
+
 
 
 

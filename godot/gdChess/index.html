@@ -59,11 +59,16 @@
 
 var engine = new Engine({"args":[],"canvasResizePolicy":1,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":39696,"index.wasm":13351459},"focusCanvas":true,"gdnativeLibs":[]});
 var playButton = document.querySelector("#play");     
+var canvas = document.querySelector("#canvas");
+canvas.setAttribute("style","display:none");     
 function printProgress(current, total) {
 var percentage = (current/total)*100;
 playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
 console.log("Loaded " + current + " of " + total + " bytes");
-if(current==total) playButton.setAttribute("style","display:none")
+if(current==total){
+ playButton.setAttribute("style","display:none")
+ canvas.setAttribute("style","");     
+}
 }
 
 </script>
@@ -74,6 +79,8 @@ if(current==total) playButton.setAttribute("style","display:none")
 TODO: PROJECT WRITE-UP
 </p>
 </section>
+
+
 
 
 
