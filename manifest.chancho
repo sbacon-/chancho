@@ -1,74 +1,3 @@
----index
-<section class="text">
-<h3>Updates</h3>
-<p>
-Welcome to the new & improved Chancho.dev 3.0<br>
-Complete with a fresh coat of paint!!<br>
-<br>
-I've setup a server to host the site locally to allow for POST requests.<br>
-This will allow me to create leader boards, and other PHP functionality.<br>
-Excited to add new features and pages<br>
-<br>
-I've also created a new C++ program that writes the HTML for me.<br>
-Making it far easier to frequently add new content. So stay tuned.<br>
-Check it out over on <a href="https://github.com/sbacon-/chancho"> gitHub </a>.<br>
-On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em><br>
-<br>
-06/20/22<br>
-Getting back from vacation, considering refactoring the gdChess Trainer to better utilize UCI<br>
-06/08/22<br>
-Just completed some consulting work for peer reviewing macros in excel<br>
-Email me your sheets if you'd like to join the queue.<br>
-</p></section>
-
-<section class="hScroll">
-<ul id="library"></ul>
-<script src="/res/scripts/genLib.js" async></script></section>
-
-
-
-
-
-
-
-
-
----cSharp/MazeGenerator/index
-<section class="feature">
-<!-- Legacy Unity Instance -->
-  <script src="Build/UnityProgress.js"></script>
-  <script src="Build/UnityLoader.js"></script>
-  <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Unity Builds.json", {onProgress: UnityProgress});</script>
-
-      <div class="center" style="width: 600px; height: 648px">
-      <div class="webgl-content">
-        <div id="unityContainer" style="width: 600px; height: 600px"></div>
-        <small>R - Generate A New Maze</small>
-      </div></div>
-
-</section>
-<section class="text">
-      <h2>Algorithmic Maze Generation</h2>
-      <p>
-        This is a randomized variation of a depth first search algorithm, the basic structure is as follows:<br>
-      </p>  <ul>
-        <li>At each iteration the current node checks which neigbors are unexplored.</li><br>
-          <ul><li>If all neighbors are explored, we will begin backtracking through the stack to the first cell with unexplored neighbors</li></ul><br>
-        <li>Picking a neigbor at random it will remove the wall that separates them.</li><br>
-        <li>The current node is added to the stack and the neighboring node will begin the next iteration</li><br></ul>
-      <p>
-        <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
-      </p>
-</section>
-
-
-
-
-
-
-
-
-
 ---misc/AlertScript
 <section class="full">
 <h3> Automatic Alert Script </h3>
@@ -272,33 +201,6 @@ repeater();
 
 
 
----About
-<section class="full">
-<h2>About Me</h2>
-<p>
-Hello, my name is Tom. I make games, automation utilities, and websites.<br><br>
-<img style="width:30%;" src="/res/img/me.jpg" alt="Handsome man in glasses shaped like hearts"><br>
-I taught myself to write Java programs 10+ years ago, and have loved it ever since.<br>
-I recently picked up C++; I'm very excited to start making games/applications
-with such a flexible and functional language.<br><br>
-A few years ago, after some guidance from the Ludum Dare community, I decided to learn C# and the Unity Engine.
-I've participated in every compo since 45, and the results seem to improve with every entry.
-I am familiar with a few other languages (Python, Kotlin, Python, JS, HTML/CSS, XML,and Visual Basic),
-but these I don't use so often.<br><br>
-I am available for freelance programming if you have something you would like built: 
-websites, games, apps etc. Check out the footer for contact info, 
-and check out the my Github page for tools/inspiration in automating your own projects.
-</p>
-</section>
-
-
-
-
-
-
-
-
-
 ---godot/template
 <section class="feature">
 <canvas id="canvas"></canvas>
@@ -334,281 +236,31 @@ TODO: PROJECT WRITE-UP
 
 
 
----misc/Blender
-<section class="full">
-<h2>Blends</h2>
-        <p>
-		<video controls="controls" width="800" height="600" name="Video Name">
- 			<source src="/res/img/blend/run.mov">
-		</video>
-		<img class="gallery" src="/res/img/blend/skeleton.png"><br>
-		<img class="gallery" src="/res/img/blend/skeletonRef.png"><br>
-		<img class="gallery" src="/res/img/blend/shelf.png"><br>
-		<img class="gallery" src="/res/img/blend/shelfRef.png"><br>
-		<img class="gallery" src="/res/img/blend/magic.png"><br>
-		<img class="gallery" src="/res/img/blend/office.png"><br>
-		<video controls="controls" width="800" height="600" name="Video Name">
- 			<source src="/res/img/blend/donut.mov">
-		</video>
-        </p>
-</section>
-
-
-
-
-
-
-
-
-
----misc/ClickBot
-<section class="full">
-<h3>ClickBot</h3><br>
-    <h4>Downloads:</h4>
-    <ul>
-      <li><a href="/res/files/ClickBot.jar">ClickBot.jar</a></li>
-    </ul>
-    <br>
-    <p>        
-        This is a simple utility to emulate the mouse as being pressed very rapidly (33 C/s)<br>
-        <br>
-        <strong>Update 12/11/19</strong><br>
-        Updated for ease of use, the clicker will now ask for a number of clicks.
-        The Clicker will run where the ok key is clicked. Or wherever the mouse is when the
-        dialog is closed.<br>
-
-        Enjoy!
-    </p>
-</section>
-
-
-
-
-
-
-
-
-
----cSharp/Wordle/index
-<section class="feature">
-  <div class="center">
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-mobile-warning"></div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="text">
-  <h2>Wordle</h2>
-  <p>
-  <h4>Created in 48 hours in preparation for Ludum Dare #50</h4>
-  Recently started playing <a href=https://www.nytimes.com/games/wordle/index.html>Wordle</a><br>
-  Frustrated with only being able to play one round per day, I decided to create my own version.<br>
-  The functionality is a limited, but similar enough for a small project<br>
-  Special thanks to <a href=https://gist.github.com/scholtes>Garrett Sholtes</a> for posting the World Dictionary to GitHub<br>
-  </p>
-    <script>
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Wordle.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/Wordle.data",
-        frameworkUrl: buildUrl + "/Wordle.framework.js",
-        codeUrl: buildUrl + "/Wordle.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "chancho",
-        productName: "Wordle",
-        productVersion: "0.049",
-      };
-
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var mobileWarning = document.querySelector("#unity-mobile-warning");
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
-        mobileWarning.style.display = "block";
-        setTimeout(() => {
-          mobileWarning.style.display = "none";
-        }, 5000);
-      } else {
-        canvas.style.width = "100%";
-        canvas.style.height = "85%";
-      }
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>
-</section>
-
-
-
-
-
-
-
-
-
----misc/BTC
-<section class="full">
-<h3>Bitcoin Exchange Rate</h3><br>
-    <h4>Downloads:</h4>
-    <ul>
-      <li><a href="/res/files/BTC.jar">BTC.jar</a></li>
-    </ul><br>
-    <p>
-      <strong>Note: This project is no longer being maintained and did not function last I checked</strong><br>
-      This is a simple utility to fetch the current exchange rate of Bitcoin<br>
-      Can be run in a terminal using java -jar /path/to/BTC.jar<br>
-      All source code can be found here: <a href="https://github.com/sbacon-/BTC">source</a><br>
-    </p>
-</section>
-
-
-
-
-
-
-
-
-
----misc/index
-<section class="full">
-<h2>Archives</h2>
-    <pre>
-        <a href="/misc/Alfonso.html">Alfonso</a>
-        <a href="/misc/Blender.html">Blender</a>
-        <a href="/misc/BTC.html">BitCoin Fetch</a>
-        <a href="/misc/ClickBot.html">Click Bot</a>
-        <a href="/misc/Digitizer.html">Digitizer</a>
-        <a href="/misc/imgdump/">/wg/ ImageDump</a>
-        <a href="/misc/LD45.html">LudumDare 45</a>
-        <a href="/misc/LD46.html">LudumDare 46</a>
-        <a href="/cSharp/LD47">LudumDare 47</a>
-    </pre>
-</section>
-
-
-
-
-
-
-
-
-
----misc/NumToWord
-<section class="full">
-       <h5>Numbers to Word Calculator</h5>
-        <p>Enter a number to convert to dollars and cents. Click to Copy!<br>
-        </p>
-
-        <div class="num-cash">
-            <input type="number" class="num-cash-input" placeholder="0000000.00"></input>
-            <a class="num-result">
-              <h4 class="num-cash-output" onclick="clickToCopy()"></h4>&nbsp
-              <i class="fas fa-clipboard" onclick="clickToCopy()"></i>
-            </a>
-            <script type="text/javascript" src="/res/scripts/numCash.js"></script>
-        </div>
-
-        <p>
-          Works with numbers up to one decicentillion [10<sup>333</sup>].<br>
-          <a href="https://github.com/sbacon-/chancho/blob/master/res/scripts/numCash.js">
-            SourceCode</a> - (or just hit F12)
-        </p>
-</section>
-
-
-
-
-
-
-
-
----misc/LD45
-<section class="full">
-<h3>Ludum Dare 45 (NOUGHT)</h3><br>
-    <h4>Downloads:</h4>
-    <ul>
-      <li><a href="/res/files/Nought.jar">Nought.jar (LD JAM)</a></li>
-      <li><a href="/res/files/LD45.jar">LD45.jar (LD COMPO)</a></li>
-    </ul><br>
-    <p>
-        Game was created in 48 hours for the <a href="https://ldjam.com/events/ludum-dare/45/nought-procedurally-generated-dungeon">Ludum Dare #45</a><br>
-        Theme: "Start With Nothing"<br>
-        All source code can be found here: <a href="https://github.com/sbacon-/LDJam45.git">source</a><br>
-        <br>
-        <strong>Screenshots:</strong><br>
-        <img src="/res/img/72hr_2.png">
-        <img src="/res/img/72hr_1.png">
-        <img src="/res/img/72hr_3.png"><br>
-
-
-        <strong>Results:</strong><br>
-        Overall: 344th (3.197 average from 40 ratings)<br>
-        Fun: 288th (3.158 average from 40 ratings)<br>
-        Innovation: 453rd (2.474 average from 40 ratings)<br>
-        Theme: 447th (2.689 average from 39 ratings)<br>
-        Graphics: 363rd (2.934 average from 40 ratings)<br>
-        Mood: 376th (2.848 average from 35 ratings)<br>
-    </p>
-</section>
-
-
-
-
-
-
-
-
-
----godot/SquashTheCreeps/index
+---godot/gdChess/index
 <section class="feature">
 <canvas id="canvas"></canvas>
 <script src=index.js></script>
 <button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
 <script>
 
-var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":1885312,"index.wasm":17503191},"focusCanvas":true,"gdnativeLibs":[]});
+var engine = new Engine({"args":[],"canvasResizePolicy":1,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":39696,"index.wasm":13351459},"focusCanvas":true,"gdnativeLibs":[]});
 var playButton = document.querySelector("#play");     
+var canvas = document.querySelector("#canvas");
+canvas.setAttribute("style","display:none");     
 function printProgress(current, total) {
 var percentage = (current/total)*100;
 playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
 console.log("Loaded " + current + " of " + total + " bytes");
+if(current==total){
+ playButton.setAttribute("style","display:none")
+ canvas.setAttribute("style","");     
+}
 }
 
 </script>
 </section>
 <section class="text">
-<h3>SquashTheCreeps</h3>
+<h3>Chess</h3>
 <p>
 TODO: PROJECT WRITE-UP
 </p>
@@ -621,8 +273,9 @@ TODO: PROJECT WRITE-UP
 
 
 
----cSharp/CUR2R5/index
+---cSharp/AlgoVisualizer/index
 <section class="feature">
+<!--GAME TITLE-->
     <div class="center">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
@@ -632,36 +285,83 @@ TODO: PROJECT WRITE-UP
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-mobile-warning"></div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title"></div>
       </div>
     </div>
-  </div>
+  </div><br>
 </section>
 <section class="text">
+  <!--GAME TEXT-->
+  <h3>Sort Algorithms</h3><br>
   <p>
-    <h2>Chancho's Unity Roundup 2k21 Remastered V</h2>
-It's that time of year again. Time to gear up and be ready for the most intense 48 to 72 hours imaginable.
-That's right folks, Ludum Dare.
-I made this project as a refresher course. Had a ton of fun, especially with the UI. [MineSweeper].
-Ran into a few bugs with the Canvas not corresponding to the screen size and trying to hard code transform positions.
-It seems like Unity has also changed the way it handles exporting to Web.
-Overall it was a good few weeks. Hope you enjoy the roundup and good luck on your own Jams.
-  </p>
-    <script>
+<u>Bubble Sort</u> - <strong>O(n<sup>2</sup>)</strong> Comparisons, <strong>O(n<sup>2</sup>)</strong> Swaps <br> 
+The least efficient of the sort methods will simply compare the first node with it's neighbor.
+Swapping if it is greater than it's neighboring node. This process is repeated until it reaches the last unsorted node. 
+When the last unsorted node is at index 0, the node is ,in fact, sorted by omission.
+This sort algorithm can be useful when the array is quite small, as the code is simple, however becomes very slow as <em> n </em> increases.
+<br><br>
+<u>Selection Sort</u> - <strong>O(n<sup>2</sup>)</strong> Comparisons, <strong>O(n)</strong> Swaps <br> 
+Is a marginally more efficient algorithm, starting at the first unsorted node, the script will loop through and determine
+the minimum node and move it to the start of the array. It is considered more efficent than the bubble sort as the
+node is only swapped once the end of the array is reached. It is similar to bubble sort in that the code is very simple, but ineffective
+when working with larger sets of data.
+<br><br>
+<u>Insertion Sort</u> - <strong>O(n<sup>2</sup>)</strong> Comparisons, <strong>O(n<sup>2</sup>)</strong> Swaps <br>
+Though the average efficiency is comperable to the previous two sort algorithms, the insertion sort tends to sort slightly
+faster. Starting at the first unsorted element it will work backwards until it finds a node that has a higher value. This can reduce
+comparisons in a best case scenario where the unsorted node is higher than the next node. Another useful property of the 
+insertion sort algorithm is that unsorted elements can be continually added. This is useful in the case of a high-score board, where it would be 
+inefficient to sort the entire list to add a single entry.
+<br><br>
+<u>Merge Sort</u> - <strong>Θ(n log n)</strong> Comparisons, <strong>O(n)</strong> Auxiliary Array<br>
+Rather than performing any swaps, a much more effective method of sorting is to use a Merge Sort. This algorithms breaks each 
+node into it's own "sorted array" of size 1. Comparing each array with the first element of its neighboring array, it pulls
+the lowest node (and moves to the next node if the array size is greater than one) then pulls the remaining nodes least to greatest to a new array. 
+This new sorted array is twice the length of the previous array. Repeating this process until the sorted array is of size <em>n</em>. In my opinion this may
+not be the most elegant solution as it requires an auxillary array to hold the nodes as they are being sorted.
+<br><br>
+<u>Quick Sort</u> - <strong>O(n log n)</strong> <br>
+Is probably the most effective sort covered in this study. The way this one works is to choose a node from the array at random.
+(Ideally close to the median value) This value become the "pivot". The array is split into two new partitions on each side of the pivot. 
+The partition on the left side of the pivot is iterated until a vaule is found that is greater than or equal to the pivot. Then the right 
+side partition is iterated until a value is found that is less than or equal to the pivot. Once each side has found a value, the nodes are swapped.
+Continuing this process will put all nodes less than the pivot on the left side partition, and the nodes larger than the pivot on the right side.
+This ensures that the pivot is in the correct place of the array. A pivot is chosen in the left and right partions and new sub-partitions are created.
+The divide and conquer type of sorting seems to be the quickest method.
+<br><br>
+<u>Heap Sort</u> - <strong>O(n log n)</strong> <br>
+I found this algorithm to be the most fascinating in it's approach to the task of sorting. The way a heap sort works is to 
+first organize the nodes into a tree data structure called a heap. The structure of the heap is such that each parent node 
+is parent to two children nodes that are smaller than the parent, these child nodes follow the same structure until the entire array is "heapified".
+The heap is stored in an array as follows <br>[0,1,2,3,4,5] - 0 is a parent of 1 and 2, 1 is a parent of 3 and 4, and 2 is a parent of 5.<br>
+The formula for finding relationships to current node at index <em>i</em> is:<br>
+<code>
+iParent(i)=floor((i-1)/2);<br>
+iLeftChild(i)=2i+1;<br>
+iRightChild(i)=2i+2;<br>
+</code>
+Once the the array is heapified, it is simply a matter of pulling the top most node and swapping with the last element in the heap.
+Once the smallest node is at the top, you swap with the larger of it's two children until the heap data structure is satisfied (being that the children of the node
+smaller than the parent node). You then continue pulling the top node until the list is beautifully sorted.
+<br><br>
+Source code is provided below, it isn't incredibly effecient as is as it is used for the visualizer seen above. But I plan to add 
+an implementable version of the sort methods. Eventually.<br>
+SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgorithms </a>
+</p>
+<script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/CUR2R5.loader.js";
+      var loaderUrl = buildUrl + "/AlgoVisualizer.loader.js";
       var config = {
-        dataUrl: buildUrl + "/CUR2R5.data",
-        frameworkUrl: buildUrl + "/CUR2R5.framework.js",
-        codeUrl: buildUrl + "/CUR2R5.wasm",
+        dataUrl: buildUrl + "/AlgoVisualizer.data",
+        frameworkUrl: buildUrl + "/AlgoVisualizer.framework.js",
+        codeUrl: buildUrl + "/AlgoVisualizer.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "chancho.dev",
-        productName: "CUR2R5",
-        productVersion: "0.1",
+        productName: "Sort Algorithm Visualizer",
+        productVersion: "1.0",
       };
 
       var container = document.querySelector("#unity-container");
@@ -699,59 +399,7 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
         });
       };
       document.body.appendChild(script);
-    </script>
-</section>
-
-
-
-
-
-
-
-
-
----cSharp/LD47/index
-<section class="feature">
-<!-- Legacy Unity Instance -->
-      <script src="Build/UnityProgress.js"></script>
-      <script src="Build/UnityLoader.js"></script>
-      <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/LD47.json", {onProgress: UnityProgress});</script>    
-      <div class="center">
-      <div class="webgl-content">
-        <div id="unityContainer" style="width: 100%; height: 85%"></div>
-        <div class="footer">
-          <div class="webgl-logo"></div>
-          <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-          <div class="title">LD47</div>
-        </div>
-      </div>
-      </div><br>
-</section>
-<section class="text">
-      <h2>Lazy River Racing</h2>
-      <h4>Downloads:</h4>
-      <ul>
-        <li><a href="/files/LD47.zip">LRR - Standalone (31mb)</a></li>
-      </ul><br>
-      <p>
-          Game was created in 48 hours for the <a href="https://ldjam.com/events/ludum-dare/47/lazy-river-racing">Ludum Dare #47 Compo</a><br>
-          Theme: "Stuck in a Loop"<br>
-          All source code can be found here: <a href="https://github.com/sbacon-/LD47-LazyRiverRacing">source</a><br>
-          ___<br>
-          Had a very lazy weekend completing this <br>
-          By far my most relaxed LD yet<br>
-          Hope you enjoy <br>
-          ___<br>
-          Results<br>
-          Overall: 535th (2.953 average from 34 ratings)<br>
-          Fun: 374th (3.129 average from 33 ratings)<br>
-          Innovation: 592nd (2.433 average from 32 ratings)<br>
-          Theme: 482nd (3.145 average from 33 ratings)<br>
-          Graphics: 444th (3.063 average from 34 ratings)<br>
-          Audio: 327th (2.984 average from 33 ratings)<br>
-          Humor: 113th (3.333 average from 32 ratings)<br>
-          Mood: 374th (3.017 average from 32 ratings)<br>
-      </p>
+    </script>  
 </section>
 
 
@@ -867,6 +515,295 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
 
 
+---cSharp/Wordle/index
+<section class="feature">
+  <div class="center">
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-mobile-warning"></div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="text">
+  <h2>Wordle</h2>
+  <p>
+  <h4>Created in 48 hours in preparation for Ludum Dare #50</h4>
+  Recently started playing <a href=https://www.nytimes.com/games/wordle/index.html>Wordle</a><br>
+  Frustrated with only being able to play one round per day, I decided to create my own version.<br>
+  The functionality is a limited, but similar enough for a small project<br>
+  Special thanks to <a href=https://gist.github.com/scholtes>Garrett Sholtes</a> for posting the World Dictionary to GitHub<br>
+  </p>
+    <script>
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/Wordle.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/Wordle.data",
+        frameworkUrl: buildUrl + "/Wordle.framework.js",
+        codeUrl: buildUrl + "/Wordle.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "chancho",
+        productName: "Wordle",
+        productVersion: "0.049",
+      };
+
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var mobileWarning = document.querySelector("#unity-mobile-warning");
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+        config.devicePixelRatio = 1;
+        mobileWarning.style.display = "block";
+        setTimeout(() => {
+          mobileWarning.style.display = "none";
+        }, 5000);
+      } else {
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
+      }
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+</section>
+
+
+
+
+
+
+
+
+
+---cSharp/Ressetti/index
+<section class="feature">
+  <div class="center">
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-mobile-warning"></div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="text">
+  <h2>Ressetti's Game</h2>
+  <p>
+  <h4>Text Recieved w/ Concept : 1:17AM;</h4>
+  <h4>Text Read : 1:44AM;</h4>
+  <h4>Publish Time : 2:05AM;</h4>
+  </p>
+    <script>
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/Ressetti.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/Ressetti.data",
+        frameworkUrl: buildUrl + "/Ressetti.framework.js",
+        codeUrl: buildUrl + "/Ressetti.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "chancho",
+        productName: "Ressetti",
+        productVersion: "0.049",
+      };
+
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      var mobileWarning = document.querySelector("#unity-mobile-warning");
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        container.className = "unity-mobile";
+        config.devicePixelRatio = 1;
+        mobileWarning.style.display = "block";
+        setTimeout(() => {
+          mobileWarning.style.display = "none";
+        }, 5000);
+      } else {
+        canvas.style.width = "100%";
+        canvas.style.height = "85%";
+      }
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+          fullscreenButton.onclick = () => {
+            unityInstance.SetFullscreen(1);
+          };
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+</section>
+
+
+
+
+
+
+
+
+
+---cSharp/SHMUP/index
+<section class="feature">
+ <!-- Legacy Unity Instance -->
+  <script src="Build/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/SHMUP.json", {onProgress: UnityProgress});</script>
+
+      <div class="center">
+      <div class="webgl-content">
+        <div id="unityContainer" style="width: 100%; height: 85%"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="unity-fullscreen-button" onclick="unityInstance.SetFullscreen(1)"></div>
+          <div class="title">Shoot 'Em Up Prototype</div>
+        </div>
+      </div>
+      </div>
+</section>
+<section class="text">
+      <h2>SHMUP</h2>
+      <p>
+        Had a great weekend making this, wanted to complete a project on a LD Jam Timeline in the Unity Engine, this is about 2 days or work.
+        Very happy with the results, collision is terrible and I had meant to implement some sort of boost system, but I decided to focus more on
+        visuals and overall feel of the game.<br>
+        <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
+      </p>
+</section>
+
+
+
+
+
+
+
+
+
+---About
+<section class="full">
+<h2>About Me</h2>
+<p>
+Hello, my name is Tom. I make games, automation utilities, and websites.<br><br>
+<img style="width:30%;" src="/res/img/me.jpg" alt="Handsome man in glasses shaped like hearts"><br>
+I taught myself to write Java programs 10+ years ago, and have loved it ever since.<br>
+I recently picked up C++; I'm very excited to start making games/applications
+with such a flexible and functional language.<br><br>
+A few years ago, after some guidance from the Ludum Dare community, I decided to learn C# and the Unity Engine.
+I've participated in every compo since 45, and the results seem to improve with every entry.
+I am familiar with a few other languages (Python, Kotlin, Python, JS, HTML/CSS, XML,and Visual Basic),
+but these I don't use so often.<br><br>
+I am available for freelance programming if you have something you would like built: 
+websites, games, apps etc. Check out the footer for contact info, 
+and check out the my Github page for tools/inspiration in automating your own projects.
+</p>
+</section>
+
+
+
+
+
+
+
+
+
+---cSharp/LD47/index
+<section class="feature">
+<!-- Legacy Unity Instance -->
+      <script src="Build/UnityProgress.js"></script>
+      <script src="Build/UnityLoader.js"></script>
+      <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/LD47.json", {onProgress: UnityProgress});</script>    
+      <div class="center">
+      <div class="webgl-content">
+        <div id="unityContainer" style="width: 100%; height: 85%"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+          <div class="title">LD47</div>
+        </div>
+      </div>
+      </div><br>
+</section>
+<section class="text">
+      <h2>Lazy River Racing</h2>
+      <h4>Downloads:</h4>
+      <ul>
+        <li><a href="/files/LD47.zip">LRR - Standalone (31mb)</a></li>
+      </ul><br>
+      <p>
+          Game was created in 48 hours for the <a href="https://ldjam.com/events/ludum-dare/47/lazy-river-racing">Ludum Dare #47 Compo</a><br>
+          Theme: "Stuck in a Loop"<br>
+          All source code can be found here: <a href="https://github.com/sbacon-/LD47-LazyRiverRacing">source</a><br>
+          ___<br>
+          Had a very lazy weekend completing this <br>
+          By far my most relaxed LD yet<br>
+          Hope you enjoy <br>
+          ___<br>
+          Results<br>
+          Overall: 535th (2.953 average from 34 ratings)<br>
+          Fun: 374th (3.129 average from 33 ratings)<br>
+          Innovation: 592nd (2.433 average from 32 ratings)<br>
+          Theme: 482nd (3.145 average from 33 ratings)<br>
+          Graphics: 444th (3.063 average from 34 ratings)<br>
+          Audio: 327th (2.984 average from 33 ratings)<br>
+          Humor: 113th (3.333 average from 32 ratings)<br>
+          Mood: 374th (3.017 average from 32 ratings)<br>
+      </p>
+</section>
+
+
+
+
+
+
+
+
+
 ---cSharp/DolphinJump/index
 <section class="feature">
   <h2>DolphinJump</h2>
@@ -955,34 +892,60 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
 
 
 
----godot/gdChess/index
+---misc/ClickBot
+<section class="full">
+<h3>ClickBot</h3><br>
+    <h4>Downloads:</h4>
+    <ul>
+      <li><a href="/res/files/ClickBot.jar">ClickBot.jar</a></li>
+    </ul>
+    <br>
+    <p>        
+        This is a simple utility to emulate the mouse as being pressed very rapidly (33 C/s)<br>
+        <br>
+        <strong>Update 12/11/19</strong><br>
+        Updated for ease of use, the clicker will now ask for a number of clicks.
+        The Clicker will run where the ok key is clicked. Or wherever the mouse is when the
+        dialog is closed.<br>
+
+        Enjoy!
+    </p>
+</section>
+
+
+
+
+
+
+
+
+
+---cSharp/MazeGenerator/index
 <section class="feature">
-<canvas id="canvas"></canvas>
-<script src=index.js></script>
-<button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
-<script>
+<!-- Legacy Unity Instance -->
+  <script src="Build/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Unity Builds.json", {onProgress: UnityProgress});</script>
 
-var engine = new Engine({"args":[],"canvasResizePolicy":1,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":39696,"index.wasm":13351459},"focusCanvas":true,"gdnativeLibs":[]});
-var playButton = document.querySelector("#play");     
-var canvas = document.querySelector("#canvas");
-canvas.setAttribute("style","display:none");     
-function printProgress(current, total) {
-var percentage = (current/total)*100;
-playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
-console.log("Loaded " + current + " of " + total + " bytes");
-if(current==total){
- playButton.setAttribute("style","display:none")
- canvas.setAttribute("style","");     
-}
-}
+      <div class="center" style="width: 600px; height: 648px">
+      <div class="webgl-content">
+        <div id="unityContainer" style="width: 600px; height: 600px"></div>
+        <small>R - Generate A New Maze</small>
+      </div></div>
 
-</script>
 </section>
 <section class="text">
-<h3>Chess</h3>
-<p>
-TODO: PROJECT WRITE-UP
-</p>
+      <h2>Algorithmic Maze Generation</h2>
+      <p>
+        This is a randomized variation of a depth first search algorithm, the basic structure is as follows:<br>
+      </p>  <ul>
+        <li>At each iteration the current node checks which neigbors are unexplored.</li><br>
+          <ul><li>If all neighbors are explored, we will begin backtracking through the stack to the first cell with unexplored neighbors</li></ul><br>
+        <li>Picking a neigbor at random it will remove the wall that separates them.</li><br>
+        <li>The current node is added to the stack and the neighboring node will begin the next iteration</li><br></ul>
+      <p>
+        <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
+      </p>
 </section>
 
 
@@ -992,142 +955,48 @@ TODO: PROJECT WRITE-UP
 
 
 
----cSharp/Catan/index
+
+---cSharp/CUR2R5/index
 <section class="feature">
-      <div class="center">
-      <div class="webgl-content">
-        <div id="unityContainer" style="width: 100%; height:85%"></div>
-        <div class="footer">
-          <div class="webgl-logo"></div>
-          <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-          <div class="title">CATAN</div>
+    <div class="center">
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
         </div>
       </div>
+      <div id="unity-mobile-warning"></div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title"></div>
       </div>
-</section>
-<section class"text">
-    <h3>CATAN (UNITY)</h3>
-      <p>
-        This is a <del>better</del>(different) version of the Java remake of Settlers of Catan.
-        It was more an excercise in 3d modeling and programatic placement and rotation in Unity.<br>
-        <em>A / D -> Rotate Camera</em><br>
-        <em>Shift -> Get Dizzy </em><br>
-      </p>
-
-      <h3>CATAN (Pre-Alpha)</h3><br>
-      <h4>Downloads:</h4>
-      <ul>
-        <li><a href="/res/files/Catan.jar">Catan.jar a0.1.1</a></li>
-      </ul><br>
-          <p>
-          This is my current pet project, it is a recreation of my favorite boardgame Settlers of Catan<br>
-          Latest update 11/19 includes new development card toasts to show built cards, and a few more cosmetic updates.<br>
-          There is still much to accomplish for this project, but so far it has been good practice in implementing Toasts & Buttons<br>
-          All source code can be found here: <a href="https://github.com/sbacon-/Catan.git">source</a><br>
-          <strong>Screenshots:</strong><br>
-          <img src="/res/img/Catan_1.png">
-          <img src="/res/img/Catan_2.png">
-          <img src="/res/img/Catan_3.png"><br>
-
-          <strong>TODO:</strong><br>
-          Finishing Toasts<br>
-          Add EndGame<br>
-          Trade<br>
-          Online<br>
-
-      </p>
-</section>
-
-
-
-
-
-
-
-
-
----cSharp/HotelLazarus/index
-<section class="feature">
-
-<div class="center">
-<div id="unity-container" class="unity-desktop">
-<canvas id="unity-canvas"></canvas>
-<div id="unity-loading-bar">
-<div id="unity-logo"></div>
-<div id="unity-progress-bar-empty">
-<div id="unity-progress-bar-full"></div>
-</div>
-</div>
-<div id="unity-mobile-warning"></div>
-<div id="unity-footer">
-<div id="unity-webgl-logo"></div>
-<div id="unity-fullscreen-button"></div>
-<div id="unity-build-title"></div>
-</div>
-</div>
-</div>
+    </div>
+  </div>
 </section>
 <section class="text">
-<br>
-<p>
-
-<br>
-<h2>Hotel Lazarus</h2>
-<h3>Hospitality for the recently departed</h3>
-Decided to try my hand at a tower building sim.
-I've been considering making this type of game for a while.
-Luckily, I was able to shoehorn the genre with the LD<i>L</i> theme.
-<br><br>
-<a href = "/res/img/ld50_prep.png"><img src="/res/img/ld50_prep.png" alt="Hastily scribbled Game Ideas from the Final Round"><br></a>
-
-<h4> Taking Lessons From Past Mistakes </h4>
-I didn't prepare as much as I typically do for the Compo. (Only one practice project the week before <a href="/cSharp/Wordle/index.html"> Wordle Clone </a>).
-Before LD49, I spent weeks trying to learn C# best practices, Blender modeling techniques, and learning a new MIDI/Audio Sequencer (muse4).
-By the time the compo started I was unable to focus on what was really important:
-<br><br>
-
-<h4>Making the Project 'I' Wanted to Make</h4>
-<a href = "/res/img/ld50_wb.png"><img src="/res/img/ld50_wb.png" alt="Whiteboard with themes: Tax Evasion, Sinking Ship, etc."></a><br>
-Taking a more relaxed aproach this time, I made my list once the final round of voting started.
-Once the theme was announced - I wrote more ideas on the whiteboard to make a decision.
-The theme was so broad this time that I figured any game with a fail state could be a candidate.
-So I went with an idea that I've had since my career change into the hospitality industry.
-<br><br>
-
-<a href="/res/img/ld50_prog1.gif"><img src="/res/img/ld50_prog1.gif" alt="Prototype with building and Guest AI"><br></a>
-Armed with enough chips, candy, and caffeine to feed a small village, I got to work;
-and after a few hours I had the basic structure finished.
-The guests looked a bit like a skeletons already, so with some slight adjustments a tone was established.
-<br><br>
-
-<h4>Lessons Learned</h4><br>
-<a href="/res/img/ld50_notes.png"><img src="/res/img/ld50_notes.png"><br></a>
-One of the biggest things that helped was PLAY-TESTING. In previous years, I've received tons of feedback
-on the controls in the game. I enlisted the help of my sister to try out the game before publishing.
-There were a ton of things I didn't consider: <br>
-<i>What will they do if they skip the control menu?<br>
-What if they are playing with only a mouse?<br>
-Why does nothing happen when you click the around the lobby (*wink)?<br> </i>
-These questions never would have crossed my mind otherwise. Thanks Kass!
-<br><br>
-
-Overall, very happy with how this one turned out. Hope you enjoyed as much as I have, look out for a mobile release (coming soon... maybe)<br>
-See y'all in October
-<br><br>
-
-<h4>Created in 48 hours for Ludum Dare #50</h4>
-</p>
-<script>
+  <p>
+    <h2>Chancho's Unity Roundup 2k21 Remastered V</h2>
+It's that time of year again. Time to gear up and be ready for the most intense 48 to 72 hours imaginable.
+That's right folks, Ludum Dare.
+I made this project as a refresher course. Had a ton of fun, especially with the UI. [MineSweeper].
+Ran into a few bugs with the Canvas not corresponding to the screen size and trying to hard code transform positions.
+It seems like Unity has also changed the way it handles exporting to Web.
+Overall it was a good few weeks. Hope you enjoy the roundup and good luck on your own Jams.
+  </p>
+    <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/LD50-PostJam.loader.js";
+      var loaderUrl = buildUrl + "/CUR2R5.loader.js";
       var config = {
-        dataUrl: buildUrl + "/LD50-PostJam.data",
-        frameworkUrl: buildUrl + "/LD50-PostJam.framework.js",
-        codeUrl: buildUrl + "/LD50-PostJam.wasm",
+        dataUrl: buildUrl + "/CUR2R5.data",
+        frameworkUrl: buildUrl + "/CUR2R5.framework.js",
+        codeUrl: buildUrl + "/CUR2R5.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "chancho",
-        productName: "LD50",
-        productVersion: "1.0",
+        companyName: "chancho.dev",
+        productName: "CUR2R5",
+        productVersion: "0.1",
       };
 
       var container = document.querySelector("#unity-container");
@@ -1176,98 +1045,6 @@ See y'all in October
 
 
 
----godot/AvoidTheCreeps/index
-<section class="feature">
-<canvas id="canvas"></canvas>
-<script src=index.js></script>
-<button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
-<script>
-
-var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":2172608,"index.wasm":17503191},"focusCanvas":true,"gdnativeLibs":[]});
-var playButton = document.querySelector("#play");     
-function printProgress(current, total) {
-var percentage = (current/total)*100;
-playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
-console.log("Loaded " + current + " of " + total + " bytes");
-}
-
-</script>
-</section>
-<section class="text">
-<h3>Test</h3>
-<p>
-TODO: PROJECT WRITE-UP
-</p>
-</section>
-
-
-
-
-
-
-
-
----misc/Alfonso
-<section class="full">
-    <h3>Alfonso's Ice Cream Shop</h3>
-    <br>
-    <h4>Downloads:</h4>
-    <ul>
-      <li><a href="/res/files/Alfonso.jar">Alfonso.jar</a></li>
-    </ul>
-    <br>
-    <p>
-        This project was a game I made to teach programming to my little bro.<br>
-        It is the greatest work I've ever not completed... <br>
-        Were I a composer, this game would be my magnum opus.<br>
-        <br>
-        Here is what critics have said about Alfonso's Ice Cream Shop:<br>
-            <q>They already have that</q><br>
-            <q>This game trash</q><br>
-            <q>I thought I told you don't come back here</q><br>
-        <br>
-        Truly a masterpiece. I love this project and hope to maybe add some <br>
-        coherent game structure... maybe <br>
-    </p>
-</section>
-
-
-
-
-
-
-
-
-
----misc/Digitizer
-<section class="full">
-    <h3>Digitizer</h3><br>
-    <h4>Downloads:</h4>
-    <ul>
-      <li><a href="https://github.com/sbacon-/Digitizer">Source Code</a></li>
-      <li><a href="https://developer.android.com/studio/command-line/adb">Android Debug Bridge</a></li>
-    </ul>
-    <p>
-        
-        <br>
-        This is a tool I created to turn an old phone into a drawing tablet.<br>
-        The current functionality only allows for stylus input<br>
-        Haven't made an app in a while so it's pretty bare bones<br>
-        Currently Requires the Android Debug Bridge and you need to alter<br>
-        the PC client source code to the proper directory<br>
-        <strong>Update: 08/09/21</strong><br>
-        I bought a Wacom tablet... It was like 20 USD
-    </p>
-</section>
-
-
-
-
-
-
-
-
-
 ---misc/LD46
 <section class="full">
 <h3>Ludum Dare 46 (IGKNIGHT)</h3><br>
@@ -1305,139 +1082,6 @@ TODO: PROJECT WRITE-UP
         Audio: 412th (3.216 average from 39 ratings)<br>
         Mood: 268th (3.538 average from 41 ratings)<br>
     </p>
-</section>
-
-
-
-
-
-
-
-
-
----cSharp/SHMUP/index
-<section class="feature">
- <!-- Legacy Unity Instance -->
-  <script src="Build/UnityProgress.js"></script>
-  <script src="Build/UnityLoader.js"></script>
-  <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/SHMUP.json", {onProgress: UnityProgress});</script>
-
-      <div class="center">
-      <div class="webgl-content">
-        <div id="unityContainer" style="width: 100%; height: 85%"></div>
-        <div class="footer">
-          <div class="webgl-logo"></div>
-          <div class="unity-fullscreen-button" onclick="unityInstance.SetFullscreen(1)"></div>
-          <div class="title">Shoot 'Em Up Prototype</div>
-        </div>
-      </div>
-      </div>
-</section>
-<section class="text">
-      <h2>SHMUP</h2>
-      <p>
-        Had a great weekend making this, wanted to complete a project on a LD Jam Timeline in the Unity Engine, this is about 2 days or work.
-        Very happy with the results, collision is terrible and I had meant to implement some sort of boost system, but I decided to focus more on
-        visuals and overall feel of the game.<br>
-        <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
-      </p>
-</section>
-
-
-
-
-
-
-
-
-
----misc/Calculator
-<section class="feature">
- <h3>Javascript Calculator</h3>
-      <div id="calculator">
-        <div class="calc-display calc-row">0</div>
-        <div class="calc-row">
-          <button class="calc-button calc-wide" onclick="clearContent()">CE</button>
-          <button class="calc-button" onclick="backspace()">←</button>
-          <button class="calc-button" onclick="flushToMemory(`divide`)">÷</button></div>
-        <div class="calc-row">
-          <button class="calc-button" onclick="appendContent(`7`)">7</button>
-          <button class="calc-button" onclick="appendContent(`8`)">8</button>
-          <button class="calc-button" onclick="appendContent(`9`)">9</button>
-          <button class="calc-button" onclick="flushToMemory(`multiply`)">x</button></div>
-        <div class="calc-row">
-          <button class="calc-button" onclick="appendContent(`4`)">4</button>
-          <button class="calc-button" onclick="appendContent(`5`)">5</button>
-          <button class="calc-button" onclick="appendContent(`6`)">6</button>
-          <button class="calc-button" onclick="flushToMemory(`subtract`)">-</button></div>
-        <div class="calc-row">
-          <button class="calc-button" onclick="appendContent(`1`)">1</button>
-          <button class="calc-button" onclick="appendContent(`2`)">2</button>
-          <button class="calc-button" onclick="appendContent(`3`)">3</button>
-          <button class="calc-button" onclick="flushToMemory(`add`)">+</button></div>
-        <div class="calc-row">
-          <button class="calc-button calc-wide" onclick="appendContent(`0`)">0</button>
-          <button class="calc-button" onclick="appendContent(`.`)">.</button>
-          <button class="calc-button" onclick="calculate()">=</button>
-        </div>
-      </div>
-      <script type="text/javascript" src="/res/scripts/calc.js"></script>
-</section>
-<section class="text">
-      <p> Made this as part of a <a href="https://frontendmasters.com/courses/web-development-v2"/>course in web-dev</a></p>
-      <p> Also made an automation tool for <a href="/misc/NumToWord.html"/>currency to word conversion</a></p>
-      <h3>calc.js</h3>
-      <pre>
-console.log("|--- Hello! ---|")
-let memory = 0;
-let task = "na"
-let newNumber = true;
-let display = document.querySelectorAll(".calc-display.calc-row");
-
-function clearContent(){
-    display[0].innerHTML="0";
-};
-
-function appendContent(number){
-    if((number!=='.'&&display[0].innerHTML==0)||newNumber) display[0].innerHTML="";
-    display[0].innerHTML+=number;
-    newNumber=false;
-}
-
-function flushToMemory(request){
-    memory = parseFloat(display[0].innerHTML);
-    task=request;
-    newNumber=true;
-}
-
-function calculate(){
-    let active = parseFloat(display[0].innerHTML);
-    switch(task){
-        case `add`:
-            display[0].innerHTML= memory+active;
-            break;
-        case `subtract`:
-            display[0].innerHTML= memory-active;
-            break;
-        case `multiply`:
-            display[0].innerHTML= memory*active;
-            break;
-        case `divide`:
-            display[0].innerHTML= memory/active;
-            break;
-        default:
-            display[0].innerHTML="Error: CE";
-            task='na';
-            break;
-    }
-    newNumber=true;
-}
-
-function backspace(){
-    display[0].innerHTML=display[0].innerHTML.substr(0,display[0].innerHTML.length-1);
-}
-
-      </pre>
 </section>
 
 
@@ -1609,181 +1253,356 @@ function backspace(){
 
 
 
----cSharp/AlgoVisualizer/index
+---index
+<section class="text">
+<h3>Updates</h3>
+<p>
+Welcome to the new & improved Chancho.dev 3.0<br>
+Complete with a fresh coat of paint!!<br>
+<br>
+I've setup a server to host the site locally to allow for POST requests.<br>
+This will allow me to create leader boards, and other PHP functionality.<br>
+Excited to add new features and pages<br>
+<br>
+I've also created a new C++ program that writes the HTML for me.<br>
+Making it far easier to frequently add new content. So stay tuned.<br>
+Check it out over on <a href="https://github.com/sbacon-/chancho"> gitHub </a>.<br>
+On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em><br>
+<br>
+06/20/22<br>
+Getting back from vacation, considering refactoring the gdChess Trainer to better utilize UCI<br>
+06/08/22<br>
+Just completed some consulting work for peer reviewing macros in excel<br>
+Email me your sheets if you'd like to join the queue.<br>
+</p></section>
+
+<section class="hScroll">
+<ul id="library"></ul>
+<script src="/res/scripts/genLib.js" async></script></section>
+
+
+
+
+
+
+
+
+
+---godot/SquashTheCreeps/index
 <section class="feature">
-<!--GAME TITLE-->
-    <div class="center">
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title"></div>
-      </div>
-    </div>
-  </div><br>
+<canvas id="canvas"></canvas>
+<script src=index.js></script>
+<button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
+<script>
+
+var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":1885312,"index.wasm":17503191},"focusCanvas":true,"gdnativeLibs":[]});
+var playButton = document.querySelector("#play");     
+function printProgress(current, total) {
+var percentage = (current/total)*100;
+playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
+console.log("Loaded " + current + " of " + total + " bytes");
+}
+
+</script>
 </section>
 <section class="text">
-  <!--GAME TEXT-->
-  <h3>Sort Algorithms</h3><br>
-  <p>
-<u>Bubble Sort</u> - <strong>O(n<sup>2</sup>)</strong> Comparisons, <strong>O(n<sup>2</sup>)</strong> Swaps <br> 
-The least efficient of the sort methods will simply compare the first node with it's neighbor.
-Swapping if it is greater than it's neighboring node. This process is repeated until it reaches the last unsorted node. 
-When the last unsorted node is at index 0, the node is ,in fact, sorted by omission.
-This sort algorithm can be useful when the array is quite small, as the code is simple, however becomes very slow as <em> n </em> increases.
+<h3>SquashTheCreeps</h3>
+<p>
+TODO: PROJECT WRITE-UP
+</p>
+</section>
+
+
+
+
+
+
+
+
+---misc/Calculator
+<section class="feature">
+ <h3>Javascript Calculator</h3>
+      <div id="calculator">
+        <div class="calc-display calc-row">0</div>
+        <div class="calc-row">
+          <button class="calc-button calc-wide" onclick="clearContent()">CE</button>
+          <button class="calc-button" onclick="backspace()">←</button>
+          <button class="calc-button" onclick="flushToMemory(`divide`)">÷</button></div>
+        <div class="calc-row">
+          <button class="calc-button" onclick="appendContent(`7`)">7</button>
+          <button class="calc-button" onclick="appendContent(`8`)">8</button>
+          <button class="calc-button" onclick="appendContent(`9`)">9</button>
+          <button class="calc-button" onclick="flushToMemory(`multiply`)">x</button></div>
+        <div class="calc-row">
+          <button class="calc-button" onclick="appendContent(`4`)">4</button>
+          <button class="calc-button" onclick="appendContent(`5`)">5</button>
+          <button class="calc-button" onclick="appendContent(`6`)">6</button>
+          <button class="calc-button" onclick="flushToMemory(`subtract`)">-</button></div>
+        <div class="calc-row">
+          <button class="calc-button" onclick="appendContent(`1`)">1</button>
+          <button class="calc-button" onclick="appendContent(`2`)">2</button>
+          <button class="calc-button" onclick="appendContent(`3`)">3</button>
+          <button class="calc-button" onclick="flushToMemory(`add`)">+</button></div>
+        <div class="calc-row">
+          <button class="calc-button calc-wide" onclick="appendContent(`0`)">0</button>
+          <button class="calc-button" onclick="appendContent(`.`)">.</button>
+          <button class="calc-button" onclick="calculate()">=</button>
+        </div>
+      </div>
+      <script type="text/javascript" src="/res/scripts/calc.js"></script>
+</section>
+<section class="text">
+      <p> Made this as part of a <a href="https://frontendmasters.com/courses/web-development-v2"/>course in web-dev</a></p>
+      <p> Also made an automation tool for <a href="/misc/NumToWord.html"/>currency to word conversion</a></p>
+      <h3>calc.js</h3>
+      <pre>
+console.log("|--- Hello! ---|")
+let memory = 0;
+let task = "na"
+let newNumber = true;
+let display = document.querySelectorAll(".calc-display.calc-row");
+
+function clearContent(){
+    display[0].innerHTML="0";
+};
+
+function appendContent(number){
+    if((number!=='.'&&display[0].innerHTML==0)||newNumber) display[0].innerHTML="";
+    display[0].innerHTML+=number;
+    newNumber=false;
+}
+
+function flushToMemory(request){
+    memory = parseFloat(display[0].innerHTML);
+    task=request;
+    newNumber=true;
+}
+
+function calculate(){
+    let active = parseFloat(display[0].innerHTML);
+    switch(task){
+        case `add`:
+            display[0].innerHTML= memory+active;
+            break;
+        case `subtract`:
+            display[0].innerHTML= memory-active;
+            break;
+        case `multiply`:
+            display[0].innerHTML= memory*active;
+            break;
+        case `divide`:
+            display[0].innerHTML= memory/active;
+            break;
+        default:
+            display[0].innerHTML="Error: CE";
+            task='na';
+            break;
+    }
+    newNumber=true;
+}
+
+function backspace(){
+    display[0].innerHTML=display[0].innerHTML.substr(0,display[0].innerHTML.length-1);
+}
+
+      </pre>
+</section>
+
+
+
+
+
+
+
+
+
+---misc/Digitizer
+<section class="full">
+    <h3>Digitizer</h3><br>
+    <h4>Downloads:</h4>
+    <ul>
+      <li><a href="https://github.com/sbacon-/Digitizer">Source Code</a></li>
+      <li><a href="https://developer.android.com/studio/command-line/adb">Android Debug Bridge</a></li>
+    </ul>
+    <p>
+        
+        <br>
+        This is a tool I created to turn an old phone into a drawing tablet.<br>
+        The current functionality only allows for stylus input<br>
+        Haven't made an app in a while so it's pretty bare bones<br>
+        Currently Requires the Android Debug Bridge and you need to alter<br>
+        the PC client source code to the proper directory<br>
+        <strong>Update: 08/09/21</strong><br>
+        I bought a Wacom tablet... It was like 20 USD
+    </p>
+</section>
+
+
+
+
+
+
+
+
+
+---misc/NumToWord
+<section class="full">
+       <h5>Numbers to Word Calculator</h5>
+        <p>Enter a number to convert to dollars and cents. Click to Copy!<br>
+        </p>
+
+        <div class="num-cash">
+            <input type="number" class="num-cash-input" placeholder="0000000.00"></input>
+            <a class="num-result">
+              <h4 class="num-cash-output" onclick="clickToCopy()"></h4>&nbsp
+              <i class="fas fa-clipboard" onclick="clickToCopy()"></i>
+            </a>
+            <script type="text/javascript" src="/res/scripts/numCash.js"></script>
+        </div>
+
+        <p>
+          Works with numbers up to one decicentillion [10<sup>333</sup>].<br>
+          <a href="https://github.com/sbacon-/chancho/blob/master/res/scripts/numCash.js">
+            SourceCode</a> - (or just hit F12)
+        </p>
+</section>
+
+
+
+
+
+
+
+
+---misc/BTC
+<section class="full">
+<h3>Bitcoin Exchange Rate</h3><br>
+    <h4>Downloads:</h4>
+    <ul>
+      <li><a href="/res/files/BTC.jar">BTC.jar</a></li>
+    </ul><br>
+    <p>
+      <strong>Note: This project is no longer being maintained and did not function last I checked</strong><br>
+      This is a simple utility to fetch the current exchange rate of Bitcoin<br>
+      Can be run in a terminal using java -jar /path/to/BTC.jar<br>
+      All source code can be found here: <a href="https://github.com/sbacon-/BTC">source</a><br>
+    </p>
+</section>
+
+
+
+
+
+
+
+
+
+---misc/index
+<section class="full">
+<h2>Archives</h2>
+    <pre>
+        <a href="/misc/Alfonso.html">Alfonso</a>
+        <a href="/misc/Blender.html">Blender</a>
+        <a href="/misc/BTC.html">BitCoin Fetch</a>
+        <a href="/misc/ClickBot.html">Click Bot</a>
+        <a href="/misc/Digitizer.html">Digitizer</a>
+        <a href="/misc/imgdump/">/wg/ ImageDump</a>
+        <a href="/misc/LD45.html">LudumDare 45</a>
+        <a href="/misc/LD46.html">LudumDare 46</a>
+        <a href="/cSharp/LD47">LudumDare 47</a>
+    </pre>
+</section>
+
+
+
+
+
+
+
+
+
+---cSharp/HotelLazarus/index
+<section class="feature">
+
+<div class="center">
+<div id="unity-container" class="unity-desktop">
+<canvas id="unity-canvas"></canvas>
+<div id="unity-loading-bar">
+<div id="unity-logo"></div>
+<div id="unity-progress-bar-empty">
+<div id="unity-progress-bar-full"></div>
+</div>
+</div>
+<div id="unity-mobile-warning"></div>
+<div id="unity-footer">
+<div id="unity-webgl-logo"></div>
+<div id="unity-fullscreen-button"></div>
+<div id="unity-build-title"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="text">
+<br>
+<p>
+
+<br>
+<h2>Hotel Lazarus</h2>
+<h3>Hospitality for the recently departed</h3>
+Decided to try my hand at a tower building sim.
+I've been considering making this type of game for a while.
+Luckily, I was able to shoehorn the genre with the LD<i>L</i> theme.
 <br><br>
-<u>Selection Sort</u> - <strong>O(n<sup>2</sup>)</strong> Comparisons, <strong>O(n)</strong> Swaps <br> 
-Is a marginally more efficient algorithm, starting at the first unsorted node, the script will loop through and determine
-the minimum node and move it to the start of the array. It is considered more efficent than the bubble sort as the
-node is only swapped once the end of the array is reached. It is similar to bubble sort in that the code is very simple, but ineffective
-when working with larger sets of data.
+<a href = "/res/img/ld50_prep.png"><img src="/res/img/ld50_prep.png" alt="Hastily scribbled Game Ideas from the Final Round"><br></a>
+
+<h4> Taking Lessons From Past Mistakes </h4>
+I didn't prepare as much as I typically do for the Compo. (Only one practice project the week before <a href="/cSharp/Wordle/index.html"> Wordle Clone </a>).
+Before LD49, I spent weeks trying to learn C# best practices, Blender modeling techniques, and learning a new MIDI/Audio Sequencer (muse4).
+By the time the compo started I was unable to focus on what was really important:
 <br><br>
-<u>Insertion Sort</u> - <strong>O(n<sup>2</sup>)</strong> Comparisons, <strong>O(n<sup>2</sup>)</strong> Swaps <br>
-Though the average efficiency is comperable to the previous two sort algorithms, the insertion sort tends to sort slightly
-faster. Starting at the first unsorted element it will work backwards until it finds a node that has a higher value. This can reduce
-comparisons in a best case scenario where the unsorted node is higher than the next node. Another useful property of the 
-insertion sort algorithm is that unsorted elements can be continually added. This is useful in the case of a high-score board, where it would be 
-inefficient to sort the entire list to add a single entry.
+
+<h4>Making the Project 'I' Wanted to Make</h4>
+<a href = "/res/img/ld50_wb.png"><img src="/res/img/ld50_wb.png" alt="Whiteboard with themes: Tax Evasion, Sinking Ship, etc."></a><br>
+Taking a more relaxed aproach this time, I made my list once the final round of voting started.
+Once the theme was announced - I wrote more ideas on the whiteboard to make a decision.
+The theme was so broad this time that I figured any game with a fail state could be a candidate.
+So I went with an idea that I've had since my career change into the hospitality industry.
 <br><br>
-<u>Merge Sort</u> - <strong>Θ(n log n)</strong> Comparisons, <strong>O(n)</strong> Auxiliary Array<br>
-Rather than performing any swaps, a much more effective method of sorting is to use a Merge Sort. This algorithms breaks each 
-node into it's own "sorted array" of size 1. Comparing each array with the first element of its neighboring array, it pulls
-the lowest node (and moves to the next node if the array size is greater than one) then pulls the remaining nodes least to greatest to a new array. 
-This new sorted array is twice the length of the previous array. Repeating this process until the sorted array is of size <em>n</em>. In my opinion this may
-not be the most elegant solution as it requires an auxillary array to hold the nodes as they are being sorted.
+
+<a href="/res/img/ld50_prog1.gif"><img src="/res/img/ld50_prog1.gif" alt="Prototype with building and Guest AI"><br></a>
+Armed with enough chips, candy, and caffeine to feed a small village, I got to work;
+and after a few hours I had the basic structure finished.
+The guests looked a bit like a skeletons already, so with some slight adjustments a tone was established.
 <br><br>
-<u>Quick Sort</u> - <strong>O(n log n)</strong> <br>
-Is probably the most effective sort covered in this study. The way this one works is to choose a node from the array at random.
-(Ideally close to the median value) This value become the "pivot". The array is split into two new partitions on each side of the pivot. 
-The partition on the left side of the pivot is iterated until a vaule is found that is greater than or equal to the pivot. Then the right 
-side partition is iterated until a value is found that is less than or equal to the pivot. Once each side has found a value, the nodes are swapped.
-Continuing this process will put all nodes less than the pivot on the left side partition, and the nodes larger than the pivot on the right side.
-This ensures that the pivot is in the correct place of the array. A pivot is chosen in the left and right partions and new sub-partitions are created.
-The divide and conquer type of sorting seems to be the quickest method.
+
+<h4>Lessons Learned</h4><br>
+<a href="/res/img/ld50_notes.png"><img src="/res/img/ld50_notes.png"><br></a>
+One of the biggest things that helped was PLAY-TESTING. In previous years, I've received tons of feedback
+on the controls in the game. I enlisted the help of my sister to try out the game before publishing.
+There were a ton of things I didn't consider: <br>
+<i>What will they do if they skip the control menu?<br>
+What if they are playing with only a mouse?<br>
+Why does nothing happen when you click the around the lobby (*wink)?<br> </i>
+These questions never would have crossed my mind otherwise. Thanks Kass!
 <br><br>
-<u>Heap Sort</u> - <strong>O(n log n)</strong> <br>
-I found this algorithm to be the most fascinating in it's approach to the task of sorting. The way a heap sort works is to 
-first organize the nodes into a tree data structure called a heap. The structure of the heap is such that each parent node 
-is parent to two children nodes that are smaller than the parent, these child nodes follow the same structure until the entire array is "heapified".
-The heap is stored in an array as follows <br>[0,1,2,3,4,5] - 0 is a parent of 1 and 2, 1 is a parent of 3 and 4, and 2 is a parent of 5.<br>
-The formula for finding relationships to current node at index <em>i</em> is:<br>
-<code>
-iParent(i)=floor((i-1)/2);<br>
-iLeftChild(i)=2i+1;<br>
-iRightChild(i)=2i+2;<br>
-</code>
-Once the the array is heapified, it is simply a matter of pulling the top most node and swapping with the last element in the heap.
-Once the smallest node is at the top, you swap with the larger of it's two children until the heap data structure is satisfied (being that the children of the node
-smaller than the parent node). You then continue pulling the top node until the list is beautifully sorted.
+
+Overall, very happy with how this one turned out. Hope you enjoyed as much as I have, look out for a mobile release (coming soon... maybe)<br>
+See y'all in October
 <br><br>
-Source code is provided below, it isn't incredibly effecient as is as it is used for the visualizer seen above. But I plan to add 
-an implementable version of the sort methods. Eventually.<br>
-SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgorithms </a>
+
+<h4>Created in 48 hours for Ludum Dare #50</h4>
 </p>
 <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/AlgoVisualizer.loader.js";
+      var loaderUrl = buildUrl + "/LD50-PostJam.loader.js";
       var config = {
-        dataUrl: buildUrl + "/AlgoVisualizer.data",
-        frameworkUrl: buildUrl + "/AlgoVisualizer.framework.js",
-        codeUrl: buildUrl + "/AlgoVisualizer.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "chancho.dev",
-        productName: "Sort Algorithm Visualizer",
-        productVersion: "1.0",
-      };
-
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var mobileWarning = document.querySelector("#unity-mobile-warning");
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        config.devicePixelRatio = 1;
-        mobileWarning.style.display = "block";
-        setTimeout(() => {
-          mobileWarning.style.display = "none";
-        }, 5000);
-      } else {
-        canvas.style.width = "100%";
-        canvas.style.height = "85%";
-      }
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
-    </script>  
-</section>
-
-
-
-
-
-
-
-
-
----cSharp/Ressetti/index
-<section class="feature">
-  <div class="center">
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-mobile-warning"></div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title"></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="text">
-  <h2>Ressetti's Game</h2>
-  <p>
-  <h4>Text Recieved w/ Concept : 1:17AM;</h4>
-  <h4>Text Read : 1:44AM;</h4>
-  <h4>Publish Time : 2:05AM;</h4>
-  </p>
-    <script>
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Ressetti.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/Ressetti.data",
-        frameworkUrl: buildUrl + "/Ressetti.framework.js",
-        codeUrl: buildUrl + "/Ressetti.wasm",
+        dataUrl: buildUrl + "/LD50-PostJam.data",
+        frameworkUrl: buildUrl + "/LD50-PostJam.framework.js",
+        codeUrl: buildUrl + "/LD50-PostJam.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "chancho",
-        productName: "Ressetti",
-        productVersion: "0.049",
+        productName: "LD50",
+        productVersion: "1.0",
       };
 
       var container = document.querySelector("#unity-container");
@@ -1824,6 +1643,189 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
     </script>
 </section>
 
+
+
+
+
+
+
+
+
+---misc/Alfonso
+<section class="full">
+    <h3>Alfonso's Ice Cream Shop</h3>
+    <br>
+    <h4>Downloads:</h4>
+    <ul>
+      <li><a href="/res/files/Alfonso.jar">Alfonso.jar</a></li>
+    </ul>
+    <br>
+    <p>
+        This project was a game I made to teach programming to my little bro.<br>
+        It is the greatest work I've ever not completed... <br>
+        Were I a composer, this game would be my magnum opus.<br>
+        <br>
+        Here is what critics have said about Alfonso's Ice Cream Shop:<br>
+            <q>They already have that</q><br>
+            <q>This game trash</q><br>
+            <q>I thought I told you don't come back here</q><br>
+        <br>
+        Truly a masterpiece. I love this project and hope to maybe add some <br>
+        coherent game structure... maybe <br>
+    </p>
+</section>
+
+
+
+
+
+
+
+
+
+---cSharp/Catan/index
+<section class="feature">
+      <div class="center">
+      <div class="webgl-content">
+        <div id="unityContainer" style="width: 100%; height:85%"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+          <div class="title">CATAN</div>
+        </div>
+      </div>
+      </div>
+</section>
+<section class"text">
+    <h3>CATAN (UNITY)</h3>
+      <p>
+        This is a <del>better</del>(different) version of the Java remake of Settlers of Catan.
+        It was more an excercise in 3d modeling and programatic placement and rotation in Unity.<br>
+        <em>A / D -> Rotate Camera</em><br>
+        <em>Shift -> Get Dizzy </em><br>
+      </p>
+
+      <h3>CATAN (Pre-Alpha)</h3><br>
+      <h4>Downloads:</h4>
+      <ul>
+        <li><a href="/res/files/Catan.jar">Catan.jar a0.1.1</a></li>
+      </ul><br>
+          <p>
+          This is my current pet project, it is a recreation of my favorite boardgame Settlers of Catan<br>
+          Latest update 11/19 includes new development card toasts to show built cards, and a few more cosmetic updates.<br>
+          There is still much to accomplish for this project, but so far it has been good practice in implementing Toasts & Buttons<br>
+          All source code can be found here: <a href="https://github.com/sbacon-/Catan.git">source</a><br>
+          <strong>Screenshots:</strong><br>
+          <img src="/res/img/Catan_1.png">
+          <img src="/res/img/Catan_2.png">
+          <img src="/res/img/Catan_3.png"><br>
+
+          <strong>TODO:</strong><br>
+          Finishing Toasts<br>
+          Add EndGame<br>
+          Trade<br>
+          Online<br>
+
+      </p>
+</section>
+
+
+
+
+
+
+
+
+
+---misc/Blender
+<section class="full">
+<h2>Blends</h2>
+        <p>
+		<img class="gallery" src="/res/img/blend/chess.png"><br>
+		<a href="/res/img/blend/chessWall.png"> High Def Wallpaper - fixed the rooks clipping into the board </a>
+		<img class="gallery" src="/res/img/blend/skeleton.png"><br>
+		<img class="gallery" src="/res/img/blend/skeletonRef.png"><br>
+		<img class="gallery" src="/res/img/blend/shelf.png"><br>
+		<img class="gallery" src="/res/img/blend/shelfRef.png"><br>
+		<img class="gallery" src="/res/img/blend/office.png"><br>
+		<img class="gallery" src="/res/img/blend/magic.png"><br>
+		<video class="gallery" controls="controls" width="800" height="600" name="Video Name">
+ 			<source src="/res/img/blend/donut.mov">
+		</video>
+		<video class="gallery" controls="controls" width="800" height="600" name="Video Name">
+ 			<source src="/res/img/blend/run.mov">
+		</video>
+        </p>
+</section>
+
+
+
+
+
+
+
+
+
+---misc/LD45
+<section class="full">
+<h3>Ludum Dare 45 (NOUGHT)</h3><br>
+    <h4>Downloads:</h4>
+    <ul>
+      <li><a href="/res/files/Nought.jar">Nought.jar (LD JAM)</a></li>
+      <li><a href="/res/files/LD45.jar">LD45.jar (LD COMPO)</a></li>
+    </ul><br>
+    <p>
+        Game was created in 48 hours for the <a href="https://ldjam.com/events/ludum-dare/45/nought-procedurally-generated-dungeon">Ludum Dare #45</a><br>
+        Theme: "Start With Nothing"<br>
+        All source code can be found here: <a href="https://github.com/sbacon-/LDJam45.git">source</a><br>
+        <br>
+        <strong>Screenshots:</strong><br>
+        <img src="/res/img/72hr_2.png">
+        <img src="/res/img/72hr_1.png">
+        <img src="/res/img/72hr_3.png"><br>
+
+
+        <strong>Results:</strong><br>
+        Overall: 344th (3.197 average from 40 ratings)<br>
+        Fun: 288th (3.158 average from 40 ratings)<br>
+        Innovation: 453rd (2.474 average from 40 ratings)<br>
+        Theme: 447th (2.689 average from 39 ratings)<br>
+        Graphics: 363rd (2.934 average from 40 ratings)<br>
+        Mood: 376th (2.848 average from 35 ratings)<br>
+    </p>
+</section>
+
+
+
+
+
+
+
+
+
+---godot/AvoidTheCreeps/index
+<section class="feature">
+<canvas id="canvas"></canvas>
+<script src=index.js></script>
+<button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
+<script>
+
+var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":2172608,"index.wasm":17503191},"focusCanvas":true,"gdnativeLibs":[]});
+var playButton = document.querySelector("#play");     
+function printProgress(current, total) {
+var percentage = (current/total)*100;
+playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
+console.log("Loaded " + current + " of " + total + " bytes");
+}
+
+</script>
+</section>
+<section class="text">
+<h3>Test</h3>
+<p>
+TODO: PROJECT WRITE-UP
+</p>
+</section>
 
 
 
