@@ -17,9 +17,12 @@ console.log("Loaded " + current + " of " + total + " bytes");
 <section class="text">
 <h3>SquashTheCreeps</h3>
 <p>
-TODO: PROJECT WRITE-UP
+3D game from the Godot documentation tutorials:<br>
+<a href="https://docs.godotengine.org/en/stable/getting_started/first_3d_game/index.html">Godot 3D</a>
 </p>
 </section>
+
+
 
 
 
