@@ -19,9 +19,8 @@ function autorefresh(){
    if(home.length > 0)home[0].click();
    if(home_alt.length > 0)home_alt[0].click();
 
-	
    //Check for Cases assigned to 'Accoutning Core'
-   var acCase = $('a[aria-label="Accounting Core"]');
+   var acCase = $('button[aria-label="Accounting Core"]');
    if(!angel && acCase.size()>0){
       playSound();
       angel = true;   
@@ -149,7 +148,6 @@ function createAngelGUI(){
 }
 
 function buttonFunctions(){
-   
    subLI.setAttribute("onClick","resetNotify()");
    subLI_label=document.getElementById("chancho-0");
    subLI_label.innerHTML = "Notify: ON";
