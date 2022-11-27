@@ -1,22 +1,25 @@
 html{
   /*COLOR VARIABLES*/
-  --primary: #3c3c65; 
-  --primary-dsat: #515165;
-  --secondary: #3c5065;
-  --secondary-dsat: #505A65;
-  --complementary: #abaa66;
-  --neutral:#333333;
-  --neutral-dsat:#555555;
-  --backdrop: #6667ab;
+  --primary:        #4F3B57;
+  --primary-dsat:   #332639; 
+  /**/
+  --secondary:      #18121A; 
+  --secondary-dsat: #3E4747; 
+  --complementary:  #95899A;
+  /**/
+  --neutral:        #0F0B11;
+  --neutral-dsat:   #262328;
+  --backdrop:       #111111;
 
-  --text: #ffffff;
-  --text-invert: #000000;
+  --text:           #ffffff;
+  --text-invert:    #000000;
+  /**/
 
   /*FONTS
   font-family: 'Roboto', Arial, sans-serif;
   font-family: 'VT323', Courier, monospace;
   */ 
-  background: linear-gradient(180deg, var(--backdrop) 0%, var(--neutral-dsat) 100%);
+  background: linear-gradient(180deg, var(--neutral) 0%, var(--neutral-dsat) 100%);
 }
 
 body{
@@ -54,7 +57,7 @@ body{
 /*nav-item - Logo, <nav>, Profiles*/
 .nav-item{
   width: 30%;
-  padding: 8px 32px;
+  padding: 15px 32px;
 }
 
 /*logo*/
@@ -129,6 +132,10 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: xx-large;
+}
+.profiles a:hover{
+  color: var(--complementary);
 }
 
 /***
@@ -140,7 +147,7 @@ body{
   justify-content: space-evenly;
   align-items: stretch;
   margin: 0;
-  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dsat) 100%);
+  background:var(--backdrop);
   height:90%;
   color:var(--text);
   font-family: 'Roboto', Arial, sans-serif;
@@ -152,10 +159,12 @@ section{
   padding: 16px;
   overflow-wrap: break-word;
   overflow-y: scroll;
-  border: solid var(--neutral); 3px;
+  /*border: solid var(--neutral);
   border-left: none;
   border-right: none;
-  background-color: var(--primary-dsat);
+  */
+  /*background-color: var(--primary-dsat);*/
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dsat) 100%);
 }
 
 section pre, section p{
@@ -190,7 +199,7 @@ h1,h2,h3,h4,h5,h6{
 
 #library a{
   border-color: var(--secondary);
-  border-radius: 100%;
+  border-radius: 40%;
   border-width: 2vh;
   border-style: groove ridge ridge groove;
   margin: 0 3vh;
@@ -301,7 +310,7 @@ footer a{
     padding: 0;
   }
   .nav-item{
-    padding: 0;
+    padding: 15px;
   }
   .logo{
     font-size: 6vw;	  

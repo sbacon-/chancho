@@ -47,7 +47,7 @@ int main(){
 		std::getline(manifest,manifest_line);
 		std::string_view man_line {manifest_line};
 		while(man_line.compare(0,3,"---")&&manifest){
-			std::cout<<man_line<<'\n';
+			//std::cout<<man_line<<'\n';
 			outf<<man_line<<'\n';
 			std::getline(manifest,manifest_line);
 			man_line = manifest_line;
