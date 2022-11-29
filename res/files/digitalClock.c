@@ -2,14 +2,15 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define WIDTH 8
+#define WIDTH 6
 #define HEIGHT WIDTH/2
-#define SPACING 2
+#define SPACING 4
 
 int *getDigitMask(int d);
 int **getMasks(const char *str);
 void printVertical(int maskL, int maskR);
 void printHorizontal(int mask);
+void printSpacing(int i, char c);
 
 int main(int argc, char *argv[]){
 	time_t current_time;
@@ -22,28 +23,38 @@ int main(int argc, char *argv[]){
 		printf("%s",time_string);
 		int **masks = getMasks(time_string);
 		//top
-		for(int i=0; i<6; i++)
+		for(int i=0; i<6; i++){
+			printSpacing(i,':');
 			printHorizontal(masks[i][0]);
+		}
 		printf("\n");
 		//left & right
 		for(int j=0;j<HEIGHT;j++){
-			for(int i=0; i<6; i++)
+			for(int i=0; i<6; i++){
+				printSpacing(i,' ');
 				printVertical(masks[i][3],masks[i][5]);
+			}
 			printf("\n");
 		}
 		//mid
-		for(int i=0; i<6; i++)
+		for(int i=0; i<6; i++){
+			printSpacing(i,':');
 			printHorizontal(masks[i][1]);
+		}
 		printf("\n");
 		//left & right
 		for(int j=0;j<HEIGHT;j++){
-			for(int i=0; i<6; i++)
+			for(int i=0; i<6; i++){
+				printSpacing(i,' ');
 				printVertical(masks[i][4],masks[i][6]);
+			}
 			printf("\n");
 		}
 		//bottom
-		for(int i=0; i<6; i++)
+		for(int i=0; i<6; i++){
+			printSpacing(i,':');
 			printHorizontal(masks[i][2]);
+		}
 
 		for(int i=0; i<6; i++){
 			free(masks[i]);
@@ -81,7 +92,7 @@ int **getMasks(const char * str){
 void printHorizontal(int mask){
 	printf(" ");	
 	for(int j=0;j<WIDTH;j++)
-		printf("%c",mask?'@':'.');
+		printf("%c",mask?'-':' ');
 	for(int i=0; i<SPACING+1; i++)
 		printf(" ");	
 	
@@ -89,9 +100,16 @@ void printHorizontal(int mask){
 
 void printVertical(int maskL, int maskR){
 	printf("%c%*c",
-		maskL?'@':'.',
+		maskL?'|':' ',
 		WIDTH+1,
-		maskR?'@':'.');
+		maskR?'|':' ');
 	for(int i=0; i<SPACING; i++)
 		printf(" ");	
+}
+
+void printSpacing(int i, char c){
+	if(i && ~i&1){
+		printf("%*c",SPACING,c);
+		printf("%*c",SPACING*2,' ');
+	}
 }
