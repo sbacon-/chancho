@@ -1,0 +1,18 @@
+<section class="full">
+<h3>DigitalClock</h3><br>
+    <h4>Downloads:</h4>
+    <ul>
+      <li><a href="/res/files/digitalClock">Pre-Compiled</a></li>
+      <li><a href="/res/files/digitalClock.c">Source Code</a></li>
+    </ul>
+    <br>
+    <p>        
+        This is a simple utility to display a digital clock in the terminal<br>
+        <br>
+        <strong>Update 11/29/22</strong><br>
+        I coded this as a means to display a digital clock from a raspberry pi.<br>
+        Source Code is available if you'd like to customize the WIDTH/HEIGHT definitions or the characters used in the print functions<br>
+
+        Enjoy!
+    </p>
+</section>
