@@ -3,7 +3,6 @@
 <script src=index.js></script>
 <button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
 <script>
-
 var engine = new Engine({"args":[],"canvasResizePolicy":1,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":39696,"index.wasm":13351459},"focusCanvas":true,"gdnativeLibs":[]});
 var playButton = document.querySelector("#play");     
 var canvas = document.querySelector("#canvas");
@@ -17,7 +16,6 @@ if(current==total){
  canvas.setAttribute("style","");     
 }
 }
-
 </script>
 </section>
 <section class="text">
@@ -25,4 +23,5 @@ if(current==total){
 <p>
 TODO: PROJECT WRITE-UP
 </p>
+</section>
 </section>

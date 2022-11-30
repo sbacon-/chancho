@@ -108,14 +108,12 @@
         productName: "LD49",
         productVersion: "0.049",
       };
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
@@ -128,7 +126,6 @@
         canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -147,7 +144,6 @@
     </script>
 </section>
 </section>
-
     </article>
     <footer role="contentinfo">
       <div>

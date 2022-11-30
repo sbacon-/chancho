@@ -22,10 +22,12 @@ int main(){
 		std::string line;
 		while(inf){
 			std::getline(inf,line);
-			outf<<line<<'\n';
+			if(!line.empty()){
+				outf<<line<<'\n';
+			}
 		}
 
-		outf<<'\n';
+		//outf<<'\n';Causing an additional line to be appended anytime the manifest is rebuilt
 		//Close the files
 		inf.close();
 	}

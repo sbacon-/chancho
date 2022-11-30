@@ -18,7 +18,6 @@
         <em>A / D -> Rotate Camera</em><br>
         <em>Shift -> Get Dizzy </em><br>
       </p>
-
       <h3>CATAN (Pre-Alpha)</h3><br>
       <h4>Downloads:</h4>
       <ul>
@@ -33,12 +32,11 @@
           <img src="/res/img/Catan_1.png">
           <img src="/res/img/Catan_2.png">
           <img src="/res/img/Catan_3.png"><br>
-
           <strong>TODO:</strong><br>
           Finishing Toasts<br>
           Add EndGame<br>
           Trade<br>
           Online<br>
-
       </p>
+</section>
 </section>

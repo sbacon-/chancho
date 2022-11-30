@@ -39,14 +39,12 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
         productName: "CUR2R5",
         productVersion: "0.1",
       };
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
@@ -59,7 +57,6 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
         canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -76,4 +73,5 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
       };
       document.body.appendChild(script);
     </script>
+</section>
 </section>

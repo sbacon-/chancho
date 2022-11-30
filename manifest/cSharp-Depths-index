@@ -82,7 +82,6 @@
       Thanks to this technique I was able to do way more levels than I anticipated: didn't get to all of them<br>
       I had planned on a Dream level called Deep Sleep, and a Depths of Hell final level. But I would have had to do
       props and music for those and there was no way I'd have time for all that.<br>
-
       <li><strong>REUSING AND REPURPOSING ASSETS</strong></li>
       <img src="/res/img/LD48.jpg" alt="3D Print Low Poly Skull"><img src="/res/img/LD48 Progress 45hr.gif" alt="Final Boss"><br>
       I used the skull model in almost every level, and even as the final boss.<br>
@@ -111,14 +110,12 @@
         productName: "The Depths",
         productVersion: "0.048",
       };
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
@@ -131,7 +128,6 @@
         canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -148,4 +144,5 @@
       };
       document.body.appendChild(script);
     </script>
+</section>
 </section>

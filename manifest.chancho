@@ -17,30 +17,23 @@ e.setAttribute("type","text/javascript");
 e.setAttribute("scr","https://chancho.dev/res/scripts/alertScript.js");
 document.body.appendChild(e);
 </code>
-
 <h4> alertScript.js </h4>
-
 <code>
 var intervalID;
 var angel = false;
 var delta = 10000;
-
 var addr = "http://chancho.dev/res/mp3/";
 var sound_url = "";
 var sounds = ["","DeskBell","VineBoom","Spam"];
 var soundIndex = 0;
-
 var ul,li,h3,subUL,subLI,subLII,subLIII,subLIV;
 var subLI_label, subLII_label, subLIII_label, subLIV_label;
-
-
 function autorefresh(){
 	//Check for the existense of a refresh button
    var home = $('button[data-id="incident|NoRelationship|HomePageGrid|Mscrm.HomepageGrid.incident.RefreshModernButton"]'); 
    var home_alt = $('button[data-id="RefreshDashboard"]');
    if(home.length > 0)home[0].click();
    if(home_alt.length > 0)home_alt[0].click();
-
 	
    //Check for Cases assigned to 'Accoutning Core'
    var acCase = $('a[aria-label="Accounting Core"]');
@@ -50,11 +43,9 @@ function autorefresh(){
       subLI_label.innerHTML = "Notify: OFF";//Stop notifying until reactivated
    }
 }
-
 function playSound(){
    window.open(sound_url,"_blank","height=200,width=200");
 }
-
 function changeSound(){
    soundIndex++;
    if(soundIndex>=sounds.length)soundIndex=0;
@@ -75,7 +66,6 @@ function changeSound(){
    }
    sound_url = addr + sounds[soundIndex] + ".mp3";
 }
-
 function repeater(){
    if(intervalID == null){
       intervalID = setInterval(autorefresh,delta);	
@@ -86,16 +76,13 @@ function repeater(){
       subLIII_label.innerHTML = "REFRESH: Off";
    }
 }
-
 function changeDelay(){
    delta *= 2;
    if(delta>=50000) delta = 5000;
    subLIV_label.innerHTML = "DELAY: " + (delta/1000) + "s";
-
    repeater();
    repeater();
 }
-
 function resetNotify(){
    if(angel){
       angel=false;
@@ -105,12 +92,10 @@ function resetNotify(){
       subLI_label.innerHTML = "Notify: OFF";
    }
 }
-
 function createAngelGUI(){
    ul = document.getElementById("id-5");
    var lastLI = ul.lastElementChild
    lastLI.setAttribute("class","pa-cr pa-gv pa-fd");
-
    li = document.createElement("LI");
    h3 = document.createElement("H3");
    subUL = document.createElement("UL");
@@ -118,12 +103,9 @@ function createAngelGUI(){
    subLII = document.createElement("LI");
    subLIII = document.createElement("LI");
    subLIV = document.createElement("LI");
-
    li.setAttribute("class","pa-cr");
-
    h3.setAttribute("class","pa-dx pa-bg pa-a pa-dy pa-dz pa-bl pa-ea pa-eb pa-ec pa-o pa-y pa-cm pa-ed ");
    h3.innerHTML = "Static M3sh";
-
    var fullLI = [subLI,subLII,subLIII,subLIV];
    for (var i = 0; i<fullLI.length; i++){
       var divI = document.createElement("DIV");
@@ -146,7 +128,6 @@ function createAngelGUI(){
       spanII.setAttribute("class","pa-bu pa-o pa-cl pa-cm pa-cn pa-co pa-cp pa-bc pa-cq ");
       spanII.setAttribute("id","chancho-"+i);
       spanII.innerHTML = "TEMP";
-
       spanI.appendChild(img);
       divIV.appendChild(spanI);
       divIV.appendChild(spanII);
@@ -156,24 +137,19 @@ function createAngelGUI(){
       fullLI[i].appendChild(divI);
       fullLI[i].setAttribute("class","pa-am pa-a pa-o pa-ao pa-bg pa-ap pa-b pa-bh pa-bi pa-bj ");
    }
-
    subUL.appendChild(subLI);
    subUL.appendChild(subLII);
    subUL.appendChild(subLIII);
    subUL.appendChild(subLIV);
-
    li.appendChild(h3);
    li.appendChild(subUL);
-
    ul.appendChild(li);
 }
-
 function buttonFunctions(){
    
    subLI.setAttribute("onClick","resetNotify()");
    subLI_label=document.getElementById("chancho-0");
    subLI_label.innerHTML = "Notify: ON";
-
    subLII.setAttribute("onClick","changeSound()");
    subLII_label = document.getElementById("chancho-1");
    subLII_label.innerHTML = "Alarm: NONE";
@@ -186,7 +162,6 @@ function buttonFunctions(){
    subLIV_label = document.getElementById("chancho-3");
    subLIV_label.innerHTML = "DELAY: "+delta/1000+"s";
 }
-
 createAngelGUI();
 buttonFunctions();
 repeater();
@@ -194,14 +169,12 @@ repeater();
 </p>
 </section>
 </section>
-
 ---godot/template
 <section class="feature">
 <canvas id="canvas"></canvas>
 <script src=$GODOT_URL></script>
 <button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
 <script>
-
 var engine = new Engine($GODOT_CONFIG);
 var playButton = document.querySelector("#play");     
 var canvas = document.querySelector("#canvas");     
@@ -224,14 +197,12 @@ TODO: PROJECT WRITE-UP
 </p>
 </section>
 </section>
-
 ---godot/gdChess/index
 <section class="feature">
 <canvas id="canvas"></canvas>
 <script src=index.js></script>
 <button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
 <script>
-
 var engine = new Engine({"args":[],"canvasResizePolicy":1,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":39696,"index.wasm":13351459},"focusCanvas":true,"gdnativeLibs":[]});
 var playButton = document.querySelector("#play");     
 var canvas = document.querySelector("#canvas");
@@ -245,7 +216,6 @@ if(current==total){
  canvas.setAttribute("style","");     
 }
 }
-
 </script>
 </section>
 <section class="text">
@@ -255,7 +225,6 @@ TODO: PROJECT WRITE-UP
 </p>
 </section>
 </section>
-
 ---cSharp/AlgoVisualizer/index
 <section class="feature">
 <!--GAME TITLE-->
@@ -346,14 +315,12 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
         productName: "Sort Algorithm Visualizer",
         productVersion: "1.0",
       };
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
@@ -366,7 +333,6 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
         canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -385,7 +351,6 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
     </script>  
 </section>
 </section>
-
 ---cSharp/LD49/index
 <section class="feature">
   <div class="center">
@@ -444,14 +409,12 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
         productName: "LD49",
         productVersion: "0.049",
       };
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
@@ -464,7 +427,6 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
         canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -483,7 +445,6 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
     </script>
 </section>
 </section>
-
 ---cSharp/Wordle/index
 <section class="feature">
   <div class="center">
@@ -525,14 +486,12 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
         productName: "Wordle",
         productVersion: "0.049",
       };
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
@@ -545,7 +504,6 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
         canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -564,7 +522,6 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
     </script>
 </section>
 </section>
-
 ---cSharp/Ressetti/index
 <section class="feature">
   <div class="center">
@@ -604,14 +561,12 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
         productName: "Ressetti",
         productVersion: "0.049",
       };
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
@@ -624,7 +579,6 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
         canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -643,14 +597,12 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
     </script>
 </section>
 </section>
-
 ---cSharp/SHMUP/index
 <section class="feature">
  <!-- Legacy Unity Instance -->
   <script src="Build/UnityProgress.js"></script>
   <script src="Build/UnityLoader.js"></script>
   <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/SHMUP.json", {onProgress: UnityProgress});</script>
-
       <div class="center">
       <div class="webgl-content">
         <div id="unityContainer" style="width: 100%; height: 85%"></div>
@@ -672,7 +624,6 @@ SOURCE: <a href="https://github.com/sbacon-/SortAlgorithms"> /sbacon-/SortAlgori
       </p>
 </section>
 </section>
-
 ---About
 <section class="full">
 <h2>About Me</h2>
@@ -692,7 +643,6 @@ and check out the my Github page for tools/inspiration in automating your own pr
 </p>
 </section>
 </section>
-
 ---cSharp/LD47/index
 <section class="feature">
 <!-- Legacy Unity Instance -->
@@ -737,7 +687,6 @@ and check out the my Github page for tools/inspiration in automating your own pr
       </p>
 </section>
 </section>
-
 ---cSharp/DolphinJump/index
 <section class="feature">
   <h2>DolphinJump</h2>
@@ -761,7 +710,6 @@ and check out the my Github page for tools/inspiration in automating your own pr
 </section>
 <section class="text">
   <p>
-
     Went and got a 3D printer this week so I made a game out of a model I made to print. T-minus 5 days to Ludum Dare 48!<br>
     <a href="/res/img/dolphindesign1.png"><img src="/res/img/dolphindesign1.png" alt="Dolphin Design Doc 1"></a><br>
     <a href="/res/img/dolphindesign2.png"><img src="/res/img/dolphindesign2.png" alt="Dolphin Design Doc 2"></a><br>
@@ -779,14 +727,12 @@ and check out the my Github page for tools/inspiration in automating your own pr
         productName: "DolphinJump",
         productVersion: "0.1",
       };
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
@@ -799,7 +745,6 @@ and check out the my Github page for tools/inspiration in automating your own pr
         canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -818,7 +763,6 @@ and check out the my Github page for tools/inspiration in automating your own pr
     </script>
 </section>
 </section>
-
 ---misc/ClickBot
 <section class="full">
 <h3>ClickBot</h3><br>
@@ -834,25 +778,21 @@ and check out the my Github page for tools/inspiration in automating your own pr
         Updated for ease of use, the clicker will now ask for a number of clicks.
         The Clicker will run where the ok key is clicked. Or wherever the mouse is when the
         dialog is closed.<br>
-
         Enjoy!
     </p>
 </section>
 </section>
-
 ---cSharp/MazeGenerator/index
 <section class="feature">
 <!-- Legacy Unity Instance -->
   <script src="Build/UnityProgress.js"></script>
   <script src="Build/UnityLoader.js"></script>
   <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Unity Builds.json", {onProgress: UnityProgress});</script>
-
       <div class="center" style="width: 600px; height: 648px">
       <div class="webgl-content">
         <div id="unityContainer" style="width: 600px; height: 600px"></div>
         <small>R - Generate A New Maze</small>
       </div></div>
-
 </section>
 <section class="text">
       <h2>Algorithmic Maze Generation</h2>
@@ -868,7 +808,6 @@ and check out the my Github page for tools/inspiration in automating your own pr
       </p>
 </section>
 </section>
-
 ---cSharp/CUR2R5/index
 <section class="feature">
     <div class="center">
@@ -911,14 +850,12 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
         productName: "CUR2R5",
         productVersion: "0.1",
       };
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
@@ -931,7 +868,6 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
         canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -950,7 +886,6 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
     </script>
 </section>
 </section>
-
 ---misc/LD46
 <section class="full">
 <h3>Ludum Dare 46 (IGKNIGHT)</h3><br>
@@ -971,14 +906,11 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
         Had to gut most of it, but got it running;
         code was too disorganized to fix, but atleast
         <em>we learned something today!</em><br>
-
         ___<br>
         <strong>Screenshots:</strong><br>
         <img src="/res/img/46_48h_1.png">
         <img src="/res/img/46_48h_2.png">
         <img src="/res/img/46_48h_3.png"><br>
-
-
         <strong>Results:</strong><br>
         Overall: 412th (3.548 average from 44 ratings)<br>
         Fun: 352nd (3.5 average from 42 ratings)<br>
@@ -990,7 +922,6 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
     </p>
 </section>
 </section>
-
 ---cSharp/Depths/index
 <section class="feature">
   <div class="center">
@@ -1076,7 +1007,6 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
       Thanks to this technique I was able to do way more levels than I anticipated: didn't get to all of them<br>
       I had planned on a Dream level called Deep Sleep, and a Depths of Hell final level. But I would have had to do
       props and music for those and there was no way I'd have time for all that.<br>
-
       <li><strong>REUSING AND REPURPOSING ASSETS</strong></li>
       <img src="/res/img/LD48.jpg" alt="3D Print Low Poly Skull"><img src="/res/img/LD48 Progress 45hr.gif" alt="Final Boss"><br>
       I used the skull model in almost every level, and even as the final boss.<br>
@@ -1105,14 +1035,12 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
         productName: "The Depths",
         productVersion: "0.048",
       };
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
@@ -1125,7 +1053,6 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
         canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -1144,7 +1071,6 @@ Overall it was a good few weeks. Hope you enjoy the roundup and good luck on you
     </script>
 </section>
 </section>
-
 ---index
 <section class="text">
 <h3>Updates</h3>
@@ -1164,19 +1090,16 @@ On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em><br
 11/27/22<br>
 Updated the CSS again, made some changes to the 'Amoeba' java project for repurposing to my new job.<br>
 Github Link: <a href="https://github.com/sbacon-/AMOEBA">AMOEBA</a><br>
-
 06/20/22<br>
 Getting back from vacation, considering refactoring the gdChess Trainer to better utilize UCI<br>
 06/08/22<br>
 Just completed some consulting work for peer reviewing macros in excel<br>
 Email me your sheets if you'd like to join the queue.<br>
 </p></section>
-
 <section class="hScroll">
 <ul id="library"></ul>
 <script src="/res/scripts/genLib.js" async></script></section>
 <script src="/res/scripts/genLib.js" async></script></section>
-
 ---misc/DigitalClock
 <section class="full">
 <h3>DigitalClock</h3><br>
@@ -1192,19 +1115,16 @@ Email me your sheets if you'd like to join the queue.<br>
         <strong>Update 11/29/22</strong><br>
         I coded this as a means to display a digital clock from a raspberry pi.<br>
         Source Code is available if you'd like to customize the WIDTH/HEIGHT definitions or the characters used in the print functions<br>
-
         Enjoy!
     </p>
 </section>
 </section>
-
 ---godot/SquashTheCreeps/index
 <section class="feature">
 <canvas id="canvas"></canvas>
 <script src=index.js></script>
 <button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
 <script>
-
 var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":1885312,"index.wasm":17503191},"focusCanvas":true,"gdnativeLibs":[]});
 var playButton = document.querySelector("#play");     
 function printProgress(current, total) {
@@ -1212,7 +1132,6 @@ var percentage = (current/total)*100;
 playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
 console.log("Loaded " + current + " of " + total + " bytes");
 }
-
 </script>
 </section>
 <section class="text">
@@ -1223,7 +1142,6 @@ console.log("Loaded " + current + " of " + total + " bytes");
 </p>
 </section>
 </section>
-
 ---misc/Calculator
 <section class="feature">
  <h3>Javascript Calculator</h3>
@@ -1266,23 +1184,19 @@ let memory = 0;
 let task = "na"
 let newNumber = true;
 let display = document.querySelectorAll(".calc-display.calc-row");
-
 function clearContent(){
     display[0].innerHTML="0";
 };
-
 function appendContent(number){
     if((number!=='.'&&display[0].innerHTML==0)||newNumber) display[0].innerHTML="";
     display[0].innerHTML+=number;
     newNumber=false;
 }
-
 function flushToMemory(request){
     memory = parseFloat(display[0].innerHTML);
     task=request;
     newNumber=true;
 }
-
 function calculate(){
     let active = parseFloat(display[0].innerHTML);
     switch(task){
@@ -1305,15 +1219,12 @@ function calculate(){
     }
     newNumber=true;
 }
-
 function backspace(){
     display[0].innerHTML=display[0].innerHTML.substr(0,display[0].innerHTML.length-1);
 }
-
       </pre>
 </section>
 </section>
-
 ---misc/Digitizer
 <section class="full">
     <h3>Digitizer</h3><br>
@@ -1335,13 +1246,11 @@ function backspace(){
     </p>
 </section>
 </section>
-
 ---misc/NumToWord
 <section class="full">
        <h5>Numbers to Word Calculator</h5>
         <p>Enter a number to convert to dollars and cents. Click to Copy!<br>
         </p>
-
         <div class="num-cash">
             <input type="number" class="num-cash-input" placeholder="0000000.00"></input>
             <a class="num-result">
@@ -1350,7 +1259,6 @@ function backspace(){
             </a>
             <script type="text/javascript" src="/res/scripts/numCash.js"></script>
         </div>
-
         <p>
           Works with numbers up to one decicentillion [10<sup>333</sup>].<br>
           <a href="https://github.com/sbacon-/chancho/blob/master/res/scripts/numCash.js">
@@ -1358,7 +1266,6 @@ function backspace(){
         </p>
 </section>
 </section>
-
 ---misc/BTC
 <section class="full">
 <h3>Bitcoin Exchange Rate</h3><br>
@@ -1374,7 +1281,6 @@ function backspace(){
     </p>
 </section>
 </section>
-
 ---misc/index
 <section class="full">
 <h2>Archives</h2>
@@ -1392,10 +1298,8 @@ function backspace(){
     </pre>
 </section>
 </section>
-
 ---cSharp/HotelLazarus/index
 <section class="feature">
-
 <div class="center">
 <div id="unity-container" class="unity-desktop">
 <canvas id="unity-canvas"></canvas>
@@ -1417,7 +1321,6 @@ function backspace(){
 <section class="text">
 <br>
 <p>
-
 <br>
 <h2>Hotel Lazarus</h2>
 <h3>Hospitality for the recently departed</h3>
@@ -1426,13 +1329,11 @@ I've been considering making this type of game for a while.
 Luckily, I was able to shoehorn the genre with the LD<i>L</i> theme.
 <br><br>
 <a href = "/res/img/ld50_prep.png"><img src="/res/img/ld50_prep.png" alt="Hastily scribbled Game Ideas from the Final Round"><br></a>
-
 <h4> Taking Lessons From Past Mistakes </h4>
 I didn't prepare as much as I typically do for the Compo. (Only one practice project the week before <a href="/cSharp/Wordle/index.html"> Wordle Clone </a>).
 Before LD49, I spent weeks trying to learn C# best practices, Blender modeling techniques, and learning a new MIDI/Audio Sequencer (muse4).
 By the time the compo started I was unable to focus on what was really important:
 <br><br>
-
 <h4>Making the Project 'I' Wanted to Make</h4>
 <a href = "/res/img/ld50_wb.png"><img src="/res/img/ld50_wb.png" alt="Whiteboard with themes: Tax Evasion, Sinking Ship, etc."></a><br>
 Taking a more relaxed aproach this time, I made my list once the final round of voting started.
@@ -1440,13 +1341,11 @@ Once the theme was announced - I wrote more ideas on the whiteboard to make a de
 The theme was so broad this time that I figured any game with a fail state could be a candidate.
 So I went with an idea that I've had since my career change into the hospitality industry.
 <br><br>
-
 <a href="/res/img/ld50_prog1.gif"><img src="/res/img/ld50_prog1.gif" alt="Prototype with building and Guest AI"><br></a>
 Armed with enough chips, candy, and caffeine to feed a small village, I got to work;
 and after a few hours I had the basic structure finished.
 The guests looked a bit like a skeletons already, so with some slight adjustments a tone was established.
 <br><br>
-
 <h4>Lessons Learned</h4><br>
 <a href="/res/img/ld50_notes.png"><img src="/res/img/ld50_notes.png"><br></a>
 One of the biggest things that helped was PLAY-TESTING. In previous years, I've received tons of feedback
@@ -1457,11 +1356,9 @@ What if they are playing with only a mouse?<br>
 Why does nothing happen when you click the around the lobby (*wink)?<br> </i>
 These questions never would have crossed my mind otherwise. Thanks Kass!
 <br><br>
-
 Overall, very happy with how this one turned out. Hope you enjoyed as much as I have, look out for a mobile release (coming soon... maybe)<br>
 See y'all in October
 <br><br>
-
 <h4>Created in 48 hours for Ludum Dare #50</h4>
 </p>
 <script>
@@ -1476,14 +1373,12 @@ See y'all in October
         productName: "LD50",
         productVersion: "1.0",
       };
-
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
@@ -1496,7 +1391,6 @@ See y'all in October
         canvas.style.height = "85%";
       }
       loadingBar.style.display = "block";
-
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -1515,7 +1409,6 @@ See y'all in October
     </script>
 </section>
 </section>
-
 ---misc/Alfonso
 <section class="full">
     <h3>Alfonso's Ice Cream Shop</h3>
@@ -1540,7 +1433,6 @@ See y'all in October
     </p>
 </section>
 </section>
-
 ---cSharp/Catan/index
 <section class="feature">
       <div class="center">
@@ -1562,7 +1454,6 @@ See y'all in October
         <em>A / D -> Rotate Camera</em><br>
         <em>Shift -> Get Dizzy </em><br>
       </p>
-
       <h3>CATAN (Pre-Alpha)</h3><br>
       <h4>Downloads:</h4>
       <ul>
@@ -1577,17 +1468,14 @@ See y'all in October
           <img src="/res/img/Catan_1.png">
           <img src="/res/img/Catan_2.png">
           <img src="/res/img/Catan_3.png"><br>
-
           <strong>TODO:</strong><br>
           Finishing Toasts<br>
           Add EndGame<br>
           Trade<br>
           Online<br>
-
       </p>
 </section>
 </section>
-
 ---misc/Blender
 <section class="full">
 <h2>Blends</h2>
@@ -1609,7 +1497,6 @@ See y'all in October
         </p>
 </section>
 </section>
-
 ---misc/LD45
 <section class="full">
 <h3>Ludum Dare 45 (NOUGHT)</h3><br>
@@ -1627,8 +1514,6 @@ See y'all in October
         <img src="/res/img/72hr_2.png">
         <img src="/res/img/72hr_1.png">
         <img src="/res/img/72hr_3.png"><br>
-
-
         <strong>Results:</strong><br>
         Overall: 344th (3.197 average from 40 ratings)<br>
         Fun: 288th (3.158 average from 40 ratings)<br>
@@ -1639,14 +1524,12 @@ See y'all in October
     </p>
 </section>
 </section>
-
 ---godot/AvoidTheCreeps/index
 <section class="feature">
 <canvas id="canvas"></canvas>
 <script src=index.js></script>
 <button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
 <script>
-
 var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":2172608,"index.wasm":17503191},"focusCanvas":true,"gdnativeLibs":[]});
 var playButton = document.querySelector("#play");     
 function printProgress(current, total) {
@@ -1654,7 +1537,6 @@ var percentage = (current/total)*100;
 playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
 console.log("Loaded " + current + " of " + total + " bytes");
 }
-
 </script>
 </section>
 <section class="text">
@@ -1665,4 +1547,3 @@ console.log("Loaded " + current + " of " + total + " bytes");
 </p>
 </section>
 </section>
-

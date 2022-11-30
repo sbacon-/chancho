@@ -56,7 +56,6 @@
 <script src=index.js></script>
 <button id="play" onclick="engine.startGame({onProgress: printProgress })"><i class="fas fa-play"></i></button>
 <script>
-
 var engine = new Engine({"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":2172608,"index.wasm":17503191},"focusCanvas":true,"gdnativeLibs":[]});
 var playButton = document.querySelector("#play");     
 function printProgress(current, total) {
@@ -64,7 +63,6 @@ var percentage = (current/total)*100;
 playButton.setAttribute("style","background:linear-gradient(45deg,var(--primary-dsat) 0%,var(--primary)"+percentage+"%, var(--complementary) "+percentage+"%,var(--complementary) 100%)"); 
 console.log("Loaded " + current + " of " + total + " bytes");
 }
-
 </script>
 </section>
 <section class="text">
@@ -75,7 +73,6 @@ console.log("Loaded " + current + " of " + total + " bytes");
 </p>
 </section>
 </section>
-
     </article>
     <footer role="contentinfo">
       <div>

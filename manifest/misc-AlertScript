@@ -16,30 +16,23 @@ e.setAttribute("type","text/javascript");
 e.setAttribute("scr","https://chancho.dev/res/scripts/alertScript.js");
 document.body.appendChild(e);
 </code>
-
 <h4> alertScript.js </h4>
-
 <code>
 var intervalID;
 var angel = false;
 var delta = 10000;
-
 var addr = "http://chancho.dev/res/mp3/";
 var sound_url = "";
 var sounds = ["","DeskBell","VineBoom","Spam"];
 var soundIndex = 0;
-
 var ul,li,h3,subUL,subLI,subLII,subLIII,subLIV;
 var subLI_label, subLII_label, subLIII_label, subLIV_label;
-
-
 function autorefresh(){
 	//Check for the existense of a refresh button
    var home = $('button[data-id="incident|NoRelationship|HomePageGrid|Mscrm.HomepageGrid.incident.RefreshModernButton"]'); 
    var home_alt = $('button[data-id="RefreshDashboard"]');
    if(home.length > 0)home[0].click();
    if(home_alt.length > 0)home_alt[0].click();
-
 	
    //Check for Cases assigned to 'Accoutning Core'
    var acCase = $('a[aria-label="Accounting Core"]');
@@ -49,11 +42,9 @@ function autorefresh(){
       subLI_label.innerHTML = "Notify: OFF";//Stop notifying until reactivated
    }
 }
-
 function playSound(){
    window.open(sound_url,"_blank","height=200,width=200");
 }
-
 function changeSound(){
    soundIndex++;
    if(soundIndex>=sounds.length)soundIndex=0;
@@ -74,7 +65,6 @@ function changeSound(){
    }
    sound_url = addr + sounds[soundIndex] + ".mp3";
 }
-
 function repeater(){
    if(intervalID == null){
       intervalID = setInterval(autorefresh,delta);	
@@ -85,16 +75,13 @@ function repeater(){
       subLIII_label.innerHTML = "REFRESH: Off";
    }
 }
-
 function changeDelay(){
    delta *= 2;
    if(delta>=50000) delta = 5000;
    subLIV_label.innerHTML = "DELAY: " + (delta/1000) + "s";
-
    repeater();
    repeater();
 }
-
 function resetNotify(){
    if(angel){
       angel=false;
@@ -104,12 +91,10 @@ function resetNotify(){
       subLI_label.innerHTML = "Notify: OFF";
    }
 }
-
 function createAngelGUI(){
    ul = document.getElementById("id-5");
    var lastLI = ul.lastElementChild
    lastLI.setAttribute("class","pa-cr pa-gv pa-fd");
-
    li = document.createElement("LI");
    h3 = document.createElement("H3");
    subUL = document.createElement("UL");
@@ -117,12 +102,9 @@ function createAngelGUI(){
    subLII = document.createElement("LI");
    subLIII = document.createElement("LI");
    subLIV = document.createElement("LI");
-
    li.setAttribute("class","pa-cr");
-
    h3.setAttribute("class","pa-dx pa-bg pa-a pa-dy pa-dz pa-bl pa-ea pa-eb pa-ec pa-o pa-y pa-cm pa-ed ");
    h3.innerHTML = "Static M3sh";
-
    var fullLI = [subLI,subLII,subLIII,subLIV];
    for (var i = 0; i<fullLI.length; i++){
       var divI = document.createElement("DIV");
@@ -145,7 +127,6 @@ function createAngelGUI(){
       spanII.setAttribute("class","pa-bu pa-o pa-cl pa-cm pa-cn pa-co pa-cp pa-bc pa-cq ");
       spanII.setAttribute("id","chancho-"+i);
       spanII.innerHTML = "TEMP";
-
       spanI.appendChild(img);
       divIV.appendChild(spanI);
       divIV.appendChild(spanII);
@@ -155,24 +136,19 @@ function createAngelGUI(){
       fullLI[i].appendChild(divI);
       fullLI[i].setAttribute("class","pa-am pa-a pa-o pa-ao pa-bg pa-ap pa-b pa-bh pa-bi pa-bj ");
    }
-
    subUL.appendChild(subLI);
    subUL.appendChild(subLII);
    subUL.appendChild(subLIII);
    subUL.appendChild(subLIV);
-
    li.appendChild(h3);
    li.appendChild(subUL);
-
    ul.appendChild(li);
 }
-
 function buttonFunctions(){
    
    subLI.setAttribute("onClick","resetNotify()");
    subLI_label=document.getElementById("chancho-0");
    subLI_label.innerHTML = "Notify: ON";
-
    subLII.setAttribute("onClick","changeSound()");
    subLII_label = document.getElementById("chancho-1");
    subLII_label.innerHTML = "Alarm: NONE";
@@ -185,10 +161,10 @@ function buttonFunctions(){
    subLIV_label = document.getElementById("chancho-3");
    subLIV_label.innerHTML = "DELAY: "+delta/1000+"s";
 }
-
 createAngelGUI();
 buttonFunctions();
 repeater();
 </code>
 </p>
+</section>
 </section>

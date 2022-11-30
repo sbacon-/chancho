@@ -16,14 +16,13 @@ On a semi-related note, the minecraft server is back: <em>mc.chancho.dev</em><br
 11/27/22<br>
 Updated the CSS again, made some changes to the 'Amoeba' java project for repurposing to my new job.<br>
 Github Link: <a href="https://github.com/sbacon-/AMOEBA">AMOEBA</a><br>
-
 06/20/22<br>
 Getting back from vacation, considering refactoring the gdChess Trainer to better utilize UCI<br>
 06/08/22<br>
 Just completed some consulting work for peer reviewing macros in excel<br>
 Email me your sheets if you'd like to join the queue.<br>
 </p></section>
-
 <section class="hScroll">
 <ul id="library"></ul>
+<script src="/res/scripts/genLib.js" async></script></section>
 <script src="/res/scripts/genLib.js" async></script></section>
