@@ -1,35 +1,98 @@
-<script> 
-	import Fa from 'svelte-fa'
-	import Dropmenu from './Dropmenu.svelte'
-  import { faGithub } from '@fortawesome/free-brands-svg-icons'
-  import { faStackOverflow } from '@fortawesome/free-brands-svg-icons'
-  import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
-	
-	let drop = {display: false, toggle:toggleDrop}
+<script>
+	import Fa from "svelte-fa";
+	import { faGithub,faStackOverflow,faLinkedin} from "@fortawesome/free-brands-svg-icons";
+	import { faPlus,faSun,faMoon,faComputer,faCookieBite} from "@fortawesome/free-solid-svg-icons";
 
-	function activateDrop(){
-		drop.display = true;
+	let drop = false;
+	function activateDrop() {
+		drop = true;
 	}
-	function toggleDrop(){
-		drop.display = !drop.display;
+	function deactivateDrop() {
+		drop = false;
 	}
 </script>
-<div class="fixed flex top-0 left-0 w-screen h-16 bg-black text-3xl text-white shadow-2xl">
-	<div class = "w-1/3 text-left text-5xl italic hover:text-bright">
-	<h3>CHANCHO.dev</h3>
+
+<div
+	on:mouseenter={activateDrop}
+	on:mouseleave={deactivateDrop}
+	class="navBar group"
+>
+	<div class="flex">
+		<div class="w-1/3 text-left hover:text-bright m-auto">
+			<a
+				class="text-text dark:text-textdark hover:text-text hover:dark:text-textdark"
+				href="/"
+			>
+				<h1>
+					CHANCHO<i class="text-pri1 dark:text-pri1dark text-md"
+						>.dev</i
+					>
+				</h1>
+			</a>
+		</div>
+		<a
+			href="/#"
+			class="txt hover:text-current text-2 w-max m-auto"
+		>
+			<Fa
+				id="navPlus"
+				class="group-hover:rotate-45 transition-all text-pri2 dark:text-pri2dark"
+				icon={faPlus}
+			/>
+		</a>
+		<div class="w-1/3 text-right m-auto">
+			<div class="text-center inline">
+			<a href="/#">
+				<Fa
+					class="text-pri2 dark:text-pri3dark inline filter"
+					icon={faCookieBite}/>
+			
+			</a>
+			<a href="/#" on:click={lightMode}>
+				<Fa
+					class="text-pri2 dark:text-pri3dark inline filter"
+					icon={faSun}/>
+			</a>
+			<a href="/#" on:click={darkMode}>
+				<Fa
+					class="text-pri2 dark:text-pri3dark inline filter"
+					icon={faMoon}/>
+			</a>
+			<a href="/#" on:click={systemMode}>
+				<Fa
+					class="text-pri2 dark:text-pri3dark inline filter"
+					icon={faComputer}/>
+			</a>
+			<b>>></b>
+			</div>
+		
+			<a href="https://github.com/sbacon-"
+				><Fa
+					class="text-pri3 dark:text-pri3dark inline filter drip"
+					icon={faGithub}
+				/>
+			</a>
+			<a href="https://stackoverflow.com/users/11916061/tom-chumley"
+				><Fa
+					class="text-pri3 dark:text-pri3dark inline filter drip"
+					icon={faStackOverflow}
+				/>
+			</a>
+			<a href="https://linkedin.com/in/TomChumley"
+				><Fa
+					class="text-pri3 dark:text-pri3dark inline filter drip"
+					icon={faLinkedin}
+				/>
+			</a>
+		</div>
 	</div>
-	<div on:mouseover={activateDrop} class = "w-1/3 flex">
-	<i class="grow">Projects</i>
-	<i class="grow">About</i>
-	</div>
-	<div class = "h-auto w-1/3 flex">
-		<Fa class = "grow hover:text-bright" icon={faStackOverflow} /> 
-		<Fa class = "grow hover:text-bright" icon={faGithub} /> 
-		<Fa class = "grow hover:text-bright" icon={faLinkedin} />
+	<div class="dropMenu">
+		<div class="grow">
+			Recent
+		</div>
+		<div>
+			Featured
+		</div>
+	
 	</div>
 </div>
-
-{#if drop.display}
-	<Dropmenu {... drop} />
-{/if}
-

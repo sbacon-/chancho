@@ -1,3 +1,7 @@
+<style lang="postcss">
+
+</style>
+
 <script>
 	/*Chancho Dot Dev v 23.02.07*/
 	import Main from "./Main.svelte";
