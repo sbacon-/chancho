@@ -10,27 +10,52 @@ module.exports = {
       colors: {
         text:     '#000000',
         textdark: '#ffffff',
-        link:     '#0000ff',
-        linkdark: '#0000ff',
-        neu:      '#dddddd',
-        neudark:  '#222221',
-        pri1:     '#ed0852',
-        pri1dark:     '#ed0852',
-        pri2:     '#0B53EF',
-        pri2dark:     '#0B53EF',
-        pri3:     '#53EF0B',
-        pri3dark:     '#53EF0B',
+        /*Neutral Colors - White & Black*/
+        neu:      '#efefef',
+        grey:     '#787878',
+        neudark:  '#090909',
+        /*Contrast Chart (WAGC AA Compliant)
+        COLOR   LightN  LText     DarkN     DText
+        Red     4.53:1  4.02:1    4.51:1    4.41:1 
+        Blue    4.65:1  3.92:1    3.72:1    5.34:1  
+        Yellow  1.69:1  11.14:1   12.11:1   1.64:1
+
+        NormalSizeText 
+        WAGC AA-4.5
+        WAGC AAA-7 (O_o) 
+        LargeTextSize (18pt or 14pt-BOLD) 
+        WAGC AA-3
+        WAGC AAA-4.5
+        User & Graphical Input  
+        WAGC AA-3
+        */
+
+        /*VIVA MAGENTA*/
+        pri1:     '#d9013e',
+        pri1dark: '#ed0852',
+        /*TRIAD BLUE*/
+        pri2:     '#046dbd',
+        pri2dark: '#046dbd',
+        /*TRIAD YELLOW*/
+        pri3:     '#d9bc01',
+        pri3dark: '#edc708',
+
+        /*
         sec1:     '#ffff00',
         sec1dark: '#ffff00',
         sec2:     '#ff00ff',
         sec2dark: '#ff00ff',
         sec3:     '#00ffff',
         sec3dark: '#00ffff',
+        */
       },
       dropShadow: {
         '3xl': '0 0 1px rgba(0,0,0,1)',
         '4xl': '0 0 1px rgba(255,255,255,1)' 
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      }
     },
   },
   variants: {

@@ -1,98 +1,65 @@
 <script>
+	import { onMount } from "svelte";
 	import Fa from "svelte-fa";
 	import { faGithub,faStackOverflow,faLinkedin} from "@fortawesome/free-brands-svg-icons";
-	import { faPlus,faSun,faMoon,faComputer,faCookieBite} from "@fortawesome/free-solid-svg-icons";
+	import { faAnglesDown,faPlus,faYinYang,faSun,faMoon,faComputer,faCookieBite} from "@fortawesome/free-solid-svg-icons";
 
 	let drop = false;
-	function activateDrop() {
-		drop = true;
+	function activateDrop(){drop = true;}
+	function deactivateDrop(){drop = false;}
+	
+	let modeSelect = false;
+	function activateModeSelect(){modeSelect=true};
+	function deactivateModeSelect(){modeSelect=false};
+	function setMode(m){
+		switch (m){
+			case 0:
+				lightMode();
+				break;
+			case 1:
+				darkMode();
+				break;
+			case 2:
+				systemMode();
+				break;
+		}
+		deactivateModeSelect();
+		deactivateDrop();
 	}
-	function deactivateDrop() {
-		drop = false;
-	}
+
 </script>
 
-<div
-	on:mouseenter={activateDrop}
-	on:mouseleave={deactivateDrop}
-	class="navBar group"
->
+<nav class="group fixed flex-col w-screen top-0 left-0 neu border-b-2 shadow-md transition-all" on:mouseenter={activateDrop} on:mouseleave={deactivateDrop}>
 	<div class="flex">
-		<div class="w-1/3 text-left hover:text-bright m-auto">
-			<a
-				class="text-text dark:text-textdark hover:text-text hover:dark:text-textdark"
-				href="/"
-			>
+		<div class="navItem">
+			<a class="txt text-2xl" href="/">
 				<h1>
-					CHANCHO<i class="text-pri1 dark:text-pri1dark text-md"
-						>.dev</i
-					>
+					CHANCHO<i class="lText text-xl">.dev</i>
 				</h1>
 			</a>
 		</div>
-		<a
-			href="/#"
-			class="txt hover:text-current text-2 w-max m-auto"
-		>
-			<Fa
-				id="navPlus"
-				class="group-hover:rotate-45 transition-all text-pri2 dark:text-pri2dark"
-				icon={faPlus}
-			/>
-		</a>
-		<div class="w-1/3 text-right m-auto">
-			<div class="text-center inline">
-			<a href="/#">
-				<Fa
-					class="text-pri2 dark:text-pri3dark inline filter"
-					icon={faCookieBite}/>
-			
-			</a>
-			<a href="/#" on:click={lightMode}>
-				<Fa
-					class="text-pri2 dark:text-pri3dark inline filter"
-					icon={faSun}/>
-			</a>
-			<a href="/#" on:click={darkMode}>
-				<Fa
-					class="text-pri2 dark:text-pri3dark inline filter"
-					icon={faMoon}/>
-			</a>
-			<a href="/#" on:click={systemMode}>
-				<Fa
-					class="text-pri2 dark:text-pri3dark inline filter"
-					icon={faComputer}/>
-			</a>
-			<b>>></b>
-			</div>
-		
-			<a href="https://github.com/sbacon-"
-				><Fa
-					class="text-pri3 dark:text-pri3dark inline filter drip"
-					icon={faGithub}
-				/>
-			</a>
-			<a href="https://stackoverflow.com/users/11916061/tom-chumley"
-				><Fa
-					class="text-pri3 dark:text-pri3dark inline filter drip"
-					icon={faStackOverflow}
-				/>
-			</a>
-			<a href="https://linkedin.com/in/TomChumley"
-				><Fa
-					class="text-pri3 dark:text-pri3dark inline filter drip"
-					icon={faLinkedin}
-				/>
-			</a>
+		<div class="navItemLarge txt text-2xl">
+			<Fa id="navIcon" class="group-hover:animate-bounce transition-all graphUI" icon={faAnglesDown}/>
 		</div>
 	</div>
-	<div class="dropMenu">
-		<div class="grow">
-			Recent
+	<div class="flex txt text-2xl h-0 scale-0 group-hover:h-16 group-hover:scale-100 transition-all duration-75 md:duration-300">
+		<div class="navItemLarge">
+			<h2>Projects</h2>
+			<ul>
+				<li>
+				</li>
+			</ul>
 		</div>
-		<div>
-			Featured
+		<div class="navItem flex">
+					<a href="/#" class="hBack block w-10 lg:w-20" on:click={()=>setMode(0)}>
+						<Fa icon={faSun}/>
+					</a>
+					<a href="/#" class="hBack block w-10 lg:w-20" on:click={()=>setMode(1)}>
+						<Fa icon={faMoon}/>
+					</a>
+					<a href="/#" class="hBack block w-10 lg:w-20" on:click={()=>setMode(2)}>
+						<Fa icon={faComputer}/>
+					</a>
 		</div>
-	
 	</div>
-</div>
+</nav>

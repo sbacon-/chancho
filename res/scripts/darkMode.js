@@ -1,5 +1,5 @@
 function init(){
-    if(localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
+    if(isDarkMode()){
         document.documentElement.classList.add('dark');
     }else{
         document.documentElement.classList.remove('dark');
@@ -19,4 +19,9 @@ function darkMode(){
 function systemMode(){
     localStorage.removeItem('theme');
     init();
+}
+
+function isDarkMode(){
+    return localStorage.theme === 'dark' || 
+    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
 }

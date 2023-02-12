@@ -4,7 +4,7 @@
   import { updates } from '/res/scripts/updates';
 </script>
 
-<section class = "lg:p-20 text-text dark:text-textdark">
+<section class = "txt">
 <h3 class="text-2xl underline">Welcome Home!</h3>
 
 <br>
