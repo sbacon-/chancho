@@ -1,5 +1,10 @@
 export let updates = [
   {
+    "date":"02/12/23",
+    "update":"Finished setting up the new Backend for site refresh",
+    "link":""
+  },
+  {
     "date":"02/10/23",
     "update":"Implementing a dark mode and responsive design",
     "link":"https://github.com/sbacon-/chancho/tree/svelte"
