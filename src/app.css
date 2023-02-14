@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+	@apply h-full
+}
+
+h2,h3,h4,h5,h6 {
+	@apply text-pri1 dark:text-pri1dark
+}
+
+svg{
+	@apply inline
+}
+
+.txt {
+	@apply text-text dark:text-textdark
+}
+
+.lText {
+	@apply text-pri1 dark:text-pri1dark
+}
+
+.graphUI {
+	@apply text-pri2 dark:text-pri3dark
+}
+
+.hBack{
+	@apply
+			lg:hover:bg-pri3 lg:dark:hover:bg-pri2dark lg:rounded-2xl lg:p-2
+			lg:text-text lg:dark:text-textdark
+			text-pri2 dark:text-pri3dark
+}
+
+.bord{
+	@apply
+		border-4 border-text dark:border-textdark
+}
+
+.neu {
+	@apply bg-neu dark:bg-neudark
+}
+
+.navItem{
+	@apply w-1/3 m-auto text-center px-5
+}
+.navItemLarge{
+	@apply w-2/3 m-auto text-center px-5
+}

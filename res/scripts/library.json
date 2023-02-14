@@ -1,4 +1,4 @@
-[
+{
    {"title":"gdChess Trainer",
     "reference":"/godot/gdChess/",
     "card":"/res/img/library/Chess.png",
@@ -143,4 +143,4 @@
     "platform" : ["html"],
     "navigation" : true
   }
-]
+}
