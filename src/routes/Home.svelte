@@ -4,19 +4,19 @@
   import { updates } from '/res/scripts/updates';
 </script>
 
-<section class = "txt">
+<section class = "py-16 px-3 lg:px-40 min-h-screen max-h-max txt">
 <h3 class="text-2xl underline">Welcome Home!</h3>
 
 <br>
 <h3 class="text-2xl text-center underline">
 Updates</h3>
-<ul class="flex-col border-dotted border-pri2 dark:border-pri2dark rounded-xl border-4 m-auto lg:w-2/3 md:w-11/12">
+<ul class="flex-col border-dotted border-pri2 dark:border-pri2dark rounded-xl border-4 m-auto max-w-max">
   
 {#each updates as {date,update,link}, i}
   <li class="grid grid-cols-6 p-1"> 
     <h4 class="col-span-5 mx-2">{date}</h4>
     {#if link!=""}
-      <a class = "text-center row-span-2 m-auto text-3xl" href={link}><Fa class="inline" icon="{faGithubAlt}"/></a>
+      <a class = "text-center row-span-2 m-auto text-3xl hover:bg-pri3" href={link}><Fa class="inline" icon="{faGithubAlt}"/></a>
     {/if}
     <p class="col-span-5 mx-4">{update}</p>
 {/each}

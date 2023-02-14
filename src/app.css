@@ -27,17 +27,20 @@ svg{
 }
 
 .hBack{
-	@apply	lg:border-2 lg:border-text lg:dark:border-textdark lg:hover:bg-pri3 lg:dark:hover:bg-pri2dark lg:rounded-2xl lg:p-2
+	@apply
+			lg:hover:bg-pri3 lg:dark:hover:bg-pri2dark lg:rounded-2xl lg:p-2
 			lg:text-text lg:dark:text-textdark
-
 			text-pri2 dark:text-pri3dark
+}
 
+.bord{
+	@apply
+		border-4 border-text dark:border-textdark
 }
 
 .neu {
 	@apply bg-neu dark:bg-neudark
 }
-
 
 .navItem{
 	@apply w-1/3 m-auto text-center px-5
