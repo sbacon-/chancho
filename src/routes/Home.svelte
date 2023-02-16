@@ -1,5 +1,6 @@
 <script src="/updates/updates.js">
 	import Fa from 'svelte-fa'
+  import Taskr from './Taskr.svelte'
   import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
   import { updates } from '/res/scripts/updates';
 </script>
@@ -8,8 +9,9 @@
 <h3 class="text-2xl underline">Welcome Home!</h3>
 
 <br>
-<h3 class="text-2xl text-center underline">
-Updates</h3>
+<div class = "flex flex-col lg:flex-row">
+<div id = "updates" class="lg:basis-3/5">
+<h3 class="text-2xl text-center underline">Updates</h3>
 <ul class="flex-col border-dotted border-pri2 dark:border-pri2dark rounded-xl border-4 m-auto max-w-max">
   
 {#each updates as {date,update,link}, i}
@@ -21,6 +23,9 @@ Updates</h3>
     <p class="col-span-5 mx-4">{update}</p>
 {/each}
 </ul>
+</div>
+<Taskr />
+</div>
 <br>
 <h3 class="text-2xl text-center underline">
 Current Project: Rebuild the Site using the new stack.</h3>

@@ -7,6 +7,9 @@ module.exports = {
   content: ['./src/**/*.{htmle,js,svelte,ts}'],
   theme: {
     extend: {
+      minHeight:{
+        '1/2':'50%',
+      },
       colors: {
         text:     '#000000',
         textdark: '#ffffff',

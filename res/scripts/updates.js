@@ -1,5 +1,10 @@
 export let updates = [
   {
+    "date":"02/15/23",
+    "update":"Setup a todoList (taskr), currently only works with local storage.",
+    "link":""
+  },
+  {
     "date":"02/12/23",
     "update":"Finished setting up the new Backend for site refresh",
     "link":""
