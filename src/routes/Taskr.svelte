@@ -5,6 +5,7 @@
 	import { faBomb } from '@fortawesome/free-solid-svg-icons';
 	import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
 
+	let widget_name="TASKR"
 	let todos = [];
 	let todoText = '';
 	let confirm_dialogue = "";
@@ -51,9 +52,9 @@
 	}
 </script>
 
-<div class="grow flex flex-col">
-	<h3 class="text-2xl text-center underline">TODO:</h3>
-	<div class="grow flex flex-col mainBorder border-4 border-dotted border-pri2 rounded-xl m-auto" >
+<div class="grow flex flex-col ">
+	<h3 class="text-2xl text-center underline">{widget_name}</h3>
+	<div class="grow flex flex-col mainBorder border-4 border-dotted border-pri2 m-auto" >
 	<!--READ TASKS-->
 	<div class="basis-11/12 flex flex-col grow min-h-[10vh]">
 		<ul>
@@ -67,19 +68,19 @@
 		</ul>
 	</div>
 	<!--WRITE TASKS-->
-	<form on:submit|preventDefault={addTodo} class="basis-1/12 border-dotted border-pri2 border-t-4" action="" >
-		<div class="text-xl underline flex">
-			<label for="task" class="grow" >
+	<form on:submit|preventDefault={addTodo} class="m-3 basis-1/12 border-dotted border-pri2 border-t-4" action="" >
+		<div class="text-xl underline flex mx-3 mt-3">
+			<label for="task" class="basis-10/12 text-center" >
 				<Fa class="grow text-pri2" icon="{faPencil}"/>
 			</label>
-			<a class="flex" on:click={clearAll}>
-				<Fa class="inline" icon="{faBomb}"/>
+			<a class="flex grow" on:click={clearAll}>
+				<Fa class="inline grow" icon="{faBomb}"/>
 				<h3> 	{confirm_dialogue} </h3>
 			</a>
 		</div>
-		<div class="w-[90vw] lg:w-[20vw] flex ">
-			<input bind:value={todoText} type="text" id="task" name="task" class="px-2 bg-pri3 dark:bg-pri2dark border-1 border-pri3 dark:border-pri2dark rounded-xl basis-10/12">
-			<a on:click={addTodo} class="grow text-center my-auto hBack rounded-xl transition-all duration-1000">
+		<div class="w-[90vw] lg:w-[20vw] flex m-3 ">
+			<input bind:value={todoText} type="text" id="task" name="task" class="p-3 bg-pri3 dark:bg-pri2dark border-1 border-pri3 dark:border-pri2dark rounded-3xl basis-10/12">
+			<a on:click={addTodo} class=" grow text-center my-auto hBack rounded-3xl transition-all duration-1000">
 				<Fa class="" icon="{faFloppyDisk}"/>
 			</a>
 		</div>

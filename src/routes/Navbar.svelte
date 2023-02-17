@@ -55,13 +55,13 @@
 		</div>
 		<div class="navItem flex">
 			<div class="lg:w-fit flex lg:border-4 border-pri3 dark:border-pri2 rounded-3xl shadow-xl">
-					<a href="/#" class="hBack block w-10 lg:w-20 lg:h-15" on:click={()=>setMode(0)}>
+					<a href="/#" class="hBack block w-10 lg:w-20 lg:h-15 rounded-l-2xl" on:click={()=>setMode(0)}>
 						<Fa icon={faSun}/>
 					</a>
 					<a href="/#" class="hBack block w-10 lg:w-20 lg:h-15" on:click={()=>setMode(1)}>
 						<Fa icon={faMoon}/>
 					</a>
-					<a href="/#" class="hBack block w-10 lg:w-20 lg:h-15" on:click={()=>setMode(2)}>
+					<a href="/#" class="hBack block w-10 lg:w-20 lg:h-15 rounded-r-2xl" on:click={()=>setMode(2)}>
 						<Fa icon={faComputer}/>
 					</a>
 			</div>
