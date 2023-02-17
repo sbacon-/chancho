@@ -1,5 +1,10 @@
 export let updates = [
   {
+    "date":"02/16/23",
+    "update":"Politely asked the todo manager to work better ",
+    "link":"https://github.com/sbacon-/chancho"
+  },
+  {
     "date":"02/15/23",
     "update":"Setup a todoList (taskr), currently only works with local storage.",
     "link":""

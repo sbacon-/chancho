@@ -10,6 +10,7 @@ h2,h3,h4,h5,h6 {
 	@apply text-pri1 dark:text-pri1dark
 }
 
+
 svg{
 	@apply inline
 }
@@ -24,13 +25,18 @@ svg{
 
 .graphUI {
 	@apply text-pri2 dark:text-pri3dark
+		
 }
 
 .hBack{
 	@apply
-			lg:hover:bg-pri3 lg:dark:hover:bg-pri2dark lg:rounded-2xl lg:p-2
+			lg:hover:bg-pri3 lg:dark:hover:bg-pri2dark lg:p-2
 			lg:text-text lg:dark:text-textdark
 			text-pri2 dark:text-pri3dark
+}
+
+.mainBorder{
+	@apply border-4 border-dashed border-pri2 dark:border-pri3dark rounded-xl
 }
 
 .bord{
