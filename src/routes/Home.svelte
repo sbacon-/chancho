@@ -9,22 +9,22 @@
 <h3 class="text-2xl underline">Welcome Home!</h3>
 
 <br>
-<div class = "flex flex-col lg:flex-row">
-<div id = "updates" class="lg:basis-3/5">
-<h3 class="text-2xl text-center underline">Updates</h3>
-<ul class="flex-col mainBorder m-auto max-w-max">
-  
-{#each updates as {date,update,link}, i}
-  <li class="grid grid-cols-6 p-1"> 
-    <h4 class="col-span-5 mx-2">{date}</h4>
-    {#if link!=""}
-      <a class = "text-center row-span-2 my-auto text-3xl w-fill hover:bg-pri3 dark:hover:bg-pri2dark rounded-xl bord" href={link}><Fa class="inline" icon="{faGithubAlt}"/></a>
-    {/if}
-    <p class="col-span-5 mx-4">{update}</p>
-{/each}
-</ul>
-</div>
-<Taskr />
+<div class = "flex flex-col lg:flex-row ">
+  <div id = "updates" class="lg:basis-3/5">
+    <h3 class="text-2xl text-center underline">Updates</h3>
+    <ul class="flex-col mainBorder m-auto w-[90vw] lg:w-[40vw]">
+      
+    {#each updates as {date,update,link}, i}
+      <li class="grid grid-cols-6 p-1"> 
+        <h4 class="col-span-5 mx-2">{date}</h4>
+        {#if link!=""}
+          <a class = "text-center row-span-2 my-auto text-3xl w-fill hover:bg-pri3 dark:hover:bg-pri2dark rounded-xl bord" href={link}><Fa class="inline" icon="{faGithubAlt}"/></a>
+        {/if}
+        <p class="col-span-5 lg:basis-2/5">{update}</p>
+    {/each}
+    </ul>
+  </div>
+  <Taskr />
 </div>
 <br>
 <h3 class="text-2xl text-center underline">

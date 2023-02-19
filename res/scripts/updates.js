@@ -1,5 +1,10 @@
 export let updates = [
   {
+    "date":"02/18/23",
+    "update":"Dog Spotlight: Bentley (Benz)",
+    "link":"https://chancho.dev/videos/benz.mp4"
+  },
+  {
     "date":"02/16/23",
     "update":"Politely asked the todo manager to work better ",
     "link":"https://github.com/sbacon-/chancho"
