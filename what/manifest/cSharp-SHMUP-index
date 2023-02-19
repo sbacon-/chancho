@@ -1,0 +1,26 @@
+<section class="feature">
+ <!-- Legacy Unity Instance -->
+  <script src="Build/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/SHMUP.json", {onProgress: UnityProgress});</script>
+      <div class="center">
+      <div class="webgl-content">
+        <div id="unityContainer" style="width: 100%; height: 85%"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="unity-fullscreen-button" onclick="unityInstance.SetFullscreen(1)"></div>
+          <div class="title">Shoot 'Em Up Prototype</div>
+        </div>
+      </div>
+      </div>
+</section>
+<section class="text">
+      <h2>SHMUP</h2>
+      <p>
+        Had a great weekend making this, wanted to complete a project on a LD Jam Timeline in the Unity Engine, this is about 2 days or work.
+        Very happy with the results, collision is terrible and I had meant to implement some sort of boost system, but I decided to focus more on
+        visuals and overall feel of the game.<br>
+        <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
+      </p>
+</section>
+</section>

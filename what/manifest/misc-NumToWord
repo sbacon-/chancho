@@ -1,0 +1,19 @@
+<section class="full">
+       <h5>Numbers to Word Calculator</h5>
+        <p>Enter a number to convert to dollars and cents. Click to Copy!<br>
+        </p>
+        <div class="num-cash">
+            <input type="number" class="num-cash-input" placeholder="0000000.00"></input>
+            <a class="num-result">
+              <h4 class="num-cash-output" onclick="clickToCopy()"></h4>&nbsp
+              <i class="fas fa-clipboard" onclick="clickToCopy()"></i>
+            </a>
+            <script type="text/javascript" src="/res/scripts/numCash.js"></script>
+        </div>
+        <p>
+          Works with numbers up to one decicentillion [10<sup>333</sup>].<br>
+          <a href="https://github.com/sbacon-/chancho/blob/master/res/scripts/numCash.js">
+            SourceCode</a> - (or just hit F12)
+        </p>
+</section>
+</section>

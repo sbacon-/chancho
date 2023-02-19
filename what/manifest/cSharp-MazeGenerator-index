@@ -1,0 +1,25 @@
+<section class="feature">
+<!-- Legacy Unity Instance -->
+  <script src="Build/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script> var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Unity Builds.json", {onProgress: UnityProgress});</script>
+      <div class="center" style="width: 600px; height: 648px">
+      <div class="webgl-content">
+        <div id="unityContainer" style="width: 600px; height: 600px"></div>
+        <small>R - Generate A New Maze</small>
+      </div></div>
+</section>
+<section class="text">
+      <h2>Algorithmic Maze Generation</h2>
+      <p>
+        This is a randomized variation of a depth first search algorithm, the basic structure is as follows:<br>
+      </p>  <ul>
+        <li>At each iteration the current node checks which neigbors are unexplored.</li><br>
+          <ul><li>If all neighbors are explored, we will begin backtracking through the stack to the first cell with unexplored neighbors</li></ul><br>
+        <li>Picking a neigbor at random it will remove the wall that separates them.</li><br>
+        <li>The current node is added to the stack and the neighboring node will begin the next iteration</li><br></ul>
+      <p>
+        <a href="https://github.com/sbacon-/MazeAlgorithmScripts/blob/master/Depth%20First%20Search.cs">View Source Code</a>
+      </p>
+</section>
+</section>
