@@ -45,7 +45,7 @@ svg{
 }
 
 .neu {
-	@apply bg-neu dark:bg-neudark
+	@apply bg-neu dark:bg-neudark transition-colors duration-1000
 }
 
 .navItem{
