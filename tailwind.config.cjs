@@ -16,12 +16,12 @@ module.exports = {
         /*Neutral Colors - White & Black*/
         neu:      '#efefef',
         grey:     '#787878',
-        neudark:  '#090909',
+        neudark:  '#222222',
         /*Contrast Chart (WAGC AA Compliant)
         COLOR   LightN  LText     DarkN     DText
-        Red     4.53:1  4.02:1    4.51:1    4.41:1 
-        Blue    4.65:1  3.92:1    3.72:1    5.34:1  
-        Yellow  1.69:1  11.14:1   12.11:1   1.64:1
+        Red     4.53:1  4.02:1    3.60:1    4.41:1 
+        Blue    4.65:1  3.92:1    2.97:1    5.34:1  
+        Yellow  1.69:1  11.14:1   9.67:1    1.64:1
 
         NormalSizeText 
         WAGC AA-4.5

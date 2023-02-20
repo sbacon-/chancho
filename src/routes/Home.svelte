@@ -17,7 +17,7 @@ Current Project: Rebuild the Site using the new stack.</h3>
 <p class="indent-8 text-xl">
 Working with a new stack for my website, previously this was mainly Apache and a 
 custom HTML build framework I had written in
-<a class="underline" href="https://github.com/sbacon-/chancho/">
+<a class="underline" href="https://github.com/sbacon-/chancho/tree/classic/what">
   C++.
 </a>
 Ultimately this has proved to be too limiting and due to my poor documentation on how to use, it became instant legacy code. So I've decided to make the move to a new stack.
