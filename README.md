@@ -5,9 +5,11 @@ This is a yearly rewrite of the site, this time using Sveltekit (Vite), and Tail
 
 ## Host
 
-this can be hosted on any node server by running:
+this can be hosted on any nodeJS server by running:
 
 ```bash
+git clone https://github.com/sbacon-/chancho
+cd chancho
 npm install
 npm run dev -- --host
 ```
