@@ -1,6 +1,7 @@
 <script src="/updates/updates.js">
   import Updates from './Updates.svelte'
   import Taskr from './Taskr.svelte'
+  import Elden from './Elden.svelte'
 </script>
 
 <section class = "py-16 px-3 lg:px-40 min-h-screen max-h-max txt">
@@ -8,9 +9,10 @@
 
 <br>
 <div class = "flex flex-col lg:flex-row ">
-  <Updates />
-  <Taskr />
+  <Updates/>
+  <Taskr/>
 </div>
+<Elden/>
 <br>
 <h3 class="text-2xl text-center underline">
 Current Project: Rebuild the Site using the new stack.</h3>
