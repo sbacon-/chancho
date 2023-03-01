@@ -1,4 +1,9 @@
-export let updates = [
+export let updates = [  {
+    "date":"03/01/23",
+    "update":"Added a simulated dice roll default 1d6 up to 10d100",
+    "link":"",
+    "icon":""
+  },
   {
     "date":"02/19/23",
     "update":"Made a11y changes to lightMode transitions for photosensitive users and added hrefs to interactive elements. Also, increased the font size of tasks for improved readability",
