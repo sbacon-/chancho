@@ -1,6 +1,7 @@
 <script src="/updates/updates.js">
   import Updates from './Updates.svelte'
   import Taskr from './Taskr.svelte'
+  import Accord from './Accord.svelte'
 </script>
 
 <section class = "py-16 px-3 lg:px-40 min-h-screen max-h-max txt">
@@ -8,9 +9,10 @@
 
 <br>
 <div class = "flex flex-col lg:flex-row ">
-  <Updates />
-  <Taskr />
+  <Updates/>
+  <Taskr/>
 </div>
+<Accord/>
 <br>
 <h3 class="text-2xl text-center underline">
 Current Project: Rebuild the Site using the new stack.</h3>
@@ -25,7 +27,6 @@ Currently: Node, Svelte, TailwindCSS, NGINX
 My hope is to use NGINX as a reverse proxy, which will allow me serve more dynamic content through Node.
 Svelte and Tailwind are proving to be incredibly fast and light weight.
 <br>
-For those brave enough to join, the minecraft server should still be running: <em>mc.chancho.dev</em><br>
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis id assumenda reiciendis laborum perferendis recusandae suscipit pariatur architecto dignissimos beatae ullam quos asperiores omnis necessitatibus accusantium ad labore dolorum, aliquam fugit provident sequi tempora nihil! Officia ea quasi, ut soluta minus expedita ducimus modi atque odit aperiam exercitationem beatae, voluptatum inventore!
 </p>
 <ul id="library"></ul>

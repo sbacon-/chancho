@@ -2,7 +2,11 @@
 	import { onMount } from "svelte";
 	import Fa from "svelte-fa";
 	import { faGithub,faStackOverflow,faLinkedin} from "@fortawesome/free-brands-svg-icons";
-	import { faAnglesDown,faPlus,faYinYang,faSun,faMoon,faComputer,faCookieBite} from "@fortawesome/free-solid-svg-icons";
+	import { faAnglesDown,
+		faPlus,
+		faYinYang,
+		faSun,faMoon,faComputer,
+		faCookieBite} from "@fortawesome/free-solid-svg-icons";
 
 	let drop = false;
 	function activateDrop(){drop = true;}
@@ -32,17 +36,30 @@
 
 </script>
 
-<nav class="group fixed flex-col w-screen top-0 left-0 neu border-b-2 shadow-md transition-all py-3" on:mouseenter={activateDrop} on:mouseleave={deactivateDrop}>
+<nav class="group fixed flex-col 
+	w-screen top-0 left-0 neu 
+	border-b-2 shadow-md transition-all py-3" 
+	on:mouseenter={activateDrop} on:mouseleave={deactivateDrop}>
 	<div class="flex">
-		<div class="navItem">
-			<a class="txt text-2xl" href="/">
+		<!-- LOGO or TITLE -->
+		<div class="flex navItem">
+			<a class="txt text-2xl grow rounded-3xl" href="/">
 				<h1>
 					CHANCHO<i class="lText text-xl">.dev</i>
 				</h1>
 			</a>
+            <a href="/#" class="hBack block rounded-3xl">
+                    <Fa icon={faYinYang}/>
+            </a>
 		</div>
+        <!--SKIP NAV-->
+        <div>
+        </div>
+        <!--BOUNCE-->
 		<div class="navItemLarge txt text-2xl">
-			<Fa id="navIcon" class="group-hover:animate-bounce transition-all graphUI" icon={faAnglesDown}/>
+            <Fa id="navIcon" class="
+                group-hover:animate-bounce 
+                transition-all graphUI" icon={faAnglesDown}/>
 		</div>
 	</div>
 	<div class="flex txt text-2xl h-0 scale-0 group-hover:h-16 group-hover:scale-100 transition-all duration-75 md:duration-300">
@@ -54,7 +71,9 @@
 			</ul>
 		</div>
 		<div class="navItem flex">
-			<div class="lg:w-fit flex lg:border-4 border-pri3 dark:border-pri2 rounded-3xl shadow-xl">
+			<div class="lg:w-fit flex 
+				lg:border-4 border-pri3 dark:border-pri2 rounded-3xl 
+				shadow-xl">
 					<a href="/#" class="hBack block w-10 lg:w-20 lg:h-15 rounded-l-2xl" on:click={()=>setMode(0)}>
 						<Fa icon={faSun}/>
 					</a>
@@ -67,8 +86,8 @@
 			</div>
 			<div class="scale-0 lg:scale-100 my-auto">
 				<h4 id="modeText">Mode<h4>
-				<!--MAKE THIS CHANGE WITH THE SELECTION-->
-			</div>
+                    <!--MAKE THIS CHANGE WITH THE SELECTION-->
+                </div>
 		</div>
 	</div>
 </nav>

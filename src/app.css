@@ -30,7 +30,7 @@ svg{
 
 .hBack{
 	@apply
-			lg:hover:bg-pri3 lg:dark:hover:bg-pri2dark lg:p-2
+			lg:hover:bg-pri3 lg:dark:hover:bg-pri2dark p-2 lg:p-2
 			lg:text-text lg:dark:text-textdark
 			text-pri2 dark:text-pri3dark
 }
@@ -53,4 +53,8 @@ svg{
 }
 .navItemLarge{
 	@apply w-2/3 m-auto text-center px-5
+}
+
+.taskFunction{
+    @apply hover:bg-pri1 hover:dark:bg-pri1dark hover:text-textdark hover:dark:text-text transition-all duration-1000 rounded-3xl
 }

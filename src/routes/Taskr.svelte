@@ -8,14 +8,27 @@
 	import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
 
 	let widget_name="TASKR"
-	let todos = [];
 	let todoText = '';
 	let confirm_dialogue = "Clear";
 
+	let todos = [];
 	onMount(()=>{
 		const existingTodos = localStorage.getItem('todos');
 		todos = JSON.parse(existingTodos) || [];
 	});
+
+    function clickTodo(index){
+        console.log(index);
+    }
+
+    //FETCH
+    function fetchData(){
+    }
+
+    function abortFetch(){
+    }
+
+    //CREATE
 
 	function addTodo(){
 		if(todoText=="")
@@ -25,17 +38,14 @@
 		todoText="";
 	}
 
-	function deleteTodo(arg){
-		//O(n) there must be a better way
-		//Consider letting the element id be the index
-		for(let i=0; i<todos.length; i++){
-			if(todos[i]==arg){
-				todos[i]="";
-				break;
-			}
-		}
-		localStorage.setItem('todos',JSON.stringify(todos));
-	}
+    //UPDATE
+    function selectMode(){
+        alert("do something");
+    }
+    function abortGear(){
+    }
+
+    //DELETE
 	function clearAll(){
 		if(confirm()){
 			todos=[];
@@ -55,6 +65,7 @@
 	function abortClear(){
 		confirm_dialogue = "Clear";
 	}
+
 </script>
 
 <div class="grow flex flex-col ">
@@ -64,7 +75,7 @@
 	<div class="basis-11/12 flex flex-col grow min-h-[10vh]">
 		<ul>
 			{#each todos as todo}
-				<a on:click|preventDefault={deleteTodo(todo)} href="/#">
+                <a on:click|preventDefault={clickTodo(todo)} href="/#">
 					<li class="text-center hover:bg-pri3 dark:hover:bg-pri2dark m-auto text-xl">
 						{todo}
 					</li>
@@ -75,28 +86,24 @@
 	<!--WRITE TASKS-->
 	<form on:submit|preventDefault={addTodo} class="flex flex-col m-3 border-dotted border-pri3 dark:border-pri2dark border-t-4" action="" >
 		<div class="grow text-xl flex my-3">
-
-			<a class="hover:bg-pri1 hover:dark:bg-pri1dark hover:text-textdark hover:dark:text-text flex grow mx-auto transition-all duration-1000 rounded-3xl" href="/#">
+            <a aria-label="update" class="taskFunction flex" href="/#" on:mouseleave={abortGear} on:click|preventDefault={selectMode}>
+                <Fa icon="{faGear}"/>
+                UPDATE
+            </a>
+            <a aria-label="fetch" class="taskFunction flex" href="/#" on:mouseleave={abortFetch} on:click|preventDefault={fetchData}>
 				<Fa icon="{faFileImport}"/>
-				<p class="inline m-auto">Import File</p>
+                FETCH
 			</a>
-			<a class="hover:bg-pri1 hover:dark:bg-pri1dark hover:text-textdark hover:dark:text-text flex grow m-auto transition-all duration-1000 rounded-3xl" href="/#" on:mouseleave={abortClear} on:click|preventDefault={clearAll}>
+            <a aria-label="delete" class="taskFunction flex" href="/#" on:mouseleave={abortClear} on:click|preventDefault={clearAll}>
 				<Fa icon="{faBomb}"/>
-				<p class="inline m-auto">
-					{confirm_dialogue}
-				</p>
+                DELETE
 			</a>
 		</div>
-		<div class="grow flex p-2 bg-pri3 dark:bg-pri2dark hover:dark:bg-pri2dark duration-1000 rounded-3xl">
+        <div class="grow flex p-2 bg-pri3 dark:bg-pri2dark hover:dark:bg-pri2dark duration-1000 rounded-3xl">
 			<Fa class="grow m-auto" icon="{faPencil}"/>
-			<input bind:value={todoText} type="text" id="task" name="task" class="p-3 bg-pri3 dark:bg-pri2dark border-2 border-text dark:border-textdark rounded-3xl basis-10/12 tranition-color duration-1000">
-			<Fa class="grow m-auto" icon="{faFloppyDisk}"/>
-			<!--Unnecessary Button-a on:click={addTodo} class=" grow text-center my-auto hBack rounded-3xl transition-all duration-1000"->
-				<Fa class="" icon="{faFloppyDisk}"/>
-			<!--/a-->
+			<input placeholder="CREATE" bind:value={todoText} type="text" id="task" name="task" class="p-3 bg-pri3 dark:bg-pri2dark border-2 border-text dark:border-textdark rounded-3xl basis-10/12 tranistion-color duration-1000">
+            <Fa class="grow m-auto" icon="{faFloppyDisk}"/>
 		</div>
 	</form>
 	</div>
 </div>
-
-
