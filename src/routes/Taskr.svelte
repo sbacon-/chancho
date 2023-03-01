@@ -101,7 +101,7 @@
 		</div>
         <div class="grow flex p-2 bg-pri3 dark:bg-pri2dark hover:dark:bg-pri2dark duration-1000 rounded-3xl">
 			<Fa class="grow m-auto" icon="{faPencil}"/>
-			<input placeholder="CREATE" bind:value={todoText} type="text" id="task" name="task" class="p-3 bg-pri3 dark:bg-pri2dark border-2 border-text dark:border-textdark rounded-3xl basis-10/12 tranition-color duration-1000">
+			<input placeholder="CREATE" bind:value={todoText} type="text" id="task" name="task" class="p-3 bg-pri3 dark:bg-pri2dark border-2 border-text dark:border-textdark rounded-3xl basis-10/12 tranistion-color duration-1000">
             <Fa class="grow m-auto" icon="{faFloppyDisk}"/>
 		</div>
 	</form>
