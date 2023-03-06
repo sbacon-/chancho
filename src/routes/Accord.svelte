@@ -15,7 +15,7 @@
 </script>
 <div class="mainBorder m-auto w-max p-8">
     <form on:submit|preventDefault={rollAll} >
-    <input type="number" bind:value={dice} min=2 max=100 class="p-3 bg-pri3 dark:bg-pri2dark border-2 border-text dark:border-textdark rounded-3xl transition-color duration-1000">
+    <input type="number" bind:value={dice} min=2 class="p-3 bg-pri3 dark:bg-pri2dark border-2 border-text dark:border-textdark rounded-3xl transition-color duration-1000">
     <h3 class=text-3xl> # of rolls: {count.length} </h3>
     <input type="range" bind:value={count.length} min=1 max=10>
     

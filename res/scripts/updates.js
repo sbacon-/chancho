@@ -1,4 +1,17 @@
 export let updates = [
+//VIM 6yy
+  {
+    "date":"03/06/23",
+    "update":"Amoeba_Tech_Demo_Prototype_pre-alpha (╯°□°)╯︵ ┻━┻",
+    "link":"https://chancho.dev/videos/amoeba_tech_demo.mp4",
+    "icon":"video"
+  },
+  {
+    "date":"03/01/23",
+    "update":"Added a simulated dice roll default 1d6 up to 10d100, later removed arbitrary limit of 100",
+    "link":"",
+    "icon":""
+  },
   {
     "date":"02/19/23",
     "update":"Made a11y changes to lightMode transitions for photosensitive users and added hrefs to interactive elements. Also, increased the font size of tasks for improved readability",
