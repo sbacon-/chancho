@@ -1,6 +1,14 @@
-export let updates = [  {
+export let updates = [
+//VIM 6yy
+  {
+    "date":"03/06/23",
+    "update":"Amoeba_Tech_Demo_Prototype_pre-alpha (╯°□°)╯︵ ┻━┻",
+    "link":"https://chancho.dev/videos/amoeba_tech_demo.mp4",
+    "icon":"video"
+  },
+  {
     "date":"03/01/23",
-    "update":"Added a simulated dice roll default 1d6 up to 10d100",
+    "update":"Added a simulated dice roll default 1d6 up to 10d100, later removed arbitrary limit of 100",
     "link":"",
     "icon":""
   },
