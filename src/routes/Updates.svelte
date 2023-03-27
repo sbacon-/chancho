@@ -8,11 +8,11 @@
   function toggle(){ shown = !shown; }
 </script>
 
-  <div id = "updates" class="lg:basis-3/5">
+  <div id = "updates" class="">
       <a href="/#" on:click|preventDefault={toggle}>
     <h3 class="text-2xl text-center underline">Updates</h3>
       </a>
-    <ul class="p-3 flex-col mainBorder m-auto w-[90vw] lg:w-[40vw]">
+    <ul class="p-3 flex-col mainBorder">
       
     {#if shown}
     {#each updates as {date,update,link,icon}, i}

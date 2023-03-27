@@ -15,6 +15,10 @@ svg{
 	@apply inline
 }
 
+.content{
+    @apply px-3 lg:px-40 min-h-screen max-h-max
+}
+
 .txt {
 	@apply text-text dark:text-textdark
 }

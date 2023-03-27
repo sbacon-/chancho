@@ -1,18 +1,12 @@
 <script src="/updates/updates.js">
   import Updates from './Updates.svelte'
-  import Taskr from './Taskr.svelte'
-  import Accord from './Accord.svelte'
 </script>
 
-<section class = "py-16 px-3 lg:px-40 min-h-screen max-h-max txt">
+<section class = "content txt">
 <h3 class="text-2xl underline">Welcome Home!</h3>
 
 <br>
-<div class = "flex flex-col lg:flex-row ">
-  <Updates/>
-  <Taskr/>
-</div>
-<Accord/>
+<Updates/>
 <br>
 <h3 class="text-2xl text-center underline">
 Current Project: Rebuild the Site using the new stack.</h3>

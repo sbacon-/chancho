@@ -7,10 +7,13 @@
 		backend: ["NGINX","Fedora Server 37"]
 	}
 	*/
-	import Main from "./Main.svelte";
-	import Nav from "./Navbar.svelte";
+	import Nav from "../Navbar.svelte";
+    import Accord from "./Accord.svelte";
 </script>
 
 <Nav/>
-<Main/>
+<div class="neu content txt">
+<h2>Accord.svelte</h2>
+<Accord/>
+</div>
 

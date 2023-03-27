@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from "svelte";
+    import { init } from 'svelte/internal';
 	import Fa from "svelte-fa";
 	import { faGithub,faStackOverflow,faLinkedin} from "@fortawesome/free-brands-svg-icons";
 	import { faAnglesDown,
@@ -36,7 +37,11 @@
 
 </script>
 
-<nav class="group fixed flex-col 
+<svelte:head>
+	<script src="/res/scripts/darkMode.js">init();</script>
+</svelte:head>
+
+<nav class="group flex-col 
 	w-screen top-0 left-0 neu 
 	border-b-2 shadow-md transition-all py-3" 
 	on:mouseenter={activateDrop} on:mouseleave={deactivateDrop}>
@@ -48,7 +53,7 @@
 					CHANCHO<i class="lText text-xl">.dev</i>
 				</h1>
 			</a>
-            <a href="/#" class="hBack block rounded-3xl">
+            <a href="" class="hBack block rounded-3xl">
                     <Fa icon={faYinYang}/>
             </a>
 		</div>
@@ -67,6 +72,7 @@
 			<h2>Projects</h2>
 			<ul>
 				<li>
+                    <a href="/dice">Dice</a>
 				</li>
 			</ul>
 		</div>
@@ -74,13 +80,13 @@
 			<div class="lg:w-fit flex 
 				lg:border-4 border-pri3 dark:border-pri2 rounded-3xl 
 				shadow-xl">
-					<a href="/#" class="hBack block w-10 lg:w-20 lg:h-15 rounded-l-2xl" on:click={()=>setMode(0)}>
+					<a href="" class="hBack block w-10 lg:w-20 lg:h-15 rounded-l-2xl" on:click={()=>setMode(0)}>
 						<Fa icon={faSun}/>
 					</a>
-					<a href="/#" class="hBack block w-10 lg:w-20 lg:h-15" on:click={()=>setMode(1)}>
+					<a href="" class="hBack block w-10 lg:w-20 lg:h-15" on:click={()=>setMode(1)}>
 						<Fa icon={faMoon}/>
 					</a>
-					<a href="/#" class="hBack block w-10 lg:w-20 lg:h-15 rounded-r-2xl" on:click={()=>setMode(2)}>
+					<a href="" class="hBack block w-10 lg:w-20 lg:h-15 rounded-r-2xl" on:click={()=>setMode(2)}>
 						<Fa icon={faComputer}/>
 					</a>
 			</div>
