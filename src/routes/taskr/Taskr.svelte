@@ -19,6 +19,8 @@
 
     function clickTodo(index){
         console.log(index);
+        todos=todos.filter(a => a!==index);
+		localStorage.setItem('todos',JSON.stringify(todos));
     }
 
     //FETCH
@@ -74,7 +76,7 @@
 	<!--READ TASKS-->
 	<div class="basis-11/12 flex flex-col grow min-h-[10vh]">
 		<ul>
-			{#each todos as todo}
+            {#each todos as todo}
                 <a on:click|preventDefault={clickTodo(todo)} href="/#">
 					<li class="text-center hover:bg-pri3 dark:hover:bg-pri2dark m-auto text-xl">
 						{todo}
