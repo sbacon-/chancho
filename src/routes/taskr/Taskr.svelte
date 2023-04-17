@@ -70,7 +70,7 @@
 
 </script>
 
-<div class="grow flex flex-col ">
+<div class="grow flex flex-col updates">
 	<h3 class="text-2xl text-center underline">{widget_name}</h3>
 	<div class="w-[90vw] lg:w-[40vw] grow flex flex-col mainBorder border-4 border-dotted border-pri2 m-auto p-3" >
 	<!--READ TASKS-->

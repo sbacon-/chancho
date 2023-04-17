@@ -67,7 +67,7 @@
                 transition-all graphUI" icon={faAnglesDown}/>
 		</div>
 	</div>
-	<div class="flex txt text-2xl h-0 scale-0 group-hover:h-max group-hover:scale-100 transition-all duration-75 md:duration-300">
+	<div class="flex txt text-2xl h-0 scale-0 group-hover:h-max group-hover:scale-100 transition-scale duration-300 md:duration-300">
 		<div class="navItemLarge h-max">
 			<h2>Projects</h2>
 			<ul>
