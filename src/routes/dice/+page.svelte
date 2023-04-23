@@ -7,13 +7,20 @@
 		backend: ["NGINX","Fedora Server 37"]
 	}
 	*/
-	import Nav from "../Navbar.svelte";
     import Accord from "./Accord.svelte";
+	import Nav from "../Navbar.svelte";
 </script>
 
-<Nav/>
-<div class="neu content txt">
-<h2>Accord.svelte</h2>
-<Accord/>
+<div class=
+  "min-h-screen 
+  txt neu 
+  grid grid-cols-5 auto-rows-min 
+  text-center md:text-3xl">
+    <nav class="group grid col-span-5 grid-cols-5 auto-rows-min text-center">
+        <Nav/>
+    </nav>
+    <section class="col-span-5">
+        <Accord/>
+    </section>
+	<!--<Footer/>-->
 </div>
-

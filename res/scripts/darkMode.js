@@ -16,10 +16,6 @@ function darkMode(){
     localStorage.theme = 'dark';
     init();
 }
-function systemMode(){
-    localStorage.removeItem('theme');
-    init();
-}
 
 function isDarkMode(){
     return localStorage.theme === 'dark' || 

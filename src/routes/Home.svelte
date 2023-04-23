@@ -2,15 +2,13 @@
   import Updates from './Updates.svelte'
 </script>
 
-<section class = "content txt">
-<h3 class="text-2xl underline">Welcome Home!</h3>
-
-<br>
-<Updates/>
-<br>
-<h3 class="text-2xl text-center underline">
+<div class="col-span-6 text-left">
+    <Updates/>
+</div>
+<div class="col-span-6 text-left">
+<h3 class="">
 Current Project: Rebuild the Site using the new stack.</h3>
-<p class="indent-8 text-xl">
+<p class="text-left">
 Working with a new stack for my website, previously this was mainly Apache and a 
 custom HTML build framework I had written in
 <a class="underline" href="https://github.com/sbacon-/chancho/tree/classic/what">
@@ -24,4 +22,4 @@ Svelte and Tailwind are proving to be incredibly fast and light weight.
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis id assumenda reiciendis laborum perferendis recusandae suscipit pariatur architecto dignissimos beatae ullam quos asperiores omnis necessitatibus accusantium ad labore dolorum, aliquam fugit provident sequi tempora nihil! Officia ea quasi, ut soluta minus expedita ducimus modi atque odit aperiam exercitationem beatae, voluptatum inventore!
 </p>
 <ul id="library"></ul>
-</section>
+</div>

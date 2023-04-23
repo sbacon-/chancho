@@ -1,6 +1,18 @@
 export let updates = [
 //VIM 6yy
   {
+    "date":"04/23/23",
+    "update":"Dog Spotlight: Rose & Doby",
+    "link":"https://chancho.dev/videos/rose_doby.mp4",
+    "icon":"video"
+  },
+  {
+    "date":"04/10/23",
+    "update":"Updating the site layout, starting to learn Ruby and Rust",
+    "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
     "date":"03/06/23",
     "update":"Amoeba_Tech_Demo_Prototype_pre-alpha (╯°□°)╯︵ ┻━┻",
     "link":"https://chancho.dev/videos/amoeba_tech_demo.mp4",

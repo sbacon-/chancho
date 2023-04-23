@@ -7,10 +7,20 @@
 		backend: ["NGINX","Fedora Server 37"]
 	}
 	*/
-	import Main from "./Main.svelte";
+	import Home from './Home.svelte';
 	import Nav from "./Navbar.svelte";
 </script>
 
-<Nav/>
-<Main/>
-
+<div class=
+  "min-h-screen 
+  txt neu 
+  grid grid-cols-5 auto-rows-min 
+  text-center md:text-3xl">
+    <nav class="group grid col-span-5 grid-cols-5 auto-rows-min text-center">
+        <Nav/>
+    </nav>
+    <section class="col-span-5">
+        <Home/>
+    </section>
+	<!--<Footer/>-->
+</div>
