@@ -2,7 +2,7 @@
   import Updates from './Updates.svelte'
 </script>
 
-<div class="col-span-6 text-left">
+<div class=" w-[90vw] lg:w-[40vw] m-auto col-span-6 text-left">
     <Updates/>
 </div>
 <div class="col-span-6 text-left">

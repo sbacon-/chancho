@@ -16,7 +16,7 @@
   txt neu 
   grid grid-cols-5 auto-rows-min 
   text-center md:text-3xl">
-    <nav class="group grid col-span-5 grid-cols-5 auto-rows-min text-center">
+    <nav class="w-[90] lg:w-[40] m-auto group grid col-span-5 grid-cols-5 auto-rows-min text-center">
         <Nav/>
     </nav>
     <section class="col-span-5">
