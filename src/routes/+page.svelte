@@ -13,10 +13,12 @@
 
 <div class=
   "min-h-screen 
+  w-[90vw]
+  m-auto
   txt neu 
   grid grid-cols-5 auto-rows-min 
   text-center md:text-3xl">
-    <nav class="w-[90vw] lg:w-[40vw] m-auto group grid col-span-5 grid-cols-5 auto-rows-min text-center">
+    <nav class="group grid col-span-5 grid-cols-5 auto-rows-min text-center">
         <Nav/>
     </nav>
     <section class="col-span-5">
