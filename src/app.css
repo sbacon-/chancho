@@ -11,4 +11,5 @@ svg{@apply inline}
 .yel-txt {@apply text-pri3 dark:text-pri3dark}
 .txt-bg {@apply bg-pri3 dark:bg-pri2dark}
 .gui-svg {@apply text-pri2 dark:text-pri3dark}
+.bord {@apply border-4 border-pri2 dark:border-pri3dark rounded-3xl}
 

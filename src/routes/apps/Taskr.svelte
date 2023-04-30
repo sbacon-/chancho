@@ -7,7 +7,7 @@
 	import { faPencil } from '@fortawesome/free-solid-svg-icons';
 	import { faFloppyDisk } from '@fortawesome/free-solid-svg-icons';
 
-	let widget_name="TASKR"
+    let widget_name="Todo";
 	let todoText = '';
 	let confirm_dialogue = "Clear";
 
@@ -71,8 +71,8 @@
 </script>
 
 <div class="grow flex flex-col updates">
+	<div class="w-[90vw] lg:w-[40vw] grow flex flex-col bord m-auto p-3" >
 	<h3 class="text-2xl text-center underline">{widget_name}</h3>
-	<div class="w-[90vw] lg:w-[40vw] grow flex flex-col mainBorder border-4 border-dotted border-pri2 m-auto p-3" >
 	<!--READ TASKS-->
 	<div class="basis-11/12 flex flex-col grow min-h-[10vh]">
 		<ul>

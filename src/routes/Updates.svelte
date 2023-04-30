@@ -13,9 +13,7 @@
 
 </script>
 <div id = "updates" class="grid grid-cols-5">
-    <ul class="border-4 
-        border-pri2 dark:border-pri3dark
-        rounded-3xl
+    <ul class="bord
         col-span-5
         ">
     <h3 class="text-3xl p-3 underline">Updates<em class="red-txt">!!</em></h3>

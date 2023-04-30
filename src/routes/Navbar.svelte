@@ -30,7 +30,10 @@
         </div>
         <!--Navigation-->
         <nav class="
-            col-span-5
+            col-span-3
+            col-start-2
+            m-auto
+               hidden group-hover:flex
             text-xs group-hover:text-3xl 
             scale-0 group-hover:scale-100
             transition-all ">

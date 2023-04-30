@@ -13,7 +13,8 @@
     }
 
 </script>
-<div class="w-[90vw] lg:w-[40vw] grow flex flex-col mainBorder border-4 border-dotted border-pri2 m-auto p-3" >
+<div class="w-[90vw] lg:w-[40vw] grow flex flex-col bord m-auto p-3" >
+    <h1>Dice Roller</h1>
     <form on:submit|preventDefault={rollAll} >
     <input type="text" bind:value={dice} min=2 class="p-3 bg-pri3 dark:bg-pri2dark border-2 border-text dark:border-textdark rounded-3xl transition-color duration-1000">
     {#each count as count_index, i}
