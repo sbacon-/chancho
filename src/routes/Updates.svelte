@@ -16,7 +16,7 @@
     <ul class="bord
         col-span-5
         ">
-    <h3 class="text-3xl p-3 underline">Updates<em class="red-txt">!!</em></h3>
+    <h3 class="p-3">Updates<em class="red-txt">!!</em></h3>
     {#each updates as {date,update,link,icon}, i}
         {#if i < showing}
       <li class="grid grid-cols-5"> 
@@ -42,10 +42,10 @@
         {/if}
     {/each}
     <button on:click={increment}>
-    <h3 class="text-3xl p-3 underline">more<em class="red-txt">!!</em></h3>
+    <h3 class="p-3 underline">more<em class="red-txt">!!</em></h3>
     </button>
     <button on:click={decrement}>
-    <h3 class="text-3xl p-3 underline">less<em class="red-txt">!!</em></h3>
+    <h3 class="p-3 underline">less<em class="red-txt">!!</em></h3>
     </button>
 
 

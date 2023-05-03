@@ -8,11 +8,11 @@
 </script>
 
 		<!-- LOGO or TITLE -->
-		<div class="p-3 col-span-1">
+		<h3 class="p-3 col-span-1">
 			<a class="" href="/">
 				<h1>CHANCHO<em class="red-txt">.dev</em></h1>
 			</a>
-		</div>
+		</h3>
         <!--PLUS-->
         <div class="p-3 col-span-3 
             text-3xl gui-svg 
