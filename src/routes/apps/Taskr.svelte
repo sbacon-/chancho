@@ -71,7 +71,7 @@
 </script>
 
 <div class="grow flex flex-col updates">
-	<div class="w-[90vw] lg:w-[40vw] grow flex flex-col bord m-auto p-3" >
+	<div class="w-[90vw] xl:w-[40vw] grow flex flex-col bord m-auto p-3" >
         <h3 class="text-center underline">{widget_name}<em class="red-txt">!!</em></h3>
 	<!--READ TASKS-->
 	<div class="basis-11/12 flex flex-col grow min-h-[10vh]">

@@ -13,7 +13,7 @@
     }
 
 </script>
-<div class="w-[90vw] lg:w-[40vw] grow flex flex-col bord m-auto p-3" >
+<div class="w-[90vw] xl:w-[40vw] grow flex flex-col bord m-auto p-3" >
     <h3>Dice Roller<em class="red-txt">!!</em></h3>
     <form on:submit|preventDefault={rollAll} >
     <input type="text" bind:value={dice} min=2 class="p-3 bg-pri3 dark:bg-pri2dark border-2 border-text dark:border-textdark rounded-3xl transition-color duration-1000">

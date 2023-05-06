@@ -2,10 +2,10 @@
   import Updates from './Updates.svelte'
 </script>
 
-<div class="lg:w-[40vw] m-auto text-left">
+<div class="xl:w-[40vw] m-auto text-left">
     <Updates/>
 </div>
-<div class="lg:w-[40vw] m-auto text-center ">
+<div class="xl:w-[40vw] m-auto text-center ">
     <h3 class="">
         AMOEBA Macro Services<em class="red-txt" >!!</em></h3>
 <p class="text-left">
