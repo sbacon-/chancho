@@ -1,6 +1,12 @@
 export let updates = [
 //VIM 6yy
   {
+    "date":"05/08/23",
+    "update":"Updated updates and some SurrealQL",
+    "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
     "date":"04/30/23",
     "update":"Site Layout Update",
     "link":"https://github.com/sbacon-/chancho",

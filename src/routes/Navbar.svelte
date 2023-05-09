@@ -39,8 +39,10 @@
             transition-all ">
 			<ul>
 				<li>
+                    <!--
                     <a href="/dice">Dice</a><br>
                     <a href="/taskr">Taskr</a><br>
+                    -->
 				</li>
 			</ul>
 		</nav>

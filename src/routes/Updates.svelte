@@ -19,13 +19,13 @@
     <h3 class="p-3">Updates<em class="red-txt">!!</em></h3>
     {#each updates as {date,update,link,icon}, i}
         {#if i < showing}
-      <li class="grid grid-cols-5"> 
-        <h4 class="text-center txt-bg rounded-r-3xl col-span-2 lg:col-span-1">{date}</h4>
+      <li class="grid grid-cols-4 border-4 border-pri3 dark:border-pri2dark m-3"> 
+        <h4 class="text-center txt-bg col-span-3 col-start-1">{date}</h4>
         {#if icon != ""}
-            <a class = "py-1.5 col-start-5 row-span-2
-            text-4xl txt-bg text-center 
-            border-b-4 border-pri3 dark:border-pri2dark hover:border-neu
-            rounded-t-3xl hover:rounded-none transition-all" 
+            <a class = "m-auto px-4 col-start-4 row-span-2
+            text-4xl text-center 
+            hover:border-4 rounded-xl border-pri2 dark:border-pri3dark
+            hover:text-pri2 dark:hover:text-pri3dark transition-all" 
             href={link}>
             {#if icon == "video"}
               <Fa class="" icon="{faVideo}"/>
@@ -34,11 +34,8 @@
             {/if}
           </a>
         {:else}
-            <div class = "h-full col-start-5 row-span-2 
-                border-b-4 border-pri3 dark:border-pri2dark">
-          </div>
         {/if}
-        <p class="col-span-4 border-b-4 border-pri3 dark:border-pri2dark">{update}</p>
+        <p class="p-4 col-span-3">{update}</p>
         {/if}
     {/each}
     <button on:click={increment}>
