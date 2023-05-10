@@ -19,8 +19,8 @@
     <h3 class="p-3">Updates<em class="red-txt">!!</em></h3>
     {#each updates as {date,update,link,icon}, i}
         {#if i < showing}
-      <li class="grid grid-cols-4 border-4 border-pri3 dark:border-pri2dark m-3"> 
-        <h4 class="text-center txt-bg col-span-3 col-start-1">{date}</h4>
+      <li class="grid grid-cols-4 border-4 border-pri3 dark:border-pri2dark m-3 rounded-3xl"> 
+        <h4 class="text-center txt-bg col-span-3 col-start-1 rounded-tl-2xl">{date}</h4>
         {#if icon != ""}
             <a class = "m-auto px-4 col-start-4 row-span-2
             text-4xl text-center 
@@ -35,7 +35,7 @@
           </a>
         {:else}
         {/if}
-        <p class="p-4 col-span-3">{update}</p>
+        <p class="p-4 col-span-3 border-pri3 dark:border-pri2dark border-r-4">{update}</p>
         {/if}
     {/each}
     <button on:click={increment}>
