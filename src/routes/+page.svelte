@@ -9,8 +9,9 @@
 	*/
 	import Home from './Home.svelte';
 	import Nav from "./Navbar.svelte";
-    import Accord from "./apps/Dice.svelte";
+    import Dice from "./apps/Dice.svelte";
     import Taskr from "./apps/Taskr.svelte";
+    import Domino from "./apps/Domino.svelte";
     let apps = ["Home","Accord","Taskr"];
     let selection = 0;
 </script>
@@ -27,7 +28,8 @@
     </nav>
     <section class="w-[90vw] m-auto col-span-5">
         <Taskr/>
-        <Accord/>
+        <Dice/>
+        <Domino/>
         <Home/>
     </section>
 	<!--<Footer/>-->
