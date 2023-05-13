@@ -27,9 +27,9 @@
         <Nav/>
     </nav>
     <section class="w-[90vw] m-auto col-span-5">
+        <Domino/>
         <Taskr/>
         <Dice/>
-        <Domino/>
         <Home/>
     </section>
 	<!--<Footer/>-->
