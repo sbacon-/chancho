@@ -14,11 +14,14 @@
 			</a>
 		</h3>
         <!--PLUS-->
-        <div class="p-3 col-span-3 
-            text-3xl gui-svg 
-            group-hover:rotate-45 transition-all">
-            <Fa class="" icon={faPlus}/>
-		</div>
+        <nav class="p-3 col-span-3 group">
+        <nav class=" text-md gui-svg ">
+            <Fa class="group-hover:rotate-45 transition-all" icon={faPlus}/>
+            <a href="./apps" class="navbord invisible group-hover:visible">Apps</a>
+
+            <a href="." class="navbord invisible group-hover:visible">Home</a>
+		</nav>
+        </nav>
         <!--DarkMode-->
 		<div class="p-3 col-span-1 md:text-3xl gui-svg ">
             <button class="" on:click={lightMode}>

@@ -7,11 +7,10 @@
 		backend: ["NGINX","Fedora Server 37"]
 	}
 	*/
-	import Home from './Home.svelte';
-	import Nav from "./Navbar.svelte";
-    import Dice from "./apps/Dice.svelte";
-    import Taskr from "./apps/Taskr.svelte";
-    import Domino from "./apps/Domino.svelte";
+    import Nav from "../Navbar.svelte";
+    import Dice from "./Dice.svelte";
+    import Taskr from "./Taskr.svelte";
+    import Domino from "./Domino.svelte";
     let apps = ["Home","Accord","Taskr"];
     let selection = 0;
 </script>
@@ -22,7 +21,9 @@
         <Nav/>
     </nav>
     <section class="pagesec">
-        <Home/>
+        <Domino/>
+        <Taskr/>
+        <Dice/>
     </section>
 	<!--<Footer/>-->
 </div>
