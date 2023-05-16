@@ -27,27 +27,27 @@
     }
 </script>
 <div class="w-[90vw] xl:w-[40vw] grow  bord m-auto p-3" >
-        <h3>Domino Score Sheet<em class="red-txt">!!</em></h3>
-     <ul class="text-center grid grid-cols-6 auto-rows-auto bg-pri3 dark:bg-pri2dark rounded-xl">
-        <li class="border-text dark:border-textdark g border-b-2 border-r-2">
+        <h3>Score Sheet<em class="red-txt">!!</em></h3>
+     <ul class="text-center grid grid-cols-6 auto-rows-auto rounded-xl">
+        <li class="border-pri3 dark:border-pri2dark border-b-2 border-r-2">
         </li>
-        <li class="col-span-2 border-text dark:border-textdark g border-b-2">
+        <li class="col-span-2 border-pri3 dark:border-pri2dark border-b-2">
             Name
         </li> 
-        <li class="border-b-2 border-text dark:border-textdark g">
+        <li class=" border-pri3 dark:border-pri2dark border-b-2">
             Score
         </li>
-        <li class="col-span-2 border-text dark:border-textdark g border-b-2">
+        <li class="col-span-2 border-pri3 dark:border-pri2dark border-b-2">
             <button class="w-5/12 border-text dark:border-textdark g border-x-4 rounded-xl" on:click={() => addPlayer()}>p+</button>
             <button class="w-5/12 border-text dark:border-textdark g border-x-4 rounded-xl" on:click={() => deductPlayer()}>p-</button>
         </li>
         {#each scoreboard as {lead,id,name,score},i}
             {#if lead}
-                <li class="text-center border-r-2 border-text dark:border-textdark g"><Fa icon={faCrown}/></li>
+                <li class="text-pri3 dark:text-pri2dark text-center border-r-2 border-pri3 dark:border-pri2dark"><Fa icon={faCrown}/></li>
             {:else}
-                <li class="text-center border-r-2 border-text dark:border-textdark g"></li>
+                <li class="text-center border-r-2 border-pri3 dark:border-pri2dark"></li>
             {/if}
-                <input class="text-center bg-pri3 dark:bg-pri2dark col-span-2" type="text" value={name}>
+                <input class= "text-center bg-neu dark:bg-neudark col-span-2 border-b-2 border-pri3 dark:border-pri2dark" type="text" value={name}>
             <li>{score*5}</li>
             <li class="col-span-2">
                 <button class="w-5/12 border-text dark:border-textdark g border-x-4 rounded-xl" on:click={() => addPoints(i)}>+</button>
