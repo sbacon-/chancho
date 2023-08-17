@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <Canvas w={w} h={h} hex_len={hex_len} hex_alt={hex_alt} measure={measure} dark={isDarkMode}/>
 <nav style="width:{hex_alt*2}px; height:{hex_len*2}px;" class="m-auto text-center txt">
     <TownPortal pt={h/2-(3*hex_len/4)} pb={hex_len/4} dark={dark} dM={darkMode} lM={lightMode} hex_alt={hex_alt}/>
@@ -12,6 +13,28 @@
         <Updates />
         <h2 on:click={signout} class="ui-button" >logout</h2>
     {/if}
+=======
+<script>
+	/*Chancho Dot Dev v 23.02.07
+	const siteData = {
+		name:"chancho.dev",
+		version:"23.2.8",
+		frontend: ["Svelte","TailWindCSS, NodeJS"],
+		backend: ["NGINX","Fedora Server 37"]
+	}
+	*/
+	import Home from './Home.svelte';
+	import Nav from "./Navbar.svelte";
+</script>
+
+
+<div class=page>
+    <nav class="pagenav">
+        <Nav/>
+    </nav>
+    <section class="pagesec">
+        <Home/>
+>>>>>>> 344b22d (deleted 36hrs of work with 15 keystrokes (efficiency On/2))
     </section>
 </nav>
 <script>

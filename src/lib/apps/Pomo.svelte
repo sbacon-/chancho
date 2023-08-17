@@ -1,4 +1,8 @@
 <script>
+	import {onMount, onDestroy} from 'svelte';
+
+	let interval;
+
 	let date = new Date();
 	let time_locale = date.toLocaleTimeString();
 	let date_locale = date.toLocaleDateString();
@@ -29,10 +33,25 @@
 	//HOUR
 	hour = day*24;
 
+	function update_time(){
+		console.log("Hello");
+		date = new Date();
+		time_locale = date.toLocaleTimeString();
+		date_locale = date.toLocaleDateString();
+	}
+	
+	onMount(()=>{
+		interval = setInterval(update_time,200);
+	});
+
+	onDestroy(()=>{
+		clearInterval(interval);
+	});
+
 
 </script>
 <div class="w-[90vw] xl:w-[40vw] grow flex flex-col bord m-auto p-3" >
-    <h3>Pomodoro<em class="red-txt">!!</em></h3>
+    <!--h3>Pomodoro<em class="red-txt">!!</em></h3-->
 
     <p>
 	{date_locale}<br>
