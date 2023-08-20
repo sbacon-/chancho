@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <Canvas w={w} h={h} hex_len={hex_len} hex_alt={hex_alt} measure={measure} dark={isDarkMode}/>
 <nav style="width:{hex_alt*2}px; height:{hex_len*2}px;" class="m-auto text-center txt">
     <TownPortal pt={h/2-(3*hex_len/4)} pb={hex_len/4} dark={dark} dM={darkMode} lM={lightMode} hex_alt={hex_alt}/>
@@ -13,31 +12,17 @@
         <Updates />
         <h2 on:click={signout} class="ui-button" >logout</h2>
     {/if}
-=======
+    </section>
+</nav>
 <script>
-	/*Chancho Dot Dev v 23.02.07
+	/*Chancho Dot Dev v 23.08.19
 	const siteData = {
 		name:"chancho.dev",
 		version:"23.2.8",
 		frontend: ["Svelte","TailWindCSS, NodeJS"],
-		backend: ["NGINX","Fedora Server 37"]
+		backend: ["SurrealDB","Rust","Llama2","NGINX","Fedora Server 37"]
 	}
 	*/
-	import Home from './Home.svelte';
-	import Nav from "./Navbar.svelte";
-</script>
-
-
-<div class=page>
-    <nav class="pagenav">
-        <Nav/>
-    </nav>
-    <section class="pagesec">
-        <Home/>
->>>>>>> 344b22d (deleted 36hrs of work with 15 keystrokes (efficiency On/2))
-    </section>
-</nav>
-<script>
 import {onMount, onDestroy} from 'svelte'
 import { Surreal } from 'surrealdb.js';
 import Canvas from '$lib/Canvas.svelte';
@@ -85,7 +70,7 @@ function back(){
 }
 
 async function surrealdb(){
-    await db.connect('http://45.26.126.159:8000');
+    await db.connect('https://chancho.dev');
     auth()
 }
 async function auth(){
