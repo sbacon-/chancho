@@ -10,8 +10,8 @@ module.exports = {
       },
       colors: {
         /*VIVA MAGENTA*/
-        pri1:     '#d9013e',
-        pri1dark: '#ed0852',
+        pri1:     '#ed0852',
+        pri1dark: '#d9013e',
         /*TRIAD BLUE*/
         pri2:     '#046dbd',
         pri2dark: '#046dbd',

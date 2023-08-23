@@ -4,6 +4,7 @@
     let canvas;
     function draw(){
         let neu = dark()?"rgba(34,34,34,0.5)":"rgba(239,239,239,0.5)";
+        let grey = "#787878"
         let c = canvas.getContext('2d');
         let center = {x:w/2,y:h/2};
         let hex = [
@@ -21,8 +22,10 @@
             c.lineTo(hex[i],hex[i+1]);
         }
         c.closePath();
+        c.strokeStyle = grey;
+        c.lineWidth = 2;
+        c.stroke();
         c.fillStyle = neu;
-        c.fill();
         c.fill();
 
         c.beginPath();

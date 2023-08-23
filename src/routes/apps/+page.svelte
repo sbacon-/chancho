@@ -7,23 +7,19 @@
 		backend: ["NGINX","Fedora Server 37"]
 	}
 	*/
-    import Nav from "../Navbar.svelte";
-    import Dice from "./Dice.svelte";
-    import Taskr from "./Taskr.svelte";
-    import Domino from "./Domino.svelte";
-    import Pomodoro from "./Pomo.svelte";
+    import Dice from "$lib/apps/Dice.svelte";
+    import Taskr from "$lib/apps/Taskr.svelte";
+    import Domino from "$lib/apps/Domino.svelte";
+    import Pomodoro from "$lib/apps/Pomo.svelte";
     let apps = ["Home","Accord","Taskr"];
     let selection = 0;
 </script>
 
 
 <div class=page>
-    <nav class="pagenav">
-        <Nav/>
-    </nav>
     <section class="pagesec">
         <Pomodoro/>
-        <!--Domino/-->
+        <Domino/>
         <Taskr/>
         <Dice/>
     </section>

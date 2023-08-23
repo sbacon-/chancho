@@ -8,7 +8,7 @@
     {:else if log_status=="signup"}
         <SignUp db={db} back={back}/>
     {:else if log_status=="auth"}
-        <Roulette />
+        <Roulette w={w} h={h} hex_len={hex_len} hex_alt={hex_alt} />
         <Updates />
         <h2 on:click={signout} class="ui-button" >logout</h2>
     {/if}
