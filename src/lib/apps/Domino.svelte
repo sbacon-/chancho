@@ -26,7 +26,7 @@
         }
     }
 </script>
-<div class="w-[90vw] xl:w-[40vw] grow  bord m-auto p-3" >
+<div class="app bord" >
         <h3>Score Sheet<em class="red-txt">!!</em></h3>
      <ul class="text-center grid grid-cols-6 auto-rows-auto rounded-xl">
         <li class="border-pri3 dark:border-pri2dark border-b-2 border-r-2">

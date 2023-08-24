@@ -1,0 +1,125 @@
+<div class="page">
+    <section class="pagesec">
+{#if log_status=="auth"}
+    <article class="app bord ui-form">
+        <h1 class="ui-label">Welcome, {user.split('@')[0]}</h1>
+        <div class="flex">
+        <h2>Text Completion</h2>
+        </div>
+        <div>
+            {#each history as hist}
+                <p class>{hist}</p>
+            {/each}
+        </div>
+        <div class="">
+            <input type="text" class="grow ui-input" bind:value={prompt} placeholder="prompt..."/>
+            <button on:click={send} class="ui-button">send</button>
+        </div>
+        <p class="ui-label">{response}</p>
+
+    </article>
+    <br>
+
+    <button on:click={back} class="ui-button">back</button>
+{:else if log_status=="invalid"}
+    <h1>Something went wrong :(</h1>
+    <button on:click={back} class="ui-button">back</button>
+{:else}
+    <button on:click={back} class="ui-button">back</button>
+{/if}
+    </section>
+</div>
+<script>
+	/*Chancho Dot Dev v 23.08.19
+	const siteData = {
+		name:"chancho.dev",
+		version:"23.2.8",
+		frontend: ["Svelte","TailWindCSS, NodeJS"],
+		backend: ["SurrealDB","Rust","Llama2","NGINX","Fedora Server 37"]
+	}
+	*/
+    import {onMount, onDestroy} from 'svelte'
+    import { Surreal } from 'surrealdb.js';
+
+    const db = new Surreal();
+    let user;
+    let log_status="";
+    let rec_interval;
+    let dark;
+    let history = ["hello llama2","..."];
+
+    let prompt = "";
+    let response = "type in the input field above";
+
+    //Style
+    function initDarkMode(){
+        dark=isDarkMode();
+        if(isDarkMode()){
+            document.documentElement.classList.add('dark');
+        }else{
+            document.documentElement.classList.remove('dark');
+        }
+    }
+    function lightMode(){
+        localStorage.theme = 'light';
+        initDarkMode();
+        location.reload();
+    }
+    function darkMode(){
+        localStorage.theme = 'dark';
+        initDarkMode();
+        location.reload();
+    }
+    function isDarkMode(){
+        return localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    }
+    function back(){window.location.assign("/");}
+
+
+    async function surrealdb(){
+        await db.connect('https://chancho.dev');
+        auth()
+    }
+    async function auth(){
+        try{
+            let tok = await db.authenticate(localStorage.getItem('token'));
+            let query = await db.query("SELECT user FROM user");
+            user = query[0].result[0].user;
+            log_status="auth"
+        }catch{
+            log_status="invalid"
+        }
+    }
+    async function send(){
+        try{
+            const created = await db.create('tcprompt',{pr:prompt, re:"...", ts:"...", user:user});
+            prompt="";
+        }catch{
+            log_status="invalid"
+        }
+    }
+    async function receive(){
+        try{
+            let query = await db.query("SELECT * FROM tcprompt WHERE user=$user ORDER BY ts",{user:user});
+            history = [];
+            for(let pr in query[0].result){
+                history.push(query[0].result[pr].pr);
+                history.push(query[0].result[pr].re);
+            }
+            
+        }catch{
+            log_status="invalid"
+        }
+    }
+
+    onMount(()=>{
+        receive();
+        rec_interval = setInterval(receive,10000);
+        surrealdb();
+        initDarkMode();
+    })
+    onDestroy(()=>{
+        clearInterval(rec_interval);
+    })
+</script>

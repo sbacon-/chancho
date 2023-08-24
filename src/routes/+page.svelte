@@ -4,7 +4,7 @@
     <section>
     {#if log_status=="signin"}
         <SignIn db={db}/>
-        <h2 on:click={signup}>need an account?</h2>
+        <h2 on:click={signup}>need another account?</h2>
     {:else if log_status=="signup"}
         <SignUp db={db} back={back}/>
     {:else if log_status=="auth"}

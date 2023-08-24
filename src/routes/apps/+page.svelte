@@ -16,7 +16,7 @@
 </script>
 
 
-<div class=page>
+<div class="page">
     <section class="pagesec">
         <Pomodoro/>
         <Domino/>

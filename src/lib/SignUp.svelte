@@ -26,7 +26,7 @@
  
 </script>
 <form class="ui-form">
-    <p>by creating an account you agree to our <a href="chancho_license.txt"> Terms & License Agreements</a>
+    <p>by creating an account you agree to our <a href="chancho_license.txt" class="underline"> Terms & License Agreements</a>
         <br>{pass_help}</p>
     <label class="ui-label">email
     <input bind:value={email} class="ui-input" type="text" required>
@@ -37,7 +37,7 @@
     <label class="ui-label">pass2
     <input bind:value={pass2} class="ui-input" type="password" required>
     </label>
-    <label>
+    <label class="underline">
     <input bind:value={mark} class="ui-button" type="checkbox">
     Email me stuff
     </label>
