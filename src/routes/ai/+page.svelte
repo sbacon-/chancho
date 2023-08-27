@@ -1,55 +1,32 @@
-<div class="page">
-    <section class="pagesec">
-{#if log_status=="auth"}
-    <article class="app bord ui-form">
-        <h1 class="ui-label">Welcome, {user.split('@')[0]}</h1>
-        <div class="flex">
-        <h2>Text Completion</h2>
-        </div>
-        <div>
-            {#each history as hist}
-                <p class>{hist}</p>
-            {/each}
-        </div>
-        <div class="">
-            <input type="text" class="grow ui-input" bind:value={prompt} placeholder="prompt..."/>
-            <button on:click={send} class="ui-button">send</button>
-        </div>
-        <p class="ui-label">{response}</p>
-
-    </article>
-    <br>
-
-    <button on:click={back} class="ui-button">back</button>
-{:else if log_status=="invalid"}
-    <h1>Something went wrong :(</h1>
-    <button on:click={back} class="ui-button">back</button>
-{:else}
-    <button on:click={back} class="ui-button">back</button>
-{/if}
-    </section>
-</div>
 <script>
 	/*Chancho Dot Dev v 23.08.19
 	const siteData = {
 		name:"chancho.dev",
 		version:"23.2.8",
 		frontend: ["Svelte","TailWindCSS, NodeJS"],
-		backend: ["SurrealDB","Rust","Llama2","NGINX","Fedora Server 37"]
+		backend: ["SurrealDB","Llama2","NGINX","Fedora Server 37"]
 	}
 	*/
     import {onMount, onDestroy} from 'svelte'
     import { Surreal } from 'surrealdb.js';
+    import TextComplete from '$lib/ai/TextComplete.svelte';
+    import ChatComplete from '$lib/ai/ChatComplete.svelte';
 
     const db = new Surreal();
     let user;
     let log_status="";
+    let mode="Text Complete";
+    let history = ["hello llama2","..."];
     let rec_interval;
     let dark;
-    let history = ["hello llama2","..."];
 
+    let sys = "";
     let prompt = "";
-    let response = "type in the input field above";
+
+    function switchText(){
+        mode=(mode=="Text Complete"?"Chat Complete":"Text Complete");
+        receive();
+    }
 
     //Style
     function initDarkMode(){
@@ -75,6 +52,18 @@
         (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
     }
     function back(){window.location.assign("/");}
+    async function clear(){
+        prompt = "";
+        if(mode=="Chat Complete"){
+            try{
+                let query = await db.query("UPDATE tcprompt SET mode=time::now() WHERE user=$user AND mode=$mode",{user:user, mode:mode});
+
+            }catch{
+                log_status="invalid"
+            }
+            
+        }
+    }
 
 
     async function surrealdb(){
@@ -90,18 +79,15 @@
         }catch{
             log_status="invalid"
         }
+        receive();
     }
     async function send(){
-        try{
-            const created = await db.create('tcprompt',{pr:prompt, re:"...", ts:"...", user:user});
-            prompt="";
-        }catch{
-            log_status="invalid"
-        }
+        const created = await db.create('tcprompt',{pr:prompt, re:"...", ts:"..." ,mode:mode, user:user});
+        prompt = "";
     }
     async function receive(){
         try{
-            let query = await db.query("SELECT * FROM tcprompt WHERE user=$user ORDER BY ts",{user:user});
+            let query = await db.query("SELECT * FROM tcprompt WHERE user=$user AND mode=$mode ORDER BY ts DESC",{mode:mode, user:user});
             history = [];
             for(let pr in query[0].result){
                 history.push(query[0].result[pr].pr);
@@ -115,7 +101,7 @@
 
     onMount(()=>{
         receive();
-        rec_interval = setInterval(receive,10000);
+        rec_interval = setInterval(receive,1000);
         surrealdb();
         initDarkMode();
     })
@@ -123,3 +109,39 @@
         clearInterval(rec_interval);
     })
 </script>
+<div class="page">
+    <section class="pagesec">
+{#if log_status=="auth"}
+    <article class="app bord ui-form">
+        <h1 class="ui-label">Welcome, {user.split('@')[0]}</h1>
+        <button on:click={switchText} class="ui-button">{mode}</button>
+            {#if mode=="Text Complete"}
+                <TextComplete history={history} />
+                <div class="">
+                <input type="text" class="grow ui-input bord" bind:value={prompt} placeholder="prompt..."/>
+                <button on:click={send} class="ui-button">send</button>
+                </div>
+            {:else if mode=="Chat Complete"}
+                <ChatComplete history={history} />
+                <div class="">
+                <input type="text" class="grow ui-input bord" bind:value={sys} placeholder="system..."/>
+                <button on:click={clear} class="ui-button">clear</button>
+                </div>
+                <div class="">
+                <input type="text" class="grow ui-input bord" bind:value={prompt} placeholder="prompt..."/>
+                <button on:click={send} class="ui-button">send</button>
+                </div>
+            {:else}
+            {/if}
+    </article>
+    <br>
+
+    <button on:click={back} class="ui-button">back</button>
+{:else if log_status=="invalid"}
+    <h1>Something went wrong :(</h1>
+    <button on:click={back} class="ui-button">back</button>
+{:else}
+    <button on:click={back} class="ui-button">back</button>
+{/if}
+    </section>
+</div>
