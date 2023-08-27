@@ -5,6 +5,12 @@
 let updates = [
 //VIM 6yy
   {
+    "date":"08/27/23",
+    "update":"Llama 2: Chat Completion",
+    "link":"/ai",
+    "icon":"github"
+  },
+  {
     "date":"08/24/23",
     "update":"Llama 2: Text Completion",
     "link":"/ai",
