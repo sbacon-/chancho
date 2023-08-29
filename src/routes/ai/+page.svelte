@@ -82,7 +82,7 @@
         receive();
     }
     async function send(){
-        const created = await db.create('tcprompt',{pr:prompt, re:"...", ts:"..." ,mode:mode, user:user});
+        const created = await db.create('tcprompt',{pr:prompt.replaceAll(',',''), re:"...", ts:"..." ,mode:mode, user:user});
         prompt = "";
     }
     async function receive(){
@@ -124,8 +124,6 @@
             {:else if mode=="Chat Complete"}
                 <ChatComplete history={history} />
                 <div class="">
-                <input type="text" class="grow ui-input bord" bind:value={sys} placeholder="system..."/>
-                <button on:click={clear} class="ui-button">clear</button>
                 </div>
                 <div class="">
                 <input type="text" class="grow ui-input bord" bind:value={prompt} placeholder="prompt..."/>
