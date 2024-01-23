@@ -70,7 +70,8 @@ function back(){
 }
 
 async function surrealdb(){
-    await db.connect('https://chancho.dev');
+    //await db.connect('https://chancho.dev');
+    await db.connect('http://45.26.126.159:8000');
     auth()
 }
 async function auth(){

@@ -12,4 +12,7 @@
     <button on:click={ai} class="ui-button">
         <h2 style="width:{hex_alt/2}px;"class="underline">llama2<h2>
     </button>
+    <button on:click={ai} class="ui-button">
+        <h2 style="width:{hex_alt/2}px;"class="underline">diffuse β<h2>
+    </button>
 </div>

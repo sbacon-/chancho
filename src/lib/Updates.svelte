@@ -1,9 +1,15 @@
 <script>
   import Fa from 'svelte-fa';
   import {faGithubAlt}  from '@fortawesome/free-brands-svg-icons';
-  import {faCookie,faVideo}  from '@fortawesome/free-solid-svg-icons';
+  import {faCookie,faVideo,faRobot}  from '@fortawesome/free-solid-svg-icons';
 let updates = [
 //VIM 6yy
+  {
+    "date":"01/16/24",
+    "update":"After a six-hundred percent reduction in staff, chanchodotdev's carbon footprint has been reduced by 5 employees and 1 cat.",
+    "link":"",
+    "icon":"robot"
+  },
   {
     "date":"08/27/23",
     "update":"Llama 2: Chat Completion",
@@ -157,6 +163,8 @@ let updates = [
               <Fa class="" icon="{faVideo}"/>
             {:else if icon =="github"}
               <Fa class="" icon="{faGithubAlt}"/>
+            {:else if icon =="robot"}
+              <Fa class="" icon="{faRobot}"/>
             {/if}
           </a>
         {:else}
