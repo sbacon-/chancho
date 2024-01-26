@@ -13,6 +13,8 @@
     import Pomodoro from "$lib/apps/Pomo.svelte";
     let apps = ["Home","Accord","Taskr"];
     let selection = 0;
+
+    function back(){window.location.assign('/')};
 </script>
 
 
@@ -22,6 +24,7 @@
         <Domino/>
         <Taskr/>
         <Dice/>
+        <button on:click={back} class="ui-button">back</button>
     </section>
 	<!--<Footer/>-->
 </div>

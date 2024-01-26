@@ -19,11 +19,11 @@
     }
  
 </script>
-<form class="ui-form">
-    <label class="ui-label" > email
+<form class="ui-form m-auto w-4/6">
+    <label class="ui-label" > user 
     <input bind:value={email} type="text" class="ui-input">
     </label>
-    <label class="ui-label" >pass
+    <label class="ui-label" > pass 
     <input bind:value={pass} type="password" class="ui-input">
     </label>
     <button on:click={sign_in} type="submit" class="ui-button">login</button>

@@ -9,17 +9,17 @@ svg{@apply inline}
 .red-txt {@apply text-pri1 dark:text-pri1dark}
 .blu-txt {@apply text-pri2 dark:text-pri2dark}
 .yel-txt {@apply text-pri3 dark:text-pri3dark}
-.txt-bg {@apply bg-pri3 dark:bg-pri2dark}
-.gui-svg {@apply text-pri2 dark:text-pri3dark}
+.txt-bg {@apply bg-pri3 dark:bg-pri3dark}
+.gui-svg {@apply text-pri2 dark:text-pri2dark}
 .app{@apply w-[90vw] xl:w-[40vw] grow flex flex-col m-auto p-3}
-.bord {@apply border-4 border-pri2 dark:border-pri3dark rounded-3xl}
-.navbord {@apply border-2 rounded-xl border-pri2 dark:border-pri3dark p-1}
+.bord {@apply border-4 border-pri2 dark:border-pri2dark rounded-3xl}
+.navbord {@apply border-2 rounded-xl border-pri2 dark:border-pri2dark p-1}
 .page {@apply min-h-screen m-auto txt neu grid grid-cols-5 auto-rows-min text-center md:text-3xl}
 .pagenav {@apply w-[89vw] xl:w-[40vw] m-auto grid col-span-5 grid-cols-5 auto-rows-min text-center}
 .pagesec {@apply w-[90vw] m-auto col-span-5}
-.ui-form {@apply bg-pri3 dark:bg-pri2dark flex flex-col}
-.ui-label {@apply m-3}
-.ui-input {@apply bg-pri2 dark:bg-pri3dark text-textdark dark:text-text}
-.ui-button {@apply m-3 p-1 bg-pri2 dark:bg-pri3dark text-textdark dark:text-text}
+.ui-form {@apply bg-pri3 dark:bg-pri3dark flex flex-col items-center}
+.ui-label {@apply m-2 underline}
+.ui-input {@apply bg-pri2 dark:bg-pri2dark}
+.ui-button {@apply bg-pri2 dark:bg-pri2dark}
 
 

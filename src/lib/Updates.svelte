@@ -5,6 +5,12 @@
 let updates = [
 //VIM 6yy
   {
+    "date":"01/26/24",
+    "update":"Colour of the year update, added back button to apps page (first try)",
+    "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
     "date":"01/16/24",
     "update":"After a six-hundred percent reduction in staff, chanchodotdev's carbon footprint has been reduced by 5 employees and 1 cat.",
     "link":"",
@@ -146,18 +152,18 @@ let updates = [
   function decrement(){if(showing!=0)showing--};
 
 </script>
-<div id = "updates" class="grid grid-cols-4">
+<div id = "updates" class="px-10 grid grid-cols-4">
     <ul class="bord col-span-4">
-    <h3 class="px-3">Updates<em class="red-txt">!!</em></h3>
+    <h3 class="p-3">Updates<em>!!</em></h3>
     {#each updates as {date,update,link,icon}, i}
         {#if i == showing}
-      <li class="bg-neu dark:bg-neudark grid grid-cols-4 border-4 border-pri3 dark:border-pri2dark rounded-3xl"> 
-        <h4 class="text-center txt-bg col-span-3 col-start-1 rounded-tl-2xl">{date}</h4>
+            <li class="bg-neu dark:bg-neudark grid grid-cols-4 border-4 border-pri3 dark:border-pri3dark">
+        <h4 class="text-center txt-bg col-span-3 col-start-1">{date}</h4>
         {#if icon != ""}
             <a class = "m-auto px-4 col-start-4 row-span-2
             text-4xl text-center 
-            hover:border-4 rounded-xl border-pri2 dark:border-pri3dark
-            hover:text-pri2 dark:hover:text-pri3dark transition-all" 
+            hover:border-4 rounded-xl border-pri2 dark:border-pri2dark
+            hover:text-pri2 dark:hover:text-pri2dark transition-all" 
             href={link}>
             {#if icon == "video"}
               <Fa class="" icon="{faVideo}"/>
@@ -169,7 +175,7 @@ let updates = [
           </a>
         {:else}
         {/if}
-        <p class="col-span-3 border-pri3 dark:border-pri2dark border-r-4">{update}</p>
+        <p class="col-span-3 border-pri3 dark:border-pri3dark border-r-4">{update}</p>
         {/if}
     {/each}
     <button on:click={decrement}>
