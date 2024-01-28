@@ -14,9 +14,8 @@ svg{@apply inline}
 .app{@apply w-[90vw] xl:w-[40vw] grow flex flex-col m-auto p-3}
 .bord {@apply border-4 border-pri2 dark:border-pri2dark rounded-3xl}
 .navbord {@apply border-2 rounded-xl border-pri2 dark:border-pri2dark p-1}
-.page {@apply min-h-screen m-auto txt neu grid grid-cols-5 auto-rows-min text-center md:text-3xl}
-.pagenav {@apply w-[89vw] xl:w-[40vw] m-auto grid col-span-5 grid-cols-5 auto-rows-min text-center}
-.pagesec {@apply w-[90vw] m-auto col-span-5}
+.page {@apply min-h-screen m-auto txt neu auto-rows-min text-center md:text-3xl}
+.pagesec {@apply w-[90vw] m-auto}
 .ui-form {@apply bg-pri3 dark:bg-pri3dark flex flex-col items-center}
 .ui-label {@apply m-2 underline}
 .ui-input {@apply bg-pri2 dark:bg-pri2dark}

@@ -3,16 +3,15 @@
 
     function apps(){window.location.assign("/apps");};
     function ai(){window.location.assign("/ai");};
-    
 </script>
-<div style="height: {hex_len/4}px; width:{hex_alt*2}px;">
-    <button on:click={apps} class="ui-button">
+<div style="width:{hex_alt*2}px;" class="py-3">
+    <button on:click={apps} class="bord ui-button hover:bg-pri3 dark:hover:bg-pri3dark transition-all">
         <h2 style="width:{hex_alt/2}px;"class="underline">apps<h2>
     </button>
-    <button on:click={ai} class="ui-button">
+    <button on:click={ai} class="bord ui-button hover:bg-pri3 dark:hover:bg-pri3dark transition-all">
         <h2 style="width:{hex_alt/2}px;"class="underline">llama2<h2>
     </button>
-    <button on:click={ai} class="ui-button">
+    <button on:click={ai} class="bord ui-button hover:bg-pri3 dark:hover:bg-pri3dark transition-all">
         <h2 style="width:{hex_alt/2}px;"class="underline">diffuse β<h2>
     </button>
 </div>

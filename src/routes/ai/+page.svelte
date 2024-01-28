@@ -10,7 +10,6 @@
     import {onMount, onDestroy} from 'svelte'
     import { Surreal } from 'surrealdb.js';
     import TextComplete from '$lib/ai/TextComplete.svelte';
-    import ChatComplete from '$lib/ai/ChatComplete.svelte';
 
     const db = new Surreal();
     let user;
@@ -64,8 +63,6 @@
             
         }
     }
-
-
     async function surrealdb(){
         //await db.connect('https://chancho.dev');
         await db.connect('http://45.26.126.159:8000');
@@ -114,28 +111,18 @@
     <section class="pagesec">
 {#if log_status=="auth"}
     <article class="app bord ui-form">
+        <div>
+                <button on:click={switchText} class="p-2 m-2 bord ui-button">{mode}</button>
+                <button on:click={back} class="p-2 m-2 bord ui-button">back</button>
+        </div>
         <h1 class="ui-label">Welcome, {user.split('@')[0]}</h1>
-        <button on:click={switchText} class="ui-button">{mode}</button>
-            {#if mode=="Text Complete"}
-                <TextComplete history={history} />
-                <div class="">
-                <input type="text" class="grow ui-input bord" bind:value={prompt} placeholder="prompt..."/>
-                <button on:click={send} class="ui-button">send</button>
-                </div>
-            {:else if mode=="Chat Complete"}
-                <ChatComplete history={history} />
-                <div class="">
-                </div>
-                <div class="">
-                <input type="text" class="grow ui-input bord" bind:value={prompt} placeholder="prompt..."/>
-                <button on:click={send} class="ui-button">send</button>
-                </div>
-            {:else}
-            {/if}
+        <div class="">
+            <input type="text" class="p-2 m-2 ui-input bord" bind:value={prompt} placeholder="prompt..."/>
+            <button on:click={send} class="p-2 m-2 bord ui-button">send</button>
+        </div>
+        <TextComplete history={history} />
     </article>
     <br>
-
-    <button on:click={back} class="ui-button">back</button>
 {:else if log_status=="invalid"}
     <h1>Something went wrong :(</h1>
     <button on:click={back} class="ui-button">back</button>

@@ -25,23 +25,23 @@
     }
  
 </script>
-<form class="ui-form">
-    <p>by creating an account you agree to our <a href="chancho_license.txt" class="underline"> Terms & License Agreements</a>
+<form class="bord ui-form">
+    <p>By creating an account you agree to our <a href="chancho_license.txt" class="underline"> Terms & License Agreements</a>
         <br>{pass_help}</p>
     <label class="ui-label">email
-    <input bind:value={email} class="ui-input" type="text" required>
+    <input bind:value={email} class="bord ui-input" type="text" required>
     </label>
     <label class="ui-label">pass1
-    <input bind:value={pass1} class="ui-input" type="password" required>
+    <input bind:value={pass1} class="bord ui-input" type="password" required>
     </label>
     <label class="ui-label">pass2
-    <input bind:value={pass2} class="ui-input" type="password" required>
+    <input bind:value={pass2} class="bord ui-input" type="password" required>
     </label>
-    <label class="underline">
-    <input bind:value={mark} class="ui-button" type="checkbox">
+    <label class="">
+    <input bind:value={mark} class="bord ui-button" type="checkbox">
     Email me stuff
     </label>
-    <button on:click={sign_up} class="ui-button" type="submit">signup</button>
-    <button on:click={back} class="ui-button">back</button>
+    <button on:click={sign_up} class="bord ui-button w-1/5" type="submit">signup</button>
+    <button on:click={back} class="bord ui-button w-1/5">back</button>
 </form>
 

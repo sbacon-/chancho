@@ -152,39 +152,39 @@ let updates = [
   function decrement(){if(showing!=0)showing--};
 
 </script>
-<div id = "updates" class="px-10 grid grid-cols-4">
-    <ul class="bord col-span-4">
-    <h3 class="p-3">Updates<em>!!</em></h3>
+<div id = "updates">
+    <ul class="bord bg-pri3 dark:bg-pri3dark">
+    <h3 class="mx-auto">Updates<em>!!</em></h3>
     {#each updates as {date,update,link,icon}, i}
         {#if i == showing}
-            <li class="bg-neu dark:bg-neudark grid grid-cols-4 border-4 border-pri3 dark:border-pri3dark">
-        <h4 class="text-center txt-bg col-span-3 col-start-1">{date}</h4>
-        {#if icon != ""}
-            <a class = "m-auto px-4 col-start-4 row-span-2
-            text-4xl text-center 
-            hover:border-4 rounded-xl border-pri2 dark:border-pri2dark
-            hover:text-pri2 dark:hover:text-pri2dark transition-all" 
-            href={link}>
-            {#if icon == "video"}
-              <Fa class="" icon="{faVideo}"/>
-            {:else if icon =="github"}
-              <Fa class="" icon="{faGithubAlt}"/>
-            {:else if icon =="robot"}
-              <Fa class="" icon="{faRobot}"/>
+            <li class="border-x-8 border-t-4 border-pri2 dark:border-pri2dark grid grid-cols-3">
+            <h4 class="text-center col-span-2 underline">{date}</h4>
+            {#if icon != ""}
+                <a class = "px-4 m-auto col-start-3 row-span-2
+                text-4xl text-center 
+                hover:border-4 rounded-xl border-pri2 dark:border-pri2dark
+                hover:text-pri2 dark:hover:text-pri2dark transition-all" 
+                href={link}>
+                    {#if icon == "video"}
+                      <Fa class="" icon="{faVideo}"/>
+                    {:else if icon =="github"}
+                      <Fa class="" icon="{faGithubAlt}"/>
+                    {:else if icon =="robot"}
+                      <Fa class="" icon="{faRobot}"/>
+                    {/if}
+                </a>
+            {:else}
             {/if}
-          </a>
-        {:else}
-        {/if}
-        <p class="col-span-3 border-pri3 dark:border-pri3dark border-r-4">{update}</p>
+        <p class="p-3 col-span-2">{update}</p>
         {/if}
     {/each}
+    <div class="flex justify-between">
     <button on:click={decrement}>
-    <h3 class="px-3 underline">next</h3>
+        <h3 class="ui-button px-3 rounded-bl-xl rounded-tr-xl">&lt;</h3>
     </button>
     <button on:click={increment}>
-    <h3 class="px-3 underline">prev</h3>
+        <h3 class="ui-button px-3 rounded-br-xl rounded-tl-xl">&gt;</h3>
     </button>
-
-
+    </div>
     </ul>
     </div>

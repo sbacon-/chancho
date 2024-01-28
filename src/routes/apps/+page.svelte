@@ -24,7 +24,7 @@
         <Domino/>
         <Taskr/>
         <Dice/>
-        <button on:click={back} class="ui-button">back</button>
+        <button on:click={back} class="p-2 m-2 bord ui-button">back</button>
     </section>
 	<!--<Footer/>-->
 </div>

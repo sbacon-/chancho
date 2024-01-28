@@ -19,12 +19,12 @@
     }
  
 </script>
-<form class="ui-form m-auto w-4/6">
+<form class="bord ui-form m-auto w-4/6">
     <label class="ui-label" > user 
-    <input bind:value={email} type="text" class="ui-input">
+    <input bind:value={email} type="text" class="bord ui-input">
     </label>
     <label class="ui-label" > pass 
-    <input bind:value={pass} type="password" class="ui-input">
+    <input bind:value={pass} type="password" class="bord ui-input">
     </label>
-    <button on:click={sign_in} type="submit" class="ui-button">login</button>
+    <button on:click={sign_in} type="submit" class="bord ui-button px-5">login</button>
 </form>
