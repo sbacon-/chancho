@@ -31,7 +31,7 @@
 </section>
 <section class="text">
       <p> Made this as part of a <a href="https://frontendmasters.com/courses/web-development-v2"/>course in web-dev</a></p>
-      <p> Also made an automation tool for <a href="/misc/NumToWord.html"/>currency to word conversion</a></p>
+      <p> Also made an automation tool for <a href="/classics/misc/NumToWord.html"/>currency to word conversion</a></p>
       <h3>calc.js</h3>
       <pre>
 console.log("|--- Hello! ---|")

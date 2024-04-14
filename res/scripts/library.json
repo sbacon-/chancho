@@ -1,5 +1,6 @@
 [
-   {"title":"gdChess Trainer",
+   {
+    "title":"gdChess Trainer",
     "reference":"/godot/gdChess/",
     "card":"/res/img/library/Chess.png",
     "platform" : ["html"],

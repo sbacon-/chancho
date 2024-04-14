@@ -3,7 +3,7 @@ function displayNav(){
 
   //IMPORT LIBRARY.JSON
   var request = new XMLHttpRequest();
-  request.open("GET","/res/scripts/library.json", false);
+  request.open("GET","/classic/res/scripts/library.json", false);
   request.send(null);
   var library = JSON.parse(request.responseText);
 
