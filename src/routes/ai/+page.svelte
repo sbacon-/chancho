@@ -14,7 +14,7 @@
     const db = new Surreal();
     let user;
     let log_status="";
-    let mode="Text Complete";
+    let mode="Chat Complete";
     let history = ["hello llama2","..."];
     let rec_interval;
     let dark;
@@ -64,8 +64,7 @@
         }
     }
     async function surrealdb(){
-        //await db.connect('https://chancho.dev');
-        await db.connect('http://45.26.126.159:8000');
+        await db.connect('https://chancho.dev');
         auth()
     }
     async function auth(){
@@ -119,6 +118,9 @@
         <div class="">
             <input type="text" class="p-2 m-2 ui-input bord" bind:value={prompt} placeholder="prompt..."/>
             <button on:click={send} class="p-2 m-2 bord ui-button">send</button>
+		{#if mode=="Chat Complete"}
+			<input class="p-2 ui-input" type="checkbox" checked/> as response
+		{/if}
         </div>
         <TextComplete history={history} />
     </article>

@@ -5,6 +5,36 @@
 let updates = [
 //VIM 6yy
   {
+    "date":"04/13/24",
+    "update":"Classic Mode and Text/Chat Completion almost completely functional (for now)",
+    "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
+    "date":"04/10/24",
+    "update":"Uploaded everything to the cloudflare to resolve DNS issues",
+    "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
+    "date":"04/06/24",
+    "update":"Shutting down the AI for the week, will be back with electricity in 7 days. Thank you for your patience. Also, all acheivements have been acquired in Elden Ring (DLC soon)",
+    "link":"",
+    "icon":"robot"
+  },
+  {
+    "date":"03/27/24",
+    "update":"I've finally booked some time with the LLM relay (next Saturday 3/30). May just play Elden Ring instead, the DLC gonna be great. tom@chancho.dev for jolly cooperation",
+    "link":"",
+    "icon":"robot"
+  },
+  {
+    "date":"03/10/24",
+    "update":"Technical diffuiculaties: unplugged the llama2 relay as it was un-profitable, nothing works except the apps page please email your solutions to ai@chancho.dev or call us @ 911.",
+    "link":"",
+    "icon":"robot"
+  },
+  {
     "date":"01/26/24",
     "update":"Colour of the year update, added back button to apps page (first try)",
     "link":"https://github.com/sbacon-/chancho",
