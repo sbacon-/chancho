@@ -114,7 +114,7 @@
                 <button on:click={switchText} class="p-2 m-2 bord ui-button">{mode}</button>
                 <button on:click={back} class="p-2 m-2 bord ui-button">back</button>
         </div>
-        <h1 class="ui-label">Welcome, {user.split('@')[0]}</h1>
+	<h1 class="ui-label">Welcome, {user==null?"guest":user.split('@')[0]}! </h1>
         <div class="">
             <input type="text" class="p-2 m-2 ui-input bord" bind:value={prompt} placeholder="prompt..."/>
             <button on:click={send} class="p-2 m-2 bord ui-button">send</button>
