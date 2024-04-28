@@ -1,5 +1,5 @@
 <script>
-    export let history = ["llama2-13b","..."];
+    export let history = ["llama3-70b","..."];
 </script>
 <ul class="flex flex-col">
 {#each history as hist, i}

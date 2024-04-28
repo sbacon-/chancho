@@ -1,18 +1,19 @@
 <script>
     export let db, back;
 
-    let email, pass1, pass2, mark, pass_help="";
+    let email, name, pass1, pass2, mark, pass_help="";
     async function sign_up(){
         if(pass1==pass2){
             try{
           let token = await db.signup({
               NS: 'chancho',
               DB: 'ai',
-              SC: 'allusers',
-              user: email,
-              pass: pass1,
-              marketing: mark=="",
-              tags: [],
+              SC: 'user',
+	      name: name,
+              email: email,
+              password: pass1,
+              //marketing: mark=="",
+              //tags: [],
           });
           localStorage.setItem('token',token);
             location.reload();
@@ -28,6 +29,9 @@
 <form class="bord ui-form">
     <p>By creating an account you agree to our <a href="chancho_license.txt" class="underline"> Terms & License Agreements</a>
         <br>{pass_help}</p>
+    <label class="ui-label">name
+    <input bind:value={name} class="bord ui-input" type="text" required>
+    </label>
     <label class="ui-label">email
     <input bind:value={email} class="bord ui-input" type="text" required>
     </label>

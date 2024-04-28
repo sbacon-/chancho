@@ -71,7 +71,10 @@ function back(){
 }
 
 async function surrealdb(){
-    await db.connect('https://chancho.dev');
+    await db.connect('https://chancho.dev/rpc', {
+	ns: "chancho",
+	db: "ai"
+    });
     auth()
 }
 async function auth(){

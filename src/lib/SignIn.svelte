@@ -5,11 +5,11 @@
     async function sign_in(){
         try{
       let token = await db.signin({
-      NS: 'chancho',
-      DB: 'ai',
-      SC: 'allusers',
-      user: email,
-      pass: pass,
+	      NS: 'chancho',
+	      DB: 'ai',
+	      SC: 'user',
+	      email: email,
+	      password: pass,
       });
       localStorage.setItem('token',token);
         location.reload();

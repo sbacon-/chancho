@@ -1,21 +1,16 @@
 <script>
-	/*Chancho Dot Dev v 23.08.19
-	const siteData = {
-		name:"chancho.dev",
-		version:"23.2.8",
-		frontend: ["Svelte","TailWindCSS, NodeJS"],
-		backend: ["SurrealDB","Llama2","NGINX","Fedora Server 37"]
-	}
-	*/
     import {onMount, onDestroy} from 'svelte'
     import { Surreal } from 'surrealdb.js';
     import TextComplete from '$lib/ai/TextComplete.svelte';
 
     const db = new Surreal();
     let user;
+    let id;
+    let reply = null;
     let log_status="";
     let mode="Chat Complete";
-    let history = ["hello llama2","..."];
+    let response=true;
+    let history = ["hello llama3","..."];
     let rec_interval;
     let dark;
 
@@ -50,12 +45,13 @@
         return localStorage.theme === 'dark' ||
         (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
     }
+
     function back(){window.location.assign("/");}
     async function clear(){
         prompt = "";
         if(mode=="Chat Complete"){
             try{
-                let query = await db.query("UPDATE tcprompt SET mode=time::now() WHERE user=$user AND mode=$mode",{user:user, mode:mode});
+                let query = await db.query("UPDATE tcprompt SET mode=time::now() WHERE user=$user AND mode=$mode",{user:id, mode:mode});
 
             }catch{
                 log_status="invalid"
@@ -64,14 +60,16 @@
         }
     }
     async function surrealdb(){
-        await db.connect('https://chancho.dev');
+        await db.connect('https://chancho.dev/rpc');
         auth()
     }
     async function auth(){
         try{
             let tok = await db.authenticate(localStorage.getItem('token'));
-            let query = await db.query("SELECT user FROM user");
-            user = query[0].result[0].user;
+            let query = await db.query("SELECT name,id FROM user");
+	console.log(query);
+            user = query[0].result[0].name;
+            id = query[0].result[0].id;
             log_status="auth"
         }catch{
             log_status="invalid"
@@ -79,13 +77,20 @@
         receive();
     }
     async function send(){
-        const created = await db.create('tcprompt',{pr:prompt.replaceAll(',',''), re:"...", ts:"..." ,mode:mode, user:user});
+        const created = await db.create('tcprompt',{pr:prompt.replaceAll(',',''), re:"...", ts:"..." ,mode:mode,response:response, user:id});
+	console.log("CREATED:"+created);
+	if(mode=="Chat Complete" && reply!=null && response){
+		const query = await db.query("RELATE "+created[0].id+"-> replies -> "+reply+";");
+		console.log("RELATE "+created[0].id+" -> replies -> "+reply+";");
+		console.log("QUERY:"+query);
+	}
         prompt = "";
     }
     async function receive(){
         try{
-            let query = await db.query("SELECT * FROM tcprompt WHERE user=$user AND mode=$mode ORDER BY ts DESC",{mode:mode, user:user});
+            let query = await db.query("SELECT * FROM tcprompt WHERE user=$user AND mode=$mode ORDER BY ts DESC",{mode:mode, user:id});
             history = [];
+	    if (query[0].result.length != 0) reply=query[0].result[0].id;
             for(let pr in query[0].result){
                 history.push(query[0].result[pr].pr);
                 history.push(query[0].result[pr].re);
@@ -114,12 +119,12 @@
                 <button on:click={switchText} class="p-2 m-2 bord ui-button">{mode}</button>
                 <button on:click={back} class="p-2 m-2 bord ui-button">back</button>
         </div>
-	<h1 class="ui-label">Welcome, {user==null?"guest":user.split('@')[0]}! </h1>
+	<h1 class="ui-label">Welcome, {user==null?"guest":user}! </h1>
         <div class="">
             <input type="text" class="p-2 m-2 ui-input bord" bind:value={prompt} placeholder="prompt..."/>
             <button on:click={send} class="p-2 m-2 bord ui-button">send</button>
 		{#if mode=="Chat Complete"}
-			<input class="p-2 ui-input" type="checkbox" checked/> as response
+			<input class="p-2 ui-input" type="checkbox" bind:checked={response}/> as response
 		{/if}
         </div>
         <TextComplete history={history} />
