@@ -4,12 +4,11 @@
     import TextComplete from '$lib/ai/TextComplete.svelte';
 
     const db = new Surreal();
-    let user;
-    let id;
+    let user, id;
     let reply = null;
     let log_status="";
     let mode="Chat Complete";
-    let response=true;
+    let response=false;
     let history = ["hello llama3","..."];
     let rec_interval;
     let dark;
@@ -67,7 +66,6 @@
         try{
             let tok = await db.authenticate(localStorage.getItem('token'));
             let query = await db.query("SELECT name,id FROM user");
-	console.log(query);
             user = query[0].result[0].name;
             id = query[0].result[0].id;
             log_status="auth"
@@ -78,11 +76,8 @@
     }
     async function send(){
         const created = await db.create('tcprompt',{pr:prompt.replaceAll(',',''), re:"...", ts:"..." ,mode:mode,response:response, user:id});
-	console.log("CREATED:"+created);
 	if(mode=="Chat Complete" && reply!=null && response){
 		const query = await db.query("RELATE "+created[0].id+"-> replies -> "+reply+";");
-		console.log("RELATE "+created[0].id+" -> replies -> "+reply+";");
-		console.log("QUERY:"+query);
 	}
         prompt = "";
     }

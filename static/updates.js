@@ -1,5 +1,5 @@
 export let updates = [
-//VIM 6yy
+  //TOM - do not update this, go to src/lib/Updates.svelte
   {
     "date":"05/13/23",
     "update":"Created Apps Page. HI MOM!",

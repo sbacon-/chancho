@@ -9,19 +9,19 @@
     {:else if log_status=="signup"}
         <SignUp db={db} back={back}/>
     {:else if log_status=="auth"}
-        <Roulette w={w} h={h} hex_len={hex_len} hex_alt={hex_alt} />
+        <Roulette w={w} h={h} hex_len={hex_len} hex_alt={hex_alt} display_options_menu={display_options_menu}/>
         <Updates />
         <button on:click={signout} class="bord my-3 px-3 ui-button" >logout</button>
     {/if}
     </section>
 </nav>
 <script>
-	/*Chancho Dot Dev v 23.08.19
+	/*Chancho Dot Dev
 	const siteData = {
 		name:"chancho.dev",
-		version:"23.2.8",
+		version:"24.5.6",
 		frontend: ["Svelte","TailWindCSS, NodeJS"],
-		backend: ["SurrealDB","Rust","Llama2","NGINX","Fedora Server 37"]
+		backend: ["SurrealDB","Rust","Llama3","NGINX","Fedora Server 37"]
 	}
 	*/
 import {onMount, onDestroy} from 'svelte'
@@ -37,7 +37,10 @@ const db = new Surreal();
 let log_status = "";
 
 //Style
-let w, h, hex_len, hex_alt, dark;
+let w, h, hex_len, hex_alt, dark, display_options_menu=false;
+function control_space(){
+    display_options_menu = !display_options_menu;
+}
 function measure(){
     w=window.innerWidth;
     h=window.innerHeight;
@@ -80,7 +83,7 @@ async function surrealdb(){
 async function auth(){
     try{
         let tok = await db.authenticate(localStorage.getItem('token'));
-        log_status="auth"
+        log_status="auth";
     }catch{
         log_status="signin"
     }
