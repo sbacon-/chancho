@@ -4,7 +4,7 @@
     <section>
     {#if log_status=="signin"}
         <SignIn db={db}/>
-        <h2 on:click={signup} class="m-3 underline">need another account? (yes!)</h2>
+        <button on:click={signup} class="m-3 underline bord px-3 ui-button">~GET INSTANT ACCESS~</button>
         <p class="hidden md:block bord m-5">Welcome to [Your Website Name], your one-stop shop for [briefly describe the main purpose of your website]. Our team of experts has curated a selection of [briefly describe the products or services offered on your website] that are designed to [briefly describe the benefits of using your products or services]. With [Your Website Name], you can [briefly describe the unique value proposition of your website]. Whether youre looking for [briefly describe the target audience for your website], we have everything you need to [briefly describe the desired action you want visitors to take on your website]. So why wait? [Insert call-to-action button or link].</p>
     {:else if log_status=="signup"}
         <SignUp db={db} back={back}/>

@@ -5,6 +5,12 @@
 let updates = [
 //VIM 6yy
   {
+    "date":"07/01/24",
+    "update":"This was a triumph!",
+    "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
     "date":"05/06/24",
     "update":"set default ai chat-complete behaviour to send as a new dialogue. I expect (the rest of this update was completed by the AI): to see the full list of options when I press ctrl+space",
     "link":"https://github.com/sbacon-/chancho",
