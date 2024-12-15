@@ -5,9 +5,35 @@
 let updates = [
 //VIM 6yy
   {
-    "date":"07/01/24",
-    "update":"This was a triumph!",
+    "date":"12/15/24",
+    "update":"You must gather your party before venturing forth."
     "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
+    "date":"11/18/24",
+    "update":"A world of information rests in the palm of your hand, and networks for instantaneous communication span the globe. Yet a unified vision of our future has never been built. We compete in technology, culture, and politics. We have deadly weapons that could destroy our planet. Lead us carefully, but boldly, and build a global community that can stand for years to come. ",
+    "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
+    "date":"09/10/24",
+    "update":"newspaper taxis on the surface of mars waiting to burst into flames, no oxygen no combustion and the taxis run late. picture yourself on a train in a station with plastacine people with looking glass cars, certainly someone is there at the turnstyle to inform you the trains are running late on mars", "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
+    "date":"08/05/24",
+    "update":"take the strike pad off the matchbook, and you can't ignite the muratric acid, there are 3 matches left in the box and 29 in the floor somewhere", "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
+    "date":"07/09/24",
+    "update":"The llama3 relay has been restored after a suspected DoS attack", "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
+    "date":"07/01/24",
+    "update":"This was a triumph! We have taken down the llama3 relay as it was both unprofitable and a violation of the TOS to try to predict the Pantone Color of the Year 2025 using Artificial Intelligence. It's Terracotta Sienna!", "link":"https://github.com/sbacon-/chancho",
     "icon":"github"
   },
   {
