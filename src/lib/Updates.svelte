@@ -6,7 +6,7 @@ let updates = [
 //VIM 6yy
   {
     "date":"12/15/24",
-    "update":"You must gather your party before venturing forth."
+    "update":"You must gather your party before venturing forth.",
     "link":"https://github.com/sbacon-/chancho",
     "icon":"github"
   },
