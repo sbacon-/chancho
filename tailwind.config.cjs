@@ -10,6 +10,17 @@ module.exports = {
       },
       colors: {
         /*Pantone Color of the Year 2024 (PEACH FUZZ)*/
+        //Triad Cream Tan (Mocha Mousse)/
+        pri1:     '#e4c7b8',  
+        pri1dark: '#a47764',  
+        //Triad Cannoli Cream (Baltic Amber)/
+        pri3:     '#f0f0e5', 
+        pri3dark: '#8b645a',
+        //Triad Safari (Chocolate Martini)/
+        pri2:     '#bbaa92',
+        pri2dark: '#56453f',
+        
+        /*Pantone Color of the Year 2024 (PEACH FUZZ)
         //Triad Peach-Orange (ateneo blue)/
         pri1:   '#fbbe97',  
         pri1dark:'#044168',  
@@ -19,7 +30,8 @@ module.exports = {
         //Triad Salmon Pink (tropical rain forest)/
         pri2:     '#fb97a1',
         pri2dark: '#04685e',
-        
+	*/
+
         /*Neutral Colors - White & Black*/
         text:     '#000000',
         textdark: '#ffffff',

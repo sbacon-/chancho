@@ -5,6 +5,12 @@
 let updates = [
 //VIM 6yy
   {
+    "date":"2/10/25",
+    "update":"Color of the year style update (Mocha Mousse).",
+    "link":"https://github.com/sbacon-/chancho",
+    "icon":"github"
+  },
+  {
     "date":"12/15/24",
     "update":"You must gather your party before venturing forth.",
     "link":"https://github.com/sbacon-/chancho",
