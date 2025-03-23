@@ -2,23 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
 svg{@apply inline}
 .neu {@apply bg-neu dark:bg-neudark transition-colors duration-1000}
-.txt {@apply text-text dark:text-textdark}
-.red-txt {@apply text-pri1 dark:text-pri1dark}
-.blu-txt {@apply text-pri2 dark:text-pri2dark}
-.yel-txt {@apply text-pri3 dark:text-pri3dark}
-.txt-bg {@apply bg-pri3 dark:bg-pri3dark}
-.gui-svg {@apply text-pri2 dark:text-pri2dark}
-.app{@apply w-[90vw] xl:w-[40vw] grow flex flex-col m-auto p-3}
-.bord {@apply border-4 border-pri2 dark:border-pri2dark rounded-3xl}
-.navbord {@apply border-2 rounded-xl border-pri2 dark:border-pri2dark p-1}
+.txt {@apply lg:text-xl md:text-base text-text dark:text-textdark}
+.pri1-bg {@apply bg-pri1 dark:bg-pri1dark}
+.pri2-bg {@apply bg-pri2 dark:bg-pri2dark}
+.pri3-bg {@apply bg-pri3 dark:bg-pri3dark}
+.pri1-bord {@apply border-pri1 dark:border-pri1dark}
+.pri2-bord {@apply border-pri2 dark:border-pri2dark}
+.pri3-bord {@apply border-pri3 dark:border-pri3dark}
+.ui-button {@apply hover:bg-pri3 dark:hover:bg-pri3dark transition-all}
+.ui-border {@apply border-4 rounded-3xl}
+.ui-form {@apply bg-pri1 dark:bg-pri1dark flex flex-col}
 .page {@apply min-h-screen m-auto txt neu auto-rows-min text-center md:text-3xl}
 .pagesec {@apply w-[90vw] m-auto}
-.ui-form {@apply bg-pri3 dark:bg-pri3dark flex flex-col items-center}
-.ui-label {@apply m-2 underline}
-.ui-input {@apply bg-pri2 dark:bg-pri2dark}
-.ui-button {@apply bg-pri2 dark:bg-pri2dark}
+
 
 

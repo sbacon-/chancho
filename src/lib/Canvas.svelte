@@ -1,42 +1,33 @@
 <script>
     import {tick, onMount} from 'svelte';
-    export let w,h,hex_len,hex_alt,measure,dark;
+    let {w, h, hex_len, hex_alt, dark} = $props();
     let canvas;
     function draw(){
-        let neu = dark()?"rgba(34,34,34,0.5)":"rgba(239,239,239,0.5)";
-        let grey = "#787878"
-        let c = canvas.getContext('2d');
+        let neu = dark?"rgba(0,0,0,0.5)":"rgba(255,255,255,0.5)";
+        let c2d = canvas.getContext('2d');
         let center = {x:w/2,y:h/2};
         let hex = [
-            center.x-hex_alt,center.y-hex_len/2,
-            center.x,center.y-hex_len,
-            center.x+hex_alt,center.y-hex_len/2,
-            center.x+hex_alt,center.y+hex_len/2,
-            center.x,center.y+hex_len,
-            center.x-hex_alt,center.y+hex_len/2,
+            {x:center.x-hex_alt,y:center.y-hex_len/2},
+            {x:center.x, y:center.y-hex_len},
+            {x:center.x+hex_alt, y:center.y-hex_len/2},
+            {x:center.x+hex_alt, y:center.y+hex_len/2},
+            {x:center.x, y:center.y+hex_len},
+            {x:center.x-hex_alt, y:center.y+hex_len/2}
         ];
-
-        c.beginPath();
-        c.moveTo(hex[0],hex[1]);
-        for(let i=2; i<hex.length; i+=2){
-            c.lineTo(hex[i],hex[i+1]);
+        c2d.fillStyle = neu;
+        
+        c2d.beginPath();
+        c2d.moveTo(hex[0].x,hex[0].y);
+        for(let i=1; i<hex.length; i++){
+            c2d.lineTo(hex[i].x, hex[i].y);
         }
-        c.closePath();
-        c.strokeStyle = grey;
-        c.lineWidth = 2;
-        c.stroke();
-        c.fillStyle = neu;
-        c.fill();
+        c2d.closePath();
+        c2d.fill();
 
-        c.beginPath();
-        c.arc(center.x,center.y,hex_len,0,Math.PI*2,true);
-        c.closePath();
-        c.fill();
-
-        c.beginPath();
-        c.arc(center.x,center.y,hex_alt,0,Math.PI*2,true);
-        c.closePath();
-        c.fill();
+        c2d.beginPath();
+        c2d.arc(center.x,center.y,hex_len,0,Math.PI*2,true);
+        c2d.closePath();
+        c2d.fill();
     }
     onMount(async ()=>{
         await tick();
@@ -45,15 +36,14 @@
     });
 </script>
 <canvas 
-        bind:this="{canvas}"
-        id="canvas" 
-        width ="{w}"
-        height="{h}"
-        class="absolute 
-               -z-50 
-               bg-pri1
-               dark:bg-pri1dark
-               w-full
-               h-full
-               ">
+    bind:this="{canvas}"
+    width ="{w}"
+    height="{h}"
+    class="absolute 
+        -z-50 
+        bg-pri1
+        dark:bg-pri1dark
+        w-full
+        h-full
+    ">
 </canvas>

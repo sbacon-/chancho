@@ -3,9 +3,6 @@
     import Taskr from "$lib/apps/Taskr.svelte";
     import Domino from "$lib/apps/Domino.svelte";
     import Pomodoro from "$lib/apps/Pomo.svelte";
-    let apps = ["Home","Accord","Taskr"];
-    let selection = 0;
-
     function back(){window.location.assign('/')};
 </script>
 
@@ -16,7 +13,9 @@
         <Domino/>
         <Taskr/>
         <Dice/>
-        <button on:click={back} class="p-2 m-2 bord ui-button">back</button>
+        <button onclick={back} class="pri2-bg ui-button pri2-bord ui-border my-3 px-3" >
+            back
+        </button>
     </section>
 	<!--<Footer/>-->
 </div>
