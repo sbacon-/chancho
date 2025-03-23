@@ -27,7 +27,7 @@
   let log_status = "";
   async function surrealdb(){
     try{
-      await db.connect("http://45.26.126.159:8000/rpc",{
+      await db.connect("https://chancho.dev/rpc",{
         namespace: 'dev',
         database: 'chancho'
       });
