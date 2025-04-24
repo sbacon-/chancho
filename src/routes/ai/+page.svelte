@@ -14,7 +14,7 @@
         window.location.assign("/");
     }
     async function surrealdb(){
-        await db.connect("https://chancho.dev/rpc",{
+        await db.connect("https://www.chancho.dev/rpc",{
             namespace: 'dev',
             database: 'chancho'
         });
