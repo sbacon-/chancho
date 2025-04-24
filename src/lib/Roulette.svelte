@@ -2,7 +2,7 @@
     let {hex_len, hex_alt,display_options_menu} = $props();
     function apps(){window.location.assign("/apps");};
     function ai(){window.location.assign("/ai");};
-    function classic(){window.location.assign("/classics");};
+    function classic(){window.location.assign("/classic");};
     function options(){
       display_options_menu = !display_options_menu;
     }

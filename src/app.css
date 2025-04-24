@@ -1,21 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@custom-variant dark (&:where(.dark, .dark *));
 
-svg{@apply inline}
-.neu {@apply bg-neu dark:bg-neudark transition-colors duration-1000}
-.txt {@apply lg:text-xl md:text-base text-text dark:text-textdark}
-.pri1-bg {@apply bg-pri1 dark:bg-pri1dark}
-.pri2-bg {@apply bg-pri2 dark:bg-pri2dark}
-.pri3-bg {@apply bg-pri3 dark:bg-pri3dark}
-.pri1-bord {@apply border-pri1 dark:border-pri1dark}
-.pri2-bord {@apply border-pri2 dark:border-pri2dark}
-.pri3-bord {@apply border-pri3 dark:border-pri3dark}
-.ui-button {@apply hover:bg-pri3 dark:hover:bg-pri3dark transition-all}
-.ui-border {@apply border-4 rounded-3xl}
-.ui-form {@apply bg-pri1 dark:bg-pri1dark flex flex-col}
-.page {@apply min-h-screen m-auto txt neu auto-rows-min text-center md:text-3xl}
-.pagesec {@apply w-[90vw] m-auto}
-
-
-
+@theme {
+    /*Pantone Color of the Year 2025 (Mocha Mousse)*/
+    /*  Triad Cream Tan (Mocha Mousse)*/
+    --color-pri1: #e4c7b8;
+    --color-pri1dark: #a47764;
+    /*  Triad Safari (Chocolate Martini)*/
+    --color-pri2: #bbaa92;
+    --color-pri2dark: #56453f;
+    /*  Triad Gardenia (Baltic Amber)*/
+    --color-pri3: #f0e9e0;
+    --color-pri3dark: #8b645a;
+    /*Neutral Colors - White & Black*/
+    --color-text: #000000;
+    --color-textdark: #ffffff;
+    /*Neutral Backgrounds for text and a true neutral*/
+    --color-neu: #efefef;
+    --color-neudark: #222222;
+    --color-grey: #787878;
+}
+@layer components{
+    svg{
+        display: inline;
+    }
+}
+.neu {@apply bg-neu dark:bg-neudark transition-colors duration-1000;}
+.txt {@apply lg:text-xl md:text-base text-text dark:text-textdark;}
+.pri1-bg {@apply bg-pri1 dark:bg-pri1dark;}
+.pri2-bg {@apply bg-pri2 dark:bg-pri2dark;}
+.pri3-bg {@apply bg-pri3 dark:bg-pri3dark;}
+.pri1-bord {@apply border-pri1 dark:border-pri1dark;}
+.pri2-bord {@apply border-pri2 dark:border-pri2dark;}
+.pri3-bord {@apply border-pri3 dark:border-pri3dark;}
+.ui-button {@apply hover:bg-pri3 dark:hover:bg-pri3dark transition-all;}
+.ui-border {@apply border-4 rounded-3xl;}
+.ui-form {@apply bg-pri1 dark:bg-pri1dark flex flex-col;}
+.page {@apply min-h-screen m-auto auto-rows-min lg:text-xl md:text-base text-text dark:text-textdark text-center bg-neu dark:bg-neudark transition-colors duration-1000;}
+.pagesec {@apply w-[90vw] m-auto;}
