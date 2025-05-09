@@ -116,15 +116,6 @@ getBase = function(number){//Takes the base and returns which -illion you're at
 }
 
 //I paste these into excel for my work, so it'd be helpful to just click and have it on the clipboard
-//Copy & Pasted from stack overflow
 clickToCopy = function(){ 
-    let selection = window.getSelection();
-    let range = document.createRange();
-    range.selectNodeContents(output);//output is the html tag with the result
-
-    selection.removeAllRanges();
-    selection.addRange(range);
-
-    document.execCommand("copy"); //I'll have to remember this one
-    selection.removeAllRanges();
+    navigator.clipboard.writeText(output.innerHTML);
 }

@@ -1,63 +1,73 @@
 <script>
-	import {onMount, onDestroy} from 'svelte';
+	import { onMount, onDestroy } from "svelte";
 
 	let interval;
 
 	let date = new Date();
 	let time_locale = date.toLocaleTimeString();
 	let date_locale = date.toLocaleDateString();
-	
-	const month_str = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-	let days = [31,28,31,30,31,30,31,31,30,31,30,31];
-	
+
+	const month_str = [
+		"Jan",
+		"Feb",
+		"Mar",
+		"Apr",
+		"May",
+		"Jun",
+		"Jul",
+		"Aug",
+		"Sep",
+		"Oct",
+		"Nov",
+		"Dec",
+	];
+	let days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
 	let millis = Date.now();
-	let secs = millis/1000;
-	let min = secs/60;
-	let hour = min/60;
-	let day = hour/24;
+	let secs = millis / 1000;
+	let min = secs / 60;
+	let hour = min / 60;
+	let day = hour / 24;
 
 	//YEAR
 	let year = 1970;
-	while (day>365){
-		let days_in_year = year%4==0?366:365;
-		day-=days_in_year;
+	while (day > 365) {
+		let days_in_year = year % 4 == 0 ? 366 : 365;
+		day -= days_in_year;
 		year++;
 	}
-	if(year%4==0) days[1] = 29;
+	if (year % 4 == 0) days[1] = 29;
 	//MONTH
 	let month = 0;
-	while(day>days[month]){
-		day-=days[month];
+	while (day > days[month]) {
+		day -= days[month];
 		month++;
 	}
 	//HOUR
-	hour = day*24;
+	hour = day * 24;
 
-	function update_time(){
+	function update_time() {
 		date = new Date();
 		time_locale = date.toLocaleTimeString();
 		date_locale = date.toLocaleDateString();
 	}
-	
-	onMount(()=>{
-		interval = setInterval(update_time,200);
+
+	onMount(() => {
+		interval = setInterval(update_time, 200);
 	});
 
-	onDestroy(()=>{
+	onDestroy(() => {
 		clearInterval(interval);
 	});
-
-
 </script>
-<div class="app bord" >
-    <!--h3>Pomodoro<em class="red-txt">!!</em></h3-->
 
-    <p>
-	{date_locale}<br>
-	{time_locale} <br><br>
-	{month_str[month] + " " + Math.ceil(day) + ", "+year}<br>
-	{hour}<br>
+<div class="app bord">
+	<!--h3>Pomodoro<em class="red-txt">!!</em></h3-->
 
-    </p>
-
+	<p>
+		{date_locale}<br />
+		{time_locale} <br /><br />
+		{month_str[month] + " " + Math.ceil(day) + ", " + year}<br />
+		{hour}<br />
+	</p>
 </div>

@@ -22,21 +22,106 @@
     --color-neudark: #222222;
     --color-grey: #787878;
 }
-@layer components{
-    svg{
+
+@layer components {
+    svg {
         display: inline;
     }
 }
-.neu {@apply bg-neu dark:bg-neudark transition-colors duration-1000;}
-.txt {@apply lg:text-xl md:text-base text-text dark:text-textdark;}
-.pri1-bg {@apply bg-pri1 dark:bg-pri1dark;}
-.pri2-bg {@apply bg-pri2 dark:bg-pri2dark;}
-.pri3-bg {@apply bg-pri3 dark:bg-pri3dark;}
-.pri1-bord {@apply border-pri1 dark:border-pri1dark;}
-.pri2-bord {@apply border-pri2 dark:border-pri2dark;}
-.pri3-bord {@apply border-pri3 dark:border-pri3dark;}
-.ui-button {@apply hover:bg-pri3 dark:hover:bg-pri3dark transition-all;}
-.ui-border {@apply border-4 rounded-3xl;}
-.ui-form {@apply bg-pri1 dark:bg-pri1dark flex flex-col;}
-.page {@apply min-h-screen m-auto auto-rows-min lg:text-xl md:text-base text-text dark:text-textdark text-center bg-neu dark:bg-neudark transition-colors duration-1000;}
-.pagesec {@apply w-[90vw] m-auto;}
+
+.neu {
+    @apply bg-neu dark:bg-neudark transition-colors duration-1000;
+}
+
+.txt {
+    @apply lg:text-xl md:text-base text-text dark:text-textdark;
+}
+
+.pri1-bg {
+    @apply bg-pri1 dark:bg-pri1dark;
+}
+
+.pri2-bg {
+    @apply bg-pri2 dark:bg-pri2dark;
+}
+
+.pri3-bg {
+    @apply bg-pri3 dark:bg-pri3dark;
+}
+
+.pri1-bord {
+    @apply border-pri1 dark:border-pri1dark;
+}
+
+.pri2-bord {
+    @apply border-pri2 dark:border-pri2dark;
+}
+
+.pri3-bord {
+    @apply border-pri3 dark:border-pri3dark;
+}
+
+.ui-button {
+    @apply hover:bg-pri3 dark:hover:bg-pri3dark transition-all;
+}
+
+.ui-border {
+    @apply border-4 rounded-3xl;
+}
+
+.ui-form {
+    @apply bg-pri1 dark:bg-pri1dark flex flex-col;
+}
+
+.page {
+    @apply min-h-screen m-auto auto-rows-min lg:text-xl md:text-base text-text dark:text-textdark text-center bg-neu dark:bg-neudark transition-colors duration-1000;
+}
+
+.pagesec {
+    @apply w-[60vw] m-auto;
+}
+
+.navBar{
+    @apply h-[10vh];
+}
+article{
+    @apply h-[85vh];
+}
+footer{
+    @apply h-[5vh];
+}
+
+.feature {
+    @apply h-[60%] flex justify-center
+}
+.text {
+    @apply h-[30%] break-words overflow-y-scroll;
+}
+#unity-container{
+    @apply h-full
+}
+#unity-canvas{
+    @apply aspect-960/600;
+}
+#unity-footer{
+    @apply w-full h-[12%];
+}
+#unity-logo { 
+    @apply w-[154px] h-[130px] bg-[url(/res/img/Unity/unity-logo-light.png)] dark:bg-[url(/res/img/Unity/unity-logo-dark.png)] bg-no-repeat bg-center;
+}
+#unity-progress-bar-empty {
+    @apply w-[141px] h-[18px] bg-[url(/res/img/Unity/progress-bar-empty-light.png)] dark:bg-[url(/res/img/Unity/progress-bar-empty-dark.png)] bg-no-repeat bg-center;
+}
+#unity-progress-bar-full {
+    @apply w-[0%] h-[18px] mt-[10px] bg-[url(/res/img/Unity/progress-bar-full-light.png)] dark:bg-[url(/res/img/Unity/progress-bar-full-dark.png)] bg-no-repeat bg-center;
+}
+#unity-webgl-logo {
+    @apply float-left w-[204px] h-[38px] bg-[url(/res/img/Unity/webgl-logo.png)] bg-no-repeat bg-center;
+}
+#unity-fullscreen-button {
+    @apply float-right w-[38px] h-[38px] bg-[url(/res/img/Unity/fullscreen-button.png)] bg-no-repeat bg-center;
+}
+
+h1,h2,h3,h4,h5,h6{
+    @apply text-center;
+}

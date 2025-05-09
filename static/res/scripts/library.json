@@ -1,128 +1,121 @@
 [
 {
   "title":"gdChess Trainer",
-  "reference":"/godot/gdChess/",
+  "reference":"/gdChess/",
   "card":"/res/img/library/Chess.png",
   "platform" : ["html"],
   "navigation" : true
 },
  {
   "title":"Hotel Lazarus",
-  "reference":"/cSharp/HotelLazarus/",
+  "reference":"/HotelLazarus/",
   "card":"/res/img/library/Hotel.png",
   "platform" : ["html"],
   "navigation" : true
 },
  {
   "title":"Wordle",
-  "reference":"/cSharp/Wordle/",
+  "reference":"/Wordle/",
   "card":"/res/img/library/Wordle.png",
   "platform" : ["html"],
   "navigation" : true
 },
  {
   "title":"Un-Named Stock Market Battle Simulator",
-  "reference":"/cSharp/LD49/",
+  "reference":"/LD49/",
   "card":"/res/img/library/Stonk.png",
   "platform" : ["html"],
   "navigation" : false
 },
 {
   "title":"Ressetti's Game",
-  "reference":"/cSharp/Ressetti/",
+  "reference":"/Ressetti/",
   "card":"/res/img/library/Ressetti.png",
   "platform" : ["html"],
   "navigation" : false
 },
 {
   "title":"JS Calculator",
-  "reference":"/misc/Calculator",
+  "reference":"/Calculator",
   "card":"/res/img/library/Calc.png",
   "platform" : ["html"],
   "navigation" : true
 },
 {
   "title":"The Depths",
-  "reference":"/cSharp/Depths",
+  "reference":"/Depths",
   "card":"/res/img/library/Depths.png",
   "platform" : ["html"],
   "navigation" : false
 },
 {
   "title":"Dolphin Jump Demo",
-  "reference":"/cSharp/DolphinJump",
+  "reference":"/DolphinJump",
   "card":"/res/img/library/Dolphin.png",
   "platform" : ["html"],
   "navigation" : false
 },
 {
   "title":"Sort Algorithm Visualizer",
-  "reference":"/cSharp/AlgoVisualizer",
+  "reference":"/AlgoVisualizer",
   "card":"/res/img/library/Sort.png",
   "platform" : ["html"],
   "navigation" : true
 },
 {
   "title":"Chancho's Unity Roundup 2k21",
-  "reference":"/cSharp/CUR2R5",
+  "reference":"/CUR2R5",
   "card":"/res/img/library/Cur2.png",
   "platform" : ["html"],
   "navigation" : true
 },
 {
   "title":"Shoot 'em Up Prototype",
-  "reference":"/cSharp/SHMUP",
+  "reference":"/SHMUP",
   "card":"/res/img/library/Shmup.png",
   "platform" : ["html"],
   "navigation" : false
 },
 {
   "title":"Algorithmic Maze Generator",
-  "reference":"/cSharp/MazeGenerator",
+  "reference":"/MazeGenerator",
   "card":"/res/img/library/Maze.png",
   "platform" : ["html"],
   "navigation" : true
 },
 {
   "title":"Lazy River Racing",
-  "reference":"/cSharp/LD47",
+  "reference":"/LD47",
   "card":"/res/img/library/River.png",
   "platform" : ["html"],
   "navigation" : false
 },
 {
   "title":"IgKnight: Keeper of the Flame",
-  "reference":"/misc/LD46",
+  "reference":"/LD46",
   "card":"/res/img/library/Knight.png",
   "platform" : ["java"],
   "navigation" : false
 },
 {
   "title":"Nought - My First Ludum Dare Game",
-  "reference":"/misc/LD45",
+  "reference":"/LD45",
   "card":"/res/img/library/Nought.png",
   "platform" : ["java"],
   "navigation" : false
 },
 {
   "title":"Catan",
-  "reference":"/cSharp/Catan/",
+  "reference":"/Catan/",
   "card":"/res/img/library/Catan.png",
   "platform" : ["html","java"],
   "navigation" : false
 },
 {
   "title":"Alfonso's IceCream Shop",
-  "reference":"/misc/Alfonso.html",
+  "reference":"/Alfonso",
   "card":"/res/img/library/Icecream.png",
   "platform" : ["java"],
   "navigation" : false
-},
-{
-  "title":"Archives",
-  "reference":"/misc/index.html",
-  "card":"/res/img/library/Archive.png",
-  "platform" : ["html"],
-  "navigation" : true
 }
 ]

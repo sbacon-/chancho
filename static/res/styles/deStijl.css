@@ -108,7 +108,7 @@ body{
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  border: solid var(--text) 3px;
+  border: solid var(--text) 3pxSerializeField;
 }
 #projects a{
   padding: 8px 0;
