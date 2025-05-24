@@ -1,5 +1,12 @@
 [
 {
+  "title":"gdChess 2",
+  "reference":"/gdChess2/",
+  "card":"/res/img/library/Chess.png",
+  "platform" : ["html"],
+  "navigation" : true
+},
+{
   "title":"gdChess Trainer",
   "reference":"/gdChess/",
   "card":"/res/img/library/Chess.png",
