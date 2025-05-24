@@ -83,11 +83,9 @@ body {
 	text-align: center;
 	z-index: 1;
 }
-</style>
-		<link id="-gd-engine-icon" rel="icon" type="image/png" href="/res/files/gdChess2/gdChess2.icon.png" />
-<link rel="apple-touch-icon" href="gdChess2.apple-touch-icon.png"/>
-
-<div>
+		</style>
+		
+		<div>
 		<canvas id="canvas">
 			Your browser does not support the canvas tag.
 		</canvas>
@@ -104,7 +102,7 @@ body {
 
 		<script src="/res/files/gdChess2/gdChess2.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"gdChess2","experimentalVK":false,"fileSizes":{"/res/files/gdChess2/gdChess2.pck":142592,"/res/files/gdChess2/gdChess2.wasm":52126319},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"/res/files/gdChess2/gdChess2","experimentalVK":false,"fileSizes":{"gdChess2.pck":142736,"gdChess2.wasm":1626559},"focusCanvas":true,"gdextensionLibs":[]};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -208,4 +206,5 @@ const engine = new Engine(GODOT_CONFIG);
 	}
 }());
 		</script>
-</div>
+		</div>
+

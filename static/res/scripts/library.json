@@ -2,7 +2,7 @@
 {
   "title":"gdChess 2",
   "reference":"/gdChess2/",
-  "card":"/res/img/library/Chess.png",
+  "card":"/res/img/library/Chess2.png",
   "platform" : ["html"],
   "navigation" : true
 },
