@@ -1,5 +1,12 @@
 [
 {
+  "title":"Tetris",
+  "reference":"/Tetris/",
+  "card":"/res/img/library/Tetris.png",
+  "platform" : ["html"],
+  "navigation" : true
+},
+{
   "title":"gdChess 2",
   "reference":"/gdChess2/",
   "card":"/res/img/library/Chess2.png",
@@ -11,7 +18,7 @@
   "reference":"/gdChess/",
   "card":"/res/img/library/Chess.png",
   "platform" : ["html"],
-  "navigation" : true
+  "navigation" : false
 },
  {
   "title":"Hotel Lazarus",
