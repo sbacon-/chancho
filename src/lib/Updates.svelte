@@ -6,6 +6,7 @@
     faCookie,
     faVideo,
     faRobot,
+    faGamepad
   } from "@fortawesome/free-solid-svg-icons";
   let { hex_len, hex_alt, db } = $props();
   let updates = $state({});
@@ -55,6 +56,8 @@
             <Fa icon={faVideo} />
           {:else if icon == "github"}
             <Fa icon={faGithubAlt} />
+          {:else if icon == "game"}
+            <Fa icon={faGamepad} />
           {:else if icon == "robot"}
             <Fa icon={faRobot} />
           {:else if icon == "cookie"}

@@ -1,5 +1,12 @@
 [
 {
+  "title":"Donkey Kong",
+  "reference":"/gdKong/",
+  "card":"/res/img/library/Kong.png",
+  "platform" : ["html"],
+  "navigation" : true
+},
+{
   "title":"Tetris",
   "reference":"/Tetris/",
   "card":"/res/img/library/Tetris.png",
