@@ -1,5 +1,12 @@
 [
 {
+  "title":"Pacman",
+  "reference":"/gdPacman/",
+  "card":"/res/img/library/Pacman.png",
+  "platform" : ["html"],
+  "navigation" : true
+},
+{
   "title":"Donkey Kong",
   "reference":"/gdKong/",
   "card":"/res/img/library/Kong.png",
