@@ -32,7 +32,7 @@
                 <p>
                     Move - Arrow Keys or WASD <br/>
 		    Start - Spacebar <br/>
-		    Alt Movement - JKL; (vim movement)
+		    Alt Movement - JKL; (vim movement) <br/>
                     Downloads:<br/>
                     <a href="/res/files/gdPacman/Pacman.exe">Windows</a><br/>
                     <a href="/res/files/gdPacman/Pacman.x86_64">Linux</a><br/>

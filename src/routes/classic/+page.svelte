@@ -24,8 +24,26 @@
     <div class="pagesec">
         <NavBar />
         <article>
-            <section class="text">
-                <h3 class="text-lg">Updates</h3>
+            <section class="md:mx-8 text">
+                <ul
+                    class="list-none flex overflow-scroll overflow-x-scroll"
+                    id="library"
+                >
+                    {#each library as project}
+                        <a
+                            href="/classic{project.reference}"
+                            aria-label={project.title}
+                        >
+                            <li
+                                class="w-[25vh] h-[25vh] bg-contain border-4 rounded-[40%] pri3-bord"
+                                style="background-image: url({project.card});"
+                            ></li>
+                        </a>
+                    {/each}
+                </ul>
+            </section>
+            <section class="h-[60%]">
+                <h3 class="text-xl text-center">Updates</h3>
                 <p>
                     Welcome to the new & improved Chancho.dev 3.0<br />
                     Complete with a fresh coat of paint!!<br />
@@ -60,24 +78,6 @@
                     in excel<br />
                     Email me your sheets if you'd like to join the queue.<br />
                 </p>
-            </section>
-            <section class="text">
-                <ul
-                    class="list-none flex overflow-scroll overflow-x-scroll"
-                    id="library"
-                >
-                    {#each library as project}
-                        <a
-                            href="/classic{project.reference}"
-                            aria-label={project.title}
-                        >
-                            <li
-                                class="w-[25vh] h-[25vh] bg-contain border-4 rounded-[40%] pri3-bord"
-                                style="background-image: url({project.card});"
-                            ></li>
-                        </a>
-                    {/each}
-                </ul>
             </section>
         </article>
         <footer>
