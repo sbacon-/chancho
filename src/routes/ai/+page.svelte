@@ -36,7 +36,7 @@
     }
     async function send() {
         const created = await db.create("ai", {
-            prompt: prompt.replaceAll(",", ""),
+            prompt: prompt.replaceAll(",", "").replaceAll("'",""),
             reply: "...",
             timestamp: new Date(),
             mode: mode,
@@ -115,7 +115,7 @@
                 <div>
                     <input
                         type="text"
-                        class="p-2 m-2 rounded-xl pri2-bg ui-input bord"
+                        class="p-2 m-2 w-[25%] rounded-xl pri2-bg ui-input bord"
                         bind:value={prompt}
                         placeholder="prompt..."
                     />
@@ -136,6 +136,9 @@
                         />
                     </label>
                 {/if}
+	    	<p>
+		    Llama 3.2-11B-Vision (please allow up to 60 seconds for a response)
+	    	</p>
             </form>
             <TextComplete {history} />
             <br />

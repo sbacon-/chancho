@@ -14,6 +14,7 @@
             { x: center.x, y: center.y + hex_len },
             { x: center.x - hex_alt, y: center.y + hex_len / 2 },
         ];
+
         c2d.fillStyle = neu;
 
         c2d.beginPath();
