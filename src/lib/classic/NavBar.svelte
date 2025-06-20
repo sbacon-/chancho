@@ -34,13 +34,13 @@
 
 <header class="navBar neu txt font-mono flex justify-between">
     <h1
-        class="text-4xl w-[30%] px-[15px] py-[32px] hover:italic flex justify-center"
+        class="text-lg md:text-4xl w-[30%] px-[15px] py-[32px] hover:italic flex justify-center"
     >
         <button onclick={home}>
             CHANCHO<em class="text-sm">.dev</em>
         </button>
     </h1>
-    <nav class="h-full w-[30%] px-[15px] py-[32px]">
+    <nav class="h-full w-[70%] md:w-[40%]  py-[16px]">
         <ul class="h-full text-center flex justify-evenly">
             <button
                 class="text-sm w-[25%] pri2-bg ui-button ui-border pri2-bord"
@@ -80,13 +80,13 @@
         {/if}
     </nav>
     <!--Profiles-->
-    <p class="text-4xl w-[30%] flex justify-end">
+    <p class="hidden md:flex md:text-4xl w-[30%] my-auto justify-end">
         <a
             class="p-[16px]"
             href="https://github.com/sbacon-"
             aria-label="GitHub"
         >
-            <Fa icon={faGithubAlt} /></a
+            <Fa icon={faGithubAlt}/></a
         >
         <a
             class="p-[16px]"

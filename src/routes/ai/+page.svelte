@@ -26,8 +26,6 @@
             let query = await db.query("SELECT id, username FROM user");
             user = query[0][0].username;
             id = query[0][0].id;
-            console.log(user);
-            console.log(id);
             log_status = "auth";
         } catch {
             log_status = "invalid";
@@ -43,19 +41,12 @@
             user: id,
             response: response,
         });
-        console.log(created);
-        //console.log(created);
         if (mode == "Chat Complete" && response) {
             const query = await db.relate(
                 created[0].id,
                 "replies",
                 previous_msg.id,
             );
-            console.log(query);
-            console.log(
-                "RELATE " + created[0] + " -> replies -> " + previous_msg + ";",
-            );
-            console.log("QUERY:" + query);
         }
         prompt = "";
     }
@@ -74,8 +65,8 @@
             }
             history = [];
             query[0].forEach((result) => {
-                history.push(result.prompt);
                 history.push(result.reply);
+                history.push(result.prompt);
             });
         } catch {
             log_status = "invalid";
@@ -115,7 +106,7 @@
                 <div>
                     <input
                         type="text"
-                        class="p-2 m-2 w-[25%] rounded-xl pri2-bg ui-input bord"
+                        class="p-2 m-2 w-[75%] rounded-xl pri2-bg ui-input bord"
                         bind:value={prompt}
                         placeholder="prompt..."
                     />
@@ -128,7 +119,7 @@
                 </div>
                 {#if mode == "Chat Complete"}
                     <label>
-                        as response
+                        send as response
                         <input
                             class="p-2 ui-input"
                             type="checkbox"
@@ -137,7 +128,7 @@
                     </label>
                 {/if}
 	    	<p>
-		    Llama 3.2-11B-Vision (please allow up to 60 seconds for a response)
+			Llama 3.2-11B-Vision <i class="hidden md:inline">(please allow up to 60 seconds for a response)</i>
 	    	</p>
             </form>
             <TextComplete {history} />

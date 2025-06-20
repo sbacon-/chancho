@@ -69,12 +69,10 @@
   function lightMode() {
     localStorage.theme = "light";
     initDarkMode();
-    location.reload();
   }
   function darkMode() {
     localStorage.theme = "dark";
     initDarkMode();
-    location.reload();
   }
   function isDarkMode() {
     return (

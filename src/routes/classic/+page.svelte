@@ -42,9 +42,9 @@
                     {/each}
                 </ul>
             </section>
-            <section class="h-[60%]">
+            <section class="h-[60%] overflow-y-scroll">
                 <h3 class="text-xl text-center">Updates</h3>
-                <p>
+                <p >
                     Welcome to the new & improved Chancho.dev 3.0<br />
                     Complete with a fresh coat of paint!!<br />
                     <br />

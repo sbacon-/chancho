@@ -78,7 +78,7 @@
 }
 
 .pagesec {
-    @apply md:w-[100vw] w-[60vw] m-auto;
+    @apply w-[100vw] md:w-[80vw] m-auto;
 }
 
 .navBar{

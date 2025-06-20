@@ -3,16 +3,16 @@
 
     let big_picture = false
     
-    let width = 256 * 3
-    let height = 240 * 3
+    let width = 224 * 2.5
+    let height = 288 * 2.5
 
     function adjust_size() {
         if (big_picture) {
-            width = 256 * 3
-            height = 240 * 3
+            width = 224 * 2.5
+            height = 288 * 2.5
         }else{
-            width= 256 * 4
-            height= 240 * 4
+            width= 224 * 3.5
+            height= 288 * 3.5
         }
         big_picture = !big_picture
     }
